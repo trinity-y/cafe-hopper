@@ -1,6 +1,6 @@
-# db-project
+# Cafe Hopper
 
-This is a simple database application that connects to a database and seeds it with initial data for users and cafes.
+Just to get started, we just connect to a database and seeds it with initial data for users and cafes for now.
 
 ## Project Structure
 
@@ -19,8 +19,8 @@ db-project
 
 1. Clone the repository:
    ```
-   git clone https://github.com/microsoft/vscode-remote-try-dab.git
-   cd db-project
+   git clone https://github.com/trinity-y/cafe-hopper.git
+   cd cafe-hopper
    ```
 
 2. Install dependencies:
@@ -28,7 +28,11 @@ db-project
    npm install
    ```
 
-3. Create a `.env` file in the src/db and add the necessary 
+3. Ensure you have postgres downloaded and set up locally (latest version should be fine)  
+
+    Go here for the installation instructions: https://www.postgresql.org/download/macosx/
+
+5. Create a `.env` file in the src/db and add the necessary 
    configs to connect to the local database you have created
    ```
    POSTGRES_DATABASE=
@@ -42,11 +46,9 @@ db-project
 
 1. Connect to the database and seed it with initial data by running:
    ```
-   node db/seed.js
+   node seed.js
    ```
 
-2. The application will create sample users and cafes in the database.
+2. The script will create sample users and cafes in the database.
 
-## License
-
-This project is licensed under the MIT License.
+3. Query into the database and check whether the seeding was successful.
