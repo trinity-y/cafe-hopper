@@ -23,16 +23,16 @@ db-project
    cd cafe-hopper
    ```
 
-2. Install dependencies:
+2. Ensure you have postgres downloaded and set up locally (latest version should be fine)  
+
+    Go here for the installation instructions: https://www.postgresql.org/download/macosx/
+
+3. Install dependencies:
    ```
    npm install
    ```
 
-3. Ensure you have postgres downloaded and set up locally (latest version should be fine)  
-
-    Go here for the installation instructions: https://www.postgresql.org/download/macosx/
-
-5. Create a `.env` file in the src/db and add the necessary 
+4. Create a `.env` file in the src/db and add the necessary 
    configs to connect to the local database you have created
    ```
    POSTGRES_DATABASE=
