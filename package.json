@@ -1,17 +1,5 @@
 {
-  "name": "db-project",
-  "version": "1.0.0",
-  "description": "A project to connect and seed a database with users and cafes.",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "node src/index.js",
-    "seed": "node src/db/seed.js"
-  },
   "dependencies": {
-    "dotenv": "^10.0.0",
-    "pg": "^8.16.0"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "@prisma/client": "^6.4.1"
+  }
 }
