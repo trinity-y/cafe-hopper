@@ -16,7 +16,7 @@ RUN npm run build
 COPY scripts/docker-scripting.sh ./docker-scripting.sh
 RUN chmod +x docker-scripting.sh
 
-EXPOSE 3001
+EXPOSE 8080
 
 ENTRYPOINT ["./docker-scripting.sh"]
 CMD ["npm", "start"]
