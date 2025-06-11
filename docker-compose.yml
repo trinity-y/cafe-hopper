@@ -37,7 +37,7 @@ services:
       - POSTGRES_DATABASE_URL_PRISMA=${POSTGRES_DATABASE_URL_PRISMA}
       - POSTGRES_HOST_PRISMA=${POSTGRES_HOST_PRISMA}
     ports:
-      - '3001:3001'
+      - '3001:8080'
     restart: always
 
   frontend:
