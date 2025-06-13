@@ -1,6 +1,6 @@
 import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
@@ -9,9 +9,10 @@ import FormLabel from '@mui/material/FormLabel';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 
 import handleLogin from '../../api/auth';
-const theme = createTheme();
+import theme from '../theme';
 
 function LoginCard() {
     const [email, setEmail] = React.useState("");
@@ -41,50 +42,74 @@ function LoginCard() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline/>
-            <Card variant='active'>
-                <Typography
-                    component="h1"
+            <Stack
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100vh',
+                }}
+            >
+                <Card
+                    variant='outline'
+                    sx={{ p: '3em', width:'80%'}}
                 >
-                    Log in
-                </Typography>
-                <Typography>
-                    Enter your e-mail and we'll send you a passwordless sign-in link.
-                </Typography>
-                <Box
-                    component="form"
-                    onSubmit={handleSubmit}
-                    noValidate
-                >
-                    <FormControl>
-                        <FormLabel htmlFor="email">Email</FormLabel>
-                        <TextField
-                            error={emailError}
-                            helperText={emailErrorMessage}
-                            id="email"
-                            type="email"
-                            name="email"
-                            placeholder="your@email.com"
-                            autoComplete="email"
-                            autoFocus
-                            required
-                            fullWidth
-                            variant="outlined"
-                            color={emailError ? 'error' : 'primary'}
-                            value={email}
-                            onChange={(event)=>{setEmail(event.target.value)}}
-                        />
-                    </FormControl>
-                    <Button
-                        type="submit"
+                    <Typography
+                        variant="h3"
+                    >
+                        Log In
+                    </Typography>
+                    <Typography
+                        variant="body"
+                    >
+                        Enter your e-mail and we'll send you a passwordless sign-in link.
+                    </Typography>
+                    <Box
+                        component="form"
+                        onSubmit={handleSubmit}
+                        noValidate
                         fullWidth
-                        variant="contained"
-                        onClick={validateInputs}
-                        >
-                        Send me a link!
-                    </Button>
-                </Box>
-                
-            </Card>
+                        sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            flexDirection: 'column',
+                            gap:'1em',
+                            paddingTop:'1em',
+                        }}
+                    >
+                        <FormControl fullWidth>
+                            <FormLabel htmlFor="email">Email</FormLabel>
+                            <TextField
+                                error={emailError}
+                                helperText={emailErrorMessage}
+                                id="email"
+                                type="email"
+                                name="email"
+                                placeholder="your@email.com"
+                                autoComplete="email"
+                                autoFocus
+                                required
+                                fullWidth
+                                variant="outlined"
+                                color={emailError ? 'error' : 'primary'}
+                                value={email}
+                                onChange={(event)=>{setEmail(event.target.value)}}
+                            />
+                        </FormControl>
+                        <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            onClick={validateInputs}
+                            >
+                            Send me a link!
+                        </Button>
+                    </Box>
+                    
+                </Card>
+            </Stack>
+            
         </ThemeProvider>
     );
 }

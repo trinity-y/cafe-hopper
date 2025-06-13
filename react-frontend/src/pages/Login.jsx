@@ -1,12 +1,12 @@
 import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
 import Stack from '@mui/material/Stack';
 
 import LoginCard from '../components/auth/LoginCard';
 
-const theme = createTheme();
+import theme from '../components/theme';
 
 function LoginPage() {
     return (
