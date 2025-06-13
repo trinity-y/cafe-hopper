@@ -14,10 +14,14 @@ import Stack from '@mui/material/Stack';
 import authAPI from '../../api/auth';
 import theme from '../theme';
 
-function LoginCard() {
+function SignupCard() {
     const [email, setEmail] = React.useState("");
     const [emailError, setEmailError] = React.useState(false);
     const [emailErrorMessage, setEmailErrorMessage] = React.useState("");
+
+    const [username, setUsername] = React.useState("");
+    const [usernameError, setUsernameError] = React.useState(false);
+    const [usernameErrorMessage, setUsernameMessage] = React.useState("");
 
     const validateInputs = () => {
         if (!email || !/\S+@\S+\.\S+/.test(email.value)) {
@@ -33,7 +37,7 @@ function LoginCard() {
 
     const handleSubmit = async () => {
         if (emailError) return;
-        const successfulAuth = await authAPI.handleLogin(email);
+        const successfulAuth = await authAPI.handleSignup(email);
         if (!successfulAuth) {
             setEmailErrorMessage('We could not send an email to this email address. Try again later.')
         }
@@ -58,12 +62,12 @@ function LoginCard() {
                         variant="h3"
                         sx={{ width: '100%', fontSize: 'clamp(2rem, 10vw, 2.15rem)', paddingBottom:'0.5rem' }}
                     >
-                        Log In
+                        Welcome to Cafe Hopper!
                     </Typography>
                     <Typography
                         variant="body"
                     >
-                        Enter your e-mail and we'll send you a passwordless sign-in link.
+                        Fill in some quick info to get started.
                     </Typography>
                     <Box
                         component="form"
@@ -79,6 +83,24 @@ function LoginCard() {
                             paddingTop:'1em',
                         }}
                     >
+                        <FormControl fullWidth>
+                            <FormLabel htmlFor="name">Username</FormLabel>
+                            <TextField
+                                error={usernameError}
+                                helperText={usernameErrorMessage}
+                                id="username"
+                                type="username"
+                                name="username"
+                                placeholder="froggy2025"
+                                autoFocus
+                                required
+                                fullWidth
+                                variant="outlined"
+                                color={usernameError ? 'error' : 'primary'}
+                                value={username}
+                                onChange={(event)=>{setUsername(event.target.value)}}
+                            />
+                        </FormControl>
                         <FormControl fullWidth>
                             <FormLabel htmlFor="email">Email</FormLabel>
                             <TextField
@@ -104,7 +126,7 @@ function LoginCard() {
                             variant="contained"
                             onClick={validateInputs}
                             >
-                            Send me a link!
+                            Sign Up
                         </Button>
                     </Box>
                     
@@ -115,5 +137,5 @@ function LoginCard() {
     );
 }
 
-export default LoginCard;
+export default SignupCard;
 
