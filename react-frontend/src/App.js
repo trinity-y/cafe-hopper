@@ -1,15 +1,18 @@
 import React from 'react';
-import UserTable from './components/UserTable';
-import CafeList from './components/CafeList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import './App.css';
+import LoginPage from './pages/Login';
+import SignupPage from './pages/Signup';
 
 function App() {
   return (
-    <div className="App">
-      <h1>User and Cafe Management</h1>
-      <UserTable />
-      <CafeList />
-    </div>
+    <Router>
+        <Routes>
+          <Route path='/login' element={<LoginPage/>} />
+          <Route path='/signup' element={<SignupPage/>} />
+        </Routes>
+    </Router>
   );
 }
 
