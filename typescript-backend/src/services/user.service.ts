@@ -1,5 +1,5 @@
 import { CustomModel } from '../../orm/custom';
-import { IUser } from '../interfaces/user.interface';
+import { IUser, CreateUserDTO } from '../interfaces/user.interface';
 import { IUserServiceAPI } from '../interfaces/user.service.interface'; 
 
 const userModel = new CustomModel('User');
@@ -10,9 +10,13 @@ const userService: IUserServiceAPI = {
     return userModel.findMany();
   },
 
-  async getUserById(id: number): Promise<IUser | null> {
-    return userModel.findUnique(id);
+  async getUserById(uid: number): Promise<IUser | null> {
+    return userModel.findUnique(uid);
   },
+
+  async createUser(user: CreateUserDTO): Promise<IUser | null> {
+    return userModel.create(user);
+  }
 };
 
 export default userService;
