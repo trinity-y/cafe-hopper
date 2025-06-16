@@ -45,6 +45,8 @@ services:
     build: 
       context: ./react-frontend
       dockerfile: Dockerfile
+    env_file:
+      - ./react-frontend/.env
     ports:
       - '3000:3000'
     depends_on:
