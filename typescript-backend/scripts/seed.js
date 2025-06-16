@@ -15,9 +15,8 @@ async function seedDatabase() {
     try {
         await client.query(`
             CREATE TABLE IF NOT EXISTS "User" (
-              id SERIAL PRIMARY KEY,
-              "firstName" VARCHAR(100) NOT NULL,
-              "secondName" VARCHAR(100) NOT NULL
+              uid SERIAL PRIMARY KEY,
+              "username" VARCHAR(100) NOT NULL UNIQUE,
             );
             
             CREATE TABLE IF NOT EXISTS "Cafe" (
@@ -30,17 +29,17 @@ async function seedDatabase() {
         await client.query('TRUNCATE "User", "Cafe" RESTART IDENTITY CASCADE');
         
         const users = [
-            { firstName: 'Trinity', secondName: 'Yip' },
-            { firstName: 'Safiya', secondName: 'Makada' },
-            { firstName: 'Celina', secondName: 'He' },
-            { firstName: 'Nadeen', secondName: 'Findakly' },
-            { firstName: 'Rohan', secondName: 'Nankani' },
+            { username: 'Trinity' },
+            { username: 'Safiya' },
+            { username: 'Celina' },
+            { username: 'Nadeen' },
+            { username: 'Rohan' },
         ];
         
         for (const user of users) {
             await client.query(
-                'INSERT INTO "User" ("firstName", "secondName") VALUES ($1, $2)',
-                [user.firstName, user.secondName]
+                'INSERT INTO "User" ("username") VALUES ($1)',
+                [user.username]
             );
         }
         
