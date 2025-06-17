@@ -20,7 +20,7 @@ function LoginCard() {
     const [emailErrorMessage, setEmailErrorMessage] = React.useState("");
 
     const validateInputs = () => {
-        if (!email || !/\S+@\S+\.\S+/.test(email.value)) {
+        if (!email || !/\S+@\S+\.\S+/.test(email)) {
             setEmailError(true);
             setEmailErrorMessage('Please enter a valid email address.');
             return true;
@@ -31,7 +31,8 @@ function LoginCard() {
         }
     };
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
         if (emailError) return;
         const successfulAuth = await authAPI.handleLogin(email);
         if (!successfulAuth) {
@@ -69,7 +70,6 @@ function LoginCard() {
                         component="form"
                         onSubmit={handleSubmit}
                         noValidate
-                        fullWidth
                         sx={{
                             display: 'flex',
                             justifyContent: 'center',

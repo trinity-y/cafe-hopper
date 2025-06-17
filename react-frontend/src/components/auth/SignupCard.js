@@ -20,11 +20,14 @@ function SignupCard() {
     const [emailErrorMessage, setEmailErrorMessage] = React.useState("");
 
     const [username, setUsername] = React.useState("");
-    const [usernameError, setUsernameError] = React.useState(false);
+    // eslint-disable-next-line no-unused-vars
+    const [usernameError, setUsernameError] = React.useState(false); // ! eventually return an error if the username already exists
+    // eslint-disable-next-line no-unused-vars
     const [usernameErrorMessage, setUsernameMessage] = React.useState("");
 
     const validateInputs = () => {
-        if (!email || !/\S+@\S+\.\S+/.test(email.value)) {
+        if (!email || !/\S+@\S+\.\S+/.test(email)) {
+            console.log(email);
             setEmailError(true);
             setEmailErrorMessage('Please enter a valid email address.');
             return true;
@@ -35,10 +38,11 @@ function SignupCard() {
         }
     };
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
         if (emailError) return;
-        const successfulAuth = await authAPI.handleSignup(email);
-        if (!successfulAuth) {
+        const emailSent = await authAPI.handleSignup(email, username);
+        if (!emailSent) {
             setEmailErrorMessage('We could not send an email to this email address. Try again later.')
         }
     }
@@ -73,7 +77,6 @@ function SignupCard() {
                         component="form"
                         onSubmit={handleSubmit}
                         noValidate
-                        fullWidth
                         sx={{
                             display: 'flex',
                             justifyContent: 'center',
