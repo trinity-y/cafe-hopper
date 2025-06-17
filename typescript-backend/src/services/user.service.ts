@@ -6,7 +6,6 @@ const userModel = new CustomModel('User');
 
 const userService: IUserServiceAPI = {
   async getAllUsers(): Promise<IUser[]> {
-    // return prisma.user.findMany();
     return userModel.findMany();
   },
 

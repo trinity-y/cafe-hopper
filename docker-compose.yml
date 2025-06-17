@@ -8,16 +8,16 @@ services:
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DATABASE}
+      - POSTGRES_DB=${POSTGRES_DB}
     ports:
       - '5432:5432'
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -D ${POSTGRES_DATABASE}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 5s
       timeout: 5s
-      retries: 5
+      retries: 30
 
   backend:
     container_name: cafe_hopper_backend
@@ -27,15 +27,14 @@ services:
     depends_on:
       db:
         condition: service_healthy
+        restart: true
     environment:
       - POSTGRES_DATABASE_URL=${POSTGRES_DATABASE_URL}
       - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_HOST=${POSTGRES_HOST_PRISMA}
-      - POSTGRES_DATABASE=${POSTGRES_DATABASE}
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_DB=${POSTGRES_DB}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_PORT=${POSTGRES_PORT}
-      - POSTGRES_DATABASE_URL_PRISMA=${POSTGRES_DATABASE_URL_PRISMA}
-      - POSTGRES_HOST_PRISMA=${POSTGRES_HOST_PRISMA}
     ports:
       - '3001:8080'
     restart: always
