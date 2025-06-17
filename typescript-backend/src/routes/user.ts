@@ -19,7 +19,7 @@ router.get('/:uid', async (req: Request, res: Response) => {
     if (user) {
       res.status(200).json(user);
     } else {
-      res.status(404).json({ message: `User with uid ${uid} not found` }); // ! fix uid vs id
+      res.status(404).json({ message: `User with uid ${uid} not found` });
     }
   } catch (error) {
     console.error(`Error fetching user with id ${uid}:`, error);
@@ -28,9 +28,9 @@ router.get('/:uid', async (req: Request, res: Response) => {
 });
 
 router.post('/', async (req: Request, res: Response) => {
-  const { username } = req.body;
+  const { username, firebase_uid } = req.body;
   try {
-    const newUser = await userService.createUser({ username });
+    const newUser = await userService.createUser({ username, firebase_uid });
       if (newUser) {
         res.status(200).json(newUser);
       } else {
