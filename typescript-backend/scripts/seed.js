@@ -16,7 +16,7 @@ async function seedDatabase() {
         await client.query(`
             CREATE TABLE IF NOT EXISTS "User" (
               uid SERIAL PRIMARY KEY,
-              "username" VARCHAR(100) NOT NULL UNIQUE,
+              "username" VARCHAR(100) NOT NULL UNIQUE
             );
             
             CREATE TABLE IF NOT EXISTS "Cafe" (
