@@ -25,7 +25,6 @@ const userService: IUserServiceAPI = {
       }
       return false;
     } catch (e) {
-      console.error(e);
       return false;
     }
   },
