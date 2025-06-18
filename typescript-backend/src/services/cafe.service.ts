@@ -1,6 +1,6 @@
 import { CustomModel } from '../../orm/custom';
 import { ICafe } from '../interfaces/cafe.interface';
-import { ICafeServiceAPI } from '../interfaces/cafe.service.interface'; 
+import { ICafeServiceAPI } from '../interfaces/cafe.service.interface';
 
 const cafeModel = new CustomModel('Cafe');
 
@@ -10,8 +10,19 @@ const cafeService: ICafeServiceAPI = {
   },
 
   async getCafeById(id: number): Promise<ICafe | null> {
-    return cafeModel.findUnique(id); 
+    return cafeModel.findUnique(id);
   },
+
+  async searchCafes(term: string): Promise<ICafe[]> {
+    const q = `
+    SELECT * FROM Cafes WHERE LOWER(name) LIKE LOWER('%' || $1 || '%')
+      ORDER BY name
+      LIMIT 10;
+  `;
+    const { rows } = await CustomModel.query(q, [term]);
+    return rows;
+  },
+
 };
 
 export default cafeService;
