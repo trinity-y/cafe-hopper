@@ -4,8 +4,6 @@ import { ThemeProvider } from '@mui/material/styles';
 
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
@@ -17,26 +15,37 @@ import theme from '../theme';
 function LoginCard() {
     const [email, setEmail] = React.useState("");
     const [emailError, setEmailError] = React.useState(false);
-    const [emailErrorMessage, setEmailErrorMessage] = React.useState("");
+    const [emailHelperMessage, setEmailHelperMessage] = React.useState("");
+    // const [sentEmail, setSentEmail] = React.useState(false);
 
-    const validateInputs = () => {
+    const validateInputs = async () => {
+        let valid = true;
         if (!email || !/\S+@\S+\.\S+/.test(email)) {
             setEmailError(true);
-            setEmailErrorMessage('Please enter a valid email address.');
-            return true;
-        } else {
-            setEmailError(false);
-            setEmailErrorMessage('');
-            return false;
+            setEmailHelperMessage('Please enter a valid email address.');
+            valid = false;
+        } else if (!(await authAPI.doesEmailExist(email))) {
+            setEmailError(true);
+            setEmailHelperMessage(`There's no account associated with that e-mail. Sign up if you don't have an account!`);
+            valid = false;
         }
+        else {
+            setEmailError(false);
+            setEmailHelperMessage('');
+        }
+        return valid;
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (emailError) return;
+        if (!(await validateInputs())) return;
         const successfulAuth = await authAPI.handleLogin(email);
         if (!successfulAuth) {
-            setEmailErrorMessage('We could not send an email to this email address. Try again later.')
+            setEmailError(true);
+            setEmailHelperMessage('We could not send an email to this email address. Try again later.')
+        } else {
+            setEmailError(false);
+            setEmailHelperMessage('Sent! Check your inbox.');
         }
     }
 
@@ -59,10 +68,10 @@ function LoginCard() {
                         variant="h3"
                         sx={{ width: '100%', fontSize: 'clamp(2rem, 10vw, 2.15rem)', paddingBottom:'0.5rem' }}
                     >
-                        Log In
+                        Log In 🐸☕
                     </Typography>
                     <Typography
-                        variant="body"
+                        variant="body1"
                     >
                         Enter your e-mail and we'll send you a passwordless sign-in link.
                     </Typography>
@@ -79,30 +88,27 @@ function LoginCard() {
                             paddingTop:'1em',
                         }}
                     >
-                        <FormControl fullWidth>
-                            <FormLabel htmlFor="email">Email</FormLabel>
-                            <TextField
-                                error={emailError}
-                                helperText={emailErrorMessage}
-                                id="email"
-                                type="email"
-                                name="email"
-                                placeholder="your@email.com"
-                                autoComplete="email"
-                                autoFocus
-                                required
-                                fullWidth
-                                variant="outlined"
-                                color={emailError ? 'error' : 'primary'}
-                                value={email}
-                                onChange={(event)=>{setEmail(event.target.value)}}
+                        <TextField
+                            label="Email"
+                            error={emailError}
+                            helperText={emailHelperMessage}
+                            id="email"
+                            type="email"
+                            name="email"
+                            placeholder="your@email.com"
+                            autoComplete="email"
+                            autoFocus
+                            required
+                            fullWidth
+                            variant="outlined"
+                            color={emailError ? 'error' : 'primary'}
+                            value={email}
+                            onChange={(event) => setEmail(event.target.value)}
                             />
-                        </FormControl>
                         <Button
                             type="submit"
                             fullWidth
                             variant="contained"
-                            onClick={validateInputs}
                             >
                             Send me a link!
                         </Button>
