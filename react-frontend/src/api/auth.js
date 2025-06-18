@@ -7,8 +7,6 @@ const frontendUrl = process.env.REACT_APP_ISLOCAL ? process.env.REACT_APP_LOCAL_
 
 const loginFromLink = async (email, url) => {
     try {
-        console.log(url);
-        console.log(email);
         const result = await signInWithEmailLink(auth, email, url);
         return result.user;
     } catch (e) {
@@ -18,7 +16,9 @@ const loginFromLink = async (email, url) => {
 }
 
 const completeSignup = async (username, firebase_uid) => {
-    await client.post('/users/', { username, firebase_uid })
+    await client.post('/users/',
+        { username, firebase_uid },
+    )
 }
 
 const handleLogin = async (email) => {
@@ -47,10 +47,35 @@ const handleSignup = async (email, username) => {
         return false;
     }
 }
+
+const doesEmailExist = async (email) => {
+    try {
+        const response = await client.get('/users/emailExists', {
+            params: { email },
+        });
+        return response.data;
+    } catch (e) {
+        return false;
+    }
+};
+
+const validUsername = async (username) => {
+    try {
+        const response = await client.get('/users/usernameExists', {
+            params: { username },
+        });
+        return !response.data; // username is valid if it doesn't exist
+    } catch (e) {
+        return true; // fallback to allow username if error occurs
+    }
+};
+
 const authAPI = {
     handleLogin,
     handleSignup,
     loginFromLink,
-    completeSignup
+    completeSignup,
+    doesEmailExist,
+    validUsername,
 }
 export default authAPI;

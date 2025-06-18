@@ -2,6 +2,7 @@ import { CustomModel } from '../../orm/custom';
 import { IUser, CreateUserDTO } from '../interfaces/user.interface';
 import { IUserServiceAPI } from '../interfaces/user.service.interface'; 
 
+import admin from '../firebase/firebase-admin'
 const userModel = new CustomModel('User');
 
 const userService: IUserServiceAPI = {
@@ -15,6 +16,26 @@ const userService: IUserServiceAPI = {
 
   async createUser(user: CreateUserDTO): Promise<IUser | null> {
     return userModel.create(user);
+  },
+
+  async doesEmailExist(email: string): Promise<boolean> {
+    try {
+      if (await admin.auth().getUserByEmail(email)) {
+        return true;
+      }
+      return false;
+    } catch (e) {
+      console.error(e);
+      return false;
+    }
+  },
+
+  async doesUsernameExist(username: string): Promise<boolean> {
+    if ((await userModel.findMany({username})).length > 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 };
 

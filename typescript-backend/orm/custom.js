@@ -10,18 +10,80 @@ const pool = new Pool({
 });
 
 class CustomModel {
-  tableSchema = null;
+  #tableSchema = null;
   constructor(tableName) {
     this.tableName = tableName;    
   }
 
-  async findMany() {
+  // get a tableSchema object with keys representing column name and the values representing the columns type
+  async #getTableSchema() {
     const client = await pool.connect();
 
+    if (!this.#tableSchema) {
+      this.#tableSchema = {};
+      const tableDataQuery = `
+        SELECT column_name, data_type
+        FROM information_schema.columns
+        WHERE table_name = '${this.tableName}';`
+      const tableData = (await client.query(tableDataQuery)).rows;
+
+      tableData.forEach(tableDataTuple => { // {column__name:"uid", data_type:"char varying"}
+          this.#tableSchema[tableDataTuple.column_name] = tableDataTuple.data_type;
+      });
+      return this.#tableSchema;
+    } else {
+      return this.#tableSchema;
+    }
+  }
+
+  // if you have an object of properties and their values, this will format the properties for SQL queries (adding quotes for the correct types)
+  async #quoteProperties(object) {
+    const tableSchema = await this.#getTableSchema();
+    const keyNames = Object.keys(object);
+    const quotedTypes = new Set([
+      'character varying',
+      'character',
+      'text',
+      'date',
+      'timestamp',
+      'timestamp without time zone',
+      'timestamp with time zone',
+      'time',
+      'time without time zone',
+      'time with time zone',
+      'uuid',
+      'interval',
+      'json',
+    ]);
+
+    const quotedProperties = {}
+    keyNames.map(key => {
+      if (quotedTypes.has(tableSchema[key])) { // if the key's type is in quoted types, surround w/ quotes
+        quotedProperties[key] = `'${object[key]}'`;
+      } else {
+        quotedProperties[key] = object[key];
+      }
+    })
+    return quotedProperties;
+  }
+
+  async findMany(where) {
+    const client = await pool.connect();
     try {
-      const query = `SELECT * FROM "${this.tableName}"`;
+      if (where === undefined) { // no where clause -- get all rows
+        const query = `SELECT * FROM "${this.tableName}"`;
+        const result = await client.query(query);
+        return result.rows; 
+      }
+      // where clause -- current behaviour is to AND all properties in where
+      const quotedProperties = await this.#quoteProperties(where);
+      const conditions = [];
+      for (let attribute in quotedProperties) {
+        conditions.push(`${attribute} = ${quotedProperties[attribute]}`)
+      }
+      const query = `SELECT * FROM "${this.tableName}" WHERE ${conditions.join(" AND ")};`
       const result = await client.query(query);
-      return result.rows; 
+      return result.rows;
     } finally {
       client.release();
     }
@@ -38,53 +100,14 @@ class CustomModel {
       client.release();
     }
   }
+
   // inserts a single row into the database. returns object created.
   async create(tupleObject) {
     const client = await pool.connect();
     try {
-      // fetch and store (for reuse later) the table's attributes + their types
-      // https://stackoverflow.com/questions/20194806/how-to-get-a-list-column-names-and-datatypes-of-a-table-in-postgresql#32369441
-      if (!this.tableSchema) {
-        this.tableSchema = {};
-        const tableDataQuery = `
-          SELECT column_name, data_type
-          FROM information_schema.columns
-          WHERE table_name = '${this.tableName}';`
-        const tableData = (await client.query(tableDataQuery)).rows;
-        console.log(tableData);
-
-        tableData.forEach(tableDataTuple => { // {column__name:"uid", data_type:"char varying"}
-            this.tableSchema[tableDataTuple.column_name] = tableDataTuple.data_type;
-        });
-        console.log(this.tableSchema);
-      }
-      
       const keyNames = Object.keys(tupleObject);
-      const quotedTypes = new Set([
-        'character varying',
-        'character',
-        'text',
-        'date',
-        'timestamp',
-        'timestamp without time zone',
-        'timestamp with time zone',
-        'time',
-        'time without time zone',
-        'time with time zone',
-        'uuid',
-        'interval',
-        'json',
-      ]);
-
-      // surround with quotes if required
-      const formattedValues = keyNames.map(key => {
-        console.log(`key = ${key}, type = ${this.tableSchema[key]}`)
-        if (quotedTypes.has(this.tableSchema[key])) { // if the key's type is in quoted types, surrounded
-          return `'${tupleObject[key]}'`;
-        }
-        return tupleObject[key];
-      })
-      const query = `INSERT INTO "${this.tableName}" (${keyNames.join(', ')}) VALUES (${formattedValues.join(', ')}) RETURNING *`
+      const quotedProperties = await this.#quoteProperties(tupleObject);
+      const query = `INSERT INTO "${this.tableName}" (${keyNames.join(', ')}) VALUES (${Object.values(quotedProperties).join(', ')}) RETURNING *`
       const result = await client.query(query);
       return result.rows[0];
     } catch (e) {

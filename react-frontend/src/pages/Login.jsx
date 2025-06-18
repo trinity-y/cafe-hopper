@@ -14,7 +14,6 @@ import theme from '../components/theme';
 
 const statuses = {
     LOADING:"loading",
-    SIGNINGUP:"signingup",
     LOGIN:"login",
     ERROR:"error",
 }

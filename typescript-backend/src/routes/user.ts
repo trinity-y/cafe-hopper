@@ -12,6 +12,28 @@ router.get('/', async (req: Request, res: Response) => {
   }
 });
 
+router.get('/emailExists', async (req: Request, res: Response) => {
+  const email = req.query.email as string;
+  try {
+    const doesEmailExist = await userService.doesEmailExist(email);
+    res.status(200).json(doesEmailExist);
+  } catch (error) {
+    console.error(`Could not check if email is already associated with a user for email ${email}:`, error);
+    res.status(500).json({ message: `Could not check if email is already associated with a user.` });
+  }
+});
+
+router.get('/usernameExists', async (req: Request, res: Response) => {
+  const username = req.query.username as string;
+  try {
+    const doesUsernameExist = await userService.doesUsernameExist(username);
+    res.status(200).json(doesUsernameExist);
+  } catch (error) {
+    console.error(`Could not check if the username "${username}" already exists:`, error);
+    res.status(500).json({ message: `Could not check if the username already exists.` });
+  }
+});
+
 router.get('/:uid', async (req: Request, res: Response) => {
   const { uid } = req.params;
   try {
