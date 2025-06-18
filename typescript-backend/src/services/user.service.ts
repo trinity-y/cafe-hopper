@@ -10,8 +10,8 @@ const userService: IUserServiceAPI = {
     return userModel.findMany();
   },
 
-  async getUserById(uid: number): Promise<IUser | null> {
-    return userModel.findUnique(uid);
+  async getUserById(id: number): Promise<IUser | null> {
+    return userModel.findUnique(id);
   },
 
   async createUser(user: CreateUserDTO): Promise<IUser | null> {

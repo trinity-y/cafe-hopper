@@ -57,7 +57,7 @@ function SignupCard() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (!validateInputs()) return;
+        if (!(await validateInputs())) return;
         const emailSent = await authAPI.handleSignup(email, username);
         if (!emailSent) {
             setEmailMessage('We could not send an email to this email address. Try again later.')

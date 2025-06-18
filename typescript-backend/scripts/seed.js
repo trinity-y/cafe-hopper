@@ -15,7 +15,7 @@ async function seedDatabase() {
     try {
         await client.query(`
             CREATE TABLE IF NOT EXISTS "User" (
-              uid SERIAL PRIMARY KEY,
+              id SERIAL PRIMARY KEY,
               "username" VARCHAR(100) NOT NULL UNIQUE,
               "firebase_uid" VARCHAR(100) NOT NULL UNIQUE
             );
