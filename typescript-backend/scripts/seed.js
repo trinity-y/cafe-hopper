@@ -54,7 +54,7 @@ async function seedDatabase() {
 
         for (const cafe of cafes) {
             await client.query(
-                'INSERT INTO "Cafe" (name, address, "openingDays", "googleRating") VALUES ($1, $2)',
+                'INSERT INTO "Cafe" (name, address, "openingDays", "googleRating") VALUES ($1, $2, $3, $4)',
                 [cafe.name, cafe.address, cafe.openingDays, cafe.googleRating]
             );
         }
