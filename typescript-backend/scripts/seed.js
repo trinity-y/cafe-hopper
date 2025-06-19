@@ -25,6 +25,17 @@ async function seedDatabase() {
               name VARCHAR(200) NOT NULL,
               rating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5)
             );
+            CREATE TABLE IF NOT EXISTS "Reviews" (
+              id SERIAL PRIMARY KEY,
+              rating DECIMAL(2,1) NOT NULL CHECK (rating >= 0 AND rating <= 5),
+              drinkRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
+              foodRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
+              atmosphereRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
+              notes VARCHAR(200),
+              cID NOT NULL INT REFERENCES Cafe(id),
+              uID NOT NULL INT REFERENCES User(id),
+              UNIQUE(cID, uID)
+            );
         `);
         
         await client.query('TRUNCATE "User", "Cafe" RESTART IDENTITY CASCADE');
