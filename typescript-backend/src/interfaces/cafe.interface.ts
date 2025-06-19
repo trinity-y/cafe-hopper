@@ -1,5 +1,7 @@
 export interface ICafe {
   id: number;
   name: string;
-  rating: number;
+  address: string;
+  openingDays: string;
+  googleRating: number;
 }

@@ -11,7 +11,7 @@ const pool = new Pool({
 
 async function seedDatabase() {
     const client = await pool.connect();
-    
+
     try {
         await client.query(`
             CREATE TABLE IF NOT EXISTS "User" (
@@ -21,39 +21,41 @@ async function seedDatabase() {
             );
             
             CREATE TABLE IF NOT EXISTS "Cafe" (
-              id SERIAL PRIMARY KEY,
-              name VARCHAR(200) NOT NULL,
-              rating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5)
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(200) NOT NULL,
+                address TEXT NOT NULL,
+                openingDays VARCHAR(100) NOT NULL,
+                googleRating DECIMAL(2,1) CHECK (googleRating >= 0 AND googleRating <= 5)
             );
         `);
-        
+
         await client.query('TRUNCATE "User", "Cafe" RESTART IDENTITY CASCADE');
-        
+
         const users = [ // warning the firebase uids are all FAKE!!
-            { username: 'Trinity', firebase_uid: 'aB3xYz9KlmNOqP456rstUVWX7yza'},
-            { username: 'Safiya', firebase_uid: 'JkL8MnOpQrSTuvW0xyZa1Bc2DeFg'},
-            { username: 'Celina', firebase_uid: 'hI3jK4LmN5oPqrStUvWxYzAbCdEf'},
-            { username: 'Nadeen', firebase_uid: 'mNoPQr5TuVWX6yzA7bCdEfGhIjKl'},
-            { username: 'Rohan', firebase_uid: 'ZxCvBnM8aS9dFgHiJkL0QwErTyUp'},
+            { username: 'Trinity', firebase_uid: 'aB3xYz9KlmNOqP456rstUVWX7yza' },
+            { username: 'Safiya', firebase_uid: 'JkL8MnOpQrSTuvW0xyZa1Bc2DeFg' },
+            { username: 'Celina', firebase_uid: 'hI3jK4LmN5oPqrStUvWxYzAbCdEf' },
+            { username: 'Nadeen', firebase_uid: 'mNoPQr5TuVWX6yzA7bCdEfGhIjKl' },
+            { username: 'Rohan', firebase_uid: 'ZxCvBnM8aS9dFgHiJkL0QwErTyUp' },
         ];
-        
+
         for (const user of users) {
             await client.query(
                 'INSERT INTO "User" ("username", "firebase_uid") VALUES ($1, $2)',
                 [user.username, user.firebase_uid]
             );
         }
-        
+
         const cafes = [
-            { name: 'Midnight Run Cafe', rating: 4.5 },
-            { name: 'Princess Cafe', rating: 4.6 },
-            { name: 'Rommana', rating: 5.0 },
+            { name: 'Midnight Run Cafe', googleRating: 4.5 },
+            { name: 'Princess Cafe', googleRating: 4.6 },
+            { name: 'Rommana', googleRating: 5.0 },
         ];
-        
+
         for (const cafe of cafes) {
             await client.query(
-                'INSERT INTO "Cafe" (name, rating) VALUES ($1, $2)',
-                [cafe.name, cafe.rating]
+                'INSERT INTO "Cafe" (name, googleRating) VALUES ($1, $2)',
+                [cafe.name, cafe.googleRating]
             );
         }
 
