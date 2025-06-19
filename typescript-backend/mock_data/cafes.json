@@ -1,0 +1,903 @@
+[
+	{
+	  "name": "Tranquil Java",
+	  "address": "777 RIM Park Dr, Waterloo, ON I8P 6Z4",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.0
+	},
+	{
+	  "name": "Golden Station",
+	  "address": "143 Fairway Rd, Kitchener, ON Y1T 4R9",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.0
+	},
+	{
+	  "name": "Roasted Brew",
+	  "address": "921 Avalon Dr, Toronto, ON R1L 6K9",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Quiet House",
+	  "address": "454 Bridgeport Rd, Waterloo, ON Z8A 1X6",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.7
+	},
+	{
+	  "name": "Harbor Nest",
+	  "address": "2 Laurier Ave, Cambridge, ON H5W 1G9",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Morning Vault",
+	  "address": "557 Ottawa St, Waterloo, ON C5Q 7D4",
+	  "openingDays": "sun-thu",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Brewed Stop",
+	  "address": "341 Main St, Cambridge, ON O1T 6K9",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Golden Gallery",
+	  "address": "192 King St, Cambridge, ON P1C 2E0",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.8
+	},
+	{
+	  "name": "Friendly Stop",
+	  "address": "700 Homer Watson Blvd, Cambridge, ON Q3G 9N9",
+	  "openingDays": "daily",
+	  "googleRating": 4.2
+	},
+	{
+	  "name": "Harbor Nest",
+	  "address": "718 Forest Glen Rd, Waterloo, ON K9D 7S5",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Roasted Blend",
+	  "address": "120 Fountain St, Cambridge, ON Z2K 6B1",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.8
+	},
+	{
+	  "name": "Hidden Cup",
+	  "address": "837 Queen St, Waterloo, ON D3T 9D6",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.1
+	},
+	{
+	  "name": "Brewed Cup",
+	  "address": "621 King St N, Kitchener, ON F1P 3X0",
+	  "openingDays": "tue-sun",
+	  "googleRating": 3.5
+	},
+	{
+	  "name": "Green Lounge",
+	  "address": "104 Bridgeport Rd, Waterloo, ON H1U 4L6",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.6
+	},
+	{
+	  "name": "Silver Cup",
+	  "address": "611 Victoria St, Toronto, ON G4L 7S2",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.5
+	},
+	{
+	  "name": "Steaming Cup",
+	  "address": "808 University Ave, Kitchener, ON K8I 1T7",
+	  "openingDays": "tue-sun",
+	  "googleRating": 3.8
+	},
+	{
+	  "name": "Copper Hideaway",
+	  "address": "420 Fairway Rd, Cambridge, ON M4E 8W0",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Garden Alley",
+	  "address": "47 Bridgeport Rd, Kitchener, ON H7L 9J5",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Trail Cove",
+	  "address": "636 Erb St, Cambridge, ON M6U 1A9",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.5
+	},
+	{
+	  "name": "Midnight Grounds",
+	  "address": "229 Ottawa St, Toronto, ON W9N 0M9",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.7
+	},
+	{
+	  "name": "Corner Cup",
+	  "address": "170 Ottawa St, Waterloo, ON I2O 8P8",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Urban House",
+	  "address": "334 Fairway Rd, Toronto, ON B6G 8U1",
+	  "openingDays": "tue-sun",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Cozy Java",
+	  "address": "973 RIM Park Dr, Cambridge, ON A3A 0V8",
+	  "openingDays": "sun-thu",
+	  "googleRating": 3.6
+	},
+	{
+	  "name": "Brewed Lounge",
+	  "address": "665 Main St, Cambridge, ON I2D 7M1",
+	  "openingDays": "mon-fri",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Silver Vault",
+	  "address": "812 Victoria St, Cambridge, ON E8U 5D2",
+	  "openingDays": "daily",
+	  "googleRating": 4.8
+	},
+	{
+	  "name": "Urban Cup",
+	  "address": "211 Bridgeport Rd, Cambridge, ON L9B 9U7",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.5
+	},
+	{
+	  "name": "Silver Nest",
+	  "address": "446 Forest Glen Rd, Kitchener, ON G6S 4A2",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Garden Vault",
+	  "address": "377 Queen St, Cambridge, ON Y9B 0I2",
+	  "openingDays": "sat-sun",
+	  "googleRating": 5.0
+	},
+	{
+	  "name": "Maple Espresso",
+	  "address": "405 Erb St, Cambridge, ON D7X 3B4",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.8
+	},
+	{
+	  "name": "Roasted Brew",
+	  "address": "310 Homer Watson Blvd, Cambridge, ON J6D 1R7",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.0
+	},
+	{
+	  "name": "Charming Vault",
+	  "address": "352 Victoria St, Toronto, ON D7N 0J5",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.5
+	},
+	{
+	  "name": "Morning Perk",
+	  "address": "642 Homer Watson Blvd, Waterloo, ON C1G 3B6",
+	  "openingDays": "mon-fri",
+	  "googleRating": 3.6
+	},
+	{
+	  "name": "Quiet Station",
+	  "address": "297 Ottawa St, Toronto, ON Z9W 3N1",
+	  "openingDays": "daily",
+	  "googleRating": 3.8
+	},
+	{
+	  "name": "Daily Workshop",
+	  "address": "796 University Ave, Toronto, ON G5D 1W0",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.2
+	},
+	{
+	  "name": "Harbor Drip",
+	  "address": "122 Laurier Ave, Toronto, ON I3U 0Z3",
+	  "openingDays": "sun-thu",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Golden Parlor",
+	  "address": "388 Forest Glen Rd, Kitchener, ON D9P 2S6",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.5
+	},
+	{
+	  "name": "Velvet House",
+	  "address": "696 Avalon Dr, Toronto, ON P3R 9H0",
+	  "openingDays": "daily",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Roasted Latte",
+	  "address": "838 Avalon Dr, Waterloo, ON Q2I 9Z2",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.4
+	},
+	{
+	  "name": "Corner Spot",
+	  "address": "827 Laurier Ave, Waterloo, ON Z1Q 0C3",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.6
+	},
+	{
+	  "name": "Cozy Hub",
+	  "address": "865 Ottawa St, Cambridge, ON F2U 7L8",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Velvet Cup",
+	  "address": "588 Queen St, Waterloo, ON X6Y 3J8",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.1
+	},
+	{
+	  "name": "Copper Cove",
+	  "address": "811 Homer Watson Blvd, Kitchener, ON Z0V 0X2",
+	  "openingDays": "daily",
+	  "googleRating": 4.3
+	},
+	{
+	  "name": "Daily Latte",
+	  "address": "68 Laurier Ave, Cambridge, ON J6M 6B2",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Hidden Mug",
+	  "address": "747 Avalon Dr, Waterloo, ON B7N 2P9",
+	  "openingDays": "tue-sun",
+	  "googleRating": 3.6
+	},
+	{
+	  "name": "Corner Grind",
+	  "address": "830 Forest Glen Rd, Toronto, ON B9O 6O0",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.2
+	},
+	{
+	  "name": "Morning Bean",
+	  "address": "34 Erb St, Cambridge, ON D8U 5G6",
+	  "openingDays": "mon-sat",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Urban Lounge",
+	  "address": "718 Ottawa St, Cambridge, ON U1V 9J2",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.7
+	},
+	{
+	  "name": "Roasted Cove",
+	  "address": "981 Victoria St, Kitchener, ON B6O 5Y3",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.0
+	},
+	{
+	  "name": "Trail Brew",
+	  "address": "980 King St, Waterloo, ON P4A 8V9",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.8
+	},
+	{
+	  "name": "Hidden Brew",
+	  "address": "795 RIM Park Dr, Cambridge, ON D2N 9N1",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.1
+	},
+	{
+	  "name": "Brewed Cafe",
+	  "address": "793 Erb St, Waterloo, ON Z7N 6A7",
+	  "openingDays": "daily",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Rustic Espresso",
+	  "address": "73 Victoria St, Cambridge, ON W0L 5F0",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.7
+	},
+	{
+	  "name": "Rustic Lounge",
+	  "address": "915 Erb St, Kitchener, ON A3V 1X0",
+	  "openingDays": "daily",
+	  "googleRating": 4.1
+	},
+	{
+	  "name": "Cozy Lounge",
+	  "address": "239 Erb St, Kitchener, ON O1P 5W4",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.5
+	},
+	{
+	  "name": "Golden Espresso",
+	  "address": "344 Laurier Ave, Cambridge, ON J8U 5F9",
+	  "openingDays": "mon-fri",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Sunny Mug",
+	  "address": "161 Homer Watson Blvd, Kitchener, ON E3K 8H3",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Green Hideaway",
+	  "address": "48 Erb St, Waterloo, ON M1W 1E6",
+	  "openingDays": "daily",
+	  "googleRating": 4.3
+	},
+	{
+	  "name": "Roasted Grind",
+	  "address": "606 RIM Park Dr, Cambridge, ON U5C 3O5",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Urban Java",
+	  "address": "419 King St N, Toronto, ON X5O 3L4",
+	  "openingDays": "mon-sat",
+	  "googleRating": 3.6
+	},
+	{
+	  "name": "Midnight Vault",
+	  "address": "112 Bridgeport Rd, Waterloo, ON R9W 2Z7",
+	  "openingDays": "mon-sat",
+	  "googleRating": 3.8
+	},
+	{
+	  "name": "Green Cafe",
+	  "address": "179 Fountain St, Toronto, ON K8E 5O1",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Maple Bean",
+	  "address": "851 Ottawa St, Toronto, ON A3J 1Y4",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.4
+	},
+	{
+	  "name": "Green Spot",
+	  "address": "770 Laurier Ave, Waterloo, ON V7Y 3R6",
+	  "openingDays": "daily",
+	  "googleRating": 4.4
+	},
+	{
+	  "name": "Cozy Roast",
+	  "address": "277 King St, Waterloo, ON I6Q 9W6",
+	  "openingDays": "mon-sat",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Daily Espresso",
+	  "address": "291 Main St, Waterloo, ON B1Z 4J8",
+	  "openingDays": "daily",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Tranquil Grounds",
+	  "address": "913 University Ave, Waterloo, ON N4J 8E9",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.4
+	},
+	{
+	  "name": "Quiet Roast",
+	  "address": "421 Homer Watson Blvd, Cambridge, ON J7L 9U2",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Brewed Java",
+	  "address": "411 Ottawa St, Kitchener, ON R4L 7X6",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.2
+	},
+	{
+	  "name": "Corner Station",
+	  "address": "326 Laurier Ave, Waterloo, ON O4E 7B9",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.5
+	},
+	{
+	  "name": "Copper Java",
+	  "address": "910 King St N, Waterloo, ON V1V 6A5",
+	  "openingDays": "mon-fri",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Cozy Blend",
+	  "address": "895 Fairway Rd, Kitchener, ON E9J 3D6",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Red Perk",
+	  "address": "339 RIM Park Dr, Toronto, ON E7W 2Q5",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.8
+	},
+	{
+	  "name": "Midnight Parlor",
+	  "address": "358 Homer Watson Blvd, Toronto, ON Z7M 3Z3",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Sunny Spot",
+	  "address": "51 Homer Watson Blvd, Waterloo, ON H1F 5B2",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.4
+	},
+	{
+	  "name": "Star Brew",
+	  "address": "722 Fairway Rd, Cambridge, ON N7B 8V8",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Sunny Parlor",
+	  "address": "502 Bridgeport Rd, Toronto, ON G5I 0B0",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.0
+	},
+	{
+	  "name": "Maple Nest",
+	  "address": "8 Erb St, Waterloo, ON Z6V 3T6",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Silver Drip",
+	  "address": "348 Victoria St, Waterloo, ON Z5K 8O5",
+	  "openingDays": "daily",
+	  "googleRating": 3.5
+	},
+	{
+	  "name": "Urban Drip",
+	  "address": "378 Queen St, Kitchener, ON Q5G 3I4",
+	  "openingDays": "daily",
+	  "googleRating": 4.3
+	},
+	{
+	  "name": "Red Blend",
+	  "address": "494 Forest Glen Rd, Kitchener, ON B4R 1A7",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Urban Vault",
+	  "address": "423 Laurier Ave, Toronto, ON O1C 1H1",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.1
+	},
+	{
+	  "name": "Golden Parlor",
+	  "address": "628 Queen St, Toronto, ON R6B 2H7",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Tranquil Blend",
+	  "address": "957 Forest Glen Rd, Cambridge, ON N1R 4T8",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Steaming Parlor",
+	  "address": "527 Ottawa St, Cambridge, ON I3A 1T1",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Hidden Drip",
+	  "address": "292 King St N, Toronto, ON B1M 4D9",
+	  "openingDays": "daily",
+	  "googleRating": 3.8
+	},
+	{
+	  "name": "Corner Spot",
+	  "address": "560 Fairway Rd, Kitchener, ON X3C 8J5",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.1
+	},
+	{
+	  "name": "Copper Mug",
+	  "address": "597 University Ave, Kitchener, ON Z0R 8K5",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.5
+	},
+	{
+	  "name": "Charming Grind",
+	  "address": "898 Homer Watson Blvd, Kitchener, ON F8C 2Y3",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.4
+	},
+	{
+	  "name": "Corner Drip",
+	  "address": "241 Erb St, Kitchener, ON Y6L 9S2",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.2
+	},
+	{
+	  "name": "Brewed Lounge",
+	  "address": "854 King St N, Cambridge, ON P7J 0H8",
+	  "openingDays": "tue-sun",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Copper Vault",
+	  "address": "977 Laurier Ave, Cambridge, ON W1I 2T6",
+	  "openingDays": "tue-sun",
+	  "googleRating": 3.8
+	},
+	{
+	  "name": "Garden Vault",
+	  "address": "299 Homer Watson Blvd, Waterloo, ON G0K 3K7",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Harbor Grounds",
+	  "address": "267 Forest Glen Rd, Kitchener, ON J0L 9R0",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.4
+	},
+	{
+	  "name": "Blue Bean",
+	  "address": "503 King St, Waterloo, ON H0A 3U5",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.7
+	},
+	{
+	  "name": "Blue Hideaway",
+	  "address": "433 Erb St, Kitchener, ON O6E 5J2",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.0
+	},
+	{
+	  "name": "Charming Alley",
+	  "address": "419 Homer Watson Blvd, Waterloo, ON N4R 8Z7",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.3
+	},
+	{
+	  "name": "Brewed Cafe",
+	  "address": "977 Homer Watson Blvd, Kitchener, ON A8E 9V8",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.5
+	},
+	{
+	  "name": "Rustic Latte",
+	  "address": "244 University Ave, Kitchener, ON A2X 8F1",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Star Roast",
+	  "address": "636 Ottawa St, Kitchener, ON T9B 4K6",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.4
+	},
+	{
+	  "name": "Urban House",
+	  "address": "92 Forest Glen Rd, Cambridge, ON V2O 3Q5",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Red Latte",
+	  "address": "277 Laurier Ave, Toronto, ON A4Q 4R7",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.7
+	},
+	{
+	  "name": "Sunny Stop",
+	  "address": "269 King St, Toronto, ON M1M 5P0",
+	  "openingDays": "mon-fri",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Urban Blend",
+	  "address": "698 Fairway Rd, Kitchener, ON Y8Q 5M4",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Garden Vault",
+	  "address": "992 Fountain St, Cambridge, ON F2K 0S0",
+	  "openingDays": "sun-thu",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Blue Espresso",
+	  "address": "299 Fairway Rd, Cambridge, ON P6T 6F0",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.4
+	},
+	{
+	  "name": "Silver Grind",
+	  "address": "350 King St N, Toronto, ON V4X 9G1",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Daily Gallery",
+	  "address": "179 University Ave, Waterloo, ON V2S 1Q8",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.1
+	},
+	{
+	  "name": "Green Blend",
+	  "address": "319 Fairway Rd, Waterloo, ON N4I 8Q8",
+	  "openingDays": "daily",
+	  "googleRating": 5.0
+	},
+	{
+	  "name": "Golden Spot",
+	  "address": "802 RIM Park Dr, Kitchener, ON A8E 9M5",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Quiet Cafe",
+	  "address": "652 Fountain St, Waterloo, ON L8F 3U5",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Cozy Alley",
+	  "address": "753 Fountain St, Kitchener, ON I2Y 6C9",
+	  "openingDays": "mon-sat",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Corner Parlor",
+	  "address": "885 Victoria St, Kitchener, ON F7C 6U6",
+	  "openingDays": "daily",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Steaming Hub",
+	  "address": "365 Avalon Dr, Waterloo, ON J0P 0Y4",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Red Cafe",
+	  "address": "795 Homer Watson Blvd, Waterloo, ON S7L 9E9",
+	  "openingDays": "tue-sun",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Friendly Bean",
+	  "address": "408 Laurier Ave, Kitchener, ON B1S 5L0",
+	  "openingDays": "mon-fri",
+	  "googleRating": 3.8
+	},
+	{
+	  "name": "Brewed Hideaway",
+	  "address": "554 Laurier Ave, Waterloo, ON K0K 6E4",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.5
+	},
+	{
+	  "name": "Star Grind",
+	  "address": "414 Fairway Rd, Waterloo, ON F2E 7W0",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.7
+	},
+	{
+	  "name": "Urban Gallery",
+	  "address": "569 Homer Watson Blvd, Kitchener, ON L9C 1R2",
+	  "openingDays": "daily",
+	  "googleRating": 3.8
+	},
+	{
+	  "name": "Daily Latte",
+	  "address": "718 Bridgeport Rd, Cambridge, ON Q7E 7R2",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.4
+	},
+	{
+	  "name": "Midnight Nest",
+	  "address": "525 King St, Cambridge, ON C3U 7T3",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.3
+	},
+	{
+	  "name": "Corner Latte",
+	  "address": "935 Erb St, Toronto, ON Y8B 8C8",
+	  "openingDays": "daily",
+	  "googleRating": 3.5
+	},
+	{
+	  "name": "Steaming Brew",
+	  "address": "107 RIM Park Dr, Cambridge, ON S7K 6Q5",
+	  "openingDays": "tue-sun",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Garden Bean",
+	  "address": "187 Erb St, Waterloo, ON K9G 0N0",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.0
+	},
+	{
+	  "name": "Red Cup",
+	  "address": "615 University Ave, Cambridge, ON C6B 7L9",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Harbor Mug",
+	  "address": "577 Ottawa St, Toronto, ON F0O 4G6",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.0
+	},
+	{
+	  "name": "Brewed Bean",
+	  "address": "360 King St N, Kitchener, ON M9W 0K7",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Corner House",
+	  "address": "488 Queen St, Waterloo, ON R6Z 4A8",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.8
+	},
+	{
+	  "name": "Rustic Latte",
+	  "address": "368 Victoria St, Toronto, ON B2Q 4B0",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.0
+	},
+	{
+	  "name": "Quiet Spot",
+	  "address": "151 University Ave, Kitchener, ON Y2U 3T5",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.2
+	},
+	{
+	  "name": "Trail Hideaway",
+	  "address": "408 King St, Kitchener, ON H4K 2H5",
+	  "openingDays": "sat-sun",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Green Parlor",
+	  "address": "373 Erb St, Toronto, ON S0F 9A6",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.7
+	},
+	{
+	  "name": "Morning Bean",
+	  "address": "26 Avalon Dr, Waterloo, ON B0Y 1S9",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.7
+	},
+	{
+	  "name": "Harbor Vault",
+	  "address": "389 King St N, Toronto, ON N9V 5W3",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.0
+	},
+	{
+	  "name": "Golden Stop",
+	  "address": "410 Queen St, Kitchener, ON N9V 5D6",
+	  "openingDays": "mon-sat",
+	  "googleRating": 3.9
+	},
+	{
+	  "name": "Red Grounds",
+	  "address": "939 Homer Watson Blvd, Kitchener, ON U7M 9C4",
+	  "openingDays": "daily",
+	  "googleRating": 4.8
+	},
+	{
+	  "name": "Blue Stop",
+	  "address": "23 Laurier Ave, Kitchener, ON I0T 5Z6",
+	  "openingDays": "tue-sun",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Tranquil Cup",
+	  "address": "148 Homer Watson Blvd, Waterloo, ON Y6X 6N1",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.2
+	},
+	{
+	  "name": "Silver Perk",
+	  "address": "174 Avalon Dr, Toronto, ON N2S 4Y8",
+	  "openingDays": "mon-fri",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Blue Grind",
+	  "address": "644 Forest Glen Rd, Toronto, ON U8Y 0G4",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Garden Mug",
+	  "address": "390 King St, Cambridge, ON R6B 6I6",
+	  "openingDays": "tue-sun",
+	  "googleRating": 3.8
+	},
+	{
+	  "name": "Morning Grind",
+	  "address": "113 Forest Glen Rd, Kitchener, ON A6S 6O1",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Harbor Brew",
+	  "address": "797 RIM Park Dr, Kitchener, ON F2G 2H0",
+	  "openingDays": "sun-thu",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Copper Espresso",
+	  "address": "922 Fairway Rd, Cambridge, ON V1Z 6Y4",
+	  "openingDays": "sat-sun",
+	  "googleRating": 4.0
+	},
+	{
+	  "name": "Velvet Latte",
+	  "address": "546 Erb St, Toronto, ON X8J 3M5",
+	  "openingDays": "mon-sat",
+	  "googleRating": 4.9
+	},
+	{
+	  "name": "Velvet Mug",
+	  "address": "988 RIM Park Dr, Toronto, ON D2E 0S9",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.6
+	},
+	{
+	  "name": "Velvet Roast",
+	  "address": "714 Main St, Waterloo, ON I9F 6C0",
+	  "openingDays": "mon-fri",
+	  "googleRating": 3.7
+	},
+	{
+	  "name": "Blue Gallery",
+	  "address": "740 Laurier Ave, Cambridge, ON D7L 9W4",
+	  "openingDays": "tue-sun",
+	  "googleRating": 4.2
+	},
+	{
+	  "name": "Steaming Grounds",
+	  "address": "945 University Ave, Waterloo, ON Y8F 0U2",
+	  "openingDays": "sun-thu",
+	  "googleRating": 4.1
+	},
+	{
+	  "name": "Harbor Drip",
+	  "address": "449 Homer Watson Blvd, Cambridge, ON A9E 6F7",
+	  "openingDays": "sun-thu",
+	  "googleRating": 3.6
+	},
+	{
+	  "name": "Red Vault",
+	  "address": "89 Homer Watson Blvd, Cambridge, ON H8O 0P9",
+	  "openingDays": "mon-fri",
+	  "googleRating": 3.9
+	}
+  ]
+  
