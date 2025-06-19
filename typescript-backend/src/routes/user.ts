@@ -12,6 +12,28 @@ router.get('/', async (req: Request, res: Response) => {
   }
 });
 
+router.get('/emailExists', async (req: Request, res: Response) => {
+  const email = req.query.email as string;
+  try {
+    const doesEmailExist = await userService.doesEmailExist(email);
+    res.status(200).json(doesEmailExist);
+  } catch (error) {
+    console.error(`Could not check if email is already associated with a user for email ${email}:`, error);
+    res.status(500).json({ message: `Could not check if email is already associated with a user.` });
+  }
+});
+
+router.get('/usernameExists', async (req: Request, res: Response) => {
+  const username = req.query.username as string;
+  try {
+    const doesUsernameExist = await userService.doesUsernameExist(username);
+    res.status(200).json(doesUsernameExist);
+  } catch (error) {
+    console.error(`Could not check if the username "${username}" already exists:`, error);
+    res.status(500).json({ message: `Could not check if the username already exists.` });
+  }
+});
+
 router.get('/:id', async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
@@ -26,5 +48,20 @@ router.get('/:id', async (req: Request, res: Response) => {
     res.status(500).json({ message: 'Error fetching user' });
   }
 });
+
+router.post('/', async (req: Request, res: Response) => {
+  const { username, firebase_uid } = req.body;
+  try {
+    const newUser = await userService.createUser({ username, firebase_uid });
+      if (newUser) {
+        res.status(200).json(newUser);
+      } else {
+        res.status(500).json({ message: `Could not create user with username ${username}. New user not returned.` });
+      }
+  } catch (error) {
+    console.error(`Error creating user with username ${username}:`, error)
+    res.status(500).json({ message: `Error creating user with username ${username}. ` });
+  }
+})
 
 export default router;

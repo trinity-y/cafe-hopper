@@ -17,29 +17,52 @@ import theme from '../theme';
 function SignupCard() {
     const [email, setEmail] = React.useState("");
     const [emailError, setEmailError] = React.useState(false);
-    const [emailErrorMessage, setEmailErrorMessage] = React.useState("");
+    const [emailMessage, setEmailMessage] = React.useState("");
 
     const [username, setUsername] = React.useState("");
-    const [usernameError, setUsernameError] = React.useState(false);
-    const [usernameErrorMessage, setUsernameMessage] = React.useState("");
+    // eslint-disable-next-line no-unused-vars
+    const [usernameError, setUsernameError] = React.useState(false); // ! eventually return an error if the username already exists
+    // eslint-disable-next-line no-unused-vars
+    const [usernameMessage, setUsernameMessage] = React.useState("");
 
-    const validateInputs = () => {
-        if (!email || !/\S+@\S+\.\S+/.test(email.value)) {
+    const validateInputs = async () => {
+        let valid = true;
+        if (!email || !/\S+@\S+\.\S+/.test(email)) {
             setEmailError(true);
-            setEmailErrorMessage('Please enter a valid email address.');
-            return true;
+            setEmailMessage('Please enter a valid email address.');
+            valid = false;
+        } else if (await authAPI.doesEmailExist(email)) {
+            setEmailError(true);
+            setEmailMessage('Looks like you already have an account! Please log in instead.');
+            valid = false;
         } else {
             setEmailError(false);
-            setEmailErrorMessage('');
-            return false;
+            setEmailMessage('');
         }
+
+        if (!username) {
+            setUsernameError(true);
+            setUsernameMessage('Please enter a username.');
+            valid = false;
+        } else if (!(await authAPI.validUsername(username))) {
+            setUsernameError(true);
+            setUsernameMessage(`Username ${username} already exists! Please pick another.`);
+            valid = false;
+        } else {
+            setUsernameError(false);
+            setUsernameMessage('');
+        }
+        return valid;
     };
 
-    const handleSubmit = async () => {
-        if (emailError) return;
-        const successfulAuth = await authAPI.handleSignup(email);
-        if (!successfulAuth) {
-            setEmailErrorMessage('We could not send an email to this email address. Try again later.')
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        if (!(await validateInputs())) return;
+        const emailSent = await authAPI.handleSignup(email, username);
+        if (!emailSent) {
+            setEmailMessage('We could not send an email to this email address. Try again later.')
+        } else {
+            setEmailMessage('Sent! Check your inbox.');
         }
     }
 
@@ -62,7 +85,7 @@ function SignupCard() {
                         variant="h3"
                         sx={{ width: '100%', fontSize: 'clamp(2rem, 10vw, 2.15rem)', paddingBottom:'0.5rem' }}
                     >
-                        Welcome to Cafe Hopper!
+                        Welcome to Cafe Hopper! 🐸☕
                     </Typography>
                     <Typography
                         variant="body"
@@ -73,7 +96,6 @@ function SignupCard() {
                         component="form"
                         onSubmit={handleSubmit}
                         noValidate
-                        fullWidth
                         sx={{
                             display: 'flex',
                             justifyContent: 'center',
@@ -87,7 +109,7 @@ function SignupCard() {
                             <FormLabel htmlFor="name">Username</FormLabel>
                             <TextField
                                 error={usernameError}
-                                helperText={usernameErrorMessage}
+                                helperText={usernameMessage}
                                 id="username"
                                 type="username"
                                 name="username"
@@ -105,7 +127,7 @@ function SignupCard() {
                             <FormLabel htmlFor="email">Email</FormLabel>
                             <TextField
                                 error={emailError}
-                                helperText={emailErrorMessage}
+                                helperText={emailMessage}
                                 id="email"
                                 type="email"
                                 name="email"
@@ -124,7 +146,6 @@ function SignupCard() {
                             type="submit"
                             fullWidth
                             variant="contained"
-                            onClick={validateInputs}
                             >
                             Sign Up
                         </Button>

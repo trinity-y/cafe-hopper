@@ -7,6 +7,7 @@ import cafeRoutes from './routes/cafe';
 const app: Application = express();
 
 app.use(cors());
+app.options('*', cors());
 app.use(express.json());
 
 app.use('/users', userRoutes);
