@@ -55,11 +55,18 @@ async function seedDatabase() {
             { name: 'Princess Cafe', rating: 4.6 },
             { name: 'Rommana', rating: 5.0 },
         ];
-        
         for (const cafe of cafes) {
             await client.query(
                 'INSERT INTO "Cafe" (name, rating) VALUES ($1, $2)',
                 [cafe.name, cafe.rating]
+            );
+        }
+        const reviews = require('../mock_data/reviews.json');
+
+        for (const review of reviews) {
+            await client.query(
+                'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7)',
+                [review.rating, review.drinkRating, review.foodRating, review.atmosphereRating, review.notes, review.uID, review.cID]
             );
         }
 
