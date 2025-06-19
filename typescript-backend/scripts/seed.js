@@ -46,11 +46,7 @@ async function seedDatabase() {
             );
         }
 
-        const cafes = [
-            { name: 'Midnight Run Cafe', address: '84D King St N, Waterloo, ON N2J 2X4', openingDays: 'sat-sun', googleRating: 4.5 },
-            { name: 'Princess Cafe', address: '46 King St N, Waterloo, ON N2J 2W8', openingDays: 'sat-sun', googleRating: 4.6 },
-            { name: 'Rommana', address: '569 Lancaster St W, Kitchener, ON N2K 3M9', openingDays: 'sat-sun', googleRating: 5.0 },
-        ];
+        const cafes = require('../mock_data/cafes.json');
 
         for (const cafe of cafes) {
             await client.query(
