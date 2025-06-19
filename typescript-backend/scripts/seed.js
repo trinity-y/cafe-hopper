@@ -59,6 +59,15 @@ async function seedDatabase() {
             );
         }
 
+        const bookmarks = require('../mock_data/bookmarks.json');
+
+        for (const bookmark of bookmarks) {
+            await client.query(
+                'INSERT INTO "Bookmark" (uid, cid) VALUES ($1, $2)',
+                [bookmark.uid, bookmark.cid]
+            );
+        }
+
         console.log('Database seeded successfully with User and Cafe tables!');
     } catch (err) {
         console.error('Error seeding database:', err);
