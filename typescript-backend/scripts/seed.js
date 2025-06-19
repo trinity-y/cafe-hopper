@@ -24,8 +24,8 @@ async function seedDatabase() {
                 id SERIAL PRIMARY KEY,
                 name VARCHAR(200) NOT NULL,
                 address TEXT NOT NULL,
-                openingDays VARCHAR(100) NOT NULL,
-                googleRating DECIMAL(2,1) CHECK (googleRating >= 0 AND googleRating <= 5)
+                "openingDays" VARCHAR(100) NOT NULL,
+                "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5)
             );
         `);
 
@@ -47,15 +47,15 @@ async function seedDatabase() {
         }
 
         const cafes = [
-            { name: 'Midnight Run Cafe', googleRating: 4.5 },
-            { name: 'Princess Cafe', googleRating: 4.6 },
-            { name: 'Rommana', googleRating: 5.0 },
+            { name: 'Midnight Run Cafe', address: '84D King St N, Waterloo, ON N2J 2X4', openingDays: 'sat-sun', googleRating: 4.5 },
+            { name: 'Princess Cafe', address: '46 King St N, Waterloo, ON N2J 2W8', openingDays: 'sat-sun', googleRating: 4.6 },
+            { name: 'Rommana', address: '569 Lancaster St W, Kitchener, ON N2K 3M9', openingDays: 'sat-sun', googleRating: 5.0 },
         ];
 
         for (const cafe of cafes) {
             await client.query(
-                'INSERT INTO "Cafe" (name, googleRating) VALUES ($1, $2)',
-                [cafe.name, cafe.googleRating]
+                'INSERT INTO "Cafe" (name, address, "openingDays", "googleRating") VALUES ($1, $2)',
+                [cafe.name, cafe.address, cafe.openingDays, cafe.googleRating]
             );
         }
 
