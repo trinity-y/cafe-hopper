@@ -29,7 +29,7 @@ router.get('/:id', async (req: Request, res: Response) => {
 });
 
 
-router.get('/', async (req: Request, res: Response) => {
+router.get('/search', async (req: Request, res: Response) => {
   const term = (req.query.search as string)?.trim() || '';
 
   try {
