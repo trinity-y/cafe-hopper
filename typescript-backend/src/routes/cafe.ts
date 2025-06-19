@@ -13,7 +13,8 @@ router.get('/', async (req: Request, res: Response) => {
   }
 });
 
-router.get('/:id', async (req: Request, res: Response) => {
+// changed into digits-only parameter
+router.get('/:id(\\d+)', async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
     const cafe = await cafeService.getCafeById(parseInt(id, 10));

@@ -15,7 +15,7 @@ const cafeService: ICafeServiceAPI = {
 
   async searchCafes(term: string): Promise<ICafe[]> {
     const q = `
-    SELECT * FROM Cafes WHERE LOWER(name) LIKE LOWER('%' || $1 || '%')
+    SELECT * FROM "Cafe" WHERE LOWER(name) LIKE LOWER('%' || $1 || '%')
       ORDER BY name
       LIMIT 10;
   `;
