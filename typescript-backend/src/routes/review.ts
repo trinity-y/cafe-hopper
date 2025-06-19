@@ -15,7 +15,7 @@ router.get('/', async (req: Request, res: Response) => {
 });
 
 router.get('/user', async (req: Request, res: Response) => {
-  const uid = req.query.uid as string;
+  const uid = parseInt(req.query.uid as string, 10);
   try {
     const userReviews = await reviewService.getAllReviewsFromUser(uid);
     res.status(200).json(userReviews);
@@ -26,7 +26,7 @@ router.get('/user', async (req: Request, res: Response) => {
 });
 
 router.get('/cafe', async (req: Request, res: Response) => {
-  const cid = req.query.cid as string;
+  const cid = parseInt(req.query.cid as string, 10);
   try {
     const cafeReviews = await reviewService.getAllReviewsFromCafe(cid);
     res.status(200).json(cafeReviews);
@@ -36,7 +36,7 @@ router.get('/cafe', async (req: Request, res: Response) => {
   }
 });
 
-router.get('/:id', async (req: Request, res: Response) => {
+router.patch('/:id', async (req: Request, res: Response) => {
   const id = parseInt(req.params.id, 10);
   const inputReview = req.body as UpdateReviewDTO;
   try {
