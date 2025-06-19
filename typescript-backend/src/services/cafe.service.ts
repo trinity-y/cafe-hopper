@@ -1,4 +1,4 @@
-import { CustomModel } from '../../orm/custom';
+import { CustomModel, pool } from '../../orm/custom';
 import { ICafe } from '../interfaces/cafe.interface';
 import { ICafeServiceAPI } from '../interfaces/cafe.service.interface';
 
@@ -19,7 +19,7 @@ const cafeService: ICafeServiceAPI = {
       ORDER BY name
       LIMIT 10;
   `;
-    const { rows } = await CustomModel.query(q, [term]);
+    const { rows } = await pool.query(q, [term]);
     return rows;
   },
 
