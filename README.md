@@ -47,11 +47,14 @@ REACT_APP_FIREBASE_APP_ID=
 You can navigate to both frontend and backend pages using different ports.
 
 Frontend port: http://localhost:3000/
+
 Frontend pages:
+
 http://localhost:3000/signup
 http://localhost:3000/login
 http://localhost:3000/complete-signup
 http://localhost:3000/cafesearch
 
 Backend port: http://localhost:3001/
+
 You can view all completed routes in ```typescript-backend/src/routes```
