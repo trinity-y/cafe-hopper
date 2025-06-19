@@ -9,10 +9,10 @@ const bookmarkService: IBookmarkServiceAPI = {
         return bookmarkModel.findMany(uid);
     },
     async createBookmark (bookmark: CreateBookmarkDTO){
-        bookmarkModel.create(bookmark);
+        return bookmarkModel.create(bookmark);
     },
     async deleteBookmark (id: number){
-        bookmarkModel.delete(id);
+        return bookmarkModel.delete(id);
     }
 }
 

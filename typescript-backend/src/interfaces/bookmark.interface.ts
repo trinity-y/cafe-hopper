@@ -3,4 +3,5 @@ export interface IBookmark {
   uid: number;
   cid: number;
 }
-export type CreateBookmarkDTO = IBookmark;
+
+export type CreateBookmarkDTO = Omit<IBookmark, 'id'>;
