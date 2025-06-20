@@ -46,6 +46,8 @@ REACT_APP_FIREBASE_APP_ID=
 
 You can navigate to both frontend and backend pages using different ports.
 
+You may need to switch between branches in order to access these pages.
+
 Frontend port: http://localhost:3000/
 
 Frontend pages:
