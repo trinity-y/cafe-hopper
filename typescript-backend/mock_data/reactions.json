@@ -1,0 +1,62 @@
+[
+    {
+        "uID": 10, "rID": 1,  "reaction": "like"    
+    },
+    {
+        "uID": 12, "rID": 2,  "reaction": "dislike" 
+    },
+    {
+        "uID":  7, "rID": 3,  "reaction": "like"    
+    },
+    {
+        "uID":  5, "rID": 4,  "reaction": "like"    
+    },
+    {
+        "uID": 22, "rID": 5,  "reaction": "dislike" 
+    },
+    {
+        "uID": 19, "rID": 6,  "reaction": "like"    
+    },
+    {
+        "uID":  3, "rID": 7,  "reaction": "dislike" 
+    },
+    {
+        "uID": 15, "rID": 8,  "reaction": "like"    
+    },
+    {
+        "uID": 28, "rID": 9,  "reaction": "like"    
+    },
+    {
+        "uID":  9, "rID": 10, "reaction": "dislike" 
+    },
+    {
+        "uID": 14, "rID": 11, "reaction": "like"    
+    },
+    {
+        "uID":  6, "rID": 12, "reaction": "dislike" 
+    },
+    {
+        "uID": 17, "rID": 13, "reaction": "like"    
+    },
+    {
+        "uID":  8, "rID": 14, "reaction": "like"    
+    },
+    {
+        "uID": 24, "rID": 15, "reaction": "dislike" 
+    },
+    {
+        "uID": 11, "rID": 16, "reaction": "like"    
+    },
+    {
+        "uID": 21, "rID": 17, "reaction": "dislike" 
+    },
+    {
+        "uID": 18, "rID": 18, "reaction": "like"    
+    },
+    {
+        "uID": 13, "rID": 19, "reaction": "dislike" 
+    },
+    {
+        "uID":  4, "rID": 20, "reaction": "like"   
+    }
+]
