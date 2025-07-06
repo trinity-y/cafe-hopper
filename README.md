@@ -10,7 +10,7 @@ How to run our project
 
 There are two .env files required for this project to function. 
 
-The first is in the root ./cafe-hopper of this project. It needs to be in this format:
+The first is under the backend folder "typescript-backend" of this project. It needs to be in this format:
 
 ```
 POSTGRES_DB=
