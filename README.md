@@ -19,6 +19,7 @@ POSTGRES_PASSWORD=
 POSTGRES_HOST=
 POSTGRES_PORT=
 POSTGRES_DATABASE_URL=
+GOOGLE_MAPS_API_KEY=
 ```
 
 In the ./cafe-hopper/react-frontend, you must use the following .env file format:
