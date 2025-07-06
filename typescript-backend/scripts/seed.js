@@ -28,8 +28,8 @@ async function seedDatabase() {
 
             CREATE TABLE IF NOT EXISTS "Bookmark" (
               id SERIAL PRIMARY KEY,
-              uid INT NOT NULL REFERENCES User(id), 
-              cid INT NOT NULL REFERENCES Cafe(id), 
+              uid INT NOT NULL REFERENCES "User"(id), 
+              cid INT NOT NULL REFERENCES "Cafe"(id), 
               UNIQUE(uid, cid)
             );
         `);
