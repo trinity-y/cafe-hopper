@@ -2,7 +2,7 @@ import { CustomModel } from '../../orm/custom';
 import { IReview, CreateReviewDTO, UpdateReviewDTO } from '../interfaces/review.interface';
 import { IReviewServiceAPI } from '../interfaces/review.service.interface'; 
 
-const reviewModel = CustomModel('Reviews');
+const reviewModel = new CustomModel('Reviews');
 
 const reviewService: IReviewServiceAPI = {
     async getAllReviewsFromUser (uid: number) : Promise<IReview | null>{
