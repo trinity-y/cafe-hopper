@@ -32,8 +32,8 @@ async function seedDatabase() {
               foodRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
               atmosphereRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
               notes VARCHAR(200),
-              cID NOT NULL INT REFERENCES Cafe(id),
-              uID NOT NULL INT REFERENCES User(id),
+              cID INT NOT NULL REFERENCES "Cafe"(id),
+              uID INT NOT NULL REFERENCES "User"(id),
               UNIQUE(cID, uID)
             );
         `);
