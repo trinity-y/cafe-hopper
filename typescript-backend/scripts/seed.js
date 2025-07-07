@@ -33,32 +33,14 @@ async function seedDatabase() {
                 CHECK (user_id != friend_id)
             );
             
-            CREATE TABLE IF NOT EXISTS "Cafe"(
+            CREATE TABLE IF NOT EXISTS "Cafe" (
                 id SERIAL PRIMARY KEY,
                 name VARCHAR(200) NOT NULL,
                 address TEXT NOT NULL,
-                "openingDays" VARCHAR(200) NOT NULL,
-                "googleRating" DECIMAL(2,1) CHECK("googleRating" >= 0 AND "googleRating" <= 5)    
-            );
-
-            CREATE TABLE IF NOT EXISTS "Reviews" (
-              id SERIAL PRIMARY KEY,
-              rating DECIMAL(2,1) NOT NULL CHECK (rating >= 0 AND rating <= 5),
-              drinkRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
-              foodRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
-              atmosphereRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
-              notes VARCHAR(200),
-              cID INT NOT NULL REFERENCES "Cafe"(id),
-              uID INT NOT NULL REFERENCES "User"(id),
-              UNIQUE(cID, uID)
-            );
-
-            CREATE TABLE "Reaction" (
-                id SERIAL PRIMARY KEY,
-                uID INT NOT NULL REFERENCES "User"(id) ON DELETE CASCADE, 
-                rID INT NOT NULL REFERENCES "Reviews"(id) ON DELETE CASCADE,
-                reaction VARCHAR(8) NOT NULL,
-                UNIQUE(uID, rID)
+                latitude DOUBLE PRECISION NOT NULL,
+                longitude DOUBLE PRECISION NOT NULL,
+                "openingDays" TEXT,
+                "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5)
             );
         `);
 
@@ -79,31 +61,13 @@ async function seedDatabase() {
                 [friend.user_id, friend.friend_id]
             );
         }
-        
-        const cafes = require('../mock_data/cafes.json');
 
+        const { getCafeData } = require('./getCafeData');
+        const cafes = await getCafeData();
         for (const cafe of cafes) {
             await client.query(
-                'INSERT INTO "Cafe" (name, address, "openingDays", "googleRating") VALUES ($1, $2, $3, $4)',
-                [cafe.name, cafe.address, cafe.openingDays, cafe.googleRating]
-            );
-        }
-
-        const reviews = require('../mock_data/reviews.json');
-
-        for (const review of reviews) {
-            await client.query(
-                'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7)',
-                [review.rating, review.drinkRating, review.foodRating, review.atmosphereRating, review.notes, review.uID, review.cID]
-            );
-        }
-
-        const reactions = require('../mock_data/reactions.json');
-
-        for (const reaction of reactions) {
-            await client.query(
-                'INSERT INTO "Reaction" (uID, rID, reaction) VALUES ($1, $2, $3)',
-                [reaction.uID, reaction.rID, reaction.reaction]
+                'INSERT INTO "Cafe" (name, address, latitude, longitude, "openingDays", "googleRating") VALUES ($1, $2, $3, $4, $5, $6)',
+                [cafe.name, cafe.address, cafe.latitude, cafe.longitude, cafe.openingDays, cafe.googleRating]
             );
         }
 
