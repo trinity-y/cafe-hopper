@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Box, TextField, Autocomplete, Typography, Button } from '@mui/material';
+import { Box, TextField, Typography, Button } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../components/theme';
 import StarIcon from '@mui/icons-material/Star';
@@ -29,10 +29,10 @@ function CafeSearchPage() {
 
         return <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>{stars}</Box>;
     };
-    const fetchCafes = async (searchTerm = '') => {
+    const fetchCafes = async (term = '') => {
         try {
             const url = new URL('http://localhost:3001/cafes/search');
-            if (searchTerm) url.searchParams.set('search', searchTerm);
+            if (term) url.searchParams.set('search', term);
             const res = await fetch(url.toString());
             const data = await res.json();
             setCafes(data);
@@ -43,7 +43,7 @@ function CafeSearchPage() {
     };
 
     useEffect(() => {
-        fetchCafes();
+        fetchCafes('');
     }, []);
 
     return (
@@ -55,51 +55,55 @@ function CafeSearchPage() {
                 justifyContent: 'center',
                 padding: '30px'
             }}>
-                <Autocomplete
-                    freeSolo
-                    options={cafes}
-                    inputValue={inputValue}
-                    onInputChange={(_, v) => {
+                <TextField
+                    fullWidth
+                    label="Search for a Cafe"
+                    value={inputValue}
+                    onChange={e => {
+                        const v = e.target.value;
                         setInputValue(v);
                         setSelectedCafe(null);
                         fetchCafes(v); // live search
                     }}
-                    getOptionLabel={(option) => option.name || ''}
-                    onChange={(_, newValue) => {
-                        setSelectedCafe(newValue);
-                        setInputValue(newValue?.name || '');
+                    onKeyDown={e => {
+                        if (e.key === 'Enter') {
+                            e.preventDefault();
+                            setSelectedCafe(null);
+                            fetchCafes(inputValue);
+                        }
                     }}
-                    renderOption={(props, option) => (
-                        <Box component="li" {...props}>
-                            {option.name}
-                        </Box>
-                    )}
-                    renderInput={(params) => (
-                        <TextField
-                            {...params}
-                            label="Search for a Cafe"
-                            onKeyDown={e => {
-                                if (e.key === 'Enter') {
-                                    e.preventDefault();
-                                    setSelectedCafe(null);
-                                    fetchCafes(inputValue); // fetch filtered on Enter
-                                }
-                            }}
-                        />
-                    )}
                 />
 
-                {!selectedCafe && inputValue && cafes.length > 0 && (
+                {!selectedCafe && inputValue && cafes.length === 0 && (
+                    <Box
+                        sx={{
+                            mt: 6,
+                            textAlign: 'center',
+                        }}
+                    >
+                        <Typography variant="h6">
+                            Sorry! There are no matching cafes for “{inputValue}” 🐸
+                        </Typography>
+                    </Box>
+                )}
+
+                {!selectedCafe && cafes.length > 0 && (
                     <>
                         <Typography variant="body1" sx={{ mt: 2 }}>
-                            Showing {cafes.length} result{cafes.length > 1 ? 's' : ''} for "{inputValue}"
+                            {inputValue
+                                ? `Showing ${cafes.length} result${cafes.length > 1 ? 's' : ''} for "${inputValue}"`
+                                : `Showing all ${cafes.length} cafes`}
                         </Typography>
+
                         {cafes.map(cafe => (
                             <Box
                                 key={cafe.cid}
                                 sx={{
-                                    mt: 2, p: 2, border: '1px solid black',
-                                    display: 'flex', justifyContent: 'space-between'
+                                    mt: 2,
+                                    p: 2,
+                                    border: '1px solid black',
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
                                 }}
                             >
                                 <Box>
@@ -107,13 +111,18 @@ function CafeSearchPage() {
                                     <StarRating rating={cafe.googleRating} />
                                 </Box>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                                    <Button variant="contained" disabled>More info</Button>
-                                    <Button variant="contained" disabled>Rate</Button>
+                                    <Button variant="contained" disabled>
+                                        More info
+                                    </Button>
+                                    <Button variant="contained" disabled>
+                                        Rate
+                                    </Button>
                                 </Box>
                             </Box>
                         ))}
                     </>
                 )}
+
 
                 {selectedCafe && (
                     <Box
