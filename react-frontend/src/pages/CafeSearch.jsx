@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, TextField, Autocomplete, Typography, Button } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../components/theme';
@@ -8,6 +8,7 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 
 function CafeSearchPage() {
     const [cafes, setCafes] = useState([]);
+    const [inputValue, setInputValue] = useState('');
     const [selectedCafe, setSelectedCafe] = useState(null);
     const StarRating = ({ rating }) => {
         const stars = [];
@@ -28,17 +29,23 @@ function CafeSearchPage() {
 
         return <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>{stars}</Box>;
     };
-    const fetchCafes = async () => {
+    const fetchCafes = async (searchTerm = '') => {
         try {
-            const response = await fetch('http://localhost:3001/cafes');
-            const data = await response.json();
+            const url = new URL('http://localhost:3001/cafes/search');
+            if (searchTerm) url.searchParams.set('search', searchTerm);
+            const res = await fetch(url.toString());
+            const data = await res.json();
             setCafes(data);
         } catch (error) {
             console.error('Error fetching cafes:', error);
             return null;
         }
     };
-    fetchCafes();
+
+    useEffect(() => {
+        fetchCafes();
+    }, []);
+
     return (
         <ThemeProvider theme={theme}>
             <Box sx={{
@@ -48,63 +55,86 @@ function CafeSearchPage() {
                 justifyContent: 'center',
                 padding: '30px'
             }}>
-                <Box>
-                    <Autocomplete
-                        options={cafes}
-                        getOptionLabel={(option) => option.name || ''}
-                        onChange={(event, newValue) => {
-                            setSelectedCafe(newValue);
-                        }}
-                        renderOption={(props, option) => (
-                            <Box component="li" {...props}>
-                                <div>
-                                    {option.name}
-                                </div>
+                <Autocomplete
+                    freeSolo
+                    options={cafes}
+                    inputValue={inputValue}
+                    onInputChange={(_, v) => {
+                        setInputValue(v);
+                        setSelectedCafe(null);
+                        fetchCafes(v); // live search
+                    }}
+                    getOptionLabel={(option) => option.name || ''}
+                    onChange={(_, newValue) => {
+                        setSelectedCafe(newValue);
+                        setInputValue(newValue?.name || '');
+                    }}
+                    renderOption={(props, option) => (
+                        <Box component="li" {...props}>
+                            {option.name}
+                        </Box>
+                    )}
+                    renderInput={(params) => (
+                        <TextField
+                            {...params}
+                            label="Search for a Cafe"
+                            onKeyDown={e => {
+                                if (e.key === 'Enter') {
+                                    e.preventDefault();
+                                    setSelectedCafe(null);
+                                    fetchCafes(inputValue); // fetch filtered on Enter
+                                }
+                            }}
+                        />
+                    )}
+                />
+
+                {!selectedCafe && inputValue && cafes.length > 0 && (
+                    <>
+                        <Typography variant="body1" sx={{ mt: 2 }}>
+                            Showing {cafes.length} result{cafes.length > 1 ? 's' : ''} for "{inputValue}"
+                        </Typography>
+                        {cafes.map(cafe => (
+                            <Box
+                                key={cafe.cid}
+                                sx={{
+                                    mt: 2, p: 2, border: '1px solid black',
+                                    display: 'flex', justifyContent: 'space-between'
+                                }}
+                            >
+                                <Box>
+                                    <h3>{cafe.name}</h3>
+                                    <StarRating rating={cafe.googleRating} />
+                                </Box>
+                                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                                    <Button variant="contained" disabled>More info</Button>
+                                    <Button variant="contained" disabled>Rate</Button>
+                                </Box>
                             </Box>
-                        )}
-                        renderInput={(params) => <TextField {...params} label="Search for a Cafe" />}
-                    />
-                </Box>
+                        ))}
+                    </>
+                )}
 
-                {selectedCafe &&
-                    <Typography variant={"body1"}>
-                        Showing results
-                    </Typography>
-                }
-
-                {selectedCafe &&
+                {selectedCafe && (
                     <Box
-                        variant='basic'
                         sx={{
-                            p: 2,
-                            border: '1px solid black',
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'space-between'
-                        }}>
+                            p: 2, border: '1px solid black',
+                            display: 'flex', justifyContent: 'space-between'
+                        }}
+                    >
                         <Box>
-                            <h3>
-                                {selectedCafe.name}
-                            </h3>
+                            <h3>{selectedCafe.name}</h3>
                             <StarRating rating={selectedCafe.googleRating} />
                         </Box>
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                gap: 2
-                            }}>
-                            <Button variant='contained' disabled>
-                                More info
-                            </Button>
-                            <Button variant='contained' disabled>
-                                Rate
-                            </Button>
+                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                            <Button variant="contained" disabled>More info</Button>
+                            <Button variant="contained" disabled>Rate</Button>
                         </Box>
                     </Box>
-                }
+                )}
             </Box>
         </ThemeProvider>
     );
 }
+
 export default CafeSearchPage;
