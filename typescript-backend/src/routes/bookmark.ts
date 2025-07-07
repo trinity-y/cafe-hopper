@@ -16,11 +16,11 @@ router.get('/', async (req: Request, res: Response) => {
 router.get('/:uid', async (req: Request, res: Response) => {
   const { uid } = req.params;
   try {
-    const bookmarks = await bookmarkService.getAllBookmarksFromUser(parseInt(uid, 10));
+    const bookmarks = await bookmarkService.getAllBookmarksForUser(parseInt(uid, 10));
     if (bookmarks) {
         res.status(200).json(bookmarks);
     } else {
-        res.status(404).json({message: `User with uid ${uid} not found`});
+        res.status(404).json({message: `Bookmarks for user with uid ${uid} not found`});
     }
   } catch (error) {
     console.error(`Error fetching bookmarks for user with uid ${uid}:`, error);
@@ -28,6 +28,20 @@ router.get('/:uid', async (req: Request, res: Response) => {
   }
 });
 
+router.get('/bookmarked-cafes/:uid', async (req: Request, res: Response) => {
+  const { uid } = req.params;
+  try {
+    const bookmarks = await bookmarkService.getBookmarkedCafesForUser(parseInt(uid, 10));
+    if (bookmarks) {
+        res.status(200).json(bookmarks);
+    } else {
+        res.status(404).json({message: `Bookmarks for user with uid ${uid} not found`});
+    }
+  } catch (error) {
+    console.error(`Error fetching bookmarked cafes for user with uid ${uid}:`, error);
+    res.status(500).json({ message: `Error fetching bookmarks for user with uid ${uid}` });
+  }
+});
 
 router.post('/', async (req: Request, res: Response) => {
   const { uid, cid } = req.body;
