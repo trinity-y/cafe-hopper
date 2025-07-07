@@ -2,11 +2,11 @@
 set -e
 
 # load backend environment
-if [ -f .env ]; then
+if [ -f ./typescript-backend/.env ]; then
   echo "loading backend environment from .env"
-  export $(grep -v '^#' .env | xargs)
+  export $(grep -v '^#' ./typescript-backend/.env | xargs)
 else
-  echo "ERROR: no .env file found in root."
+  echo "ERROR: no .env file found in typescript-backend."
   exit 1
 fi
 
