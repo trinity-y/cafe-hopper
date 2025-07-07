@@ -30,7 +30,7 @@ function CafeSearchPage() {
     };
     const fetchCafes = async () => {
         try {
-            const response = await fetch('http://localhost:8080/cafes');
+            const response = await fetch('http://localhost:3001/cafes');
             const data = await response.json();
             setCafes(data);
         } catch (error) {
