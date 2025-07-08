@@ -64,3 +64,12 @@ http://localhost:3000/cafesearch
 Backend port: http://localhost:3001/
 
 You can view all completed routes in ```typescript-backend/src/routes```
+
+
+# How to generate the “production” dataset and load it into our database
+Since our dataset is only ~300 entries, we have saved it in typescript-backend/prod_data/cafes.json
+
+However, you may also generate it using the script in typescript-backend/scripts/getCafeData.js
+This would require the following steps:
+1. Add google maps API key to .env (this will require Google Cloud Project)
+2. Run writeCafeData()
