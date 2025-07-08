@@ -189,28 +189,28 @@ LOCATIONS = [
     }
 ]
 
-const CAFE_DATA_PATH = './typescript-backend/prod_data/cafes.json'; // from root (!! this may be a point of error if running from docker)
+const CAFE_DATA_PATH = './prod_data/cafes.json'; // from root (!! this may be a point of error if running from docker)
 
 async function writeCafeData() {
     console.log('writing cafe data to prod_data/cafes.json');
     cafeData = []
-    for (let i=0; i< LOCATIONS.length; i++) {
+    for (let i = 0; i < LOCATIONS.length; i++) {
         let response;
-            try {
-                response = await axios.post('https://places.googleapis.com/v1/places:searchNearby',
-                    {
-                        "includedTypes":['cafe'],
-                        "locationRestriction": { 'circle': LOCATIONS[i] }
-                    }, 
-                    {
-                        headers: { 
-                            'Content-Type': 'application/json',
-                            'X-Goog-Api-Key': process.env.GOOGLE_MAPS_API_KEY,
-                            'X-Goog-FieldMask': 'places.displayName,places.formattedAddress,places.regularOpeningHours,places.rating,places.location',
-                        }
+        try {
+            response = await axios.post('https://places.googleapis.com/v1/places:searchNearby',
+                {
+                    "includedTypes": ['cafe'],
+                    "locationRestriction": { 'circle': LOCATIONS[i] }
+                },
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Goog-Api-Key': process.env.GOOGLE_MAPS_API_KEY,
+                        'X-Goog-FieldMask': 'places.displayName,places.formattedAddress,places.regularOpeningHours,places.rating,places.location',
                     }
+                }
             );
-        } catch(err) {
+        } catch (err) {
             if (err.response) {
                 console.error('status:', err.response.status);
                 console.error('error body:', err.response.data);
@@ -227,7 +227,7 @@ async function writeCafeData() {
                 console.log(`this was for location #${i}`)
                 continue;
             }
-            for (let j=0; j<places.length; j++) {
+            for (let j = 0; j < places.length; j++) {
                 const { displayName, formattedAddress, regularOpeningHours, rating, location } = places[j]
                 if (displayName?.text !== "Tim Hortons" && displayName?.text !== "McDonald's") { // FAKE CAFES!!
                     const place = {
