@@ -30,6 +30,9 @@ services:
       - ./typescript-backend/.env
     ports:
       - '3001:8080'
+    volumes:                              
+      - ./typescript-backend/src:/app/src:delegated   
+      - /app/node_modules
     restart: always
 
   frontend:
@@ -41,6 +44,11 @@ services:
       - ./react-frontend/.env
     ports:
       - '3000:3000'
+    volumes:                              
+      - ./react-frontend/src:/app/src:delegated         
+      - /app/node_modules 
+    environment:                          
+      - CHOKIDAR_USEPOLLING=true          
     depends_on:
       - backend
     restart: always

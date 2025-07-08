@@ -9,6 +9,7 @@ const pool = new Pool({
     port: process.env.POSTGRES_PORT,
 });
 
+const dataLocation = 'prod_data'; // prod_data || mock_data
 async function seedDatabase() {
     const client = await pool.connect();
 
@@ -24,7 +25,9 @@ async function seedDatabase() {
                 id SERIAL PRIMARY KEY,
                 name VARCHAR(200) NOT NULL,
                 address TEXT NOT NULL,
-                "openingDays" VARCHAR(100) NOT NULL,
+                latitude DOUBLE PRECISION NOT NULL,
+                longitude DOUBLE PRECISION NOT NULL,
+                "openingDays" TEXT,
                 "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5)
             );
         `);
@@ -41,12 +44,12 @@ async function seedDatabase() {
             );
         }
 
-        const cafes = require('../mock_data/cafes.json');
-
+        const { getCafeData } = require('./getCafeData');
+        const cafes = await getCafeData();
         for (const cafe of cafes) {
             await client.query(
-                'INSERT INTO "Cafe" (name, address, "openingDays", "googleRating") VALUES ($1, $2, $3, $4)',
-                [cafe.name, cafe.address, cafe.openingDays, cafe.googleRating]
+                'INSERT INTO "Cafe" (name, address, latitude, longitude, "openingDays", "googleRating") VALUES ($1, $2, $3, $4, $5, $6)',
+                [cafe.name, cafe.address, cafe.latitude, cafe.longitude, cafe.openingDays, cafe.googleRating]
             );
         }
 
