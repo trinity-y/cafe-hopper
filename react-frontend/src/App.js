@@ -8,6 +8,7 @@ import SignupPage from './pages/Signup';
 import CompleteSignupPage from './pages/CompleteSignup';
 import CafeSearchPage from './pages/CafeSearch';
 
+import TestReaction from './pages/TempPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/signup' element={<SignupPage />} />
           <Route path='/complete-signup' element={<CompleteSignupPage />} />
           <Route path='/cafesearch' element={<CafeSearchPage />} />
+          <Route path='/tempage' element={<TestReaction/>} />
         </Routes>
       </Router>
     </UserProvider>
