@@ -55,7 +55,7 @@ async function seedDatabase() {
                 UNIQUE(cID, uID)
             );
 
-            CREATE TABLE "Reaction" (
+            CREATE TABLE IF NOT EXISTS "Reaction" (
                 id SERIAL PRIMARY KEY,
                 uID INT NOT NULL REFERENCES "User"(id) ON DELETE CASCADE, 
                 rID INT NOT NULL REFERENCES "Reviews"(id) ON DELETE CASCADE,
