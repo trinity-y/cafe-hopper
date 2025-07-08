@@ -1,0 +1,20 @@
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+UPDATE 0
+ id | rating | drinkrating | foodrating | atmosphererating |     notes     | cid | uid 
+----+--------+-------------+------------+------------------+---------------+-----+-----
+  1 |    4.0 |         4.0 |            |                  | nice service! |   1 |   1
+(1 row)
+
+ id | rating | drinkrating | foodrating | atmosphererating |     notes     | cid | uid 
+----+--------+-------------+------------+------------------+---------------+-----+-----
+  1 |    4.0 |         4.0 |            |                  | nice service! |   1 |   1
+(1 row)

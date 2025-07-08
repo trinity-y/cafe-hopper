@@ -12,7 +12,7 @@ const pool = new Pool({
 const dataLocation = 'prod_data'; // prod_data || mock_data
 async function seedDatabase() {
     const client = await pool.connect();
-    
+
     try {
         await client.query(`
             CREATE TABLE IF NOT EXISTS "User" (
@@ -31,12 +31,12 @@ async function seedDatabase() {
                 "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5)
             );
         `);
-        
+
         await client.query('TRUNCATE "User", "Cafe" RESTART IDENTITY CASCADE');
 
         // warning the firebase uids as part of this data are all FAKE!!
         const users = require('../mock_data/users.json');
-        
+
         for (const user of users) {
             await client.query(
                 'INSERT INTO "User" ("username", "firebase_uid") VALUES ($1, $2)',

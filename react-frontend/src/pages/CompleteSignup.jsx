@@ -28,7 +28,7 @@ function CompleteSignupPage() {
                 try {
                     await authAPI.completeSignup(username, user.uid);
                     localStorage.removeItem("emailForSignIn");
-                    setNavigateTo("/");
+                    setNavigateTo("/cafesearch");
                 } catch (e) {
                     console.error(e);
                     setMessage("Something went wrong finishing signup.");
