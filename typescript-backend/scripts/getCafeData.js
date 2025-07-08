@@ -186,6 +186,62 @@ LOCATIONS = [
             "longitude": -79.92616
         },
         radius: 5000
+    },
+    { // west hamilton
+    "center": {
+        "latitude": 43.243078,
+        "longitude": -79.805877
+    },
+        radius: 5000
+    },
+    { // trins ends
+    "center": {
+        "latitude": 43.887700,
+        "longitude": -79.420543
+    },
+        radius: 2424
+    },
+    { // trins ends pt 3
+    "center": {
+        "latitude": 43.909080,
+        "longitude": -79.373974
+    },
+        radius: 1962
+    },
+    { // trins ends pt 4 (bubble tea plaza)
+    "center": {
+        "latitude": 43.848682,
+        "longitude": -79.382759
+    },
+        radius: 1962
+    },
+    { // markham + unionville
+    "center": {
+        "latitude": 43.879163,
+        "longitude": -79.315032
+    },
+        radius: 3805
+    },
+    { // vaughan
+    "center": {
+        "latitude": 43.826794,
+        "longitude": -79.555663
+    },
+        radius: 3235
+    },
+    { // trins ends part 5
+    "center": {
+        "latitude": 43.841172,
+        "longitude": -79.449837
+    },
+        radius: 3234
+    },
+    { // ajax
+    "center": {
+        "latitude": 43.8654885,
+        "longitude": -79.0542726
+    },
+        radius: 10000
     }
 ]
 
