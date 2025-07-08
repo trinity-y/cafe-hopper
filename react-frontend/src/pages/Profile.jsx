@@ -54,13 +54,13 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        Reviews
+        Add reviews here
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
         <BookmarkTab />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Friends
+        Add friends here
       </CustomTabPanel>
     </Box>
   );
