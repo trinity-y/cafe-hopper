@@ -1,0 +1,43 @@
+-- creating the reaction table
+CREATE TABLE IF NOT EXISTS "Reaction" (
+    id SERIAL PRIMARY KEY,
+    uID INT NOT NULL REFERENCES "User"(id) ON DELETE CASCADE, 
+    rID INT NOT NULL REFERENCES "Reviews"(id) ON DELETE CASCADE,
+    reaction VARCHAR(8) NOT NULL,
+    UNIQUE(uID, rID)
+);
+CREATE TABLE
+
+-- add new reactions
+INSERT INTO "Reaction" (uID, rID, reaction) VALUES (1, 5, 'like');
+INSERT 0 1
+INSERT INTO "Reaction" (uID, rID, reaction) VALUES (2, 5, 'dislike');
+INSERT 0 1
+INSERT INTO "Reaction" (uID, rID, reaction) VALUES (1, 7, 'dislike');
+INSERT 0 1
+
+-- view all reactions
+SELECT * FROM "Reaction";
+ id | uid | rid | reaction 
+----+-----+-----+----------
+  1 |   1 |   5 | like
+  2 |   2 |   5 | dislike
+  3 |   1 |   7 | dislike
+(3 rows)
+
+-- find a specific reaction
+SELECT * FROM "Reaction" WHERE uID = 1 AND rID = 5;
+ id | uid | rid | reaction 
+----+-----+-----+----------
+  1 |   1 |   5 | like
+(1 row)
+
+-- delete a reaction
+DELETE FROM "Reaction" WHERE uID = 1 AND rID = 7;
+DELETE 1
+
+-- verify deletion
+SELECT * FROM "Reaction" WHERE uID = 1 AND rID = 7;
+ id | uid | rid | reaction 
+----+-----+-----+----------
+(0 rows)

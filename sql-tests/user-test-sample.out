@@ -1,0 +1,28 @@
+-- creating the user table
+CREATE TABLE IF NOT EXISTS "User" (
+              id SERIAL PRIMARY KEY,
+              "username" VARCHAR(100) NOT NULL UNIQUE,
+              "firebase_uid" VARCHAR(100) NOT NULL UNIQUE
+            );
+CREATE TABLE
+
+--add new user
+INSERT INTO "User" (username, firebase_uid) VALUES ('trinity6', 'aB3xYz9KlmNOqP456rstUVWX7yza');
+INSERT 0 1
+INSERT INTO "User" (username, firebase_uid) VALUES ('safiya2', 'JkL8MnOpQrSTuvW0xyZa1Bc2DeFg');
+INSERT 0 1
+INSERT INTO "User" (username, firebase_uid) VALUES ('celina3', 'hI3jK4LmN5oPqrStUvWxYzAbCdEf');
+INSERT 0 1
+
+--username validation (find users with the same username, that way we can check if the user already exists)
+SELECT * FROM "User" WHERE username = 'trinity6';
+ id | username |         firebase_uid
+----+----------+------------------------------
+  1 | trinity6 | aB3xYz9KlmNOqP456rstUVWX7yza
+(1 row)
+
+
+SELECT * FROM "User" WHERE username = 'frog7';
+ id | username | firebase_uid
+----+----------+--------------
+(0 rows)
