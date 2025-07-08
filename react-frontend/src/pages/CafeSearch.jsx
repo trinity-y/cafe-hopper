@@ -10,20 +10,25 @@ function CafeSearchPage() {
     const [cafes, setCafes] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [selectedCafe, setSelectedCafe] = useState(null);
+
+    // helper to strip out ", Canada"
+    const formatAddress = (address) =>
+        address.replace(/,\s*Canada$/, '').trim();
+
     const StarRating = ({ rating }) => {
+        const value = typeof rating === 'string'
+            ? parseFloat(rating)
+            : rating;
         const stars = [];
         const totalStars = 5;
 
         for (let i = 1; i <= totalStars; i++) {
-            if (i <= Math.floor(rating)) {
-                // Full star
-                stars.push(<StarIcon key={i} sx={{ color: 'gold' }} />);
-            } else if (i === Math.ceil(rating) && !Number.isInteger(rating)) {
-                // Half star
-                stars.push(<StarHalfIcon key={i} sx={{ color: 'gold' }} />);
+            if (i <= Math.floor(value)) {
+                stars.push(<StarIcon key={i} sx={{ color: 'gold' }} />); // full star
+            } else if (i === Math.ceil(value) && !Number.isInteger(value)) {
+                stars.push(<StarHalfIcon key={i} sx={{ color: 'gold' }} />); // half star
             } else {
-                // Empty star
-                stars.push(<StarBorderIcon key={i} sx={{ color: 'gold' }} />);
+                stars.push(<StarBorderIcon key={i} sx={{ color: 'gold' }} />); // empty star
             }
         }
 
@@ -82,7 +87,7 @@ function CafeSearchPage() {
                         }}
                     >
                         <Typography variant="h6">
-                            Sorry! There are no matching cafes for “{inputValue}” 🐸
+                            Sorry! There are no matching cafes for “{inputValue}” 🐸❓
                         </Typography>
                     </Box>
                 )}
@@ -97,7 +102,7 @@ function CafeSearchPage() {
 
                         {cafes.map(cafe => (
                             <Box
-                                key={cafe.cid}
+                                Boxkey={cafe.cid}
                                 sx={{
                                     mt: 2,
                                     p: 2,
@@ -107,8 +112,15 @@ function CafeSearchPage() {
                                 }}
                             >
                                 <Box>
-                                    <h3>{cafe.name}</h3>
-                                    <StarRating rating={cafe.googleRating} />
+                                    <h3 > ☕️ {cafe.name}</h3>
+                                    <h5 >{formatAddress(cafe.address)}</h5>
+                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                        <Typography variant="body2">
+                                            {Number(cafe.googleRating).toFixed(1)}
+                                        </Typography>
+                                        <StarRating rating={cafe.googleRating} />
+                                    </Box>
+
                                 </Box>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                                     <Button variant="contained" disabled>
@@ -132,8 +144,15 @@ function CafeSearchPage() {
                         }}
                     >
                         <Box>
-                            <h3>{selectedCafe.name}</h3>
-                            <StarRating rating={selectedCafe.googleRating} />
+                            <h3> ☕️ {selectedCafe.name}</h3>
+                            <h5>{formatAddress(selectedCafe.address)}</h5>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                <Typography variant="body2">
+                                    {Number(selectedCafe.googleRating).toFixed(1)}
+                                </Typography>
+                                <StarRating rating={selectedCafe.googleRating} />
+                            </Box>
+
                         </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                             <Button variant="contained" disabled>More info</Button>
