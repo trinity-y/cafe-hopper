@@ -11,7 +11,7 @@ const pool = new Pool({
 
 async function seedDatabase() {
     const client = await pool.connect();
-    
+
     try {
         await client.query(`
             CREATE TABLE IF NOT EXISTS "User" (
@@ -30,7 +30,7 @@ async function seedDatabase() {
                 "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5)
             );
         `);
-        
+
         await client.query('TRUNCATE "User", "Cafe" RESTART IDENTITY CASCADE');
 
         // warning the firebase uids as part of this data are all FAKE!!
