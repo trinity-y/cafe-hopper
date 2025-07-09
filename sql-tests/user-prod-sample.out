@@ -1,0 +1,18 @@
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ id  | username |         firebase_uid
+-----+----------+------------------------------
+ 751 | trinity6 | aB3xYz9KlmNOqP456rstUVWX7yza
+(1 row)
+
+
+ id | username | firebase_uid
+----+----------+--------------
+(0 rows)
+
+
+ id |       username        |         firebase_uid
+----+-----------------------+------------------------------
+  5 | deferentialtumbleweed | qalp0DRdtUslsJD80pwjYMUfjB7Q
+(1 row)
