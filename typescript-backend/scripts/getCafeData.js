@@ -248,7 +248,7 @@ LOCATIONS = [
 const CAFE_DATA_PATH = './prod_data/cafes.json'; // from root (!! this may be a point of error if running from docker)
 
 async function writeCafeData() {
-    console.log('writing cafe data to prod_data/cafes.json');
+    console.log(`writing cafe data to ${CAFE_DATA_PATH}`);
     cafeData = []
     for (let i = 0; i < LOCATIONS.length; i++) {
         let response;
