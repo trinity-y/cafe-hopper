@@ -47,7 +47,7 @@ function LoginPage() {
     React.useEffect(() => {
         const cleanupFunc = onAuthStateChanged(auth, (user) => {
             if (user) { // if already signed in
-                setNavigateTo("/");
+                setNavigateTo("/cafesearch");
                 localStorage.removeItem('emailForSignIn'); // clean up
             } else { // otherwise we need to log in
                 setStatus(statuses.LOGIN);

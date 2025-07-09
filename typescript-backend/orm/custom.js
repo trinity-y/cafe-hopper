@@ -12,7 +12,7 @@ const pool = new Pool({
 class CustomModel {
   #tableSchema = null;
   constructor(tableName) {
-    this.tableName = tableName;    
+    this.tableName = tableName;
   }
 
   // get a tableSchema object with keys representing column name and the values representing the columns type
@@ -28,7 +28,7 @@ class CustomModel {
       const tableData = (await client.query(tableDataQuery)).rows;
 
       tableData.forEach(tableDataTuple => { // {column__name:"uid", data_type:"char varying"}
-          this.#tableSchema[tableDataTuple.column_name] = tableDataTuple.data_type;
+        this.#tableSchema[tableDataTuple.column_name] = tableDataTuple.data_type;
       });
       return this.#tableSchema;
     } else {
@@ -73,7 +73,7 @@ class CustomModel {
       if (where === undefined) { // no where clause -- get all rows
         const query = `SELECT * FROM "${this.tableName}"`;
         const result = await client.query(query);
-        return result.rows; 
+        return result.rows;
       }
       // where clause -- current behaviour is to AND all properties in where
       const quotedProperties = await this.#quoteProperties(where);
@@ -118,4 +118,4 @@ class CustomModel {
   }
 }
 
-module.exports = { CustomModel };
+module.exports = { CustomModel, pool };
