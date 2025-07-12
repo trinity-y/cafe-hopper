@@ -44,7 +44,8 @@ const reactionService: IReactionService = {
             return null;
         }
 
-        return reactionModel.delete(existingReaction[0].id);
+        const deletedObject = await reactionModel.delete(existingReaction[0].id);
+        return deletedObject;
     }
 };
 

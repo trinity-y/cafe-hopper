@@ -34,30 +34,30 @@ const Reaction = ({ reviewId, onReactionChange }) => {
     }
   };
 
+  const checkExistingReaction = async () => {
+    if (!userId || !reviewId) return;
+
+    try {
+      setIsLoading(true);
+      const response = await axios.get(`http://localhost:3001/reactions/review/${reviewId}?userId=${userId}`);
+      const userReaction = response.data.find(reaction => 
+        reaction.uID === userId && reaction.reaction === 'like'
+      );
+      setHasLiked(!!userReaction);
+    } catch (error) {
+      console.error('Error checking reaction:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const checkExistingReaction = async () => {
-      if (!userId || !reviewId) return;
-
-      try {
-        setIsLoading(true);
-        const response = await axios.get(`http://localhost:3001/reactions/review/${reviewId}?userId=${userId}`);
-        
-        const userReaction = response.data.find(reaction => 
-          reaction.uID === userId && reaction.reaction === 'like'
-        );
-        
-        setHasLiked(!!userReaction);
-      } catch (error) {
-        console.error('Error checking reaction:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
     checkExistingReaction();
   }, [userId, reviewId]);
 
   const handleReaction = async () => {
+    if (isLoading) return;
+
     const auth = getAuth();
     
     if (!auth.currentUser) {
@@ -70,9 +70,10 @@ const Reaction = ({ reviewId, onReactionChange }) => {
       return;
     }
 
+    setIsLoading(true);
     try {
       if (hasLiked) {
-        await axios.delete('/reactions', {
+        await axios.delete('http://localhost:3001/reactions', {
           data: {
             userId: userId,
             reviewId: reviewId
@@ -81,7 +82,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
         setHasLiked(false);
         if (onReactionChange) onReactionChange('remove');
       } else {
-        await axios.post('/reactions', {
+        await axios.post('http://localhost:3001/reactions', {
           uID: userId,
           rID: reviewId,
           reaction: 'like'
@@ -99,6 +100,8 @@ const Reaction = ({ reviewId, onReactionChange }) => {
       } else if (error.response?.status === 401) {
         alert('Please log in to react to reviews');
       }
+    } finally {
+      setIsLoading(false);
     }
   };
 
