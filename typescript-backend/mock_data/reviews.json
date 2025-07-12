@@ -1,0 +1,1352 @@
+[
+  {
+    "rating": 3.5,
+    "drinkRating": 1.8,
+    "foodRating": 2.5,
+    "atmosphereRating": 3.6,
+    "notes": "Great spot!",
+    "uID": 37,
+    "cID": 1
+  },
+  {
+    "rating": 4.0,
+    "drinkRating": 2.2,
+    "foodRating": 3.7,
+    "atmosphereRating": 3.4,
+    "notes": "",
+    "uID": 5,
+    "cID": 8
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 3.6,
+    "foodRating": 4.0,
+    "atmosphereRating": 4.1,
+    "notes": "Nice ambiance",
+    "uID": 41,
+    "cID": 7
+  },
+  {
+    "rating": 2.1,
+    "drinkRating": 4.2,
+    "foodRating": 2.2,
+    "atmosphereRating": 3.9,
+    "notes": "",
+    "uID": 33,
+    "cID": 8
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 3.7,
+    "foodRating": 1.7,
+    "atmosphereRating": 2.1,
+    "notes": "",
+    "uID": 12,
+    "cID": 4
+  },
+  {
+    "rating": 4.4,
+    "drinkRating": 1.7,
+    "foodRating": 4.9,
+    "atmosphereRating": 3.7,
+    "notes": "Great spot!",
+    "uID": 35,
+    "cID": 1
+  },
+  {
+    "rating": 1.9,
+    "drinkRating": 4.2,
+    "foodRating": 2.2,
+    "atmosphereRating": 2.6,
+    "notes": "",
+    "uID": 43,
+    "cID": 6
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 3.0,
+    "foodRating": 2.8,
+    "atmosphereRating": 1.9,
+    "notes": "Great spot!",
+    "uID": 7,
+    "cID": 7
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 1.6,
+    "foodRating": 1.7,
+    "atmosphereRating": 4.7,
+    "notes": null,
+    "uID": 24,
+    "cID": 4
+  },
+  {
+    "rating": 4.3,
+    "drinkRating": 2.2,
+    "foodRating": 3.3,
+    "atmosphereRating": 4.5,
+    "notes": "Loved the drinks",
+    "uID": 17,
+    "cID": 2
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 3.5,
+    "foodRating": 1.1,
+    "atmosphereRating": 3.3,
+    "notes": null,
+    "uID": 3,
+    "cID": 7
+  },
+  {
+    "rating": 4.4,
+    "drinkRating": 2.8,
+    "foodRating": 2.1,
+    "atmosphereRating": 4.8,
+    "notes": "Loved the drinks",
+    "uID": 33,
+    "cID": 2
+  },
+  {
+    "rating": 3.2,
+    "drinkRating": 4.1,
+    "foodRating": 3.3,
+    "atmosphereRating": 3.4,
+    "notes": null,
+    "uID": 24,
+    "cID": 9
+  },
+  {
+    "rating": 3.5,
+    "drinkRating": 4.0,
+    "foodRating": 1.7,
+    "atmosphereRating": 2.1,
+    "notes": null,
+    "uID": 20,
+    "cID": 4
+  },
+  {
+    "rating": 4.0,
+    "drinkRating": 1.6,
+    "foodRating": 4.4,
+    "atmosphereRating": 2.4,
+    "notes": "Great spot!",
+    "uID": 10,
+    "cID": 10
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 3.9,
+    "foodRating": 3.6,
+    "atmosphereRating": 4.9,
+    "notes": "Loved the drinks",
+    "uID": 39,
+    "cID": 10
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 4.5,
+    "foodRating": 2.5,
+    "atmosphereRating": 2.9,
+    "notes": null,
+    "uID": 28,
+    "cID": 9
+  },
+  {
+    "rating": 2.7,
+    "drinkRating": 4.7,
+    "foodRating": 3.7,
+    "atmosphereRating": 4.9,
+    "notes": "Loved the drinks",
+    "uID": 41,
+    "cID": 10
+  },
+  {
+    "rating": 3.4,
+    "drinkRating": 2.0,
+    "foodRating": 3.7,
+    "atmosphereRating": 1.3,
+    "notes": "Great spot!",
+    "uID": 9,
+    "cID": 5
+  },
+  {
+    "rating": 4.5,
+    "drinkRating": 3.3,
+    "foodRating": 1.6,
+    "atmosphereRating": 2.7,
+    "notes": "Loved the drinks",
+    "uID": 47,
+    "cID": 5
+  },
+  {
+    "rating": 3.4,
+    "drinkRating": 3.2,
+    "foodRating": 1.6,
+    "atmosphereRating": 4.5,
+    "notes": "Nice ambiance",
+    "uID": 44,
+    "cID": 10
+  },
+  {
+    "rating": 1.9,
+    "drinkRating": 1.9,
+    "foodRating": 2.3,
+    "atmosphereRating": 3.8,
+    "notes": "Loved the drinks",
+    "uID": 49,
+    "cID": 10
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 2.9,
+    "foodRating": 4.6,
+    "atmosphereRating": 2.4,
+    "notes": "Great spot!",
+    "uID": 9,
+    "cID": 9
+  },
+  {
+    "rating": 3.2,
+    "drinkRating": 2.7,
+    "foodRating": 2.6,
+    "atmosphereRating": 4.5,
+    "notes": "Great spot!",
+    "uID": 22,
+    "cID": 3
+  },
+  {
+    "rating": 1.7,
+    "drinkRating": 4.3,
+    "foodRating": 1.7,
+    "atmosphereRating": 1.5,
+    "notes": "Great spot!",
+    "uID": 21,
+    "cID": 5
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 4.9,
+    "foodRating": 3.1,
+    "atmosphereRating": 2.4,
+    "notes": "Great spot!",
+    "uID": 7,
+    "cID": 6
+  },
+  {
+    "rating": 3.1,
+    "drinkRating": 4.3,
+    "foodRating": 2.6,
+    "atmosphereRating": 3.4,
+    "notes": "Nice ambiance",
+    "uID": 11,
+    "cID": 4
+  },
+  {
+    "rating": 3.1,
+    "drinkRating": 3.8,
+    "foodRating": 4.7,
+    "atmosphereRating": 1.8,
+    "notes": "Loved the drinks",
+    "uID": 50,
+    "cID": 3
+  },
+  {
+    "rating": 3.5,
+    "drinkRating": 1.4,
+    "foodRating": 4.0,
+    "atmosphereRating": 1.0,
+    "notes": "",
+    "uID": 47,
+    "cID": 6
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 4.9,
+    "foodRating": 4.6,
+    "atmosphereRating": 2.7,
+    "notes": null,
+    "uID": 7,
+    "cID": 9
+  },
+  {
+    "rating": 2.3,
+    "drinkRating": 4.3,
+    "foodRating": 1.1,
+    "atmosphereRating": 4.5,
+    "notes": null,
+    "uID": 17,
+    "cID": 1
+  },
+  {
+    "rating": 2.5,
+    "drinkRating": 2.2,
+    "foodRating": 3.8,
+    "atmosphereRating": 3.2,
+    "notes": "",
+    "uID": 3,
+    "cID": 3
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 1.3,
+    "foodRating": 2.6,
+    "atmosphereRating": 1.1,
+    "notes": null,
+    "uID": 43,
+    "cID": 1
+  },
+  {
+    "rating": 4.2,
+    "drinkRating": 4.6,
+    "foodRating": 2.7,
+    "atmosphereRating": 2.2,
+    "notes": "",
+    "uID": 32,
+    "cID": 5
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 3.5,
+    "foodRating": 1.5,
+    "atmosphereRating": 1.8,
+    "notes": "Nice ambiance",
+    "uID": 45,
+    "cID": 9
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 4.5,
+    "foodRating": 3.2,
+    "atmosphereRating": 3.7,
+    "notes": null,
+    "uID": 47,
+    "cID": 8
+  },
+  {
+    "rating": 3.5,
+    "drinkRating": 2.7,
+    "foodRating": 4.7,
+    "atmosphereRating": 4.2,
+    "notes": "Great spot!",
+    "uID": 33,
+    "cID": 9
+  },
+  {
+    "rating": 2.1,
+    "drinkRating": 2.2,
+    "foodRating": 2.5,
+    "atmosphereRating": 4.1,
+    "notes": "Loved the drinks",
+    "uID": 9,
+    "cID": 7
+  },
+  {
+    "rating": 4.3,
+    "drinkRating": 3.5,
+    "foodRating": 4.2,
+    "atmosphereRating": 1.4,
+    "notes": "Nice ambiance",
+    "uID": 33,
+    "cID": 5
+  },
+  {
+    "rating": 2.7,
+    "drinkRating": 4.2,
+    "foodRating": 4.2,
+    "atmosphereRating": 4.6,
+    "notes": "Great spot!",
+    "uID": 35,
+    "cID": 4
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 2.4,
+    "foodRating": 2.8,
+    "atmosphereRating": 3.2,
+    "notes": "Nice ambiance",
+    "uID": 19,
+    "cID": 8
+  },
+  {
+    "rating": 3.7,
+    "drinkRating": 3.7,
+    "foodRating": 1.6,
+    "atmosphereRating": 2.2,
+    "notes": "",
+    "uID": 46,
+    "cID": 2
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 4.6,
+    "foodRating": 3.0,
+    "atmosphereRating": 4.7,
+    "notes": "",
+    "uID": 27,
+    "cID": 10
+  },
+  {
+    "rating": 4.6,
+    "drinkRating": 3.5,
+    "foodRating": 4.5,
+    "atmosphereRating": 3.3,
+    "notes": "Loved the drinks",
+    "uID": 41,
+    "cID": 2
+  },
+  {
+    "rating": 4.6,
+    "drinkRating": 1.4,
+    "foodRating": 3.1,
+    "atmosphereRating": 1.6,
+    "notes": "",
+    "uID": 19,
+    "cID": 10
+  },
+  {
+    "rating": 4.0,
+    "drinkRating": 4.7,
+    "foodRating": 3.3,
+    "atmosphereRating": 4.9,
+    "notes": "Great spot!",
+    "uID": 2,
+    "cID": 6
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 2.2,
+    "foodRating": 2.4,
+    "atmosphereRating": 3.0,
+    "notes": "Nice ambiance",
+    "uID": 29,
+    "cID": 5
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 4.3,
+    "foodRating": 1.3,
+    "atmosphereRating": 2.3,
+    "notes": null,
+    "uID": 23,
+    "cID": 3
+  },
+  {
+    "rating": 4.4,
+    "drinkRating": 3.7,
+    "foodRating": 3.3,
+    "atmosphereRating": 1.3,
+    "notes": "Great spot!",
+    "uID": 36,
+    "cID": 4
+  },
+  {
+    "rating": 1.2,
+    "drinkRating": 2.1,
+    "foodRating": 1.2,
+    "atmosphereRating": 3.2,
+    "notes": "Great spot!",
+    "uID": 26,
+    "cID": 8
+  },
+  {
+    "rating": 1.9,
+    "drinkRating": 2.2,
+    "foodRating": 3.9,
+    "atmosphereRating": 4.7,
+    "notes": "Great spot!",
+    "uID": 32,
+    "cID": 2
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 2.4,
+    "foodRating": 3.9,
+    "atmosphereRating": 1.8,
+    "notes": "",
+    "uID": 18,
+    "cID": 5
+  },
+  {
+    "rating": 3.5,
+    "drinkRating": 1.4,
+    "foodRating": 1.0,
+    "atmosphereRating": 4.0,
+    "notes": "Great spot!",
+    "uID": 22,
+    "cID": 2
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 3.4,
+    "foodRating": 3.6,
+    "atmosphereRating": 1.7,
+    "notes": "Loved the drinks",
+    "uID": 31,
+    "cID": 8
+  },
+  {
+    "rating": 4.3,
+    "drinkRating": 5.0,
+    "foodRating": 2.6,
+    "atmosphereRating": 2.8,
+    "notes": "",
+    "uID": 34,
+    "cID": 4
+  },
+  {
+    "rating": 1.9,
+    "drinkRating": 1.1,
+    "foodRating": 1.7,
+    "atmosphereRating": 2.9,
+    "notes": "Great spot!",
+    "uID": 1,
+    "cID": 2
+  },
+  {
+    "rating": 1.7,
+    "drinkRating": 2.1,
+    "foodRating": 1.7,
+    "atmosphereRating": 4.2,
+    "notes": "Great spot!",
+    "uID": 22,
+    "cID": 7
+  },
+  {
+    "rating": 3.2,
+    "drinkRating": 1.5,
+    "foodRating": 3.6,
+    "atmosphereRating": 4.0,
+    "notes": "Loved the drinks",
+    "uID": 45,
+    "cID": 8
+  },
+  {
+    "rating": 2.1,
+    "drinkRating": 4.0,
+    "foodRating": 4.2,
+    "atmosphereRating": 3.1,
+    "notes": "Great spot!",
+    "uID": 21,
+    "cID": 4
+  },
+  {
+    "rating": 4.3,
+    "drinkRating": 4.8,
+    "foodRating": 3.6,
+    "atmosphereRating": 1.4,
+    "notes": "Nice ambiance",
+    "uID": 25,
+    "cID": 3
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 1.3,
+    "foodRating": 4.1,
+    "atmosphereRating": 4.3,
+    "notes": "",
+    "uID": 41,
+    "cID": 1
+  },
+  {
+    "rating": 3.6,
+    "drinkRating": 4.0,
+    "foodRating": 3.2,
+    "atmosphereRating": 3.5,
+    "notes": "Nice ambiance",
+    "uID": 34,
+    "cID": 2
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 2.3,
+    "foodRating": 3.2,
+    "atmosphereRating": 4.5,
+    "notes": "Nice ambiance",
+    "uID": 12,
+    "cID": 5
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 4.7,
+    "foodRating": 2.3,
+    "atmosphereRating": 2.9,
+    "notes": "Nice ambiance",
+    "uID": 10,
+    "cID": 4
+  },
+  {
+    "rating": 3.9,
+    "drinkRating": 4.7,
+    "foodRating": 4.6,
+    "atmosphereRating": 4.8,
+    "notes": null,
+    "uID": 10,
+    "cID": 7
+  },
+  {
+    "rating": 1.2,
+    "drinkRating": 3.4,
+    "foodRating": 3.1,
+    "atmosphereRating": 1.3,
+    "notes": "Great spot!",
+    "uID": 49,
+    "cID": 4
+  },
+  {
+    "rating": 3.5,
+    "drinkRating": 4.6,
+    "foodRating": 2.7,
+    "atmosphereRating": 4.3,
+    "notes": "Loved the drinks",
+    "uID": 37,
+    "cID": 3
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 4.2,
+    "foodRating": 2.6,
+    "atmosphereRating": 2.2,
+    "notes": "Loved the drinks",
+    "uID": 8,
+    "cID": 8
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 2.8,
+    "foodRating": 4.4,
+    "atmosphereRating": 3.2,
+    "notes": "Nice ambiance",
+    "uID": 49,
+    "cID": 2
+  },
+  {
+    "rating": 3.2,
+    "drinkRating": 1.0,
+    "foodRating": 5.0,
+    "atmosphereRating": 2.6,
+    "notes": "Great spot!",
+    "uID": 50,
+    "cID": 10
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 3.0,
+    "foodRating": 4.0,
+    "atmosphereRating": 2.8,
+    "notes": "Nice ambiance",
+    "uID": 26,
+    "cID": 1
+  },
+  {
+    "rating": 5.0,
+    "drinkRating": 2.1,
+    "foodRating": 1.1,
+    "atmosphereRating": 2.8,
+    "notes": "",
+    "uID": 6,
+    "cID": 9
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 3.1,
+    "foodRating": 4.0,
+    "atmosphereRating": 2.9,
+    "notes": null,
+    "uID": 44,
+    "cID": 7
+  },
+  {
+    "rating": 1.8,
+    "drinkRating": 2.4,
+    "foodRating": 3.9,
+    "atmosphereRating": 1.7,
+    "notes": "Great spot!",
+    "uID": 41,
+    "cID": 4
+  },
+  {
+    "rating": 1.9,
+    "drinkRating": 2.7,
+    "foodRating": 3.8,
+    "atmosphereRating": 4.1,
+    "notes": "Loved the drinks",
+    "uID": 35,
+    "cID": 9
+  },
+  {
+    "rating": 3.1,
+    "drinkRating": 4.4,
+    "foodRating": 3.8,
+    "atmosphereRating": 3.9,
+    "notes": "",
+    "uID": 6,
+    "cID": 1
+  },
+  {
+    "rating": 3.5,
+    "drinkRating": 2.0,
+    "foodRating": 1.2,
+    "atmosphereRating": 2.1,
+    "notes": "Loved the drinks",
+    "uID": 38,
+    "cID": 10
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 3.4,
+    "foodRating": 4.0,
+    "atmosphereRating": 4.2,
+    "notes": "",
+    "uID": 14,
+    "cID": 5
+  },
+  {
+    "rating": 4.3,
+    "drinkRating": 3.8,
+    "foodRating": 3.1,
+    "atmosphereRating": 3.9,
+    "notes": "Nice ambiance",
+    "uID": 2,
+    "cID": 10
+  },
+  {
+    "rating": 2.7,
+    "drinkRating": 4.4,
+    "foodRating": 4.9,
+    "atmosphereRating": 1.6,
+    "notes": "",
+    "uID": 21,
+    "cID": 3
+  },
+  {
+    "rating": 3.9,
+    "drinkRating": 4.3,
+    "foodRating": 1.1,
+    "atmosphereRating": 2.8,
+    "notes": "",
+    "uID": 30,
+    "cID": 9
+  },
+  {
+    "rating": 5.0,
+    "drinkRating": 3.6,
+    "foodRating": 2.0,
+    "atmosphereRating": 2.5,
+    "notes": "Loved the drinks",
+    "uID": 10,
+    "cID": 2
+  },
+  {
+    "rating": 3.9,
+    "drinkRating": 3.7,
+    "foodRating": 3.1,
+    "atmosphereRating": 4.8,
+    "notes": "",
+    "uID": 5,
+    "cID": 4
+  },
+  {
+    "rating": 4.1,
+    "drinkRating": 2.9,
+    "foodRating": 1.6,
+    "atmosphereRating": 2.0,
+    "notes": "",
+    "uID": 4,
+    "cID": 1
+  },
+  {
+    "rating": 3.8,
+    "drinkRating": 1.9,
+    "foodRating": 4.7,
+    "atmosphereRating": 2.9,
+    "notes": "Nice ambiance",
+    "uID": 25,
+    "cID": 8
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 2.9,
+    "foodRating": 4.4,
+    "atmosphereRating": 1.7,
+    "notes": null,
+    "uID": 32,
+    "cID": 9
+  },
+  {
+    "rating": 4.4,
+    "drinkRating": 1.3,
+    "foodRating": 4.9,
+    "atmosphereRating": 2.2,
+    "notes": "Loved the drinks",
+    "uID": 32,
+    "cID": 4
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 2.4,
+    "foodRating": 2.4,
+    "atmosphereRating": 4.2,
+    "notes": "Great spot!",
+    "uID": 41,
+    "cID": 8
+  },
+  {
+    "rating": 4.6,
+    "drinkRating": 2.1,
+    "foodRating": 3.7,
+    "atmosphereRating": 3.1,
+    "notes": "Nice ambiance",
+    "uID": 29,
+    "cID": 6
+  },
+  {
+    "rating": 4.2,
+    "drinkRating": 4.1,
+    "foodRating": 1.8,
+    "atmosphereRating": 4.3,
+    "notes": "Great spot!",
+    "uID": 2,
+    "cID": 5
+  },
+  {
+    "rating": 4.4,
+    "drinkRating": 1.9,
+    "foodRating": 1.7,
+    "atmosphereRating": 2.9,
+    "notes": "Great spot!",
+    "uID": 13,
+    "cID": 3
+  },
+  {
+    "rating": 3.8,
+    "drinkRating": 1.6,
+    "foodRating": 1.4,
+    "atmosphereRating": 2.3,
+    "notes": null,
+    "uID": 3,
+    "cID": 5
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 1.6,
+    "foodRating": 3.9,
+    "atmosphereRating": 3.3,
+    "notes": "Great spot!",
+    "uID": 5,
+    "cID": 6
+  },
+  {
+    "rating": 2.3,
+    "drinkRating": 4.5,
+    "foodRating": 1.5,
+    "atmosphereRating": 2.9,
+    "notes": "",
+    "uID": 46,
+    "cID": 10
+  },
+  {
+    "rating": 4.3,
+    "drinkRating": 4.4,
+    "foodRating": 2.1,
+    "atmosphereRating": 1.4,
+    "notes": "Great spot!",
+    "uID": 24,
+    "cID": 8
+  },
+  {
+    "rating": 1.2,
+    "drinkRating": 2.5,
+    "foodRating": 2.8,
+    "atmosphereRating": 4.1,
+    "notes": "Great spot!",
+    "uID": 1,
+    "cID": 6
+  },
+  {
+    "rating": 1.9,
+    "drinkRating": 3.2,
+    "foodRating": 2.4,
+    "atmosphereRating": 4.4,
+    "notes": "",
+    "uID": 22,
+    "cID": 6
+  },
+  {
+    "rating": 3.7,
+    "drinkRating": 2.4,
+    "foodRating": 4.5,
+    "atmosphereRating": 1.5,
+    "notes": "",
+    "uID": 36,
+    "cID": 3
+  },
+  {
+    "rating": 4.7,
+    "drinkRating": 2.5,
+    "foodRating": 2.2,
+    "atmosphereRating": 4.1,
+    "notes": null,
+    "uID": 9,
+    "cID": 10
+  },
+  {
+    "rating": 3.0,
+    "drinkRating": 1.8,
+    "foodRating": 3.6,
+    "atmosphereRating": 4.1,
+    "notes": "Great spot!",
+    "uID": 44,
+    "cID": 1
+  },
+  {
+    "rating": 3.9,
+    "drinkRating": 2.4,
+    "foodRating": 4.6,
+    "atmosphereRating": 1.7,
+    "notes": null,
+    "uID": 47,
+    "cID": 2
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 3.1,
+    "foodRating": 2.4,
+    "atmosphereRating": 4.0,
+    "notes": "Great spot!",
+    "uID": 15,
+    "cID": 4
+  },
+  {
+    "rating": 4.5,
+    "drinkRating": 4.3,
+    "foodRating": 4.4,
+    "atmosphereRating": 3.1,
+    "notes": "Nice ambiance",
+    "uID": 27,
+    "cID": 4
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 3.2,
+    "foodRating": 2.8,
+    "atmosphereRating": 3.1,
+    "notes": "Loved the drinks",
+    "uID": 26,
+    "cID": 2
+  },
+  {
+    "rating": 3.2,
+    "drinkRating": 1.3,
+    "foodRating": 4.9,
+    "atmosphereRating": 5.0,
+    "notes": "",
+    "uID": 11,
+    "cID": 9
+  },
+  {
+    "rating": 3.8,
+    "drinkRating": 1.3,
+    "foodRating": 4.7,
+    "atmosphereRating": 2.5,
+    "notes": null,
+    "uID": 12,
+    "cID": 1
+  },
+  {
+    "rating": 1.6,
+    "drinkRating": 2.5,
+    "foodRating": 2.8,
+    "atmosphereRating": 3.5,
+    "notes": "Great spot!",
+    "uID": 34,
+    "cID": 5
+  },
+  {
+    "rating": 4.5,
+    "drinkRating": 3.7,
+    "foodRating": 2.1,
+    "atmosphereRating": 4.2,
+    "notes": "Loved the drinks",
+    "uID": 24,
+    "cID": 2
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 2.2,
+    "foodRating": 3.9,
+    "atmosphereRating": 2.2,
+    "notes": "",
+    "uID": 5,
+    "cID": 9
+  },
+  {
+    "rating": 3.0,
+    "drinkRating": 4.9,
+    "foodRating": 4.7,
+    "atmosphereRating": 1.2,
+    "notes": "Loved the drinks",
+    "uID": 37,
+    "cID": 5
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 4.9,
+    "foodRating": 4.7,
+    "atmosphereRating": 2.7,
+    "notes": "Nice ambiance",
+    "uID": 16,
+    "cID": 6
+  },
+  {
+    "rating": 4.2,
+    "drinkRating": 1.2,
+    "foodRating": 2.1,
+    "atmosphereRating": 4.5,
+    "notes": "Nice ambiance",
+    "uID": 22,
+    "cID": 9
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 2.8,
+    "foodRating": 1.4,
+    "atmosphereRating": 3.4,
+    "notes": "Great spot!",
+    "uID": 48,
+    "cID": 3
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 4.6,
+    "foodRating": 4.2,
+    "atmosphereRating": 2.5,
+    "notes": "Loved the drinks",
+    "uID": 11,
+    "cID": 5
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 1.9,
+    "foodRating": 4.8,
+    "atmosphereRating": 3.3,
+    "notes": "",
+    "uID": 50,
+    "cID": 8
+  },
+  {
+    "rating": 3.9,
+    "drinkRating": 1.6,
+    "foodRating": 4.7,
+    "atmosphereRating": 3.4,
+    "notes": null,
+    "uID": 2,
+    "cID": 8
+  },
+  {
+    "rating": 3.8,
+    "drinkRating": 3.9,
+    "foodRating": 3.4,
+    "atmosphereRating": 4.3,
+    "notes": "",
+    "uID": 34,
+    "cID": 7
+  },
+  {
+    "rating": 4.1,
+    "drinkRating": 2.6,
+    "foodRating": 3.2,
+    "atmosphereRating": 4.6,
+    "notes": "Great spot!",
+    "uID": 48,
+    "cID": 10
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 2.4,
+    "foodRating": 1.6,
+    "atmosphereRating": 3.0,
+    "notes": "Nice ambiance",
+    "uID": 3,
+    "cID": 10
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 1.8,
+    "foodRating": 3.6,
+    "atmosphereRating": 1.6,
+    "notes": "Loved the drinks",
+    "uID": 26,
+    "cID": 7
+  },
+  {
+    "rating": 5.0,
+    "drinkRating": 4.5,
+    "foodRating": 2.8,
+    "atmosphereRating": 2.7,
+    "notes": "",
+    "uID": 10,
+    "cID": 9
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 4.8,
+    "foodRating": 2.7,
+    "atmosphereRating": 1.9,
+    "notes": null,
+    "uID": 18,
+    "cID": 8
+  },
+  {
+    "rating": 2.7,
+    "drinkRating": 4.2,
+    "foodRating": 3.7,
+    "atmosphereRating": 3.1,
+    "notes": "Nice ambiance",
+    "uID": 50,
+    "cID": 9
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 1.3,
+    "foodRating": 2.4,
+    "atmosphereRating": 3.0,
+    "notes": "Great spot!",
+    "uID": 20,
+    "cID": 1
+  },
+  {
+    "rating": 3.7,
+    "drinkRating": 3.5,
+    "foodRating": 4.4,
+    "atmosphereRating": 2.0,
+    "notes": "Loved the drinks",
+    "uID": 1,
+    "cID": 1
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 2.9,
+    "foodRating": 2.2,
+    "atmosphereRating": 4.5,
+    "notes": "Nice ambiance",
+    "uID": 26,
+    "cID": 5
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 1.1,
+    "foodRating": 2.5,
+    "atmosphereRating": 4.8,
+    "notes": "Nice ambiance",
+    "uID": 19,
+    "cID": 7
+  },
+  {
+    "rating": 2.5,
+    "drinkRating": 2.8,
+    "foodRating": 3.4,
+    "atmosphereRating": 4.3,
+    "notes": "",
+    "uID": 19,
+    "cID": 4
+  },
+  {
+    "rating": 1.6,
+    "drinkRating": 1.6,
+    "foodRating": 4.0,
+    "atmosphereRating": 4.3,
+    "notes": "",
+    "uID": 4,
+    "cID": 10
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 3.3,
+    "foodRating": 3.0,
+    "atmosphereRating": 1.3,
+    "notes": "",
+    "uID": 44,
+    "cID": 9
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 3.7,
+    "foodRating": 3.3,
+    "atmosphereRating": 2.2,
+    "notes": "",
+    "uID": 40,
+    "cID": 6
+  },
+  {
+    "rating": 3.6,
+    "drinkRating": 2.2,
+    "foodRating": 2.4,
+    "atmosphereRating": 2.0,
+    "notes": "Great spot!",
+    "uID": 29,
+    "cID": 4
+  },
+  {
+    "rating": 1.7,
+    "drinkRating": 4.5,
+    "foodRating": 3.8,
+    "atmosphereRating": 2.0,
+    "notes": "Nice ambiance",
+    "uID": 35,
+    "cID": 6
+  },
+  {
+    "rating": 1.2,
+    "drinkRating": 2.7,
+    "foodRating": 2.1,
+    "atmosphereRating": 4.9,
+    "notes": "Loved the drinks",
+    "uID": 5,
+    "cID": 1
+  },
+  {
+    "rating": 3.4,
+    "drinkRating": 1.9,
+    "foodRating": 1.2,
+    "atmosphereRating": 3.8,
+    "notes": "Great spot!",
+    "uID": 29,
+    "cID": 9
+  },
+  {
+    "rating": 4.5,
+    "drinkRating": 2.8,
+    "foodRating": 3.1,
+    "atmosphereRating": 4.4,
+    "notes": null,
+    "uID": 36,
+    "cID": 7
+  },
+  {
+    "rating": 4.2,
+    "drinkRating": 4.8,
+    "foodRating": 1.7,
+    "atmosphereRating": 4.6,
+    "notes": "Loved the drinks",
+    "uID": 37,
+    "cID": 6
+  },
+  {
+    "rating": 3.8,
+    "drinkRating": 4.4,
+    "foodRating": 1.3,
+    "atmosphereRating": 4.1,
+    "notes": "Great spot!",
+    "uID": 48,
+    "cID": 7
+  },
+  {
+    "rating": 3.6,
+    "drinkRating": 2.5,
+    "foodRating": 1.6,
+    "atmosphereRating": 2.7,
+    "notes": "Loved the drinks",
+    "uID": 10,
+    "cID": 1
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 1.7,
+    "foodRating": 2.7,
+    "atmosphereRating": 1.5,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 6
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 2.1,
+    "foodRating": 1.5,
+    "atmosphereRating": 1.2,
+    "notes": "Loved the drinks",
+    "uID": 8,
+    "cID": 7
+  },
+  {
+    "rating": 3.8,
+    "drinkRating": 3.2,
+    "foodRating": 1.2,
+    "atmosphereRating": 1.2,
+    "notes": null,
+    "uID": 41,
+    "cID": 5
+  },
+  {
+    "rating": 2.3,
+    "drinkRating": 3.8,
+    "foodRating": 4.6,
+    "atmosphereRating": 1.0,
+    "notes": null,
+    "uID": 11,
+    "cID": 3
+  },
+  {
+    "rating": 3.4,
+    "drinkRating": 3.1,
+    "foodRating": 4.0,
+    "atmosphereRating": 3.2,
+    "notes": "",
+    "uID": 50,
+    "cID": 7
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 3.8,
+    "foodRating": 2.5,
+    "atmosphereRating": 3.5,
+    "notes": "Nice ambiance",
+    "uID": 27,
+    "cID": 5
+  },
+  {
+    "rating": 3.1,
+    "drinkRating": 2.5,
+    "foodRating": 1.9,
+    "atmosphereRating": 3.8,
+    "notes": "",
+    "uID": 50,
+    "cID": 4
+  },
+  {
+    "rating": 4.5,
+    "drinkRating": 3.0,
+    "foodRating": 1.8,
+    "atmosphereRating": 4.1,
+    "notes": "Great spot!",
+    "uID": 15,
+    "cID": 3
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 3.0,
+    "foodRating": 3.7,
+    "atmosphereRating": 3.5,
+    "notes": "Nice ambiance",
+    "uID": 31,
+    "cID": 3
+  },
+  {
+    "rating": 4.0,
+    "drinkRating": 4.0,
+    "foodRating": 4.5,
+    "atmosphereRating": 4.0,
+    "notes": null,
+    "uID": 39,
+    "cID": 4
+  },
+  {
+    "rating": 3.4,
+    "drinkRating": 2.3,
+    "foodRating": 2.3,
+    "atmosphereRating": 4.9,
+    "notes": "Loved the drinks",
+    "uID": 46,
+    "cID": 7
+  }
+]
