@@ -17,9 +17,12 @@ class CustomModel {
 
   // get a tableSchema object with keys representing column name and the values representing the columns type
   async #getTableSchema() {
-    const client = await pool.connect();
+    if (this.#tableSchema) {
+      return this.#tableSchema; 
+    }
 
-    if (!this.#tableSchema) {
+    const client = await pool.connect();
+    try {
       this.#tableSchema = {};
       const tableDataQuery = `
         SELECT column_name, data_type
@@ -31,8 +34,8 @@ class CustomModel {
         this.#tableSchema[tableDataTuple.column_name] = tableDataTuple.data_type;
       });
       return this.#tableSchema;
-    } else {
-      return this.#tableSchema;
+    } finally {
+      client.release(); 
     }
   }
 
