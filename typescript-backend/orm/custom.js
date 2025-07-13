@@ -60,7 +60,7 @@ class CustomModel {
     ]);
 
     const quotedProperties = {}
-    keyNames.map(key => {
+    keyNames.forEach(key => {
       if (quotedTypes.has(tableSchema[key])) { // if the key's type is in quoted types, surround w/ quotes
         quotedProperties[key] = `'${object[key]}'`;
       } else {
@@ -115,6 +115,7 @@ class CustomModel {
       return result.rows[0];
     } catch (e) {
       console.error(e);
+      throw e;
     } finally {
       client.release();
     }
