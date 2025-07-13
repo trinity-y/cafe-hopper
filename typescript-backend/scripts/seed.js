@@ -19,6 +19,14 @@ async function seedDatabase() {
               "username" VARCHAR(100) NOT NULL UNIQUE,
               "firebase_uid" VARCHAR(100) NOT NULL UNIQUE
             );
+
+            CREATE TABLE IF NOT EXISTS "Friend" (
+                id SERIAL PRIMARY KEY,
+                user_id INT NOT NULL REFERENCES "User"(id), 
+                friend_id INT NOT NULL REFERENCES "User"(id), 
+                UNIQUE(user_id, friend_id),
+                CHECK (user_id != friend_id)
+            );
             
             CREATE TABLE IF NOT EXISTS "Cafe" (
                 id SERIAL PRIMARY KEY,
@@ -40,6 +48,14 @@ async function seedDatabase() {
             await client.query(
                 'INSERT INTO "User" ("username", "firebase_uid") VALUES ($1, $2)',
                 [user.username, user.firebase_uid]
+            );
+        }
+
+        const friends = require('../mock_data/friends.json');
+        for (const friend of friends) {
+            await client.query(
+                'INSERT INTO "Friend" ("user_id", "friend_id") VALUES ($1, $2)',
+                [friend.user_id, friend.friend_id]
             );
         }
 
