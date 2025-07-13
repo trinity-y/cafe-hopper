@@ -73,12 +73,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
     setIsLoading(true);
     try {
       if (hasLiked) {
-        await axios.delete('http://localhost:3001/reactions', {
-          data: {
-            userId: userId,
-            reviewId: reviewId
-          }
-        });
+        await axios.delete(`http://localhost:3001/reactions/${userId}/${reviewId}`);
         setHasLiked(false);
         if (onReactionChange) onReactionChange('remove');
       } else {

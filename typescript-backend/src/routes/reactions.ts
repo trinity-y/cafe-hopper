@@ -5,7 +5,9 @@ const router = Router();
 
 router.get('/', async (req: Request, res: Response) => {
   try {
-    const reactions = await reactionService.getAllReactions(); 
+    const { rID, uID } = req.body;
+
+    const reactions = await reactionService.getAllReactions(rID, uID); 
     res.status(200).json(reactions);
   } catch (error) {
     console.error('Error fetching reactions:', error);
@@ -57,20 +59,20 @@ router.post('/', async (req: Request, res: Response) => {
 
 // The routes might not fully make sense right now since it will all be 
 // implemented on top of reviews
-router.delete('/', async (req: Request, res: Response) => {
+router.delete('/:userId/:reviewId', async (req: Request, res: Response) => {
   try {
-    const { userId, reviewId } = req.body;
-
+    const { userId, reviewId } = req.params;
+    
     if (!userId || !reviewId) {
       return res.status(400).json({ message: 'userId and reviewId are required' });
     }
     
-    const deletedReaction = await reactionService.deleteUserReactionForReview(userId, reviewId);
+    const deletedReaction = await reactionService.deleteUserReactionForReview(parseInt(userId), parseInt(reviewId));
     
     if (!deletedReaction) {
       return res.status(404).json({ message: 'Reaction not found' });
     }
-
+    
     res.status(200).json({ message: 'Reaction removed successfully', deletedReaction });
   } catch (error) {
     console.error('Error deleting reaction:', error);
