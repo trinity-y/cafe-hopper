@@ -4,6 +4,7 @@ import { CreateReviewDTO, UpdateReviewDTO } from '../interfaces/review.interface
 
 const router = Router();
 
+// Get all reviews
 router.get('/', async (req: Request, res: Response) => {
   try {
     const reviews = await reviewService.getAllReviews(); 
@@ -14,6 +15,7 @@ router.get('/', async (req: Request, res: Response) => {
   }
 });
 
+// Get all reviews from a user
 router.get('/user', async (req: Request, res: Response) => {
   const uid = parseInt(req.query.uid as string, 10);
   try {
@@ -25,6 +27,7 @@ router.get('/user', async (req: Request, res: Response) => {
   }
 });
 
+// Get all reviews from a cafe
 router.get('/cafe', async (req: Request, res: Response) => {
   const cid = parseInt(req.query.cid as string, 10);
   try {
@@ -36,31 +39,35 @@ router.get('/cafe', async (req: Request, res: Response) => {
   }
 });
 
+// Update review with a certain ID, UpdateReviewDTO expected input body structure
+// rating: number;
+//   foodRating?: number;
+//   drinkRating?: number;
+//   atmosphereRating?: number;
+//   notes?: string;
 router.patch('/:id', async (req: Request, res: Response) => {
   const id = parseInt(req.params.id, 10);
   const inputReview = req.body as UpdateReviewDTO;
   try {
-    const review = await reviewService.editReview(id, inputReview); 
-    if (review) {
-      res.status(200).json(review);
-    } else {
-      res.status(404).json({ message: `review with id ${id} not found` });
-    }
+    await reviewService.editReview(id, inputReview); 
+    res.status(200).json(`Successfully updated review with id ${id}`);
   } catch (error) {
-    console.error(`Error fetching review with id ${id}:`, error);
-    res.status(500).json({ message: 'Error fetching review' });
+    console.error(`Error updating review with id ${id}:`, error);
+    res.status(500).json({ message: 'Error updating review' });
   }
 });
 
+// Create a review
 router.post('/', async (req: Request, res: Response) => {
   const inputReview = req.body as CreateReviewDTO;
   try {
     const newReview = await reviewService.createReview(inputReview);
       if (newReview) {
-        res.status(200).json(newReview);
+        res.status(201).json(newReview);
       } else {
         res.status(500).json({ message: `Could not create review. New review not returned.` });
       }
+      return newReview;
   } catch (error) {
     console.error(`Error creating review:`, error)
     res.status(500).json({ message: `Error creating review. ` });
@@ -71,6 +78,12 @@ router.post('/delete/:id', async (req: Request, res: Response) => {
   const id = parseInt(req.params.id, 10);
   try {
     const deletedReview = await reviewService.deleteReview(id);
+    if (deletedReview){
+      res.status(200).json(`Successfully deleted review with id ${id}`)
+    } else {
+      res.status(500).json({ message: `Error deleting review with id ${id} ` });
+    }
+    return deletedReview;
   } catch (error) {
     console.error(`Error deleting review with id ${id}:`, error)
     res.status(500).json({ message: `Error deleting review. ` });
