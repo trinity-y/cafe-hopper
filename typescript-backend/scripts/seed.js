@@ -37,6 +37,17 @@ async function seedDatabase() {
                 "openingDays" TEXT,
                 "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5)
             );
+            CREATE TABLE IF NOT EXISTS "Reviews" (
+              id SERIAL PRIMARY KEY,
+              rating DECIMAL(2,1) NOT NULL CHECK (rating >= 0 AND rating <= 5),
+              drinkRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
+              foodRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
+              atmosphereRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
+              notes VARCHAR(200),
+              cID INT NOT NULL REFERENCES "Cafe"(id),
+              uID INT NOT NULL REFERENCES "User"(id),
+              UNIQUE(cID, uID)
+            );
         `);
 
         await client.query('TRUNCATE "User", "Cafe" RESTART IDENTITY CASCADE');
@@ -65,6 +76,14 @@ async function seedDatabase() {
             await client.query(
                 'INSERT INTO "Cafe" (name, address, latitude, longitude, "openingDays", "googleRating") VALUES ($1, $2, $3, $4, $5, $6)',
                 [cafe.name, cafe.address, cafe.latitude, cafe.longitude, cafe.openingDays, cafe.googleRating]
+            );
+        }
+        const reviews = require('../mock_data/reviews.json');
+
+        for (const review of reviews) {
+            await client.query(
+                'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7)',
+                [review.rating, review.drinkRating, review.foodRating, review.atmosphereRating, review.notes, review.uID, review.cID]
             );
         }
 
