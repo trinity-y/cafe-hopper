@@ -7,3 +7,5 @@ export interface ICafe {
   startPrice: number;
   endPrice: number;
 }
+
+// Add another like final calculated rating appended to

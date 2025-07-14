@@ -21,8 +21,7 @@ async function seedDatabase() {
             DROP TABLE IF EXISTS "Friend" CASCADE;
             DROP TABLE IF EXISTS "Bookmark" CASCADE;
 
-
-            CREATE TABLE "User" (
+            CREATE TABLE IF NOT EXISTS "User" (
               id SERIAL PRIMARY KEY,
               "username" VARCHAR(100) NOT NULL UNIQUE,
               "firebase_uid" VARCHAR(100) NOT NULL UNIQUE
@@ -139,6 +138,15 @@ async function seedDatabase() {
             );
         }
 
+
+        const reviews = require('../mock_data/reviews.json');
+
+        for (const review of reviews) {
+            await client.query(
+                'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7)',
+                [review.rating, review.drinkRating, review.foodRating, review.atmosphereRating, review.notes, review.uID, review.cID]
+            );
+        }
 
         console.log('Database seeded successfully with User and Cafe tables!');
     } catch (err) {
