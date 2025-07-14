@@ -9,10 +9,10 @@ function Review({review}) {
     // 4. Notes (notes)
     return (
         <>
-        <Box component="section" sx={{ px:4, py: 2, border: '1px solid grey', width: '100%', bgcolor:'whitesmoke' }} display="flex" justifyContent="space-between" >
+        <Box component="section" sx={{ px:4, py: 2, border: '1px solid grey', width: '100%', bgcolor:'whitesmoke', padding:'2em' }} display="flex" justifyContent="space-between" >
             {/* main review info */}
             <Box display="flex" flexDirection="column" sx={{ height: '100%', marginTop:'1em' }}>
-                <Box display="flex" alignItems="center" gap={1.5}>
+                <Box display="flex" alignItems="baseline" gap={3}>
                     <Typography variant='h4' style={{ margin: 0 }}>{review.cafename}</Typography>
                     <StarRating rating={review.rating} interactive={false}></StarRating>
                 </Box>
