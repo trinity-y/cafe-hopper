@@ -5,7 +5,7 @@ const CreateReviewRow = async (rating, foodRating, drinkRating, atmosphereRating
     drinkRating: drinkRating,
     atmosphereRating: atmosphereRating,
     notes: notes,
-    uid: uid, // unknown
+    uid: uid,
     cid: cid,
   };
   try {
@@ -20,6 +20,7 @@ const CreateReviewRow = async (rating, foodRating, drinkRating, atmosphereRating
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+    return response;
   } catch (error) {
     console.error('Error creating review:', error);
     throw error;
