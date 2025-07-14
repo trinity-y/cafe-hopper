@@ -12,14 +12,17 @@ const pool = new Pool({
 class CustomModel {
   #tableSchema = null;
   constructor(tableName) {
-    this.tableName = tableName;    
+    this.tableName = tableName;
   }
 
   // get a tableSchema object with keys representing column name and the values representing the columns type
   async #getTableSchema() {
-    const client = await pool.connect();
+    if (this.#tableSchema) {
+      return this.#tableSchema; 
+    }
 
-    if (!this.#tableSchema) {
+    const client = await pool.connect();
+    try {
       this.#tableSchema = {};
       const tableDataQuery = `
         SELECT column_name, data_type
@@ -28,11 +31,11 @@ class CustomModel {
       const tableData = (await client.query(tableDataQuery)).rows;
 
       tableData.forEach(tableDataTuple => { // {column__name:"uid", data_type:"char varying"}
-          this.#tableSchema[tableDataTuple.column_name] = tableDataTuple.data_type;
+        this.#tableSchema[tableDataTuple.column_name] = tableDataTuple.data_type;
       });
       return this.#tableSchema;
-    } else {
-      return this.#tableSchema;
+    } finally {
+      client.release(); 
     }
   }
 
@@ -57,7 +60,7 @@ class CustomModel {
     ]);
 
     const quotedProperties = {}
-    keyNames.map(key => {
+    keyNames.forEach(key => {
       if (quotedTypes.has(tableSchema[key])) { // if the key's type is in quoted types, surround w/ quotes
         quotedProperties[key] = `'${object[key]}'`;
       } else {
@@ -73,7 +76,7 @@ class CustomModel {
       if (where === undefined) { // no where clause -- get all rows
         const query = `SELECT * FROM "${this.tableName}"`;
         const result = await client.query(query);
-        return result.rows; 
+        return result.rows;
       }
       // where clause -- current behaviour is to AND all properties in where
       const quotedProperties = await this.#quoteProperties(where);
@@ -112,6 +115,7 @@ class CustomModel {
       return result.rows[0];
     } catch (e) {
       console.error(e);
+      throw e;
     } finally {
       client.release();
     }
@@ -159,4 +163,4 @@ class CustomModel {
   }
 }
 
-module.exports = { CustomModel };
+module.exports = { CustomModel, pool };

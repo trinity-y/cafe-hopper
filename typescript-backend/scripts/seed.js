@@ -11,7 +11,7 @@ const pool = new Pool({
 
 async function seedDatabase() {
     const client = await pool.connect();
-    
+
     try {
         await client.query(`
             CREATE TABLE IF NOT EXISTS "User" (
@@ -21,9 +21,13 @@ async function seedDatabase() {
             );
             
             CREATE TABLE IF NOT EXISTS "Cafe" (
-              id SERIAL PRIMARY KEY,
-              name VARCHAR(200) NOT NULL,
-              rating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5)
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(200) NOT NULL,
+                address TEXT NOT NULL,
+                latitude DOUBLE PRECISION NOT NULL,
+                longitude DOUBLE PRECISION NOT NULL,
+                "openingDays" TEXT,
+                "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5)
             );
             CREATE TABLE IF NOT EXISTS "Reviews" (
               id SERIAL PRIMARY KEY,
@@ -37,28 +41,25 @@ async function seedDatabase() {
               UNIQUE(cID, uID)
             );
         `);
-        
+
         await client.query('TRUNCATE "User", "Cafe" RESTART IDENTITY CASCADE');
 
         // warning the firebase uids as part of this data are all FAKE!!
-        const users = require('../mock_data/users.json');
-        
+        const { getUserData } = require('./getUserData');
+        const users = await getUserData();
         for (const user of users) {
             await client.query(
                 'INSERT INTO "User" ("username", "firebase_uid") VALUES ($1, $2)',
                 [user.username, user.firebase_uid]
             );
         }
-        
-        const cafes = [
-            { name: 'Midnight Run Cafe', rating: 4.5 },
-            { name: 'Princess Cafe', rating: 4.6 },
-            { name: 'Rommana', rating: 5.0 },
-        ];
+
+        const { getCafeData } = require('./getCafeData');
+        const cafes = await getCafeData();
         for (const cafe of cafes) {
             await client.query(
-                'INSERT INTO "Cafe" (name, rating) VALUES ($1, $2)',
-                [cafe.name, cafe.rating]
+                'INSERT INTO "Cafe" (name, address, latitude, longitude, "openingDays", "googleRating") VALUES ($1, $2, $3, $4, $5, $6)',
+                [cafe.name, cafe.address, cafe.latitude, cafe.longitude, cafe.openingDays, cafe.googleRating]
             );
         }
         const reviews = require('../mock_data/reviews.json');
