@@ -5,3 +5,5 @@ export interface ICafe {
   openingDays: string;
   googleRating: number;
 }
+
+// Add another like final calculated rating appended to
