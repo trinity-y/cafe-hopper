@@ -4,7 +4,7 @@ import {Box, TextField, Grid, Button, Alert} from '@mui/material';
 import theme from './theme';
 import StarRating from './StarRating';
 import CreateReviewRow from './CreateReviewRow';
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 function CreateReview({cafeName, cid}) {
     const [userRating, setUserRating] = useState(0);
@@ -13,37 +13,55 @@ function CreateReview({cafeName, cid}) {
     const [atmosphereRating, setAtmosphereRating] = useState(0);
     const [notes, setNotes] = useState("");
     const [showSubmissionResult, setShowSubmissionResult] = useState(false);
+    const [submissionMessage, setSubmissionMessage] = useState(null);
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         setShowSubmissionResult(true);
         // Add your review submission logic here
+        const result = await FormSubmission();
+        setSubmissionMessage(result);
     };
-    const FormSubmission = () => {
-        let uid = 0;
+    const FormSubmission = async () => {
         if (userRating === 0){
             return <Alert severity="error">Please submit a ranking.</Alert>;
         }
         try {
             const auth = getAuth();
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    uid = user.uid;
-                } else {
-                    return <Alert severity="error">You must be signed in to write a review.</Alert>;
-                }
-            });
-            CreateReviewRow(userRating, foodRating, drinkRating, atmosphereRating, notes, uid, cid);
+            const user = auth.currentUser; // Get current user synchronously
+            
+            if (!user) {
+                return <Alert severity="error">You must be signed in to write a review.</Alert>;
+            }
+            
+            // Fetch and find the matching user
+            const res = await fetch("http://localhost:3001/users");
+            if (!res.ok) throw new Error("Failed to fetch users");
+            
+            const users = await res.json();
+            const matchingUser = users.find(u => u.firebase_uid === user.uid);
+            
+            if (!matchingUser) {
+                console.error("No matching user found for this Firebase UID");
+                return <Alert severity="error">User not found in database.</Alert>;
+            }
+            
+            const currentUid = matchingUser.id; // Use local variable instead of state
+            const currentCid = cid || 1; // Handle null cid
+            
+            
+            const result = await CreateReviewRow(userRating, foodRating, drinkRating, atmosphereRating, notes, currentUid, currentCid);
+            console.log(result);
+            return <Alert severity="success">Your review was successfully created.</Alert>;
+            
         } catch (error){
             console.log(error);
-            return <Alert severity="error">An error has occured.</Alert>;
+            return <Alert severity="error">An error has occurred/you have already created a review for this cafe.</Alert>;
         }
-        return <Alert severity="success">Your review was successfully created.</Alert>;
     }
     return (
         <ThemeProvider theme={theme}>
             <Box 
             display="flex" 
-            // bgcolor="primary.main"
             alignItems="center"
             justifyContent="center"
             flexDirection={"column"}
@@ -101,7 +119,7 @@ function CreateReview({cafeName, cid}) {
                     )
                 }
                 <Button variant="contained" onClick={handleSubmit}> Submit </Button>
-                {showSubmissionResult && (FormSubmission())}
+                {showSubmissionResult && submissionMessage}
             </Box>
         </ThemeProvider>
     );
