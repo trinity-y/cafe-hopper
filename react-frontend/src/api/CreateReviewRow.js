@@ -1,5 +1,5 @@
 const CreateReviewRow = async (rating, foodRating, drinkRating, atmosphereRating, notes, uid, cid) => {
-  const now = new Date();
+const now = new Date();
   const timestamp = now.toISOString();
 
   const newReview = {
