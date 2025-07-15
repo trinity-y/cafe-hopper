@@ -3,7 +3,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import {Box, TextField, Grid, Button, Alert} from '@mui/material';
 import theme from './theme';
 import StarRating from './StarRating';
-import CreateReviewRow from './CreateReviewRow';
+import CreateReviewRow from '../api/CreateReviewRow';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function CreateReview({cafeName, cid}) {
@@ -34,6 +34,7 @@ function CreateReview({cafeName, cid}) {
             }
             
             // Fetch and find the matching user
+            // TODO: Update with new bookmarks endpoint
             const res = await fetch("http://localhost:3001/users");
             if (!res.ok) throw new Error("Failed to fetch users");
             
