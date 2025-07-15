@@ -1,10 +1,14 @@
 const CreateReviewRow = async (rating, foodRating, drinkRating, atmosphereRating, notes, uid, cid) => {
+  const now = new Date();
+  const timestamp = now.toISOString();
+
   const newReview = {
     rating: rating,
     foodRating: foodRating,
     drinkRating: drinkRating,
     atmosphereRating: atmosphereRating,
     notes: notes,
+    timestamp, timestamp,
     uid: uid,
     cid: cid,
   };
