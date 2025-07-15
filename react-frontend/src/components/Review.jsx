@@ -1,6 +1,9 @@
 import {Box} from '@mui/material';
 import StarRating from './StarRating';
 import { Typography } from '@mui/material';
+import { IconButton } from '@mui/material';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+
 function Review({review}) {
     // Expecting review object with the following structure:
     // 1. Username (username)
@@ -21,6 +24,25 @@ function Review({review}) {
                 </Typography>
                 <br/>
                 <Typography variant='p' style={{ margin: 'auto 0' }}>{review.notes}</Typography>
+                <br/>
+                <Box display="flex" gap={0.5}>
+                    <IconButton 
+                        // onClick={handleThumbsUp}
+                        aria-label="thumbs up"
+                        color="black"
+                        disableRipple
+                        sx={{
+                            '&:hover': {
+                                color: 'secondary.main'
+                            },
+                            width: 'auto'
+                        }}
+                    >
+                        <ThumbUpIcon />
+                    </IconButton>
+                    <Typography variant='p' style={{ margin: 'auto 0' }}>101</Typography> {/* TODO: update w/ like count */}
+                </Box>
+                
             </Box>
             {/* detailed ratings */}
             <Box display="flex" flexDirection="column"sx={{textAlign: 'center', justifyContent:'center'}} gap={1}>
