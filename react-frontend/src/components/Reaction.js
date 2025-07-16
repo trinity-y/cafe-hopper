@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ThumbUp, ThumbUpOutlined } from '@mui/icons-material';
+import { Box, IconButton, Typography } from '@mui/material';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import axios from 'axios';
 import './Reaction.css';
@@ -117,22 +118,28 @@ const Reaction = ({ reviewId, onReactionChange }) => {
   }
 
   return (
-    <div className="reaction-container">
-      <button 
-        className={`reaction-button ${hasLiked ? 'active' : ''}`}
+    <Box display="flex" alignItems="center" gap={0.5} className="reaction-container">
+      <IconButton
         onClick={handleReaction}
-        disabled={isLoading || !userId}
         aria-label={hasLiked ? "Unlike" : "Like"}
-        title={hasLiked ? "Unlike" : "Like"}
+        color="inherit"
+        disabled={isLoading || !userId}
+        sx={{
+          '&:hover': { color: 'secondary.main' },
+          padding: 0.5,
+          width: 'auto'
+        }}
       >
         {hasLiked ? (
           <ThumbUp className="thumb-icon filled" />
         ) : (
           <ThumbUpOutlined className="thumb-icon" />
         )}
-      </button>
-      <div className="reaction-count">{likeCount} {likeCount === 1 ? 'like' : 'likes'}</div>
-    </div>
+      </IconButton>
+      <Typography variant="body2" style={{ margin: 'auto 0' }}>
+        {likeCount}
+      </Typography>
+    </Box>
   );
 };
 

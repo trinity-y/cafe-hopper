@@ -8,7 +8,6 @@ import SignupPage from './pages/Signup';
 import CompleteSignupPage from './pages/CompleteSignup';
 import CafeSearchPage from './pages/CafeSearch';
 import FeedPage from './pages/Feed';
-import TestReaction from './pages/TempPage';
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
           <Route path='/complete-signup' element={<CompleteSignupPage />} />
           <Route path='/cafesearch' element={<CafeSearchPage />} />
           <Route path='/feed' element={<FeedPage />} />
-          <Route path='/tempage' element={<TestReaction/>} />
         </Routes>
       </Router>
     </UserProvider>

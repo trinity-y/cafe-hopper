@@ -2,6 +2,7 @@ import {Box} from '@mui/material';
 import StarRating from './StarRating';
 import { Typography } from '@mui/material';
 import { IconButton } from '@mui/material';
+import Reaction from './Reaction';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
 function Review({review}) {
@@ -25,23 +26,7 @@ function Review({review}) {
                 <br/>
                 <Typography variant='p' style={{ margin: 'auto 0' }}>{review.notes}</Typography>
                 <br/>
-                <Box display="flex" gap={0.5}>
-                    <IconButton 
-                        // onClick={handleThumbsUp}
-                        aria-label="thumbs up"
-                        color="black"
-                        disableRipple
-                        sx={{
-                            '&:hover': {
-                                color: 'secondary.main'
-                            },
-                            width: 'auto'
-                        }}
-                    >
-                        <ThumbUpIcon />
-                    </IconButton>
-                    <Typography variant='p' style={{ margin: 'auto 0' }}>101</Typography> {/* TODO: update w/ like count */}
-                </Box>
+                <Reaction reviewId={review.id} />
                 
             </Box>
             {/* detailed ratings */}

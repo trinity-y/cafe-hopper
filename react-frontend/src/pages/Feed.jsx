@@ -11,18 +11,21 @@ import {Typography} from '@mui/material';
 // add the three other ratings later
 const testReviews = [
     {
+        id: 1,
         username: 'abrasiveprophet',
         cafename: 'Midnight Run Cafe',
         rating: 4,
         notes: "iced latte w/ simple syrup <3"
     },
     {
+        id: 2,
         username: 'abrasiveprophet',
         cafename: 'Midnight Run Cafe',
         rating: 4,
         notes: "iced latte w/ simple syrup <3"
     },
     {
+        id: 3,
         username: 'abrasiveprophet',
         cafename: 'Midnight Run Cafe',
         rating: 4,

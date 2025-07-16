@@ -18,6 +18,7 @@ async function seedDatabase() {
             DROP TABLE IF EXISTS "User" CASCADE;
             DROP TABLE IF EXISTS "Reviews" CASCADE;
             DROP TABLE IF EXISTS "Reaction" CASCADE;
+            DROP TABLE IF EXISTS "Friend" CASCADE;
 
             CREATE TABLE "User" (
               id SERIAL PRIMARY KEY,
