@@ -1,7 +1,7 @@
 export interface IFriend {
   id: number;
   user_id: number;
-  friend_id: number;
+  following_id: number;
 }
 
-export type CreateUserDTO = Omit<IFriend, 'id'>;
+export type CreateFriendDTO = Omit<IFriend, 'id'>;
