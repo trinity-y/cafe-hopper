@@ -6,34 +6,24 @@ import { Box, Stack } from '@mui/material';
 import Review from '../components/Review';
 import CssBaseline from '@mui/material/CssBaseline';
 import {Typography} from '@mui/material';
-// import { useUser } from '../context/userContext';
+import { useUser } from '../context/userContext';
 
-// add the three other ratings later
-const testReviews = [
-    {
-        id: 1,
-        username: 'abrasiveprophet',
-        cafename: 'Midnight Run Cafe',
-        rating: 4,
-        notes: "iced latte w/ simple syrup <3"
-    },
-    {
-        id: 2,
-        username: 'abrasiveprophet',
-        cafename: 'Midnight Run Cafe',
-        rating: 4,
-        notes: "iced latte w/ simple syrup <3"
-    },
-    {
-        id: 3,
-        username: 'abrasiveprophet',
-        cafename: 'Midnight Run Cafe',
-        rating: 4,
-        notes: "iced latte w/ simple syrup <3"
-    }
-]
+import reviewAPI from '../api/review';
+
 function FeedPage() {
-    // const { setUser } = useUser();
+    const { userId } = useUser();
+    const [reviews, setReviews] = React.useState([]);
+
+    React.useEffect(() => {
+        const fetchData = async () => {
+            if (userId) {
+                const getFeedReviewsResult = await reviewAPI.getReviewsForFeed(userId); 
+                setReviews(getFeedReviewsResult);
+            }
+        }
+        console.log(reviews);
+        fetchData();
+    }, [userId]);
     
     return (
     <>
@@ -54,7 +44,7 @@ function FeedPage() {
                     paddingTop='1em'
                 >
                     <Typography variant="h2" fontWeight='fontWeightMedium' color='whitesmoke' margin={'1rem'}>Your Feed</Typography>
-                </Box>   
+                </Box>
                 <Stack
                     justifyContent="center"
                     alignItems={"center"}
@@ -67,10 +57,17 @@ function FeedPage() {
                             justifyContent: 'center',
                             padding: '30px'}}>
                         {
-                        testReviews.map((review, index) => {
+                        reviews?.length > 0 ?
+                        reviews.map((review, index) => {
                             return <Review key={index} review={review}/>
-                        })
-                        }
+                        }) :
+                        <Box
+                            sx={{ alignItems:'left'}}
+                            width='100%'
+                        >
+                            <Typography variant="h5" color='whitesmoke'>You're not following anyone who has written a review yet!</Typography>
+                        </Box>
+                        } 
                     </Box>
                 </Stack>
             </Box>
