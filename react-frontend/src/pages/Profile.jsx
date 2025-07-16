@@ -12,15 +12,17 @@ function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-    </div>
+    <ThemeProvider theme={theme}>
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`simple-tabpanel-${index}`}
+        aria-labelledby={`simple-tab-${index}`}
+        {...other}
+      >
+        {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      </div>
+    </ThemeProvider>
   );
 }
 
@@ -45,24 +47,26 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%', maxWidth: '900px', mx: 'auto', mt: 4, px: 2 }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="profile tabs">
-          <Tab label="Reviews" {...a11yProps(0)} />
-          <Tab label="Bookmarks" {...a11yProps(1)} />
-          <Tab label="Friends" {...a11yProps(2)} />
-        </Tabs>
+    <ThemeProvider theme={theme}>
+      <Box sx={{ width: '100%', maxWidth: '900px', mx: 'auto', mt: 4, px: 2 }}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <Tabs value={value} onChange={handleChange} aria-label="profile tabs">
+            <Tab label="Reviews" {...a11yProps(0)} />
+            <Tab label="Bookmarks" {...a11yProps(1)} />
+            <Tab label="Friends" {...a11yProps(2)} />
+          </Tabs>
+        </Box>
+        <CustomTabPanel value={value} index={0}>
+          Add reviews here
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={1}>
+          <BookmarkTab />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={2}>
+          Add friends here
+        </CustomTabPanel>
       </Box>
-      <CustomTabPanel value={value} index={0}>
-        Add reviews here
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        <BookmarkTab />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-        Add friends here
-      </CustomTabPanel>
-    </Box>
+    </ThemeProvider>
   );
 }
 

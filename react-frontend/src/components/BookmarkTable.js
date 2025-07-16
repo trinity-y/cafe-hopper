@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -9,40 +10,51 @@ import Paper from '@mui/material/Paper';
 import BookmarkButton from './BookmarkButton';
 
 export default function BookmarkTable({ bookmarkedCafes, onRemoveBookmark }) {
+  const [loadingIds, setLoadingIds] = useState([]);
+
+  const handleToggle = async (newState, bookmarkId) => {
+    if (loadingIds.includes(bookmarkId)) return false;
+    setLoadingIds((prev) => [...prev, bookmarkId]);
+
+    try {
+      if (!newState) {
+        const res = await fetch(`http://localhost:3001/bookmarks/${bookmarkId}`, {
+          method: 'DELETE',
+        });
+        if (!res.ok) throw new Error('Failed to delete bookmark');
+
+        onRemoveBookmark(bookmarkId); // update parent state
+        return true;
+      }
+      return false; // re-adding not supported in profile
+    } catch (err) {
+      console.error('Error deleting bookmark:', err);
+      return false;
+    } finally {
+      setLoadingIds((prev) => prev.filter((id) => id !== bookmarkId));
+    }
+  };
+
   return (
     <TableContainer component={Paper}>
       <Table aria-label="bookmarks table">
         <TableHead>
           <TableRow>
-            <TableCell>Cafe Name</TableCell>
+            <TableCell>☕ Cafe</TableCell>
             <TableCell>Rating</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {bookmarkedCafes.map((bookmarkedCafe) => (
-            <TableRow key={bookmarkedCafe.bookmarkId}>
+          {bookmarkedCafes.map((cafe) => (
+            <TableRow key={cafe.bookmarkId}>
               <TableCell>
-                <BookmarkButton 
-                  isBookmarked={ true }
-                  onToggle={async (newState) => {
-                    if (!newState) {
-                      try {
-                        const res = await fetch(`http://localhost:3001/bookmarks/${bookmarkedCafe.bookmarkId}`, {
-                          method: 'DELETE',
-                        });
-                        if (!res.ok) throw new Error('Failed to delete bookmark');
-                        onRemoveBookmark(bookmarkedCafe.bookmarkId); // update parent state
-                        return true;
-                      } catch (err) {
-                        console.error('Error deleting bookmark:', err);
-                      }
-                    }
-                    return false;
-                  }}
-                /> 
-                {bookmarkedCafe.name} 
+                <BookmarkButton
+                  isBookmarked={true}
+                  onToggle={(newState) => handleToggle(newState, cafe.bookmarkId)}
+                />
+                {cafe.name}
               </TableCell>
-              <TableCell>{bookmarkedCafe.rating}</TableCell>
+              <TableCell>{cafe.googleRating}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -50,4 +62,3 @@ export default function BookmarkTable({ bookmarkedCafes, onRemoveBookmark }) {
     </TableContainer>
   );
 }
-

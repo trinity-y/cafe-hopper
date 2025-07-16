@@ -15,15 +15,16 @@ router.get('/', async (req: Request, res: Response) => {
 
 router.get('/:uid', async (req: Request, res: Response) => {
   const { uid } = req.params;
+
   try {
     const bookmarks = await bookmarkService.getAllBookmarksForUser(parseInt(uid, 10));
+    
     if (bookmarks) {
-        res.status(200).json(bookmarks);
+      res.status(200).json(bookmarks);
     } else {
-        res.status(404).json({message: `Bookmarks for user with uid ${uid} not found`});
+      res.status(404).json({ message: `Bookmarks for user with uid ${uid} not found` });
     }
   } catch (error) {
-    console.error(`Error fetching bookmarks for user with uid ${uid}:`, error);
     res.status(500).json({ message: `Error fetching bookmarks for user with uid ${uid}` });
   }
 });
@@ -48,7 +49,7 @@ router.post('/', async (req: Request, res: Response) => {
   try {
     const bookmarkCreated = await bookmarkService.createBookmark({ uid, cid });
     if (bookmarkCreated) {
-        res.status(201).json({ message: 'Bookmark created successfully' });
+        res.status(201).json(bookmarkCreated);
     } else {
         res.status(500).json({ message: 'Could not create bookmark' });
     }

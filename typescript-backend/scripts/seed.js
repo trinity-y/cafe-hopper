@@ -9,7 +9,6 @@ const pool = new Pool({
     port: process.env.POSTGRES_PORT,
 });
 
-const dataLocation = 'prod_data'; // prod_data || mock_data
 async function seedDatabase() {
     const client = await pool.connect();
 
@@ -42,8 +41,8 @@ async function seedDatabase() {
         await client.query('TRUNCATE "User", "Cafe" RESTART IDENTITY CASCADE');
 
         // warning the firebase uids as part of this data are all FAKE!!
-        const users = require('../mock_data/users.json');
-
+        const { getUserData } = require('./getUserData');
+        const users = await getUserData();
         for (const user of users) {
             await client.query(
                 'INSERT INTO "User" ("username", "firebase_uid") VALUES ($1, $2)',
@@ -60,7 +59,8 @@ async function seedDatabase() {
             );
         }
 
-        const bookmarks = require('../mock_data/bookmarks.json');
+        //const bookmarks = require('../mock_data/bookmarks.json');
+        const bookmarks = [ { uid: 156, cid: 1 }, { uid: 156, cid: 2 }, { uid: 156, cid: 3 }, ];
 
         for (const bookmark of bookmarks) {
             await client.query(
