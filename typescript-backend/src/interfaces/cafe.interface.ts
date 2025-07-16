@@ -8,4 +8,6 @@ export interface ICafe {
   endPrice: number;
 }
 
-// Add another like final calculated rating appended to
+export interface ICafeWithRating extends ICafe {
+  finalRating: number;
+}

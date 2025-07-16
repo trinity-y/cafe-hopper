@@ -1,1502 +1,2036 @@
 [
-  {
-    "rating": 3.5,
-    "drinkRating": 1.8,
-    "foodRating": 2.5,
-    "atmosphereRating": 3.6,
-    "notes": "Great spot!",
-    "uID": 37,
-    "cID": 1,
-    "timestamp": "2004-10-14 18:46:01"
-  },
-  {
-    "rating": 4.0,
-    "drinkRating": 2.2,
-    "foodRating": 3.7,
-    "atmosphereRating": 3.4,
-    "notes": "",
-    "uID": 5,
-    "cID": 8,
-    "timestamp": "2004-05-09 02:13:03"
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 3.6,
-    "foodRating": 4.0,
-    "atmosphereRating": 4.1,
-    "notes": "Nice ambiance",
-    "uID": 41,
-    "cID": 7,
-    "timestamp": "2004-04-23 19:51:33"
-  },
-  {
-    "rating": 2.1,
-    "drinkRating": 4.2,
-    "foodRating": 2.2,
-    "atmosphereRating": 3.9,
-    "notes": "",
-    "uID": 33,
-    "cID": 8,
-    "timestamp": "2004-07-03 08:10:34"
-  },
-  {
-    "rating": 2.8,
-    "drinkRating": 3.7,
-    "foodRating": 1.7,
-    "atmosphereRating": 2.1,
-    "notes": "",
-    "uID": 12,
-    "cID": 4,
-    "timestamp": "2004-08-07 14:01:39"
-  },
-  {
-    "rating": 4.4,
-    "drinkRating": 1.7,
-    "foodRating": 4.9,
-    "atmosphereRating": 3.7,
-    "notes": "Great spot!",
-    "uID": 35,
-    "cID": 1,
-    "timestamp": "2004-12-17 21:31:32"
-  },
-  {
-    "rating": 1.9,
-    "drinkRating": 4.2,
-    "foodRating": 2.2,
-    "atmosphereRating": 2.6,
-    "notes": "",
-    "uID": 43,
+    {
+        "rating": 3.5,
+        "drinkRating": 1.8,
+        "foodRating": 2.5,
+        "atmosphereRating": 3.6,
+        "notes": "Great spot!",
+        "uID": 37,
+        "cID": 1,
+        "timestamp": "2004-10-14 18:46:01"
+    },
+    {
+        "rating": 4.0,
+        "drinkRating": 2.2,
+        "foodRating": 3.7,
+        "atmosphereRating": 3.4,
+        "notes": "",
+        "uID": 5,
+        "cID": 8,
+        "timestamp": "2004-05-09 02:13:03"
+    },
+    {
+        "rating": 2.2,
+        "drinkRating": 3.6,
+        "foodRating": 4.0,
+        "atmosphereRating": 4.1,
+        "notes": "Nice ambiance",
+        "uID": 41,
+        "cID": 7,
+        "timestamp": "2004-04-23 19:51:33"
+    },
+    {
+        "rating": 2.1,
+        "drinkRating": 4.2,
+        "foodRating": 2.2,
+        "atmosphereRating": 3.9,
+        "notes": "",
+        "uID": 33,
+        "cID": 8,
+        "timestamp": "2004-07-03 08:10:34"
+    },
+    {
+        "rating": 2.8,
+        "drinkRating": 3.7,
+        "foodRating": 1.7,
+        "atmosphereRating": 2.1,
+        "notes": "",
+        "uID": 12,
+        "cID": 4,
+        "timestamp": "2004-08-07 14:01:39"
+    },
+    {
+        "rating": 4.4,
+        "drinkRating": 1.7,
+        "foodRating": 4.9,
+        "atmosphereRating": 3.7,
+        "notes": "Great spot!",
+        "uID": 35,
+        "cID": 1,
+        "timestamp": "2004-12-17 21:31:32"
+    },
+    {
+        "rating": 1.9,
+        "drinkRating": 4.2,
+        "foodRating": 2.2,
+        "atmosphereRating": 2.6,
+        "notes": "",
+        "uID": 43,
+        "cID": 6,
+        "timestamp": "2004-09-19 21:08:39"
+    },
+    {
+        "rating": 2.9,
+        "drinkRating": 3.0,
+        "foodRating": 2.8,
+        "atmosphereRating": 1.9,
+        "notes": "Great spot!",
+        "uID": 7,
+        "cID": 7,
+        "timestamp": "2004-03-10 09:29:06"
+    },
+    {
+        "rating": 2.9,
+        "drinkRating": 1.6,
+        "foodRating": 1.7,
+        "atmosphereRating": 4.7,
+        "notes": null,
+        "uID": 24,
+        "cID": 4,
+        "timestamp": "2004-11-13 22:25:58"
+    },
+    {
+        "rating": 4.3,
+        "drinkRating": 2.2,
+        "foodRating": 3.3,
+        "atmosphereRating": 4.5,
+        "notes": "Loved the drinks",
+        "uID": 17,
+        "cID": 2,
+        "timestamp": "2004-11-20 05:09:38"
+    },
+    {
+        "rating": 2.8,
+        "drinkRating": 3.5,
+        "foodRating": 1.1,
+        "atmosphereRating": 3.3,
+        "notes": null,
+        "uID": 3,
+        "cID": 7,
+        "timestamp": "2004-03-13 01:09:19"
+    },
+    {
+        "rating": 4.4,
+        "drinkRating": 2.8,
+        "foodRating": 2.1,
+        "atmosphereRating": 4.8,
+        "notes": "Loved the drinks",
+        "uID": 33,
+        "cID": 2,
+        "timestamp": "2004-08-17 08:13:51"
+    },
+    {
+        "rating": 3.2,
+        "drinkRating": 4.1,
+        "foodRating": 3.3,
+        "atmosphereRating": 3.4,
+        "notes": null,
+        "uID": 24,
+        "cID": 9,
+        "timestamp": "2004-03-08 07:05:30"
+    },
+    {
+        "rating": 3.5,
+        "drinkRating": 4.0,
+        "foodRating": 1.7,
+        "atmosphereRating": 2.1,
+        "notes": null,
+        "uID": 20,
+        "cID": 4,
+        "timestamp": "2004-02-25 07:17:58"
+    },
+    {
+        "rating": 4.0,
+        "drinkRating": 1.6,
+        "foodRating": 4.4,
+        "atmosphereRating": 2.4,
+        "notes": "Great spot!",
+        "uID": 10,
+        "cID": 10,
+        "timestamp": "2004-08-04 06:13:06"
+    },
+    {
+        "rating": 3.3,
+        "drinkRating": 3.9,
+        "foodRating": 3.6,
+        "atmosphereRating": 4.9,
+        "notes": "Loved the drinks",
+        "uID": 39,
+        "cID": 10,
+        "timestamp": "2004-07-26 05:35:35"
+    },
+    {
+        "rating": 2.8,
+        "drinkRating": 4.5,
+        "foodRating": 2.5,
+        "atmosphereRating": 2.9,
+        "notes": null,
+        "uID": 28,
+        "cID": 9,
+        "timestamp": "2004-02-22 07:42:19"
+    },
+    {
+        "rating": 2.7,
+        "drinkRating": 4.7,
+        "foodRating": 3.7,
+        "atmosphereRating": 4.9,
+        "notes": "Loved the drinks",
+        "uID": 41,
+        "cID": 10,
+        "timestamp": "2004-06-25 12:15:35"
+    },
+    {
+        "rating": 3.4,
+        "drinkRating": 2.0,
+        "foodRating": 3.7,
+        "atmosphereRating": 1.3,
+        "notes": "Great spot!",
+        "uID": 9,
+        "cID": 5,
+        "timestamp": "2004-08-01 02:30:19"
+    },
+    {
+        "rating": 4.5,
+        "drinkRating": 3.3,
+        "foodRating": 1.6,
+        "atmosphereRating": 2.7,
+        "notes": "Loved the drinks",
+        "uID": 47,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-08-24 19:06:35"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.4,
+        "drinkRating": 3.2,
+        "foodRating": 1.6,
+        "atmosphereRating": 4.5,
+        "notes": "Nice ambiance",
+        "uID": 44,
+<<<<<<< HEAD
+    "cID": 10,
+        "timestamp": "2004-05-04 01:20:59"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.9,
+        "drinkRating": 1.9,
+        "foodRating": 2.3,
+        "atmosphereRating": 3.8,
+        "notes": "Loved the drinks",
+        "uID": 49,
+<<<<<<< HEAD
+    "cID": 10,
+        "timestamp": "2004-06-23 05:41:49"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.2,
+        "drinkRating": 2.9,
+        "foodRating": 4.6,
+        "atmosphereRating": 2.4,
+        "notes": "Great spot!",
+        "uID": 9,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-08-22 01:41:07"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.2,
+        "drinkRating": 2.7,
+        "foodRating": 2.6,
+        "atmosphereRating": 4.5,
+        "notes": "Great spot!",
+        "uID": 22,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-12-08 06:44:43"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.7,
+        "drinkRating": 4.3,
+        "foodRating": 1.7,
+        "atmosphereRating": 1.5,
+        "notes": "Great spot!",
+        "uID": 21,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-05-23 18:29:35"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.9,
+        "drinkRating": 4.9,
+        "foodRating": 3.1,
+        "atmosphereRating": 2.4,
+        "notes": "Great spot!",
+        "uID": 7,
+<<<<<<< HEAD
     "cID": 6,
-    "timestamp": "2004-09-19 21:08:39"
-  },
-  {
-    "rating": 2.9,
-    "drinkRating": 3.0,
-    "foodRating": 2.8,
-    "atmosphereRating": 1.9,
-    "notes": "Great spot!",
-    "uID": 7,
-    "cID": 7,
-    "timestamp": "2004-03-10 09:29:06"
-  },
-  {
-    "rating": 2.9,
-    "drinkRating": 1.6,
-    "foodRating": 1.7,
-    "atmosphereRating": 4.7,
-    "notes": null,
-    "uID": 24,
+        "timestamp": "2004-06-09 21:48:05"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.1,
+        "drinkRating": 4.3,
+        "foodRating": 2.6,
+        "atmosphereRating": 3.4,
+        "notes": "Nice ambiance",
+        "uID": 11,
+<<<<<<< HEAD
     "cID": 4,
-    "timestamp": "2004-11-13 22:25:58"
-  },
-  {
-    "rating": 4.3,
-    "drinkRating": 2.2,
-    "foodRating": 3.3,
-    "atmosphereRating": 4.5,
-    "notes": "Loved the drinks",
-    "uID": 17,
-    "cID": 2,
-    "timestamp": "2004-11-20 05:09:38"
-  },
-  {
-    "rating": 2.8,
-    "drinkRating": 3.5,
-    "foodRating": 1.1,
-    "atmosphereRating": 3.3,
-    "notes": null,
-    "uID": 3,
+        "timestamp": "2004-12-27 19:51:09"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.1,
+        "drinkRating": 3.8,
+        "foodRating": 4.7,
+        "atmosphereRating": 1.8,
+        "notes": "Loved the drinks",
+        "uID": 50,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-03-12 05:57:04"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.5,
+        "drinkRating": 1.4,
+        "foodRating": 4.0,
+        "atmosphereRating": 1.0,
+        "notes": "",
+        "uID": 47,
+<<<<<<< HEAD
+    "cID": 6,
+        "timestamp": "2004-02-12 12:34:30"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.0,
+        "drinkRating": 4.9,
+        "foodRating": 4.6,
+        "atmosphereRating": 2.7,
+        "notes": null,
+        "uID": 7,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-11-20 08:09:21"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.3,
+        "drinkRating": 4.3,
+        "foodRating": 1.1,
+        "atmosphereRating": 4.5,
+        "notes": null,
+        "uID": 17,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-04-15 22:58:20"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.5,
+        "drinkRating": 2.2,
+        "foodRating": 3.8,
+        "atmosphereRating": 3.2,
+        "notes": "",
+        "uID": 3,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-11-05 21:46:25"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.5,
+        "drinkRating": 1.3,
+        "foodRating": 2.6,
+        "atmosphereRating": 1.1,
+        "notes": null,
+        "uID": 43,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-08-29 11:52:26"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.2,
+        "drinkRating": 4.6,
+        "foodRating": 2.7,
+        "atmosphereRating": 2.2,
+        "notes": "",
+        "uID": 32,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-03-20 05:14:33"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.6,
+        "drinkRating": 3.5,
+        "foodRating": 1.5,
+        "atmosphereRating": 1.8,
+        "notes": "Nice ambiance",
+        "uID": 45,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-05-03 00:39:37"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.0,
+        "drinkRating": 4.5,
+        "foodRating": 3.2,
+        "atmosphereRating": 3.7,
+        "notes": null,
+        "uID": 47,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-02-27 18:37:30"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.5,
+        "drinkRating": 2.7,
+        "foodRating": 4.7,
+        "atmosphereRating": 4.2,
+        "notes": "Great spot!",
+        "uID": 33,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-04-19 12:12:47"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.1,
+        "drinkRating": 2.2,
+        "foodRating": 2.5,
+        "atmosphereRating": 4.1,
+        "notes": "Loved the drinks",
+        "uID": 9,
+<<<<<<< HEAD
     "cID": 7,
-    "timestamp": "2004-03-13 01:09:19"
-  },
-  {
-    "rating": 4.4,
-    "drinkRating": 2.8,
-    "foodRating": 2.1,
-    "atmosphereRating": 4.8,
-    "notes": "Loved the drinks",
-    "uID": 33,
-    "cID": 2,
-    "timestamp": "2004-08-17 08:13:51"
-  },
-  {
-    "rating": 3.2,
-    "drinkRating": 4.1,
-    "foodRating": 3.3,
-    "atmosphereRating": 3.4,
-    "notes": null,
-    "uID": 24,
-    "cID": 9,
-    "timestamp": "2004-03-08 07:05:30"
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 4.0,
-    "foodRating": 1.7,
-    "atmosphereRating": 2.1,
-    "notes": null,
-    "uID": 20,
+        "timestamp": "2004-11-10 01:38:41"
+=======
+    "cID": 7
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.3,
+        "drinkRating": 3.5,
+        "foodRating": 4.2,
+        "atmosphereRating": 1.4,
+        "notes": "Nice ambiance",
+        "uID": 33,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-08-10 16:29:28"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.7,
+        "drinkRating": 4.2,
+        "foodRating": 4.2,
+        "atmosphereRating": 4.6,
+        "notes": "Great spot!",
+        "uID": 35,
+<<<<<<< HEAD
     "cID": 4,
-    "timestamp": "2004-02-25 07:17:58"
-  },
-  {
-    "rating": 4.0,
-    "drinkRating": 1.6,
-    "foodRating": 4.4,
-    "atmosphereRating": 2.4,
-    "notes": "Great spot!",
-    "uID": 10,
+        "timestamp": "2004-06-01 21:26:34"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.2,
+        "drinkRating": 2.4,
+        "foodRating": 2.8,
+        "atmosphereRating": 3.2,
+        "notes": "Nice ambiance",
+        "uID": 19,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-10-07 02:39:13"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.7,
+        "drinkRating": 3.7,
+        "foodRating": 1.6,
+        "atmosphereRating": 2.2,
+        "notes": "",
+        "uID": 46,
+<<<<<<< HEAD
+    "cID": 2,
+        "timestamp": "2004-09-26 00:38:33"
+=======
+    "cID": 2
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.2,
+        "drinkRating": 4.6,
+        "foodRating": 3.0,
+        "atmosphereRating": 4.7,
+        "notes": "",
+        "uID": 27,
+<<<<<<< HEAD
     "cID": 10,
-    "timestamp": "2004-08-04 06:13:06"
-  },
-  {
-    "rating": 3.3,
-    "drinkRating": 3.9,
-    "foodRating": 3.6,
-    "atmosphereRating": 4.9,
-    "notes": "Loved the drinks",
-    "uID": 39,
+        "timestamp": "2004-08-12 23:35:12"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.6,
+        "drinkRating": 3.5,
+        "foodRating": 4.5,
+        "atmosphereRating": 3.3,
+        "notes": "Loved the drinks",
+        "uID": 41,
+<<<<<<< HEAD
+    "cID": 2,
+        "timestamp": "2004-08-25 12:12:06"
+=======
+    "cID": 2
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.6,
+        "drinkRating": 1.4,
+        "foodRating": 3.1,
+        "atmosphereRating": 1.6,
+        "notes": "",
+        "uID": 19,
+<<<<<<< HEAD
     "cID": 10,
-    "timestamp": "2004-07-26 05:35:35"
-  },
-  {
-    "rating": 2.8,
-    "drinkRating": 4.5,
-    "foodRating": 2.5,
-    "atmosphereRating": 2.9,
-    "notes": null,
-    "uID": 28,
+        "timestamp": "2004-10-25 05:57:01"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.0,
+        "drinkRating": 4.7,
+        "foodRating": 3.3,
+        "atmosphereRating": 4.9,
+        "notes": "Great spot!",
+        "uID": 2,
+<<<<<<< HEAD
+    "cID": 6,
+        "timestamp": "2004-04-30 06:48:18"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.5,
+        "drinkRating": 2.2,
+        "foodRating": 2.4,
+        "atmosphereRating": 3.0,
+        "notes": "Nice ambiance",
+        "uID": 29,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-07-16 07:37:35"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.8,
+        "drinkRating": 4.3,
+        "foodRating": 1.3,
+        "atmosphereRating": 2.3,
+        "notes": null,
+        "uID": 23,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-09-30 17:05:04"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.4,
+        "drinkRating": 3.7,
+        "foodRating": 3.3,
+        "atmosphereRating": 1.3,
+        "notes": "Great spot!",
+        "uID": 36,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-11-17 18:06:40"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.2,
+        "drinkRating": 2.1,
+        "foodRating": 1.2,
+        "atmosphereRating": 3.2,
+        "notes": "Great spot!",
+        "uID": 26,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-11-18 04:29:52"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.9,
+        "drinkRating": 2.2,
+        "foodRating": 3.9,
+        "atmosphereRating": 4.7,
+        "notes": "Great spot!",
+        "uID": 32,
+<<<<<<< HEAD
+    "cID": 2,
+        "timestamp": "2004-07-28 15:27:13"
+=======
+    "cID": 2
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.2,
+        "drinkRating": 2.4,
+        "foodRating": 3.9,
+        "atmosphereRating": 1.8,
+        "notes": "",
+        "uID": 18,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-05-14 05:49:55"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.5,
+        "drinkRating": 1.4,
+        "foodRating": 1.0,
+        "atmosphereRating": 4.0,
+        "notes": "Great spot!",
+        "uID": 22,
+<<<<<<< HEAD
+    "cID": 2,
+        "timestamp": "2004-05-06 21:21:08"
+=======
+    "cID": 2
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.9,
+        "drinkRating": 3.4,
+        "foodRating": 3.6,
+        "atmosphereRating": 1.7,
+        "notes": "Loved the drinks",
+        "uID": 31,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-10-03 13:17:51"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.3,
+        "drinkRating": 5.0,
+        "foodRating": 2.6,
+        "atmosphereRating": 2.8,
+        "notes": "",
+        "uID": 34,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-06-13 11:33:56"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.9,
+        "drinkRating": 1.1,
+        "foodRating": 1.7,
+        "atmosphereRating": 2.9,
+        "notes": "Great spot!",
+        "uID": 1,
+<<<<<<< HEAD
+    "cID": 2,
+        "timestamp": "2004-06-07 14:20:33"
+=======
+    "cID": 2
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.7,
+        "drinkRating": 2.1,
+        "foodRating": 1.7,
+        "atmosphereRating": 4.2,
+        "notes": "Great spot!",
+        "uID": 22,
+<<<<<<< HEAD
+    "cID": 7,
+        "timestamp": "2004-01-21 05:17:16"
+=======
+    "cID": 7
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.2,
+        "drinkRating": 1.5,
+        "foodRating": 3.6,
+        "atmosphereRating": 4.0,
+        "notes": "Loved the drinks",
+        "uID": 45,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-01-30 05:58:27"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.1,
+        "drinkRating": 4.0,
+        "foodRating": 4.2,
+        "atmosphereRating": 3.1,
+        "notes": "Great spot!",
+        "uID": 21,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-03-26 00:58:45"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.3,
+        "drinkRating": 4.8,
+        "foodRating": 3.6,
+        "atmosphereRating": 1.4,
+        "notes": "Nice ambiance",
+        "uID": 25,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-01-24 19:36:48"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.8,
+        "drinkRating": 1.3,
+        "foodRating": 4.1,
+        "atmosphereRating": 4.3,
+        "notes": "",
+        "uID": 41,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-12-23 08:48:02"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.6,
+        "drinkRating": 4.0,
+        "foodRating": 3.2,
+        "atmosphereRating": 3.5,
+        "notes": "Nice ambiance",
+        "uID": 34,
+<<<<<<< HEAD
+    "cID": 2,
+        "timestamp": "2004-09-17 23:28:18"
+=======
+    "cID": 2
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.9,
+        "drinkRating": 2.3,
+        "foodRating": 3.2,
+        "atmosphereRating": 4.5,
+        "notes": "Nice ambiance",
+        "uID": 12,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-07-30 08:29:46"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.9,
+        "drinkRating": 4.7,
+        "foodRating": 2.3,
+        "atmosphereRating": 2.9,
+        "notes": "Nice ambiance",
+        "uID": 10,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-12-25 06:23:41"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.9,
+        "drinkRating": 4.7,
+        "foodRating": 4.6,
+        "atmosphereRating": 4.8,
+        "notes": null,
+        "uID": 10,
+<<<<<<< HEAD
+    "cID": 7,
+        "timestamp": "2004-04-02 12:58:24"
+=======
+    "cID": 7
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.2,
+        "drinkRating": 3.4,
+        "foodRating": 3.1,
+        "atmosphereRating": 1.3,
+        "notes": "Great spot!",
+        "uID": 49,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-11-27 09:16:23"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.5,
+        "drinkRating": 4.6,
+        "foodRating": 2.7,
+        "atmosphereRating": 4.3,
+        "notes": "Loved the drinks",
+        "uID": 37,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-05-19 15:31:00"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.0,
+        "drinkRating": 4.2,
+        "foodRating": 2.6,
+        "atmosphereRating": 2.2,
+        "notes": "Loved the drinks",
+        "uID": 8,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-05-30 00:23:39"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.6,
+        "drinkRating": 2.8,
+        "foodRating": 4.4,
+        "atmosphereRating": 3.2,
+        "notes": "Nice ambiance",
+        "uID": 49,
+<<<<<<< HEAD
+    "cID": 2,
+        "timestamp": "2004-10-06 07:39:37"
+=======
+    "cID": 2
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.2,
+        "drinkRating": 1.0,
+        "foodRating": 5.0,
+        "atmosphereRating": 2.6,
+        "notes": "Great spot!",
+        "uID": 50,
+<<<<<<< HEAD
+    "cID": 10,
+        "timestamp": "2004-10-26 19:10:45"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.3,
+        "drinkRating": 3.0,
+        "foodRating": 4.0,
+        "atmosphereRating": 2.8,
+        "notes": "Nice ambiance",
+        "uID": 26,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-05-05 23:56:38"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 5.0,
+        "drinkRating": 2.1,
+        "foodRating": 1.1,
+        "atmosphereRating": 2.8,
+        "notes": "",
+        "uID": 6,
+<<<<<<< HEAD
     "cID": 9,
-    "timestamp": "2004-02-22 07:42:19"
-  },
-  {
-    "rating": 2.7,
-    "drinkRating": 4.7,
-    "foodRating": 3.7,
-    "atmosphereRating": 4.9,
-    "notes": "Loved the drinks",
-    "uID": 41,
+        "timestamp": "2004-06-29 18:29:35"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.0,
+        "drinkRating": 3.1,
+        "foodRating": 4.0,
+        "atmosphereRating": 2.9,
+        "notes": null,
+        "uID": 44,
+<<<<<<< HEAD
+    "cID": 7,
+        "timestamp": "2004-04-07 20:30:52"
+=======
+    "cID": 7
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.8,
+        "drinkRating": 2.4,
+        "foodRating": 3.9,
+        "atmosphereRating": 1.7,
+        "notes": "Great spot!",
+        "uID": 41,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-11-09 04:18:13"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.9,
+        "drinkRating": 2.7,
+        "foodRating": 3.8,
+        "atmosphereRating": 4.1,
+        "notes": "Loved the drinks",
+        "uID": 35,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-04-04 23:17:26"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.1,
+        "drinkRating": 4.4,
+        "foodRating": 3.8,
+        "atmosphereRating": 3.9,
+        "notes": "",
+        "uID": 6,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-12-14 11:01:58"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.5,
+        "drinkRating": 2.0,
+        "foodRating": 1.2,
+        "atmosphereRating": 2.1,
+        "notes": "Loved the drinks",
+        "uID": 38,
+<<<<<<< HEAD
     "cID": 10,
-    "timestamp": "2004-06-25 12:15:35"
-  },
-  {
+        "timestamp": "2004-11-06 01:24:03"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.6,
+        "drinkRating": 3.4,
+        "foodRating": 4.0,
+        "atmosphereRating": 4.2,
+        "notes": "",
+        "uID": 14,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-12-27 10:23:43"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.3,
+        "drinkRating": 3.8,
+        "foodRating": 3.1,
+        "atmosphereRating": 3.9,
+        "notes": "Nice ambiance",
+        "uID": 2,
+<<<<<<< HEAD
+    "cID": 10,
+        "timestamp": "2004-04-11 20:02:57"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.7,
+        "drinkRating": 4.4,
+        "foodRating": 4.9,
+        "atmosphereRating": 1.6,
+        "notes": "",
+        "uID": 21,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-05-17 00:26:37"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.9,
+        "drinkRating": 4.3,
+        "foodRating": 1.1,
+        "atmosphereRating": 2.8,
+        "notes": "",
+        "uID": 30,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-10-19 16:09:41"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 5.0,
+        "drinkRating": 3.6,
+        "foodRating": 2.0,
+        "atmosphereRating": 2.5,
+        "notes": "Loved the drinks",
+        "uID": 10,
+<<<<<<< HEAD
+    "cID": 2,
+        "timestamp": "2004-05-01 18:34:34"
+=======
+    "cID": 2
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.9,
+        "drinkRating": 3.7,
+        "foodRating": 3.1,
+        "atmosphereRating": 4.8,
+        "notes": "",
+        "uID": 5,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-03-07 14:24:51"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.1,
+        "drinkRating": 2.9,
+        "foodRating": 1.6,
+        "atmosphereRating": 2.0,
+        "notes": "",
+        "uID": 4,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-12-29 23:48:28"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.8,
+        "drinkRating": 1.9,
+        "foodRating": 4.7,
+        "atmosphereRating": 2.9,
+        "notes": "Nice ambiance",
+        "uID": 25,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-01-30 12:12:49"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.4,
+        "drinkRating": 2.9,
+        "foodRating": 4.4,
+        "atmosphereRating": 1.7,
+        "notes": null,
+        "uID": 32,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-11-18 21:26:59"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.4,
+        "drinkRating": 1.3,
+        "foodRating": 4.9,
+        "atmosphereRating": 2.2,
+        "notes": "Loved the drinks",
+        "uID": 32,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-08-27 08:30:11"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.5,
+        "drinkRating": 2.4,
+        "foodRating": 2.4,
+        "atmosphereRating": 4.2,
+        "notes": "Great spot!",
+        "uID": 41,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-11-11 20:30:52"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.6,
+        "drinkRating": 2.1,
+        "foodRating": 3.7,
+        "atmosphereRating": 3.1,
+        "notes": "Nice ambiance",
+        "uID": 29,
+<<<<<<< HEAD
+    "cID": 6,
+        "timestamp": "2004-07-09 06:44:04"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.2,
+        "drinkRating": 4.1,
+        "foodRating": 1.8,
+        "atmosphereRating": 4.3,
+        "notes": "Great spot!",
+        "uID": 2,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-01-23 11:31:33"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.4,
+        "drinkRating": 1.9,
+        "foodRating": 1.7,
+        "atmosphereRating": 2.9,
+        "notes": "Great spot!",
+        "uID": 13,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-06-25 21:11:51"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.8,
+        "drinkRating": 1.6,
+        "foodRating": 1.4,
+        "atmosphereRating": 2.3,
+        "notes": null,
+        "uID": 3,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-02-26 01:30:45"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.9,
+        "drinkRating": 1.6,
+        "foodRating": 3.9,
+        "atmosphereRating": 3.3,
+        "notes": "Great spot!",
+        "uID": 5,
+<<<<<<< HEAD
+    "cID": 6,
+        "timestamp": "2004-02-03 08:45:44"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.3,
+        "drinkRating": 4.5,
+        "foodRating": 1.5,
+        "atmosphereRating": 2.9,
+        "notes": "",
+        "uID": 46,
+<<<<<<< HEAD
+    "cID": 10,
+        "timestamp": "2004-06-11 10:33:22"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.3,
+        "drinkRating": 4.4,
+        "foodRating": 2.1,
+        "atmosphereRating": 1.4,
+        "notes": "Great spot!",
+        "uID": 24,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-04-11 10:18:46"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.2,
+        "drinkRating": 2.5,
+        "foodRating": 2.8,
+        "atmosphereRating": 4.1,
+        "notes": "Great spot!",
+        "uID": 1,
+<<<<<<< HEAD
+    "cID": 6,
+        "timestamp": "2004-07-10 22:18:11"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.9,
+        "drinkRating": 3.2,
+        "foodRating": 2.4,
+        "atmosphereRating": 4.4,
+        "notes": "",
+        "uID": 22,
+<<<<<<< HEAD
+    "cID": 6,
+        "timestamp": "2004-09-12 08:23:40"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.7,
+        "drinkRating": 2.4,
+        "foodRating": 4.5,
+        "atmosphereRating": 1.5,
+        "notes": "",
+        "uID": 36,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-04-23 18:47:26"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.7,
+        "drinkRating": 2.5,
+        "foodRating": 2.2,
+        "atmosphereRating": 4.1,
+        "notes": null,
+        "uID": 9,
+<<<<<<< HEAD
+    "cID": 10,
+        "timestamp": "2004-01-24 09:09:02"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.0,
+        "drinkRating": 1.8,
+        "foodRating": 3.6,
+        "atmosphereRating": 4.1,
+        "notes": "Great spot!",
+        "uID": 44,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-12-11 19:15:59"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.9,
+        "drinkRating": 2.4,
+        "foodRating": 4.6,
+        "atmosphereRating": 1.7,
+        "notes": null,
+        "uID": 47,
+<<<<<<< HEAD
+    "cID": 2,
+        "timestamp": "2004-12-30 11:57:40"
+=======
+    "cID": 2
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.4,
+        "drinkRating": 3.1,
+        "foodRating": 2.4,
+        "atmosphereRating": 4.0,
+        "notes": "Great spot!",
+        "uID": 15,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-11-11 13:14:33"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.5,
+        "drinkRating": 4.3,
+        "foodRating": 4.4,
+        "atmosphereRating": 3.1,
+        "notes": "Nice ambiance",
+        "uID": 27,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-04-16 12:22:23"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.5,
+        "drinkRating": 3.2,
+        "foodRating": 2.8,
+        "atmosphereRating": 3.1,
+        "notes": "Loved the drinks",
+        "uID": 26,
+<<<<<<< HEAD
+    "cID": 2,
+        "timestamp": "2004-08-24 19:20:17"
+=======
+    "cID": 2
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.2,
+        "drinkRating": 1.3,
+        "foodRating": 4.9,
+        "atmosphereRating": 5.0,
+        "notes": "",
+        "uID": 11,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-07-27 15:52:01"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.8,
+        "drinkRating": 1.3,
+        "foodRating": 4.7,
+        "atmosphereRating": 2.5,
+        "notes": null,
+        "uID": 12,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-08-05 10:12:01"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.6,
+        "drinkRating": 2.5,
+        "foodRating": 2.8,
+        "atmosphereRating": 3.5,
+        "notes": "Great spot!",
+        "uID": 34,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-05-20 18:30:17"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.5,
+        "drinkRating": 3.7,
+        "foodRating": 2.1,
+        "atmosphereRating": 4.2,
+        "notes": "Loved the drinks",
+        "uID": 24,
+<<<<<<< HEAD
+    "cID": 2,
+        "timestamp": "2004-10-05 00:53:43"
+=======
+    "cID": 2
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.0,
+        "drinkRating": 2.2,
+        "foodRating": 3.9,
+        "atmosphereRating": 2.2,
+        "notes": "",
+        "uID": 5,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-11-27 13:23:12"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.0,
+        "drinkRating": 4.9,
+        "foodRating": 4.7,
+        "atmosphereRating": 1.2,
+        "notes": "Loved the drinks",
+        "uID": 37,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-05-09 23:45:00"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.4,
+        "drinkRating": 4.9,
+        "foodRating": 4.7,
+        "atmosphereRating": 2.7,
+        "notes": "Nice ambiance",
+        "uID": 16,
+<<<<<<< HEAD
+    "cID": 6,
+        "timestamp": "2004-09-19 20:19:12"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.2,
+        "drinkRating": 1.2,
+        "foodRating": 2.1,
+        "atmosphereRating": 4.5,
+        "notes": "Nice ambiance",
+        "uID": 22,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-07-20 06:45:46"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.4,
+        "drinkRating": 2.8,
+        "foodRating": 1.4,
+        "atmosphereRating": 3.4,
+        "notes": "Great spot!",
+        "uID": 48,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-08-24 21:56:53"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.8,
+        "drinkRating": 4.6,
+        "foodRating": 4.2,
+        "atmosphereRating": 2.5,
+        "notes": "Loved the drinks",
+        "uID": 11,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-08-10 14:15:14"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.9,
+        "drinkRating": 1.9,
+        "foodRating": 4.8,
+        "atmosphereRating": 3.3,
+        "notes": "",
+        "uID": 50,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-11-11 04:12:56"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.9,
+        "drinkRating": 1.6,
+        "foodRating": 4.7,
+        "atmosphereRating": 3.4,
+        "notes": null,
+        "uID": 2,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-02-08 15:49:17"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.8,
+        "drinkRating": 3.9,
+        "foodRating": 3.4,
+        "atmosphereRating": 4.3,
+        "notes": "",
+        "uID": 34,
+<<<<<<< HEAD
+    "cID": 7,
+        "timestamp": "2004-07-01 21:48:57"
+=======
+    "cID": 7
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.1,
+        "drinkRating": 2.6,
+        "foodRating": 3.2,
+        "atmosphereRating": 4.6,
+        "notes": "Great spot!",
+        "uID": 48,
+<<<<<<< HEAD
+    "cID": 10,
+        "timestamp": "2004-09-22 21:30:53"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.4,
+        "drinkRating": 2.4,
+        "foodRating": 1.6,
+        "atmosphereRating": 3.0,
+        "notes": "Nice ambiance",
+        "uID": 3,
+<<<<<<< HEAD
+    "cID": 10,
+        "timestamp": "2004-01-19 08:39:53"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.9,
+        "drinkRating": 1.8,
+        "foodRating": 3.6,
+        "atmosphereRating": 1.6,
+        "notes": "Loved the drinks",
+        "uID": 26,
+<<<<<<< HEAD
+    "cID": 7,
+        "timestamp": "2004-04-19 10:41:15"
+=======
+    "cID": 7
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 5.0,
+        "drinkRating": 4.5,
+        "foodRating": 2.8,
+        "atmosphereRating": 2.7,
+        "notes": "",
+        "uID": 10,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-03-05 22:25:21"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.0,
+        "drinkRating": 4.8,
+        "foodRating": 2.7,
+        "atmosphereRating": 1.9,
+        "notes": null,
+        "uID": 18,
+<<<<<<< HEAD
+    "cID": 8,
+        "timestamp": "2004-11-26 22:11:29"
+=======
+    "cID": 8
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.7,
+        "drinkRating": 4.2,
+        "foodRating": 3.7,
+        "atmosphereRating": 3.1,
+        "notes": "Nice ambiance",
+        "uID": 50,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-11-28 03:13:00"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.5,
+        "drinkRating": 1.3,
+        "foodRating": 2.4,
+        "atmosphereRating": 3.0,
+        "notes": "Great spot!",
+        "uID": 20,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-02-21 16:49:02"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.7,
+        "drinkRating": 3.5,
+        "foodRating": 4.4,
+        "atmosphereRating": 2.0,
+        "notes": "Loved the drinks",
+        "uID": 1,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-03-12 01:32:27"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.3,
+        "drinkRating": 2.9,
+        "foodRating": 2.2,
+        "atmosphereRating": 4.5,
+        "notes": "Nice ambiance",
+        "uID": 26,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-06-15 00:30:45"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.0,
+        "drinkRating": 1.1,
+        "foodRating": 2.5,
+        "atmosphereRating": 4.8,
+        "notes": "Nice ambiance",
+        "uID": 19,
+<<<<<<< HEAD
+    "cID": 7,
+        "timestamp": "2004-03-13 01:33:34"
+=======
+    "cID": 7
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.5,
+        "drinkRating": 2.8,
+        "foodRating": 3.4,
+        "atmosphereRating": 4.3,
+        "notes": "",
+        "uID": 19,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-10-08 18:51:13"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.6,
+        "drinkRating": 1.6,
+        "foodRating": 4.0,
+        "atmosphereRating": 4.3,
+        "notes": "",
+        "uID": 4,
+<<<<<<< HEAD
+    "cID": 10,
+        "timestamp": "2004-07-03 06:11:35"
+=======
+    "cID": 10
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.6,
+        "drinkRating": 3.3,
+        "foodRating": 3.0,
+        "atmosphereRating": 1.3,
+        "notes": "",
+        "uID": 44,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-01-09 16:27:18"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.8,
+        "drinkRating": 3.7,
+        "foodRating": 3.3,
+        "atmosphereRating": 2.2,
+        "notes": "",
+        "uID": 40,
+<<<<<<< HEAD
+    "cID": 6,
+        "timestamp": "2004-11-21 23:39:56"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.6,
+        "drinkRating": 2.2,
+        "foodRating": 2.4,
+        "atmosphereRating": 2.0,
+        "notes": "Great spot!",
+        "uID": 29,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-11-26 05:09:25"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.7,
+        "drinkRating": 4.5,
+        "foodRating": 3.8,
+        "atmosphereRating": 2.0,
+        "notes": "Nice ambiance",
+        "uID": 35,
+<<<<<<< HEAD
+    "cID": 6,
+        "timestamp": "2004-03-12 21:14:09"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.2,
+        "drinkRating": 2.7,
+        "foodRating": 2.1,
+        "atmosphereRating": 4.9,
+        "notes": "Loved the drinks",
+        "uID": 5,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-05-31 16:26:36"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.4,
+        "drinkRating": 1.9,
+        "foodRating": 1.2,
+        "atmosphereRating": 3.8,
+        "notes": "Great spot!",
+        "uID": 29,
+<<<<<<< HEAD
+    "cID": 9,
+        "timestamp": "2004-03-31 07:24:46"
+=======
+    "cID": 9
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.5,
+        "drinkRating": 2.8,
+        "foodRating": 3.1,
+        "atmosphereRating": 4.4,
+        "notes": null,
+        "uID": 36,
+<<<<<<< HEAD
+    "cID": 7,
+        "timestamp": "2004-04-04 10:01:46"
+=======
+    "cID": 7
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.2,
+        "drinkRating": 4.8,
+        "foodRating": 1.7,
+        "atmosphereRating": 4.6,
+        "notes": "Loved the drinks",
+        "uID": 37,
+<<<<<<< HEAD
+    "cID": 6,
+        "timestamp": "2004-09-30 07:24:42"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.8,
+        "drinkRating": 4.4,
+        "foodRating": 1.3,
+        "atmosphereRating": 4.1,
+        "notes": "Great spot!",
+        "uID": 48,
+<<<<<<< HEAD
+    "cID": 7,
+        "timestamp": "2004-02-18 22:23:13"
+=======
+    "cID": 7
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.6,
+        "drinkRating": 2.5,
+        "foodRating": 1.6,
+        "atmosphereRating": 2.7,
+        "notes": "Loved the drinks",
+        "uID": 10,
+<<<<<<< HEAD
+    "cID": 1,
+        "timestamp": "2004-12-22 02:02:44"
+=======
+    "cID": 1
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.4,
+        "drinkRating": 1.7,
+        "foodRating": 2.7,
+        "atmosphereRating": 1.5,
+        "notes": "Loved the drinks",
+        "uID": 4,
+<<<<<<< HEAD
+    "cID": 6,
+        "timestamp": "2004-05-14 12:12:09"
+=======
+    "cID": 6
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.2,
+        "drinkRating": 2.1,
+        "foodRating": 1.5,
+        "atmosphereRating": 1.2,
+        "notes": "Loved the drinks",
+        "uID": 8,
+<<<<<<< HEAD
+    "cID": 7,
+        "timestamp": "2004-12-23 06:12:59"
+=======
+    "cID": 7
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.8,
+        "drinkRating": 3.2,
+        "foodRating": 1.2,
+        "atmosphereRating": 1.2,
+        "notes": null,
+        "uID": 41,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-03-24 16:33:31"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 2.3,
+        "drinkRating": 3.8,
+        "foodRating": 4.6,
+        "atmosphereRating": 1.0,
+        "notes": null,
+        "uID": 11,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-06-26 22:46:11"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.4,
+        "drinkRating": 3.1,
+        "foodRating": 4.0,
+        "atmosphereRating": 3.2,
+        "notes": "",
+        "uID": 50,
+<<<<<<< HEAD
+    "cID": 7,
+        "timestamp": "2004-12-23 07:04:14"
+=======
+    "cID": 7
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.8,
+        "drinkRating": 3.8,
+        "foodRating": 2.5,
+        "atmosphereRating": 3.5,
+        "notes": "Nice ambiance",
+        "uID": 27,
+<<<<<<< HEAD
+    "cID": 5,
+        "timestamp": "2004-06-02 13:15:12"
+=======
+    "cID": 5
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.1,
+        "drinkRating": 2.5,
+        "foodRating": 1.9,
+        "atmosphereRating": 3.8,
+        "notes": "",
+        "uID": 50,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-01-14 06:04:30"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.5,
+        "drinkRating": 3.0,
+        "foodRating": 1.8,
+        "atmosphereRating": 4.1,
+        "notes": "Great spot!",
+        "uID": 15,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-12-13 01:00:58"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 1.5,
+        "drinkRating": 3.0,
+        "foodRating": 3.7,
+        "atmosphereRating": 3.5,
+        "notes": "Nice ambiance",
+        "uID": 31,
+<<<<<<< HEAD
+    "cID": 3,
+        "timestamp": "2004-09-11 02:51:08"
+=======
+    "cID": 3
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 4.0,
+        "drinkRating": 4.0,
+        "foodRating": 4.5,
+        "atmosphereRating": 4.0,
+        "notes": null,
+        "uID": 39,
+<<<<<<< HEAD
+    "cID": 4,
+        "timestamp": "2004-09-17 17:38:11"
+=======
+    "cID": 4
+>>>>>>> fe237e4 (add route, service layer for the blend service)
+    },
+    {
+        "rating": 3.4,
+        "drinkRating": 2.3,
+        "foodRating": 2.3,
+        "atmosphereRating": 4.9,
+        "notes": "Loved the drinks",
+        "uID": 46,
+<<<<<<< HEAD
+    "cID": 7,
+        "timestamp": "2004-11-07 03:28:03"
+    }
+=======
+    "cID": 7
+},
+{
     "rating": 3.4,
-    "drinkRating": 2.0,
-    "foodRating": 3.7,
-    "atmosphereRating": 1.3,
-    "notes": "Great spot!",
-    "uID": 9,
-    "cID": 5,
-    "timestamp": "2004-08-01 02:30:19"
-  },
-  {
-    "rating": 4.5,
-    "drinkRating": 3.3,
-    "foodRating": 1.6,
-    "atmosphereRating": 2.7,
-    "notes": "Loved the drinks",
-    "uID": 47,
-    "cID": 5,
-    "timestamp": "2004-08-24 19:06:35"
-  },
-  {
-    "rating": 3.4,
-    "drinkRating": 3.2,
-    "foodRating": 1.6,
-    "atmosphereRating": 4.5,
-    "notes": "Nice ambiance",
-    "uID": 44,
-    "cID": 10,
-    "timestamp": "2004-05-04 01:20:59"
-  },
-  {
-    "rating": 1.9,
-    "drinkRating": 1.9,
-    "foodRating": 2.3,
-    "atmosphereRating": 3.8,
-    "notes": "Loved the drinks",
-    "uID": 49,
-    "cID": 10,
-    "timestamp": "2004-06-23 05:41:49"
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 2.9,
-    "foodRating": 4.6,
-    "atmosphereRating": 2.4,
-    "notes": "Great spot!",
-    "uID": 9,
-    "cID": 9,
-    "timestamp": "2004-08-22 01:41:07"
-  },
-  {
-    "rating": 3.2,
-    "drinkRating": 2.7,
-    "foodRating": 2.6,
-    "atmosphereRating": 4.5,
-    "notes": "Great spot!",
-    "uID": 22,
-    "cID": 3,
-    "timestamp": "2004-12-08 06:44:43"
-  },
-  {
-    "rating": 1.7,
-    "drinkRating": 4.3,
-    "foodRating": 1.7,
-    "atmosphereRating": 1.5,
-    "notes": "Great spot!",
-    "uID": 21,
-    "cID": 5,
-    "timestamp": "2004-05-23 18:29:35"
-  },
-  {
-    "rating": 4.9,
-    "drinkRating": 4.9,
-    "foodRating": 3.1,
-    "atmosphereRating": 2.4,
-    "notes": "Great spot!",
-    "uID": 7,
-    "cID": 6,
-    "timestamp": "2004-06-09 21:48:05"
-  },
-  {
-    "rating": 3.1,
-    "drinkRating": 4.3,
-    "foodRating": 2.6,
-    "atmosphereRating": 3.4,
-    "notes": "Nice ambiance",
-    "uID": 11,
-    "cID": 4,
-    "timestamp": "2004-12-27 19:51:09"
-  },
-  {
-    "rating": 3.1,
-    "drinkRating": 3.8,
-    "foodRating": 4.7,
-    "atmosphereRating": 1.8,
-    "notes": "Loved the drinks",
-    "uID": 50,
-    "cID": 3,
-    "timestamp": "2004-03-12 05:57:04"
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 1.4,
-    "foodRating": 4.0,
-    "atmosphereRating": 1.0,
-    "notes": "",
-    "uID": 47,
-    "cID": 6,
-    "timestamp": "2004-02-12 12:34:30"
-  },
-  {
-    "rating": 2.0,
-    "drinkRating": 4.9,
-    "foodRating": 4.6,
-    "atmosphereRating": 2.7,
-    "notes": null,
-    "uID": 7,
-    "cID": 9,
-    "timestamp": "2004-11-20 08:09:21"
-  },
-  {
-    "rating": 2.3,
-    "drinkRating": 4.3,
-    "foodRating": 1.1,
-    "atmosphereRating": 4.5,
-    "notes": null,
-    "uID": 17,
-    "cID": 1,
-    "timestamp": "2004-04-15 22:58:20"
-  },
-  {
-    "rating": 2.5,
-    "drinkRating": 2.2,
-    "foodRating": 3.8,
-    "atmosphereRating": 3.2,
-    "notes": "",
-    "uID": 3,
-    "cID": 3,
-    "timestamp": "2004-11-05 21:46:25"
-  },
-  {
-    "rating": 1.5,
-    "drinkRating": 1.3,
-    "foodRating": 2.6,
-    "atmosphereRating": 1.1,
-    "notes": null,
-    "uID": 43,
-    "cID": 1,
-    "timestamp": "2004-08-29 11:52:26"
-  },
-  {
-    "rating": 4.2,
-    "drinkRating": 4.6,
-    "foodRating": 2.7,
-    "atmosphereRating": 2.2,
-    "notes": "",
-    "uID": 32,
-    "cID": 5,
-    "timestamp": "2004-03-20 05:14:33"
-  },
-  {
-    "rating": 2.6,
-    "drinkRating": 3.5,
-    "foodRating": 1.5,
-    "atmosphereRating": 1.8,
-    "notes": "Nice ambiance",
-    "uID": 45,
-    "cID": 9,
-    "timestamp": "2004-05-03 00:39:37"
-  },
-  {
-    "rating": 2.0,
-    "drinkRating": 4.5,
-    "foodRating": 3.2,
-    "atmosphereRating": 3.7,
-    "notes": null,
-    "uID": 47,
-    "cID": 8,
-    "timestamp": "2004-02-27 18:37:30"
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 2.7,
-    "foodRating": 4.7,
-    "atmosphereRating": 4.2,
-    "notes": "Great spot!",
-    "uID": 33,
-    "cID": 9,
-    "timestamp": "2004-04-19 12:12:47"
-  },
-  {
-    "rating": 2.1,
-    "drinkRating": 2.2,
-    "foodRating": 2.5,
-    "atmosphereRating": 4.1,
-    "notes": "Loved the drinks",
-    "uID": 9,
-    "cID": 7,
-    "timestamp": "2004-11-10 01:38:41"
-  },
-  {
-    "rating": 4.3,
-    "drinkRating": 3.5,
-    "foodRating": 4.2,
-    "atmosphereRating": 1.4,
-    "notes": "Nice ambiance",
-    "uID": 33,
-    "cID": 5,
-    "timestamp": "2004-08-10 16:29:28"
-  },
-  {
-    "rating": 2.7,
-    "drinkRating": 4.2,
-    "foodRating": 4.2,
-    "atmosphereRating": 4.6,
-    "notes": "Great spot!",
-    "uID": 35,
-    "cID": 4,
-    "timestamp": "2004-06-01 21:26:34"
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 2.4,
-    "foodRating": 2.8,
-    "atmosphereRating": 3.2,
-    "notes": "Nice ambiance",
-    "uID": 19,
-    "cID": 8,
-    "timestamp": "2004-10-07 02:39:13"
-  },
-  {
-    "rating": 3.7,
-    "drinkRating": 3.7,
-    "foodRating": 1.6,
-    "atmosphereRating": 2.2,
-    "notes": "",
-    "uID": 46,
-    "cID": 2,
-    "timestamp": "2004-09-26 00:38:33"
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 4.6,
-    "foodRating": 3.0,
-    "atmosphereRating": 4.7,
-    "notes": "",
-    "uID": 27,
-    "cID": 10,
-    "timestamp": "2004-08-12 23:35:12"
-  },
-  {
-    "rating": 4.6,
-    "drinkRating": 3.5,
-    "foodRating": 4.5,
-    "atmosphereRating": 3.3,
-    "notes": "Loved the drinks",
-    "uID": 41,
-    "cID": 2,
-    "timestamp": "2004-08-25 12:12:06"
-  },
-  {
-    "rating": 4.6,
-    "drinkRating": 1.4,
-    "foodRating": 3.1,
-    "atmosphereRating": 1.6,
-    "notes": "",
-    "uID": 19,
-    "cID": 10,
-    "timestamp": "2004-10-25 05:57:01"
-  },
-  {
-    "rating": 4.0,
-    "drinkRating": 4.7,
-    "foodRating": 3.3,
-    "atmosphereRating": 4.9,
-    "notes": "Great spot!",
-    "uID": 2,
-    "cID": 6,
-    "timestamp": "2004-04-30 06:48:18"
-  },
-  {
-    "rating": 1.5,
-    "drinkRating": 2.2,
-    "foodRating": 2.4,
-    "atmosphereRating": 3.0,
-    "notes": "Nice ambiance",
-    "uID": 29,
-    "cID": 5,
-    "timestamp": "2004-07-16 07:37:35"
-  },
-  {
-    "rating": 4.8,
-    "drinkRating": 4.3,
-    "foodRating": 1.3,
-    "atmosphereRating": 2.3,
-    "notes": null,
-    "uID": 23,
-    "cID": 3,
-    "timestamp": "2004-09-30 17:05:04"
-  },
-  {
-    "rating": 4.4,
-    "drinkRating": 3.7,
-    "foodRating": 3.3,
-    "atmosphereRating": 1.3,
-    "notes": "Great spot!",
-    "uID": 36,
-    "cID": 4,
-    "timestamp": "2004-11-17 18:06:40"
-  },
-  {
-    "rating": 1.2,
-    "drinkRating": 2.1,
-    "foodRating": 1.2,
-    "atmosphereRating": 3.2,
-    "notes": "Great spot!",
-    "uID": 26,
-    "cID": 8,
-    "timestamp": "2004-11-18 04:29:52"
-  },
-  {
-    "rating": 1.9,
-    "drinkRating": 2.2,
-    "foodRating": 3.9,
-    "atmosphereRating": 4.7,
-    "notes": "Great spot!",
-    "uID": 32,
-    "cID": 2,
-    "timestamp": "2004-07-28 15:27:13"
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 2.4,
-    "foodRating": 3.9,
-    "atmosphereRating": 1.8,
-    "notes": "",
-    "uID": 18,
-    "cID": 5,
-    "timestamp": "2004-05-14 05:49:55"
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 1.4,
-    "foodRating": 1.0,
-    "atmosphereRating": 4.0,
-    "notes": "Great spot!",
-    "uID": 22,
-    "cID": 2,
-    "timestamp": "2004-05-06 21:21:08"
-  },
-  {
-    "rating": 2.9,
-    "drinkRating": 3.4,
-    "foodRating": 3.6,
-    "atmosphereRating": 1.7,
-    "notes": "Loved the drinks",
-    "uID": 31,
-    "cID": 8,
-    "timestamp": "2004-10-03 13:17:51"
-  },
-  {
-    "rating": 4.3,
-    "drinkRating": 5.0,
-    "foodRating": 2.6,
-    "atmosphereRating": 2.8,
-    "notes": "",
-    "uID": 34,
-    "cID": 4,
-    "timestamp": "2004-06-13 11:33:56"
-  },
-  {
-    "rating": 1.9,
-    "drinkRating": 1.1,
-    "foodRating": 1.7,
-    "atmosphereRating": 2.9,
-    "notes": "Great spot!",
-    "uID": 1,
-    "cID": 2,
-    "timestamp": "2004-06-07 14:20:33"
-  },
-  {
-    "rating": 1.7,
-    "drinkRating": 2.1,
-    "foodRating": 1.7,
-    "atmosphereRating": 4.2,
-    "notes": "Great spot!",
-    "uID": 22,
-    "cID": 7,
-    "timestamp": "2004-01-21 05:17:16"
-  },
-  {
-    "rating": 3.2,
-    "drinkRating": 1.5,
-    "foodRating": 3.6,
-    "atmosphereRating": 4.0,
-    "notes": "Loved the drinks",
-    "uID": 45,
-    "cID": 8,
-    "timestamp": "2004-01-30 05:58:27"
-  },
-  {
-    "rating": 2.1,
-    "drinkRating": 4.0,
-    "foodRating": 4.2,
-    "atmosphereRating": 3.1,
-    "notes": "Great spot!",
-    "uID": 21,
-    "cID": 4,
-    "timestamp": "2004-03-26 00:58:45"
-  },
-  {
-    "rating": 4.3,
-    "drinkRating": 4.8,
-    "foodRating": 3.6,
-    "atmosphereRating": 1.4,
-    "notes": "Nice ambiance",
-    "uID": 25,
-    "cID": 3,
-    "timestamp": "2004-01-24 19:36:48"
-  },
-  {
-    "rating": 4.8,
-    "drinkRating": 1.3,
-    "foodRating": 4.1,
-    "atmosphereRating": 4.3,
-    "notes": "",
-    "uID": 41,
-    "cID": 1,
-    "timestamp": "2004-12-23 08:48:02"
-  },
-  {
-    "rating": 3.6,
-    "drinkRating": 4.0,
-    "foodRating": 3.2,
-    "atmosphereRating": 3.5,
-    "notes": "Nice ambiance",
-    "uID": 34,
-    "cID": 2,
-    "timestamp": "2004-09-17 23:28:18"
-  },
-  {
-    "rating": 2.9,
     "drinkRating": 2.3,
-    "foodRating": 3.2,
-    "atmosphereRating": 4.5,
-    "notes": "Nice ambiance",
-    "uID": 12,
-    "cID": 5,
-    "timestamp": "2004-07-30 08:29:46"
-  },
-  {
-    "rating": 4.9,
-    "drinkRating": 4.7,
-    "foodRating": 2.3,
-    "atmosphereRating": 2.9,
-    "notes": "Nice ambiance",
-    "uID": 10,
-    "cID": 4,
-    "timestamp": "2004-12-25 06:23:41"
-  },
-  {
-    "rating": 3.9,
-    "drinkRating": 4.7,
-    "foodRating": 4.6,
-    "atmosphereRating": 4.8,
-    "notes": null,
-    "uID": 10,
-    "cID": 7,
-    "timestamp": "2004-04-02 12:58:24"
-  },
-  {
-    "rating": 1.2,
-    "drinkRating": 3.4,
-    "foodRating": 3.1,
-    "atmosphereRating": 1.3,
-    "notes": "Great spot!",
-    "uID": 49,
-    "cID": 4,
-    "timestamp": "2004-11-27 09:16:23"
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 4.6,
-    "foodRating": 2.7,
-    "atmosphereRating": 4.3,
-    "notes": "Loved the drinks",
-    "uID": 37,
-    "cID": 3,
-    "timestamp": "2004-05-19 15:31:00"
-  },
-  {
-    "rating": 2.0,
-    "drinkRating": 4.2,
-    "foodRating": 2.6,
-    "atmosphereRating": 2.2,
-    "notes": "Loved the drinks",
-    "uID": 8,
-    "cID": 8,
-    "timestamp": "2004-05-30 00:23:39"
-  },
-  {
-    "rating": 2.6,
-    "drinkRating": 2.8,
-    "foodRating": 4.4,
-    "atmosphereRating": 3.2,
-    "notes": "Nice ambiance",
-    "uID": 49,
-    "cID": 2,
-    "timestamp": "2004-10-06 07:39:37"
-  },
-  {
-    "rating": 3.2,
-    "drinkRating": 1.0,
-    "foodRating": 5.0,
-    "atmosphereRating": 2.6,
-    "notes": "Great spot!",
-    "uID": 50,
-    "cID": 10,
-    "timestamp": "2004-10-26 19:10:45"
-  },
-  {
-    "rating": 3.3,
-    "drinkRating": 3.0,
-    "foodRating": 4.0,
-    "atmosphereRating": 2.8,
-    "notes": "Nice ambiance",
-    "uID": 26,
-    "cID": 1,
-    "timestamp": "2004-05-05 23:56:38"
-  },
-  {
-    "rating": 5.0,
-    "drinkRating": 2.1,
-    "foodRating": 1.1,
-    "atmosphereRating": 2.8,
-    "notes": "",
-    "uID": 6,
-    "cID": 9,
-    "timestamp": "2004-06-29 18:29:35"
-  },
-  {
-    "rating": 2.0,
-    "drinkRating": 3.1,
-    "foodRating": 4.0,
-    "atmosphereRating": 2.9,
-    "notes": null,
-    "uID": 44,
-    "cID": 7,
-    "timestamp": "2004-04-07 20:30:52"
-  },
-  {
-    "rating": 1.8,
-    "drinkRating": 2.4,
-    "foodRating": 3.9,
-    "atmosphereRating": 1.7,
-    "notes": "Great spot!",
-    "uID": 41,
-    "cID": 4,
-    "timestamp": "2004-11-09 04:18:13"
-  },
-  {
-    "rating": 1.9,
-    "drinkRating": 2.7,
-    "foodRating": 3.8,
-    "atmosphereRating": 4.1,
-    "notes": "Loved the drinks",
-    "uID": 35,
-    "cID": 9,
-    "timestamp": "2004-04-04 23:17:26"
-  },
-  {
-    "rating": 3.1,
-    "drinkRating": 4.4,
-    "foodRating": 3.8,
-    "atmosphereRating": 3.9,
-    "notes": "",
-    "uID": 6,
-    "cID": 1,
-    "timestamp": "2004-12-14 11:01:58"
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 2.0,
-    "foodRating": 1.2,
-    "atmosphereRating": 2.1,
-    "notes": "Loved the drinks",
-    "uID": 38,
-    "cID": 10,
-    "timestamp": "2004-11-06 01:24:03"
-  },
-  {
-    "rating": 2.6,
-    "drinkRating": 3.4,
-    "foodRating": 4.0,
-    "atmosphereRating": 4.2,
-    "notes": "",
-    "uID": 14,
-    "cID": 5,
-    "timestamp": "2004-12-27 10:23:43"
-  },
-  {
-    "rating": 4.3,
-    "drinkRating": 3.8,
-    "foodRating": 3.1,
-    "atmosphereRating": 3.9,
-    "notes": "Nice ambiance",
-    "uID": 2,
-    "cID": 10,
-    "timestamp": "2004-04-11 20:02:57"
-  },
-  {
-    "rating": 2.7,
-    "drinkRating": 4.4,
-    "foodRating": 4.9,
-    "atmosphereRating": 1.6,
-    "notes": "",
-    "uID": 21,
-    "cID": 3,
-    "timestamp": "2004-05-17 00:26:37"
-  },
-  {
-    "rating": 3.9,
-    "drinkRating": 4.3,
-    "foodRating": 1.1,
-    "atmosphereRating": 2.8,
-    "notes": "",
-    "uID": 30,
-    "cID": 9,
-    "timestamp": "2004-10-19 16:09:41"
-  },
-  {
-    "rating": 5.0,
-    "drinkRating": 3.6,
-    "foodRating": 2.0,
-    "atmosphereRating": 2.5,
-    "notes": "Loved the drinks",
-    "uID": 10,
-    "cID": 2,
-    "timestamp": "2004-05-01 18:34:34"
-  },
-  {
-    "rating": 3.9,
-    "drinkRating": 3.7,
-    "foodRating": 3.1,
-    "atmosphereRating": 4.8,
-    "notes": "",
-    "uID": 5,
-    "cID": 4,
-    "timestamp": "2004-03-07 14:24:51"
-  },
-  {
-    "rating": 4.1,
-    "drinkRating": 2.9,
-    "foodRating": 1.6,
-    "atmosphereRating": 2.0,
-    "notes": "",
-    "uID": 4,
-    "cID": 1,
-    "timestamp": "2004-12-29 23:48:28"
-  },
-  {
-    "rating": 3.8,
-    "drinkRating": 1.9,
-    "foodRating": 4.7,
-    "atmosphereRating": 2.9,
-    "notes": "Nice ambiance",
-    "uID": 25,
-    "cID": 8,
-    "timestamp": "2004-01-30 12:12:49"
-  },
-  {
-    "rating": 2.4,
-    "drinkRating": 2.9,
-    "foodRating": 4.4,
-    "atmosphereRating": 1.7,
-    "notes": null,
-    "uID": 32,
-    "cID": 9,
-    "timestamp": "2004-11-18 21:26:59"
-  },
-  {
-    "rating": 4.4,
-    "drinkRating": 1.3,
-    "foodRating": 4.9,
-    "atmosphereRating": 2.2,
-    "notes": "Loved the drinks",
-    "uID": 32,
-    "cID": 4,
-    "timestamp": "2004-08-27 08:30:11"
-  },
-  {
-    "rating": 1.5,
-    "drinkRating": 2.4,
-    "foodRating": 2.4,
-    "atmosphereRating": 4.2,
-    "notes": "Great spot!",
-    "uID": 41,
-    "cID": 8,
-    "timestamp": "2004-11-11 20:30:52"
-  },
-  {
-    "rating": 4.6,
-    "drinkRating": 2.1,
-    "foodRating": 3.7,
-    "atmosphereRating": 3.1,
-    "notes": "Nice ambiance",
-    "uID": 29,
-    "cID": 6,
-    "timestamp": "2004-07-09 06:44:04"
-  },
-  {
-    "rating": 4.2,
-    "drinkRating": 4.1,
-    "foodRating": 1.8,
-    "atmosphereRating": 4.3,
-    "notes": "Great spot!",
-    "uID": 2,
-    "cID": 5,
-    "timestamp": "2004-01-23 11:31:33"
-  },
-  {
-    "rating": 4.4,
-    "drinkRating": 1.9,
-    "foodRating": 1.7,
-    "atmosphereRating": 2.9,
-    "notes": "Great spot!",
-    "uID": 13,
-    "cID": 3,
-    "timestamp": "2004-06-25 21:11:51"
-  },
-  {
-    "rating": 3.8,
-    "drinkRating": 1.6,
-    "foodRating": 1.4,
-    "atmosphereRating": 2.3,
-    "notes": null,
-    "uID": 3,
-    "cID": 5,
-    "timestamp": "2004-02-26 01:30:45"
-  },
-  {
-    "rating": 2.9,
-    "drinkRating": 1.6,
-    "foodRating": 3.9,
-    "atmosphereRating": 3.3,
-    "notes": "Great spot!",
-    "uID": 5,
-    "cID": 6,
-    "timestamp": "2004-02-03 08:45:44"
-  },
-  {
-    "rating": 2.3,
-    "drinkRating": 4.5,
-    "foodRating": 1.5,
-    "atmosphereRating": 2.9,
-    "notes": "",
-    "uID": 46,
-    "cID": 10,
-    "timestamp": "2004-06-11 10:33:22"
-  },
-  {
-    "rating": 4.3,
-    "drinkRating": 4.4,
-    "foodRating": 2.1,
-    "atmosphereRating": 1.4,
-    "notes": "Great spot!",
-    "uID": 24,
-    "cID": 8,
-    "timestamp": "2004-04-11 10:18:46"
-  },
-  {
-    "rating": 1.2,
-    "drinkRating": 2.5,
-    "foodRating": 2.8,
-    "atmosphereRating": 4.1,
-    "notes": "Great spot!",
-    "uID": 1,
-    "cID": 6,
-    "timestamp": "2004-07-10 22:18:11"
-  },
-  {
-    "rating": 1.9,
-    "drinkRating": 3.2,
-    "foodRating": 2.4,
-    "atmosphereRating": 4.4,
-    "notes": "",
-    "uID": 22,
-    "cID": 6,
-    "timestamp": "2004-09-12 08:23:40"
-  },
-  {
-    "rating": 3.7,
-    "drinkRating": 2.4,
-    "foodRating": 4.5,
-    "atmosphereRating": 1.5,
-    "notes": "",
-    "uID": 36,
-    "cID": 3,
-    "timestamp": "2004-04-23 18:47:26"
-  },
-  {
-    "rating": 4.7,
-    "drinkRating": 2.5,
-    "foodRating": 2.2,
-    "atmosphereRating": 4.1,
-    "notes": null,
-    "uID": 9,
-    "cID": 10,
-    "timestamp": "2004-01-24 09:09:02"
-  },
-  {
-    "rating": 3.0,
-    "drinkRating": 1.8,
-    "foodRating": 3.6,
-    "atmosphereRating": 4.1,
-    "notes": "Great spot!",
-    "uID": 44,
-    "cID": 1,
-    "timestamp": "2004-12-11 19:15:59"
-  },
-  {
-    "rating": 3.9,
-    "drinkRating": 2.4,
-    "foodRating": 4.6,
-    "atmosphereRating": 1.7,
-    "notes": null,
-    "uID": 47,
-    "cID": 2,
-    "timestamp": "2004-12-30 11:57:40"
-  },
-  {
-    "rating": 1.4,
-    "drinkRating": 3.1,
-    "foodRating": 2.4,
-    "atmosphereRating": 4.0,
-    "notes": "Great spot!",
-    "uID": 15,
-    "cID": 4,
-    "timestamp": "2004-11-11 13:14:33"
-  },
-  {
-    "rating": 4.5,
-    "drinkRating": 4.3,
-    "foodRating": 4.4,
-    "atmosphereRating": 3.1,
-    "notes": "Nice ambiance",
-    "uID": 27,
-    "cID": 4,
-    "timestamp": "2004-04-16 12:22:23"
-  },
-  {
-    "rating": 1.5,
-    "drinkRating": 3.2,
-    "foodRating": 2.8,
-    "atmosphereRating": 3.1,
-    "notes": "Loved the drinks",
-    "uID": 26,
-    "cID": 2,
-    "timestamp": "2004-08-24 19:20:17"
-  },
-  {
-    "rating": 3.2,
-    "drinkRating": 1.3,
-    "foodRating": 4.9,
-    "atmosphereRating": 5.0,
-    "notes": "",
-    "uID": 11,
-    "cID": 9,
-    "timestamp": "2004-07-27 15:52:01"
-  },
-  {
-    "rating": 3.8,
-    "drinkRating": 1.3,
-    "foodRating": 4.7,
-    "atmosphereRating": 2.5,
-    "notes": null,
-    "uID": 12,
-    "cID": 1,
-    "timestamp": "2004-08-05 10:12:01"
-  },
-  {
-    "rating": 1.6,
-    "drinkRating": 2.5,
-    "foodRating": 2.8,
-    "atmosphereRating": 3.5,
-    "notes": "Great spot!",
-    "uID": 34,
-    "cID": 5,
-    "timestamp": "2004-05-20 18:30:17"
-  },
-  {
-    "rating": 4.5,
-    "drinkRating": 3.7,
-    "foodRating": 2.1,
-    "atmosphereRating": 4.2,
-    "notes": "Loved the drinks",
-    "uID": 24,
-    "cID": 2,
-    "timestamp": "2004-10-05 00:53:43"
-  },
-  {
-    "rating": 2.0,
-    "drinkRating": 2.2,
-    "foodRating": 3.9,
-    "atmosphereRating": 2.2,
-    "notes": "",
-    "uID": 5,
-    "cID": 9,
-    "timestamp": "2004-11-27 13:23:12"
-  },
-  {
-    "rating": 3.0,
-    "drinkRating": 4.9,
-    "foodRating": 4.7,
-    "atmosphereRating": 1.2,
-    "notes": "Loved the drinks",
-    "uID": 37,
-    "cID": 5,
-    "timestamp": "2004-05-09 23:45:00"
-  },
-  {
-    "rating": 2.4,
-    "drinkRating": 4.9,
-    "foodRating": 4.7,
-    "atmosphereRating": 2.7,
-    "notes": "Nice ambiance",
-    "uID": 16,
-    "cID": 6,
-    "timestamp": "2004-09-19 20:19:12"
-  },
-  {
-    "rating": 4.2,
-    "drinkRating": 1.2,
-    "foodRating": 2.1,
-    "atmosphereRating": 4.5,
-    "notes": "Nice ambiance",
-    "uID": 22,
-    "cID": 9,
-    "timestamp": "2004-07-20 06:45:46"
-  },
-  {
-    "rating": 1.4,
-    "drinkRating": 2.8,
-    "foodRating": 1.4,
-    "atmosphereRating": 3.4,
-    "notes": "Great spot!",
-    "uID": 48,
-    "cID": 3,
-    "timestamp": "2004-08-24 21:56:53"
-  },
-  {
-    "rating": 2.8,
-    "drinkRating": 4.6,
-    "foodRating": 4.2,
-    "atmosphereRating": 2.5,
-    "notes": "Loved the drinks",
-    "uID": 11,
-    "cID": 5,
-    "timestamp": "2004-08-10 14:15:14"
-  },
-  {
-    "rating": 2.9,
-    "drinkRating": 1.9,
-    "foodRating": 4.8,
-    "atmosphereRating": 3.3,
-    "notes": "",
-    "uID": 50,
-    "cID": 8,
-    "timestamp": "2004-11-11 04:12:56"
-  },
-  {
-    "rating": 3.9,
-    "drinkRating": 1.6,
-    "foodRating": 4.7,
-    "atmosphereRating": 3.4,
-    "notes": null,
-    "uID": 2,
-    "cID": 8,
-    "timestamp": "2004-02-08 15:49:17"
-  },
-  {
-    "rating": 3.8,
-    "drinkRating": 3.9,
-    "foodRating": 3.4,
-    "atmosphereRating": 4.3,
-    "notes": "",
-    "uID": 34,
-    "cID": 7,
-    "timestamp": "2004-07-01 21:48:57"
-  },
-  {
-    "rating": 4.1,
-    "drinkRating": 2.6,
-    "foodRating": 3.2,
-    "atmosphereRating": 4.6,
-    "notes": "Great spot!",
-    "uID": 48,
-    "cID": 10,
-    "timestamp": "2004-09-22 21:30:53"
-  },
-  {
-    "rating": 1.4,
-    "drinkRating": 2.4,
-    "foodRating": 1.6,
-    "atmosphereRating": 3.0,
-    "notes": "Nice ambiance",
-    "uID": 3,
-    "cID": 10,
-    "timestamp": "2004-01-19 08:39:53"
-  },
-  {
-    "rating": 4.9,
-    "drinkRating": 1.8,
-    "foodRating": 3.6,
-    "atmosphereRating": 1.6,
-    "notes": "Loved the drinks",
-    "uID": 26,
-    "cID": 7,
-    "timestamp": "2004-04-19 10:41:15"
-  },
-  {
-    "rating": 5.0,
-    "drinkRating": 4.5,
-    "foodRating": 2.8,
-    "atmosphereRating": 2.7,
-    "notes": "",
-    "uID": 10,
-    "cID": 9,
-    "timestamp": "2004-03-05 22:25:21"
-  },
-  {
-    "rating": 1.0,
-    "drinkRating": 4.8,
-    "foodRating": 2.7,
-    "atmosphereRating": 1.9,
-    "notes": null,
-    "uID": 18,
-    "cID": 8,
-    "timestamp": "2004-11-26 22:11:29"
-  },
-  {
-    "rating": 2.7,
-    "drinkRating": 4.2,
-    "foodRating": 3.7,
-    "atmosphereRating": 3.1,
-    "notes": "Nice ambiance",
-    "uID": 50,
-    "cID": 9,
-    "timestamp": "2004-11-28 03:13:00"
-  },
-  {
-    "rating": 1.5,
-    "drinkRating": 1.3,
-    "foodRating": 2.4,
-    "atmosphereRating": 3.0,
-    "notes": "Great spot!",
-    "uID": 20,
-    "cID": 1,
-    "timestamp": "2004-02-21 16:49:02"
-  },
-  {
-    "rating": 3.7,
-    "drinkRating": 3.5,
-    "foodRating": 4.4,
-    "atmosphereRating": 2.0,
-    "notes": "Loved the drinks",
-    "uID": 1,
-    "cID": 1,
-    "timestamp": "2004-03-12 01:32:27"
-  },
-  {
-    "rating": 3.3,
-    "drinkRating": 2.9,
-    "foodRating": 2.2,
-    "atmosphereRating": 4.5,
-    "notes": "Nice ambiance",
-    "uID": 26,
-    "cID": 5,
-    "timestamp": "2004-06-15 00:30:45"
-  },
-  {
-    "rating": 1.0,
-    "drinkRating": 1.1,
-    "foodRating": 2.5,
-    "atmosphereRating": 4.8,
-    "notes": "Nice ambiance",
-    "uID": 19,
-    "cID": 7,
-    "timestamp": "2004-03-13 01:33:34"
-  },
-  {
-    "rating": 2.5,
-    "drinkRating": 2.8,
-    "foodRating": 3.4,
-    "atmosphereRating": 4.3,
-    "notes": "",
-    "uID": 19,
-    "cID": 4,
-    "timestamp": "2004-10-08 18:51:13"
-  },
-  {
-    "rating": 1.6,
-    "drinkRating": 1.6,
-    "foodRating": 4.0,
-    "atmosphereRating": 4.3,
-    "notes": "",
-    "uID": 4,
-    "cID": 10,
-    "timestamp": "2004-07-03 06:11:35"
-  },
-  {
-    "rating": 2.6,
-    "drinkRating": 3.3,
-    "foodRating": 3.0,
-    "atmosphereRating": 1.3,
-    "notes": "",
-    "uID": 44,
-    "cID": 9,
-    "timestamp": "2004-01-09 16:27:18"
-  },
-  {
-    "rating": 4.8,
-    "drinkRating": 3.7,
-    "foodRating": 3.3,
-    "atmosphereRating": 2.2,
-    "notes": "",
-    "uID": 40,
-    "cID": 6,
-    "timestamp": "2004-11-21 23:39:56"
-  },
-  {
-    "rating": 3.6,
-    "drinkRating": 2.2,
-    "foodRating": 2.4,
-    "atmosphereRating": 2.0,
-    "notes": "Great spot!",
-    "uID": 29,
-    "cID": 4,
-    "timestamp": "2004-11-26 05:09:25"
-  },
-  {
-    "rating": 1.7,
-    "drinkRating": 4.5,
-    "foodRating": 3.8,
-    "atmosphereRating": 2.0,
-    "notes": "Nice ambiance",
-    "uID": 35,
-    "cID": 6,
-    "timestamp": "2004-03-12 21:14:09"
-  },
-  {
-    "rating": 1.2,
-    "drinkRating": 2.7,
-    "foodRating": 2.1,
-    "atmosphereRating": 4.9,
-    "notes": "Loved the drinks",
-    "uID": 5,
-    "cID": 1,
-    "timestamp": "2004-05-31 16:26:36"
-  },
-  {
-    "rating": 3.4,
-    "drinkRating": 1.9,
-    "foodRating": 1.2,
-    "atmosphereRating": 3.8,
-    "notes": "Great spot!",
-    "uID": 29,
-    "cID": 9,
-    "timestamp": "2004-03-31 07:24:46"
-  },
-  {
-    "rating": 4.5,
-    "drinkRating": 2.8,
-    "foodRating": 3.1,
-    "atmosphereRating": 4.4,
-    "notes": null,
-    "uID": 36,
-    "cID": 7,
-    "timestamp": "2004-04-04 10:01:46"
-  },
-  {
-    "rating": 4.2,
-    "drinkRating": 4.8,
-    "foodRating": 1.7,
-    "atmosphereRating": 4.6,
-    "notes": "Loved the drinks",
-    "uID": 37,
-    "cID": 6,
-    "timestamp": "2004-09-30 07:24:42"
-  },
-  {
-    "rating": 3.8,
-    "drinkRating": 4.4,
-    "foodRating": 1.3,
-    "atmosphereRating": 4.1,
-    "notes": "Great spot!",
-    "uID": 48,
-    "cID": 7,
-    "timestamp": "2004-02-18 22:23:13"
-  },
-  {
-    "rating": 3.6,
-    "drinkRating": 2.5,
-    "foodRating": 1.6,
-    "atmosphereRating": 2.7,
-    "notes": "Loved the drinks",
-    "uID": 10,
-    "cID": 1,
-    "timestamp": "2004-12-22 02:02:44"
-  },
-  {
-    "rating": 1.4,
-    "drinkRating": 1.7,
-    "foodRating": 2.7,
-    "atmosphereRating": 1.5,
-    "notes": "Loved the drinks",
-    "uID": 4,
-    "cID": 6,
-    "timestamp": "2004-05-14 12:12:09"
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 2.1,
-    "foodRating": 1.5,
-    "atmosphereRating": 1.2,
-    "notes": "Loved the drinks",
-    "uID": 8,
-    "cID": 7,
-    "timestamp": "2004-12-23 06:12:59"
-  },
-  {
-    "rating": 3.8,
-    "drinkRating": 3.2,
-    "foodRating": 1.2,
-    "atmosphereRating": 1.2,
-    "notes": null,
-    "uID": 41,
-    "cID": 5,
-    "timestamp": "2004-03-24 16:33:31"
-  },
-  {
-    "rating": 2.3,
-    "drinkRating": 3.8,
-    "foodRating": 4.6,
-    "atmosphereRating": 1.0,
-    "notes": null,
-    "uID": 11,
-    "cID": 3,
-    "timestamp": "2004-06-26 22:46:11"
-  },
-  {
-    "rating": 3.4,
-    "drinkRating": 3.1,
-    "foodRating": 4.0,
-    "atmosphereRating": 3.2,
-    "notes": "",
-    "uID": 50,
-    "cID": 7,
-    "timestamp": "2004-12-23 07:04:14"
-  },
-  {
-    "rating": 4.8,
-    "drinkRating": 3.8,
-    "foodRating": 2.5,
-    "atmosphereRating": 3.5,
-    "notes": "Nice ambiance",
-    "uID": 27,
-    "cID": 5,
-    "timestamp": "2004-06-02 13:15:12"
-  },
-  {
-    "rating": 3.1,
-    "drinkRating": 2.5,
-    "foodRating": 1.9,
-    "atmosphereRating": 3.8,
-    "notes": "",
-    "uID": 50,
-    "cID": 4,
-    "timestamp": "2004-01-14 06:04:30"
-  },
-  {
-    "rating": 4.5,
-    "drinkRating": 3.0,
-    "foodRating": 1.8,
-    "atmosphereRating": 4.1,
-    "notes": "Great spot!",
-    "uID": 15,
-    "cID": 3,
-    "timestamp": "2004-12-13 01:00:58"
-  },
-  {
-    "rating": 1.5,
-    "drinkRating": 3.0,
-    "foodRating": 3.7,
-    "atmosphereRating": 3.5,
-    "notes": "Nice ambiance",
-    "uID": 31,
-    "cID": 3,
-    "timestamp": "2004-09-11 02:51:08"
-  },
-  {
-    "rating": 4.0,
-    "drinkRating": 4.0,
-    "foodRating": 4.5,
-    "atmosphereRating": 4.0,
-    "notes": null,
-    "uID": 39,
-    "cID": 4,
-    "timestamp": "2004-09-17 17:38:11"
-  },
-  {
-    "rating": 3.4,
-    "drinkRating": 2.3,
     "foodRating": 2.3,
     "atmosphereRating": 4.9,
     "notes": "Loved the drinks",
     "uID": 46,
-    "cID": 7,
-    "timestamp": "2004-11-07 03:28:03"
-  }
+    "cID": 7
+},
+>>>>>>> fe237e4 (add route, service layer for the blend service)
 ]
