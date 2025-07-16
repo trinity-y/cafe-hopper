@@ -1,6 +1,6 @@
-import * as express from 'express';
+import express from 'express';
 import { Application } from 'express';
-import * as cors from 'cors';
+import cors from 'cors';
 import userRoutes from './routes/user';
 import cafeRoutes from './routes/cafe';
 import reviewRoutes from './routes/review';

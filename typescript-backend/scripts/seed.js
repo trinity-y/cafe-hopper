@@ -30,8 +30,8 @@ async function seedDatabase() {
                 id SERIAL PRIMARY KEY,
                 user_id INT NOT NULL REFERENCES "User"(id), 
                 following_id INT NOT NULL REFERENCES "User"(id), 
-                UNIQUE(user_id, friend_id),
-                CHECK (user_id != friend_id)
+                UNIQUE(user_id, following_id),
+                CHECK (user_id != following_id)
             );
             
             CREATE TABLE IF NOT EXISTS "Cafe" (
@@ -111,15 +111,6 @@ async function seedDatabase() {
             await client.query(
                 'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, timestamp, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
                 [review.rating, review.drinkRating, review.foodRating, review.atmosphereRating, review.notes, review.timestamp, review.uID, review.cID]
-            );
-        }
-
-        const reviews = require('../mock_data/reviews.json');
-
-        for (const review of reviews) {
-            await client.query(
-                'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7)',
-                [review.rating, review.drinkRating, review.foodRating, review.atmosphereRating, review.notes, review.uID, review.cID]
             );
         }
 
