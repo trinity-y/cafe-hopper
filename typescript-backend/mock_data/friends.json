@@ -598,5 +598,37 @@
   {
     "user_id": 23,
     "friend_id": 59
+  },
+  {
+    "user_id": 755,
+    "friend_id": 751
+  },
+  {
+    "user_id": 755,
+    "friend_id": 752
+  },
+  {
+    "user_id": 755,
+    "friend_id": 753
+  },
+  {
+    "user_id": 755,
+    "friend_id": 754
+  },
+  {
+    "user_id": 751,
+    "friend_id": 755
+  },
+  {
+    "user_id": 752,
+    "friend_id": 755
+  },
+  {
+    "user_id": 753,
+    "friend_id": 755
+  },
+  {
+    "user_id": 754,
+    "friend_id": 755
   }
 ]

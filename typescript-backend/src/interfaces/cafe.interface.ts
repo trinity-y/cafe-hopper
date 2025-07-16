@@ -6,4 +6,6 @@ export interface ICafe {
   googleRating: number;
 }
 
-// Add another like final calculated rating appended to
+export interface ICafeWithRating extends ICafe {
+  finalRating: number;
+}
