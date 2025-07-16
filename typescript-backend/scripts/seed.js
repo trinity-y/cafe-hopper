@@ -44,6 +44,7 @@ async function seedDatabase() {
               foodRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
               atmosphereRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
               notes VARCHAR(200),
+              timestamp TIMESTAMP NOT NULL,
               cID INT NOT NULL REFERENCES "Cafe"(id),
               uID INT NOT NULL REFERENCES "User"(id),
               UNIQUE(cID, uID)
@@ -82,8 +83,8 @@ async function seedDatabase() {
 
         for (const review of reviews) {
             await client.query(
-                'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7)',
-                [review.rating, review.drinkRating, review.foodRating, review.atmosphereRating, review.notes, review.uID, review.cID]
+                'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, timestamp, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
+                [review.rating, review.drinkRating, review.foodRating, review.atmosphereRating, review.notes, review.timestamp, review.uID, review.cID]
             );
         }
 
