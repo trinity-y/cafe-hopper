@@ -3,33 +3,24 @@ import { ReactionType } from '../interfaces/reactions.interface';
 import reactionService from '../services/reaction.service'; 
 const router = Router();
 
-
-// Change the logic for both of the thing significantly to make the paramaters optional instead of having
-// it different each time
-router.get('/:reviewID', async (req: Request, res: Response) => {
+router.get('/', async (req: Request, res: Response) => {
   try {
-    const reviewID = parseInt(req.params.reviewID);
+    const reviewId = req.query.reviewId ? parseInt(req.query.reviewId as string) : undefined;
+    const userId = req.query.userId ? parseInt(req.query.userId as string) : undefined;
 
-    const like_count = await reactionService.getAllReactions(reviewID); 
-    res.status(200).json({like_count});
+    if (reviewId && userId) {
+      const reactions = await reactionService.getReactions({ reviewId, userId });
+      return res.status(200).json(reactions);
+    } else if (reviewId) {
+      const like_count = await reactionService.getReactions({reviewId});
+      return res.status(200).json({ like_count });
+    } else {
+      const reactions = await reactionService.getReactions();
+      return res.status(200).json(reactions);
+    }
   } catch (error) {
     console.error('Error fetching reactions:', error);
     res.status(500).json({ message: 'Error fetching reactions' });
-  }
-});
-
-// Going to be using this to post/delete based on the response
-router.get('/review/:reviewId', async (req: Request, res: Response) => {
-  try {
-    const reviewId = parseInt(req.params.reviewId);
-    const userId = req.query.userId ? parseInt(req.query.userId as string) : undefined;
-
-    const reactions = await reactionService.getReactionsByReview({ reviewId, userId });
-
-    res.status(200).json(reactions);
-  } catch (error) {
-    console.error('Error fetching reactions for review:', error);
-    res.status(500).json({ message: 'Error fetching reactions for review' });
   }
 });
 

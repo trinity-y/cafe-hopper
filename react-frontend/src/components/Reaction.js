@@ -37,7 +37,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
 
   const fetchLikeCount = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/reactions/${reviewId}`); 
+      const response = await axios.get(`http://localhost:3001/reactions?reviewId=${reviewId}`);
       setLikeCount(response.data.like_count ?? 0);
     } catch (error) {
       setLikeCount(0);
@@ -49,7 +49,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
 
     try {
       setIsLoading(true);
-      const response = await axios.get(`http://localhost:3001/reactions/review/${reviewId}?userId=${userId}`);
+      const response = await axios.get(`http://localhost:3001/reactions?reviewId=${reviewId}&userId=${userId}`);
       const userReaction = response.data.find(reaction => 
         reaction.uid === userId && reaction.reaction === 'like'
       );
