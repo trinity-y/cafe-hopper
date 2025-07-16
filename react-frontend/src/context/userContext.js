@@ -26,13 +26,11 @@ export const UserProvider = ({ children }) => {
       }
 
       try {
-        const res = await fetch('http://localhost:3001/users');
-        if (!res.ok) throw new Error('Failed to fetch users');
-        const users = await res.json();
-        const matched = users.find((u) => u.firebase_uid === firebaseUser.uid);
-
+        const res = await fetch(`http://localhost:3001/users/firebase/${firebaseUser.uid}`);
+        if (!res.ok) throw new Error('Failed to fetch user');
+        const matched = await res.json();
         if (matched) {
-          setUser(matched);
+           setUser(matched);
         }
       } catch (err) {
         console.error('Error fetching backend user:', err);
