@@ -6,7 +6,7 @@ export interface GetReactionsOptions {
 }
 
 export interface IReactionService {
-    getAllReactions(rId: number, uID: number): Promise<number>;
+    getAllReactions(rId: number): Promise<number>;
     getReactionsByReview(options: GetReactionsOptions): Promise<IReaction[]>;
     createReaction(reactionData: CreateReactionDTO): Promise<IReaction>;
     deleteUserReactionForReview(userId: number, reviewId: number): Promise<IReaction | null>;

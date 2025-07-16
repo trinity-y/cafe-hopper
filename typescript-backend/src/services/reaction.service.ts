@@ -5,13 +5,13 @@ import { IReactionService, GetReactionsOptions} from '../interfaces/reactions.se
 const reactionModel = new CustomModel('Reaction');
 
 const reactionService: IReactionService = {
-    async getAllReactions(rID: number, uID: number): Promise<number> {
+    async getAllReactions(rID: number): Promise<number> {
         const query = `
             SELECT COUNT(*) AS like_count
             FROM "Reaction"
-            WHERE rID = $1 AND uID = $2 AND reaction = 'like'
+            WHERE rID = $1 AND reaction = 'like'
         `;
-        const result = await reactionModel.rawQuery(query, [rID, uID]);
+        const result = await reactionModel.rawQuery(query, [rID]);
         return Number(result[0]?.like_count ?? 0);
     },
 
