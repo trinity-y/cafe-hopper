@@ -52,15 +52,15 @@ const reviewService: IReviewServiceAPI = {
             ( SELECT COUNT(*) AS likes, rid AS likerid
             FROM "Reaction" WHERE "reaction" = 'like'
             GROUP BY "rid" ) AS "likeCounts"
-            ON "friendReviews"."rid" = "likeCounts"."likerid"
-        ORDER BY "timestamp" DESC;`;
+            ON "friendReviews"."rid" = "likeCounts"."likerid";`;
         await reviewModel.rawQuery(viewQuery);
         // join w/ relevant tables to get the attributes necessary
         let getReviewDataQuery = `
         SELECT "User"."username", "Cafe"."name", "rid", "overallRating", "drinkRating", "foodRating", "atmosphereRating", "notes", "timestamp", "likes"
         FROM "reviewsAndLikesForUser${uid}", "User", "Cafe"
         WHERE "reviewsAndLikesForUser${uid}"."author" = "User"."id" AND
-            "reviewsAndLikesForUser${uid}"."cid" = "Cafe"."id";`;
+            "reviewsAndLikesForUser${uid}"."cid" = "Cafe"."id"
+        ORDER BY "timestamp" DESC;`;
         const result = await reviewModel.rawQuery(getReviewDataQuery);
         const formattedResult = result.map((review) => {
             const { overallRating, drinkRating, foodRating, atmosphereRating, timestamp } = review;
