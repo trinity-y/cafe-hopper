@@ -31,6 +31,7 @@ export const UserProvider = ({ children }) => {
         const matched = await res.json();
         if (matched) {
            setUser(matched);
+           console.log('user: ', matched);
         }
       } catch (err) {
         console.error('Error fetching backend user:', err);
@@ -41,7 +42,7 @@ export const UserProvider = ({ children }) => {
     });
 
     return () => unsubscribe();
-  }, [authInitialized, user]);
+  }, []);
 
   // added for testing purposes; can use firebaseSignOut() in the console to test with new users
   useEffect(() => {
