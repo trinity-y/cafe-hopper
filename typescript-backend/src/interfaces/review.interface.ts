@@ -7,6 +7,7 @@ export interface IReview {
   notes?: string;
   uid: number;
   cid: number;
+  timestamp: Date;
 }
 export type CreateReviewDTO = Omit<IReview, 'id'>;
 // This is for updating, we don't want any of the id's and just the updated ratings
