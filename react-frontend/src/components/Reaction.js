@@ -9,6 +9,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentUser, setCurrentUser] = useState(null);
   const [userId, setUserId] = useState(null);
+  const [likeCount, setLikeCount] = useState(0); 
 
   useEffect(() => {
     const auth = getAuth();
@@ -34,6 +35,15 @@ const Reaction = ({ reviewId, onReactionChange }) => {
     }
   };
 
+  const fetchLikeCount = async () => {
+    try {
+      const response = await axios.get(`http://localhost:3001/reactions/${reviewId}`); 
+      setLikeCount(response.data.like_count ?? 0);
+    } catch (error) {
+      setLikeCount(0);
+    }
+  };
+
   const checkExistingReaction = async () => {
     if (!userId || !reviewId) return;
 
@@ -41,7 +51,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
       setIsLoading(true);
       const response = await axios.get(`http://localhost:3001/reactions/review/${reviewId}?userId=${userId}`);
       const userReaction = response.data.find(reaction => 
-        reaction.uID === userId && reaction.reaction === 'like'
+        reaction.uid === userId && reaction.reaction === 'like'
       );
       setHasLiked(!!userReaction);
     } catch (error) {
@@ -53,6 +63,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
 
   useEffect(() => {
     checkExistingReaction();
+    fetchLikeCount();
   }, [userId, reviewId]);
 
   const handleReaction = async () => {
@@ -85,6 +96,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
         setHasLiked(true);
         if (onReactionChange) onReactionChange('add');
       }
+      await fetchLikeCount();
     } catch (error) {
       console.error('Error updating reaction:', error);
       
@@ -119,6 +131,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
           <ThumbUpOutlined className="thumb-icon" />
         )}
       </button>
+      <div className="reaction-count">{likeCount} {likeCount === 1 ? 'like' : 'likes'}</div>
     </div>
   );
 };
