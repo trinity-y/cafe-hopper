@@ -35,7 +35,9 @@ async function seedDatabase() {
                 latitude DOUBLE PRECISION NOT NULL,
                 longitude DOUBLE PRECISION NOT NULL,
                 "openingDays" TEXT,
-                "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5)
+                "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5),
+                startPrice INTEGER,
+                endPrice INTEGER
             );
             CREATE TABLE IF NOT EXISTS "Reviews" (
               id SERIAL PRIMARY KEY,
@@ -74,8 +76,8 @@ async function seedDatabase() {
         const cafes = await getCafeData();
         for (const cafe of cafes) {
             await client.query(
-                'INSERT INTO "Cafe" (name, address, latitude, longitude, "openingDays", "googleRating") VALUES ($1, $2, $3, $4, $5, $6)',
-                [cafe.name, cafe.address, cafe.latitude, cafe.longitude, cafe.openingDays, cafe.googleRating]
+                'INSERT INTO "Cafe" (name, address, latitude, longitude, "openingDays", "googleRating", startPrice, endPrice) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
+                [cafe.name, cafe.address, cafe.latitude, cafe.longitude, cafe.openingDays, cafe.googleRating, cafe.startPrice, cafe.endPrice]
             );
         }
         const reviews = require('../mock_data/reviews.json');
