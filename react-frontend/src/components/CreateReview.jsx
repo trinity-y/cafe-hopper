@@ -34,6 +34,7 @@ function CreateReview({cafeName, cid}) {
             }
             
             // Fetch and find the matching user
+            // TODO: Update with new bookmarks endpoint
             const res = await fetch("http://localhost:3001/users");
             if (!res.ok) throw new Error("Failed to fetch users");
             
