@@ -118,7 +118,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
   }
 
   return (
-    <Box display="flex" alignItems="center" gap={0.5} className="reaction-container">
+    <Box display="flex" alignItems="center" gap={0.5} sx={{ margin:0 }}className="reaction-container">
       <IconButton
         onClick={handleReaction}
         aria-label={hasLiked ? "Unlike" : "Like"}
@@ -136,7 +136,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
           <ThumbUpOutlined className="thumb-icon" />
         )}
       </IconButton>
-      <Typography variant="body2" style={{ margin: 'auto 0' }}>
+      <Typography variant="body2">
         {likeCount}
       </Typography>
     </Box>

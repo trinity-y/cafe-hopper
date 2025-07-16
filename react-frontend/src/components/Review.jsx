@@ -18,19 +18,15 @@ function Review({review}) {
         <>
         <Box component="section" sx={{ px:4, py: 2, border: '1px solid grey', width: '100%', bgcolor:'whitesmoke', padding:'2em' }} display="flex" justifyContent="space-between" >
             {/* main review info */}
-            <Box display="flex" flexDirection="column" sx={{ height: '100%', marginTop:'1em' }}>
-                <Box display="flex" alignItems="baseline" gap={3}>
-                    <Typography variant='h4' style={{ margin: 0 }}>{review.name}</Typography>
-                    <StarRating rating={review.overallRating} interactive={false}></StarRating>
-                </Box>
+            <Box display="flex" flexDirection="column" sx={{ height: '100%', marginTop:'1em' }} gap={1}>
+                <Typography variant='h4'>{review.name}</Typography>
+                <StarRating rating={review.overallRating} interactive={false}></StarRating>
                 <Typography variant='p' style={{ fontStyle: 'italic', margin: 0, marginTop: '4px' }}>
                     {`written by ${review.username} 🐸 on ${review.timestamp}`}
                 </Typography>
                 <br/>
-                <Typography variant='p' style={{ margin: 'auto 0' }}>{review.notes}</Typography>
-                <br/>
+                <Typography variant='p' style={{ margin: '0' }}>{review.notes}</Typography>
                 <Reaction reviewId={review.rid} />
-                
             </Box>
             {/* detailed ratings */}
             <Box display="flex" flexDirection="column"sx={{textAlign: 'center', justifyContent:'center'}} gap={1}>
