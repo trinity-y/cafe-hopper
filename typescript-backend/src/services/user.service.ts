@@ -14,6 +14,10 @@ const userService: IUserServiceAPI = {
     return userModel.findUnique(id);
   },
 
+  async getUserByFirebaseId(firebase_uid: string): Promise<IUser | null> {
+    return userModel.findByColumn('firebase_uid', firebase_uid);
+  },
+
   async createUser(user: CreateUserDTO): Promise<IUser | null> {
     return userModel.create(user);
   },
@@ -35,7 +39,12 @@ const userService: IUserServiceAPI = {
     } else {
       return false;
     }
-  }
+  },
+
+  async getUserByFirebaseUid(firebaseUid: string): Promise<IUser | null> {
+    const users = await userModel.findMany({ firebase_uid: firebaseUid });
+    return users.length > 0 ? users[0] : null;
+  },
 };
 
 export default userService;
