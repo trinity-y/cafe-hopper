@@ -24,7 +24,6 @@ function CafeSearchPage() {
         try {
             const res = await fetch(`http://localhost:3001/bookmarks/${userId}`);
             if (!res.ok) {
-                const text = await res.text();
                 throw new Error('Failed to fetch bookmarks');
             }
             const data = await res.json(); // [{ id, uid, cid }]
@@ -44,7 +43,6 @@ function CafeSearchPage() {
                 body: JSON.stringify({ uid: userId, cid }),
             });
             if (!res.ok) {
-                const text = await res.text();
                 throw new Error('Failed to add bookmark');
             }
             await fetchBookmarks(); // refresh bookmarks

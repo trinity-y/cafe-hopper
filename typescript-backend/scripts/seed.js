@@ -59,9 +59,7 @@ async function seedDatabase() {
             );
         }
 
-        //const bookmarks = require('../mock_data/bookmarks.json');
-        const bookmarks = [ { uid: 156, cid: 1 }, { uid: 156, cid: 2 }, { uid: 156, cid: 3 }, ];
-
+        const bookmarks = require('../mock_data/bookmarks.json');
         for (const bookmark of bookmarks) {
             await client.query(
                 'INSERT INTO "Bookmark" (uid, cid) VALUES ($1, $2)',
