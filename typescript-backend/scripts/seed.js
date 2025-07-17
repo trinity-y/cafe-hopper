@@ -24,8 +24,8 @@ async function seedDatabase() {
                 id SERIAL PRIMARY KEY,
                 user_id INT NOT NULL REFERENCES "User"(id), 
                 following_id INT NOT NULL REFERENCES "User"(id), 
-                UNIQUE(user_id, friend_id),
-                CHECK (user_id != friend_id)
+                UNIQUE(user_id, following_id),
+                CHECK (user_id != following_id)
             );
             
             CREATE TABLE IF NOT EXISTS "Cafe" (
