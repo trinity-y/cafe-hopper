@@ -34,8 +34,7 @@ const blendService: IBlendServiceAPI = {
                 FROM my_visited
             )
             GROUP BY r.cid
-            ORDER BY avg_rating DESC, friend_count DESC
-            LIMIT 4
+            HAVING COUNT(*) >= 2
         ),
 
         -- Get all cafes for each one of my friends 
@@ -48,7 +47,7 @@ const blendService: IBlendServiceAPI = {
             WHERE r.uid IN (
                 SELECT friend_id FROM my_friends
             )
-            AND r.uid NOT IN (
+            AND r.cid NOT IN (
                 SELECT my_visited.cafe_id 
                 FROM my_visited
             )
@@ -78,7 +77,7 @@ const blendService: IBlendServiceAPI = {
             SELECT 
                 utc.cafe_id,
                 utc.rating
-            FROM unique_top_cafe_per_friend utc
+            FROM unique_top_k_cafe_per_friend utc
         )
 
         SELECT 
@@ -87,11 +86,14 @@ const blendService: IBlendServiceAPI = {
             c.address,
             c."openingDays",
             c."googleRating",
-            fr.rating as finalRating
+            fr.rating as "finalRating"
         FROM final_recommendations fr
         JOIN "Cafe" c ON fr.cafe_id = c.id
-        ORDER BY fr.rating DESC;
+        ORDER BY fr.rating DESC, fr.cafe_id ASC
+        LIMIT 10;
   `;
+    
+    // NO GO AMIGO!!
     const { rows } = await pool.query(q, [userId]);
     return rows;
   },

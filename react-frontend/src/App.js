@@ -7,6 +7,7 @@ import LoginPage from './pages/Login';
 import SignupPage from './pages/Signup';
 import CompleteSignupPage from './pages/CompleteSignup';
 import CafeSearchPage from './pages/CafeSearch';
+import BlendPage from './pages/BlendPage';
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
           <Route path='/signup' element={<SignupPage />} />
           <Route path='/complete-signup' element={<CompleteSignupPage />} />
           <Route path='/cafesearch' element={<CafeSearchPage />} />
-        </Routes>
+          <Route path='/blend' element={<BlendPage />} />
+      </Routes>
       </Router>
     </UserProvider>
   );

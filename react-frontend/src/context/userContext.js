@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import axios from 'axios';
 
 const UserContext = createContext();
 export const useUser = () => useContext(UserContext);
