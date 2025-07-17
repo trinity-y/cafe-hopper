@@ -54,7 +54,7 @@ router.post('/', async (req: Request, res: Response) => {
   try {
     const newUser = await userService.createUser({ username, firebase_uid });
       if (newUser) {
-        res.status(200).json(newUser);
+        res.status(201).json(newUser);
       } else {
         res.status(500).json({ message: `Could not create user with username ${username}. New user not returned.` });
       }

@@ -2,11 +2,14 @@ import {Box} from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
+import { useTheme } from '@mui/material/styles';
+
 const StarRating = ({ rating, onRatingChange, inputRatingToChange, interactive = true }) => {
         // const interactive = true;
         const displayRating = interactive ? inputRatingToChange : rating;
         const stars = [];
         const totalStars = 5;
+        const theme = useTheme();
 
         for (let i = 1; i <= totalStars; i++) {
             const isFilled = i <= Math.floor(displayRating);
@@ -21,11 +24,11 @@ const StarRating = ({ rating, onRatingChange, inputRatingToChange, interactive =
                     onClick={interactive ? () => onRatingChange(i) : undefined}
                 >
                     {isFilled ? (
-                        <StarIcon sx={{ color: 'gold' }} />
+                        <StarIcon sx={{ color: theme.palette.primary.main }} />
                     ) : isHalf ? (
-                        <StarHalfIcon sx={{ color: 'gold' }} />
+                        <StarHalfIcon sx={{ color: theme.palette.primary.main }} />
                     ) : (
-                        <StarBorderIcon sx={{ color: 'gold' }} />
+                        <StarBorderIcon sx={{ color: theme.palette.primary.main }} />
                     )}
                 </Box>
             );

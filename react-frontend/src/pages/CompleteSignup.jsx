@@ -2,6 +2,7 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
+import { useUser } from '../context/userContext'; 
 
 import Stack from '@mui/material/Stack';
 
@@ -20,13 +21,15 @@ function CompleteSignupPage() {
 
     const [navigateTo, setNavigateTo] = React.useState("")
     const [message, setMessage] = React.useState("Completing your signup...")
+    const { setUser } = useUser();
 
     React.useEffect(() => {
         // automatically handles and processes login link
         const cleanupFunc = onAuthStateChanged(auth, async (user) => {
             if (user) { // if already signed in
                 try {
-                    await authAPI.completeSignup(username, user.uid);
+                    const createdUser = await authAPI.completeSignup(username, user.uid);
+                    setUser(createdUser);
                     localStorage.removeItem("emailForSignIn");
                     setNavigateTo("/cafesearch");
                 } catch (e) {

@@ -3,8 +3,8 @@ import { ThemeProvider } from '@mui/material/styles';
 import {Box, TextField, Grid, Button, Alert} from '@mui/material';
 import theme from './theme';
 import StarRating from './StarRating';
-import CreateReviewRow from '../api/CreateReviewRow';
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import CreateReviewRow from './CreateReviewRow';
+import { getAuth } from "firebase/auth";
 
 function CreateReview({cafeName, cid}) {
     const [userRating, setUserRating] = useState(0);
