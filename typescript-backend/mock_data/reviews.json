@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
     {
         "rating": 3.5,
         "drinkRating": 1.8,
@@ -2033,4 +2034,402 @@
     "cID": 7
 },
 >>>>>>> fe237e4 (add route, service layer for the blend service)
+=======
+  {
+    "rating": 5.0,
+    "drinkRating": 5.0,
+    "foodRating": 5.0,
+    "atmosphereRating": 5.0,
+    "notes": "Loved the drinks",
+    "uID": 1,
+    "cID": 1
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 4.8,
+    "foodRating": 4.8,
+    "atmosphereRating": 4.8,
+    "notes": "Loved the drinks",
+    "uID": 2,
+    "cID": 1
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 4.9,
+    "foodRating": 4.9,
+    "atmosphereRating": 4.9,
+    "notes": "Loved the drinks",
+    "uID": 3,
+    "cID": 1
+  },
+  {
+    "rating": 4.7,
+    "drinkRating": 4.7,
+    "foodRating": 4.7,
+    "atmosphereRating": 4.7,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 1
+  },
+  {
+    "rating": 5.0,
+    "drinkRating": 5.0,
+    "foodRating": 5.0,
+    "atmosphereRating": 5.0,
+    "notes": "Loved the drinks",
+    "uID": 1,
+    "cID": 2
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 4.8,
+    "foodRating": 4.8,
+    "atmosphereRating": 4.8,
+    "notes": "Loved the drinks",
+    "uID": 2,
+    "cID": 2
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 4.9,
+    "foodRating": 4.9,
+    "atmosphereRating": 4.9,
+    "notes": "Loved the drinks",
+    "uID": 3,
+    "cID": 2
+  },
+  {
+    "rating": 4.7,
+    "drinkRating": 4.7,
+    "foodRating": 4.7,
+    "atmosphereRating": 4.7,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 2
+  },
+  {
+    "rating": 5.0,
+    "drinkRating": 5.0,
+    "foodRating": 5.0,
+    "atmosphereRating": 5.0,
+    "notes": "Loved the drinks",
+    "uID": 1,
+    "cID": 3
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 4.8,
+    "foodRating": 4.8,
+    "atmosphereRating": 4.8,
+    "notes": "Loved the drinks",
+    "uID": 2,
+    "cID": 3
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 4.9,
+    "foodRating": 4.9,
+    "atmosphereRating": 4.9,
+    "notes": "Loved the drinks",
+    "uID": 3,
+    "cID": 3
+  },
+  {
+    "rating": 4.7,
+    "drinkRating": 4.7,
+    "foodRating": 4.7,
+    "atmosphereRating": 4.7,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 3
+  },
+  {
+    "rating": 5.0,
+    "drinkRating": 5.0,
+    "foodRating": 5.0,
+    "atmosphereRating": 5.0,
+    "notes": "Loved the drinks",
+    "uID": 1,
+    "cID": 5
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 4.8,
+    "foodRating": 4.8,
+    "atmosphereRating": 4.8,
+    "notes": "Loved the drinks",
+    "uID": 2,
+    "cID": 5
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 4.9,
+    "foodRating": 4.9,
+    "atmosphereRating": 4.9,
+    "notes": "Loved the drinks",
+    "uID": 3,
+    "cID": 5
+  },
+  {
+    "rating": 4.7,
+    "drinkRating": 4.7,
+    "foodRating": 4.7,
+    "atmosphereRating": 4.7,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 5
+  },
+  {
+    "rating": 5.0,
+    "drinkRating": 5.0,
+    "foodRating": 5.0,
+    "atmosphereRating": 5.0,
+    "notes": "Loved the drinks",
+    "uID": 1,
+    "cID": 6
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 4.8,
+    "foodRating": 4.8,
+    "atmosphereRating": 4.8,
+    "notes": "Loved the drinks",
+    "uID": 2,
+    "cID": 6
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 4.9,
+    "foodRating": 4.9,
+    "atmosphereRating": 4.9,
+    "notes": "Loved the drinks",
+    "uID": 3,
+    "cID": 6
+  },
+  {
+    "rating": 4.7,
+    "drinkRating": 4.7,
+    "foodRating": 4.7,
+    "atmosphereRating": 4.7,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 6
+  },
+  {
+    "rating": 5.0,
+    "drinkRating": 5.0,
+    "foodRating": 5.0,
+    "atmosphereRating": 5.0,
+    "notes": "Loved the drinks",
+    "uID": 2,
+    "cID": 7
+  },
+  {
+    "rating": 5.0,
+    "drinkRating": 5.0,
+    "foodRating": 5.0,
+    "atmosphereRating": 5.0,
+    "notes": "Loved the drinks",
+    "uID": 3,
+    "cID": 8
+  },
+  {
+    "rating": 5.0,
+    "drinkRating": 5.0,
+    "foodRating": 5.0,
+    "atmosphereRating": 5.0,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 9
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 4.9,
+    "foodRating": 4.9,
+    "atmosphereRating": 4.9,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 10
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 1.0,
+    "foodRating": 1.0,
+    "atmosphereRating": 1.0,
+    "notes": "Hated the drinks",
+    "uID": 1,
+    "cID": 11
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 2.0,
+    "foodRating": 2.0,
+    "atmosphereRating": 2.0,
+    "notes": "Loved the drinks",
+    "uID": 2,
+    "cID": 11
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 1.5,
+    "foodRating": 1.5,
+    "atmosphereRating": 1.5,
+    "notes": "Loved the drinks",
+    "uID": 3,
+    "cID": 11
+  },
+  {
+    "rating": 2.1,
+    "drinkRating": 2.1,
+    "foodRating": 2.1,
+    "atmosphereRating": 2.1,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 11
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 1.0,
+    "foodRating": 1.0,
+    "atmosphereRating": 1.0,
+    "notes": "Loved the drinks",
+    "uID": 1,
+    "cID": 12
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 2.0,
+    "foodRating": 2.0,
+    "atmosphereRating": 2.0,
+    "notes": "Loved the drinks",
+    "uID": 2,
+    "cID": 12
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 1.5,
+    "foodRating": 1.5,
+    "atmosphereRating": 1.5,
+    "notes": "Loved the drinks",
+    "uID": 3,
+    "cID": 12
+  },
+  {
+    "rating": 2.1,
+    "drinkRating": 2.1,
+    "foodRating": 2.1,
+    "atmosphereRating": 2.1,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 12
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 1.0,
+    "foodRating": 1.0,
+    "atmosphereRating": 1.0,
+    "notes": "Loved the drinks",
+    "uID": 1,
+    "cID": 13
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 2.0,
+    "foodRating": 2.0,
+    "atmosphereRating": 2.0,
+    "notes": "Loved the drinks",
+    "uID": 2,
+    "cID": 13
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 1.5,
+    "foodRating": 1.5,
+    "atmosphereRating": 1.5,
+    "notes": "Loved the drinks",
+    "uID": 3,
+    "cID": 13
+  },
+  {
+    "rating": 2.1,
+    "drinkRating": 2.1,
+    "foodRating": 2.1,
+    "atmosphereRating": 2.1,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 13
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 1.0,
+    "foodRating": 1.0,
+    "atmosphereRating": 1.0,
+    "notes": "Loved the drinks",
+    "uID": 1,
+    "cID": 15
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 2.0,
+    "foodRating": 2.0,
+    "atmosphereRating": 2.0,
+    "notes": "Loved the drinks",
+    "uID": 2,
+    "cID": 15
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 1.5,
+    "foodRating": 1.5,
+    "atmosphereRating": 1.5,
+    "notes": "Loved the drinks",
+    "uID": 3,
+    "cID": 15
+  },
+  {
+    "rating": 2.1,
+    "drinkRating": 2.1,
+    "foodRating": 2.1,
+    "atmosphereRating": 2.1,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 15
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 1.0,
+    "foodRating": 1.0,
+    "atmosphereRating": 1.0,
+    "notes": "Loved the drinks",
+    "uID": 1,
+    "cID": 16
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 2.0,
+    "foodRating": 2.0,
+    "atmosphereRating": 2.0,
+    "notes": "Loved the drinks",
+    "uID": 2,
+    "cID": 16
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 1.5,
+    "foodRating": 1.5,
+    "atmosphereRating": 1.5,
+    "notes": "Loved the drinks",
+    "uID": 3,
+    "cID": 16
+  },
+  {
+    "rating": 2.1,
+    "drinkRating": 2.1,
+    "foodRating": 2.1,
+    "atmosphereRating": 2.1,
+    "notes": "Loved the drinks",
+    "uID": 4,
+    "cID": 16
+  }
+>>>>>>> daab74c (create front-end and back-end for blend feature)
 ]
