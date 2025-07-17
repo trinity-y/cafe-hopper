@@ -26,13 +26,12 @@ export const UserProvider = ({ children }) => {
       }
 
       try {
-        const res = await fetch('http://localhost:3001/users');
-        if (!res.ok) throw new Error('Failed to fetch users');
-        const users = await res.json();
-        const matched = users.find((u) => u.firebase_uid === firebaseUser.uid);
-
+        const res = await fetch(`http://localhost:3001/users/firebase/${firebaseUser.uid}`);
+        if (!res.ok) throw new Error('Failed to fetch user');
+        const matched = await res.json();
         if (matched) {
-          setUser(matched);
+           setUser(matched);
+           console.log('user: ', matched);
         }
       } catch (err) {
         console.error('Error fetching backend user:', err);
@@ -43,7 +42,7 @@ export const UserProvider = ({ children }) => {
     });
 
     return () => unsubscribe();
-  }, [authInitialized, user]);
+  }, []);
 
   // added for testing purposes; can use firebaseSignOut() in the console to test with new users
   useEffect(() => {

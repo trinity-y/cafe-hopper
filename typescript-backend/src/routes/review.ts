@@ -27,6 +27,18 @@ router.get('/user', async (req: Request, res: Response) => {
   }
 });
 
+// Get all reviews for a user's feed
+router.get('/feed', async (req: Request, res: Response) => {
+  const uid = parseInt(req.query.uid as string, 10);
+  try {
+    const feedReviews = await reviewService.getReviewsForFeed(uid);
+    res.status(200).json(feedReviews);
+  } catch (error) {
+    console.error(`Could not get the feed reviews for the associated with user ${uid}:`, error);
+    res.status(500).json({ message: `Could not check for reviews associated with user.` });
+  }
+});
+
 // Get all reviews from a cafe
 router.get('/cafe', async (req: Request, res: Response) => {
   const cid = parseInt(req.query.cid as string, 10);
