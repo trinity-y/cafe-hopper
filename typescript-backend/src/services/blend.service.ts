@@ -80,18 +80,26 @@ const blendService: IBlendServiceAPI = {
             FROM unique_top_k_cafe_per_friend utc
         )
 
-        SELECT 
-            fr.cafe_id as id,
-            c.name,
-            c.address,
-            c."openingDays",
-            c."googleRating",
-            fr.rating as "finalRating"
-        FROM final_recommendations fr
-        JOIN "Cafe" c ON fr.cafe_id = c.id
-        ORDER BY fr.rating DESC, fr.cafe_id ASC
+        SELECT * FROM (
+            SELECT DISTINCT ON (fr.cafe_id)
+                fr.cafe_id as id,
+                c.name,
+                c.address,
+                c."openingDays",
+                c."googleRating",
+                fr.rating as "finalRating",
+                r.notes as "friendNotes",
+                u.username as "friendUsername"
+            FROM final_recommendations fr
+            JOIN "Cafe" c ON fr.cafe_id = c.id
+            JOIN "Reviews" r ON r.cid = fr.cafe_id 
+                AND r.uid IN (SELECT friend_id FROM my_friends)
+            JOIN "User" u ON r.uid = u.id
+            ORDER BY fr.cafe_id, r.rating DESC  
+        ) AS final_result
+        ORDER BY final_result."finalRating" DESC, final_result.id ASC  
         LIMIT 10;
-  `;
+    `;
     
     // NO GO AMIGO!!
     const { rows } = await pool.query(q, [userId]);
