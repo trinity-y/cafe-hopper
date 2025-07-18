@@ -2040,7 +2040,7 @@
     "drinkRating": 5.0,
     "foodRating": 5.0,
     "atmosphereRating": 5.0,
-    "notes": "Loved the drinks",
+    "notes": "Best cafe on the planet 🤩",
     "uID": 1,
     "cID": 1
   },
@@ -2076,8 +2076,8 @@
     "drinkRating": 5.0,
     "foodRating": 5.0,
     "atmosphereRating": 5.0,
-    "notes": "Loved the drinks",
-    "uID": 1,
+    "notes": "Best cafe on the planet 🔥",
+    "uID": 2,
     "cID": 2
   },
   {
@@ -2086,7 +2086,7 @@
     "foodRating": 4.8,
     "atmosphereRating": 4.8,
     "notes": "Loved the drinks",
-    "uID": 2,
+    "uID": 1,
     "cID": 2
   },
   {
@@ -2112,8 +2112,8 @@
     "drinkRating": 5.0,
     "foodRating": 5.0,
     "atmosphereRating": 5.0,
-    "notes": "Loved the drinks",
-    "uID": 1,
+    "notes": "Best cafe on the planet 🌎",
+    "uID": 3,
     "cID": 3
   },
   {
@@ -2131,7 +2131,7 @@
     "foodRating": 4.9,
     "atmosphereRating": 4.9,
     "notes": "Loved the drinks",
-    "uID": 3,
+    "uID": 1,
     "cID": 3
   },
   {
@@ -2148,8 +2148,8 @@
     "drinkRating": 5.0,
     "foodRating": 5.0,
     "atmosphereRating": 5.0,
-    "notes": "Loved the drinks",
-    "uID": 1,
+    "notes": "Best cafe on the planet 🚀",
+    "uID": 4,
     "cID": 5
   },
   {
@@ -2176,7 +2176,7 @@
     "foodRating": 4.7,
     "atmosphereRating": 4.7,
     "notes": "Loved the drinks",
-    "uID": 4,
+    "uID": 1,
     "cID": 5
   },
   {
@@ -2184,7 +2184,7 @@
     "drinkRating": 5.0,
     "foodRating": 5.0,
     "atmosphereRating": 5.0,
-    "notes": "Loved the drinks",
+    "notes": "Best cafe on the planet 🤩",
     "uID": 1,
     "cID": 6
   },
@@ -2229,7 +2229,7 @@
     "drinkRating": 5.0,
     "foodRating": 5.0,
     "atmosphereRating": 5.0,
-    "notes": "Loved the drinks",
+    "notes": "Loved the food",
     "uID": 3,
     "cID": 8
   },
@@ -2238,7 +2238,7 @@
     "drinkRating": 5.0,
     "foodRating": 5.0,
     "atmosphereRating": 5.0,
-    "notes": "Loved the drinks",
+    "notes": "Loved the atmosphere",
     "uID": 4,
     "cID": 9
   },
