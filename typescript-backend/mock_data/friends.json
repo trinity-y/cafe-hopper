@@ -1,0 +1,602 @@
+[
+  {
+    "user_id": 86,
+    "following_id": 136
+  },
+  {
+    "user_id": 36,
+    "following_id": 62
+  },
+  {
+    "user_id": 36,
+    "following_id": 126
+  },
+  {
+    "user_id": 52,
+    "following_id": 122
+  },
+  {
+    "user_id": 24,
+    "following_id": 115
+  },
+  {
+    "user_id": 46,
+    "following_id": 48
+  },
+  {
+    "user_id": 17,
+    "following_id": 131
+  },
+  {
+    "user_id": 105,
+    "following_id": 134
+  },
+  {
+    "user_id": 28,
+    "following_id": 30
+  },
+  {
+    "user_id": 86,
+    "following_id": 102
+  },
+  {
+    "user_id": 32,
+    "following_id": 131
+  },
+  {
+    "user_id": 9,
+    "following_id": 90
+  },
+  {
+    "user_id": 96,
+    "following_id": 106
+  },
+  {
+    "user_id": 42,
+    "following_id": 50
+  },
+  {
+    "user_id": 13,
+    "following_id": 99
+  },
+  {
+    "user_id": 44,
+    "following_id": 111
+  },
+  {
+    "user_id": 78,
+    "following_id": 143
+  },
+  {
+    "user_id": 20,
+    "following_id": 150
+  },
+  {
+    "user_id": 9,
+    "following_id": 10
+  },
+  {
+    "user_id": 52,
+    "following_id": 81
+  },
+  {
+    "user_id": 74,
+    "following_id": 148
+  },
+  {
+    "user_id": 113,
+    "following_id": 131
+  },
+  {
+    "user_id": 73,
+    "following_id": 85
+  },
+  {
+    "user_id": 2,
+    "following_id": 98
+  },
+  {
+    "user_id": 57,
+    "following_id": 98
+  },
+  {
+    "user_id": 87,
+    "following_id": 148
+  },
+  {
+    "user_id": 31,
+    "following_id": 143
+  },
+  {
+    "user_id": 85,
+    "following_id": 150
+  },
+  {
+    "user_id": 16,
+    "following_id": 63
+  },
+  {
+    "user_id": 15,
+    "following_id": 18
+  },
+  {
+    "user_id": 36,
+    "following_id": 105
+  },
+  {
+    "user_id": 26,
+    "following_id": 82
+  },
+  {
+    "user_id": 16,
+    "following_id": 136
+  },
+  {
+    "user_id": 28,
+    "following_id": 110
+  },
+  {
+    "user_id": 9,
+    "following_id": 106
+  },
+  {
+    "user_id": 28,
+    "following_id": 119
+  },
+  {
+    "user_id": 2,
+    "following_id": 100
+  },
+  {
+    "user_id": 31,
+    "following_id": 81
+  },
+  {
+    "user_id": 102,
+    "following_id": 132
+  },
+  {
+    "user_id": 76,
+    "following_id": 122
+  },
+  {
+    "user_id": 9,
+    "following_id": 133
+  },
+  {
+    "user_id": 32,
+    "following_id": 128
+  },
+  {
+    "user_id": 13,
+    "following_id": 60
+  },
+  {
+    "user_id": 34,
+    "following_id": 46
+  },
+  {
+    "user_id": 115,
+    "following_id": 141
+  },
+  {
+    "user_id": 31,
+    "following_id": 74
+  },
+  {
+    "user_id": 128,
+    "following_id": 144
+  },
+  {
+    "user_id": 12,
+    "following_id": 15
+  },
+  {
+    "user_id": 119,
+    "following_id": 150
+  },
+  {
+    "user_id": 38,
+    "following_id": 98
+  },
+  {
+    "user_id": 14,
+    "following_id": 94
+  },
+  {
+    "user_id": 80,
+    "following_id": 149
+  },
+  {
+    "user_id": 30,
+    "following_id": 84
+  },
+  {
+    "user_id": 4,
+    "following_id": 111
+  },
+  {
+    "user_id": 55,
+    "following_id": 67
+  },
+  {
+    "user_id": 53,
+    "following_id": 134
+  },
+  {
+    "user_id": 105,
+    "following_id": 117
+  },
+  {
+    "user_id": 94,
+    "following_id": 132
+  },
+  {
+    "user_id": 60,
+    "following_id": 75
+  },
+  {
+    "user_id": 68,
+    "following_id": 122
+  },
+  {
+    "user_id": 94,
+    "following_id": 141
+  },
+  {
+    "user_id": 6,
+    "following_id": 122
+  },
+  {
+    "user_id": 80,
+    "following_id": 105
+  },
+  {
+    "user_id": 8,
+    "following_id": 113
+  },
+  {
+    "user_id": 93,
+    "following_id": 126
+  },
+  {
+    "user_id": 9,
+    "following_id": 121
+  },
+  {
+    "user_id": 21,
+    "following_id": 49
+  },
+  {
+    "user_id": 70,
+    "following_id": 97
+  },
+  {
+    "user_id": 55,
+    "following_id": 108
+  },
+  {
+    "user_id": 25,
+    "following_id": 74
+  },
+  {
+    "user_id": 53,
+    "following_id": 56
+  },
+  {
+    "user_id": 64,
+    "following_id": 120
+  },
+  {
+    "user_id": 14,
+    "following_id": 46
+  },
+  {
+    "user_id": 19,
+    "following_id": 97
+  },
+  {
+    "user_id": 42,
+    "following_id": 99
+  },
+  {
+    "user_id": 17,
+    "following_id": 109
+  },
+  {
+    "user_id": 94,
+    "following_id": 118
+  },
+  {
+    "user_id": 60,
+    "following_id": 125
+  },
+  {
+    "user_id": 32,
+    "following_id": 54
+  },
+  {
+    "user_id": 59,
+    "following_id": 72
+  },
+  {
+    "user_id": 60,
+    "following_id": 79
+  },
+  {
+    "user_id": 7,
+    "following_id": 43
+  },
+  {
+    "user_id": 13,
+    "following_id": 59
+  },
+  {
+    "user_id": 6,
+    "following_id": 108
+  },
+  {
+    "user_id": 27,
+    "following_id": 85
+  },
+  {
+    "user_id": 34,
+    "following_id": 100
+  },
+  {
+    "user_id": 52,
+    "following_id": 148
+  },
+  {
+    "user_id": 87,
+    "following_id": 115
+  },
+  {
+    "user_id": 2,
+    "following_id": 74
+  },
+  {
+    "user_id": 17,
+    "following_id": 93
+  },
+  {
+    "user_id": 48,
+    "following_id": 126
+  },
+  {
+    "user_id": 39,
+    "following_id": 68
+  },
+  {
+    "user_id": 23,
+    "following_id": 51
+  },
+  {
+    "user_id": 42,
+    "following_id": 101
+  },
+  {
+    "user_id": 93,
+    "following_id": 103
+  },
+  {
+    "user_id": 36,
+    "following_id": 51
+  },
+  {
+    "user_id": 128,
+    "following_id": 134
+  },
+  {
+    "user_id": 6,
+    "following_id": 19
+  },
+  {
+    "user_id": 82,
+    "following_id": 91
+  },
+  {
+    "user_id": 15,
+    "following_id": 86
+  },
+  {
+    "user_id": 21,
+    "following_id": 90
+  },
+  {
+    "user_id": 15,
+    "following_id": 104
+  },
+  {
+    "user_id": 55,
+    "following_id": 149
+  },
+  {
+    "user_id": 18,
+    "following_id": 45
+  },
+  {
+    "user_id": 30,
+    "following_id": 129
+  },
+  {
+    "user_id": 81,
+    "following_id": 113
+  },
+  {
+    "user_id": 1,
+    "following_id": 132
+  },
+  {
+    "user_id": 70,
+    "following_id": 101
+  },
+  {
+    "user_id": 27,
+    "following_id": 96
+  },
+  {
+    "user_id": 5,
+    "following_id": 29
+  },
+  {
+    "user_id": 56,
+    "following_id": 102
+  },
+  {
+    "user_id": 25,
+    "following_id": 142
+  },
+  {
+    "user_id": 8,
+    "following_id": 101
+  },
+  {
+    "user_id": 100,
+    "following_id": 120
+  },
+  {
+    "user_id": 74,
+    "following_id": 110
+  },
+  {
+    "user_id": 42,
+    "following_id": 115
+  },
+  {
+    "user_id": 24,
+    "following_id": 109
+  },
+  {
+    "user_id": 17,
+    "following_id": 134
+  },
+  {
+    "user_id": 80,
+    "following_id": 150
+  },
+  {
+    "user_id": 34,
+    "following_id": 95
+  },
+  {
+    "user_id": 16,
+    "following_id": 59
+  },
+  {
+    "user_id": 87,
+    "following_id": 110
+  },
+  {
+    "user_id": 31,
+    "following_id": 105
+  },
+  {
+    "user_id": 86,
+    "following_id": 114
+  },
+  {
+    "user_id": 85,
+    "following_id": 94
+  },
+  {
+    "user_id": 16,
+    "following_id": 25
+  },
+  {
+    "user_id": 14,
+    "following_id": 70
+  },
+  {
+    "user_id": 101,
+    "following_id": 102
+  },
+  {
+    "user_id": 95,
+    "following_id": 98
+  },
+  {
+    "user_id": 124,
+    "following_id": 134
+  },
+  {
+    "user_id": 18,
+    "following_id": 40
+  },
+  {
+    "user_id": 50,
+    "following_id": 75
+  },
+  {
+    "user_id": 126,
+    "following_id": 140
+  },
+  {
+    "user_id": 116,
+    "following_id": 148
+  },
+  {
+    "user_id": 37,
+    "following_id": 102
+  },
+  {
+    "user_id": 92,
+    "following_id": 102
+  },
+  {
+    "user_id": 48,
+    "following_id": 77
+  },
+  {
+    "user_id": 32,
+    "following_id": 35
+  },
+  {
+    "user_id": 78,
+    "following_id": 121
+  },
+  {
+    "user_id": 23,
+    "following_id": 66
+  },
+  {
+    "user_id": 81,
+    "following_id": 83
+  },
+  {
+    "user_id": 120,
+    "following_id": 136
+  },
+  {
+    "user_id": 24,
+    "following_id": 95
+  },
+  {
+    "user_id": 5,
+    "following_id": 115
+  },
+  {
+    "user_id": 101,
+    "following_id": 104
+  },
+  {
+    "user_id": 19,
+    "following_id": 71
+  },
+  {
+    "user_id": 10,
+    "following_id": 68
+  },
+  {
+    "user_id": 79,
+    "following_id": 122
+  },
+  {
+    "user_id": 76,
+    "following_id": 77
+  },
+  {
+    "user_id": 23,
+    "following_id": 59
+  }
+]
