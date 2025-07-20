@@ -139,6 +139,20 @@ class CustomModel {
       client.release();
     }
   }
+
+  async delete(id) { 
+    const client = await pool.connect(); 
+    try { 
+      const query = `DELETE FROM "${this.tableName}" WHERE id = $1`; 
+      const result = await client.query(query, [id]); 
+      return result.rowCount > 0; 
+    } catch (e) { 
+      console.error(e); 
+      return false; 
+    } finally { 
+      client.release(); 
+    } 
+  } 
 }
 
 module.exports = { CustomModel, pool };
