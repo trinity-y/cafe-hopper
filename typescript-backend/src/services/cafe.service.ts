@@ -9,6 +9,17 @@ const cafeService: ICafeServiceAPI = {
     return cafeModel.findMany();
   },
 
+  // Just to be safe, creating a new getAllCafes
+  async getTopCafes(): Promise<ICafe[]> {
+    const q = `
+      SELECT * FROM "Cafe"
+      ORDER BY "googleRating" DESC;
+    `;
+    
+    const { rows } = await pool.query(q);
+    return rows;
+  },
+
   async getCafeById(id: number): Promise<ICafe | null> {
     return cafeModel.findUnique(id);
   },
