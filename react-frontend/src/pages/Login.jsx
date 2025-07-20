@@ -11,6 +11,7 @@ import Stack from '@mui/material/Stack';
 import LoginCard from '../components/auth/LoginCard';
 import MessageCard from '../components/auth/MessageCard';
 import theme from '../components/theme';
+import { useUser } from '../context/userContext';
 
 const statuses = {
     LOADING:"loading",
@@ -21,6 +22,7 @@ const statuses = {
 function LoginPage() {
     const [status, setStatus] = React.useState(statuses.LOADING); // enforce enum
     const [navigateTo, setNavigateTo] = React.useState("");
+    const { setUser } = useUser();
     
     React.useEffect(() => {
         const trySignInWithEmailLink = async () => {
@@ -33,7 +35,8 @@ function LoginPage() {
                 return;
             }
             try {
-                await authAPI.loginFromLink(email, url);
+                const createdUser = await authAPI.loginFromLink(email, url);
+                setUser(createdUser);
             } catch (error) {
                 console.error('Error signing in with email link:', error);
                 setStatus(statuses.ERROR);

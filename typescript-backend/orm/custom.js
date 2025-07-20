@@ -17,9 +17,12 @@ class CustomModel {
 
   // get a tableSchema object with keys representing column name and the values representing the columns type
   async #getTableSchema() {
-    const client = await pool.connect();
+    if (this.#tableSchema) {
+      return this.#tableSchema; 
+    }
 
-    if (!this.#tableSchema) {
+    const client = await pool.connect();
+    try {
       this.#tableSchema = {};
       const tableDataQuery = `
         SELECT column_name, data_type
@@ -31,8 +34,8 @@ class CustomModel {
         this.#tableSchema[tableDataTuple.column_name] = tableDataTuple.data_type;
       });
       return this.#tableSchema;
-    } else {
-      return this.#tableSchema;
+    } finally {
+      client.release(); 
     }
   }
 
@@ -57,7 +60,7 @@ class CustomModel {
     ]);
 
     const quotedProperties = {}
-    keyNames.map(key => {
+    keyNames.forEach(key => {
       if (quotedTypes.has(tableSchema[key])) { // if the key's type is in quoted types, surround w/ quotes
         quotedProperties[key] = `'${object[key]}'`;
       } else {
@@ -101,6 +104,25 @@ class CustomModel {
     }
   }
 
+  async findByColumn(columnName, value) {
+    const client = await pool.connect();
+
+    try {
+      // validate column name
+      if (!/^[a-zA-Z0-9_]+$/.test(columnName)) {
+        throw new Error('Invalid column name');
+      }
+
+      const query = `SELECT * FROM "${this.tableName}" WHERE "${columnName}" = $1`;
+      const result = await client.query(query, [value]);
+
+      return result.rows.length > 0 ? result.rows[0] : null;
+    } finally {
+      client.release();
+    }
+  }
+
+
   // inserts a single row into the database. returns object created.
   async create(tupleObject) {
     const client = await pool.connect();
@@ -112,11 +134,26 @@ class CustomModel {
       return result.rows[0];
     } catch (e) {
       console.error(e);
+      throw e;
     } finally {
       client.release();
     }
   }
-
+  
+  async delete(id) { 
+    const client = await pool.connect(); 
+    try { 
+      const query = `DELETE FROM "${this.tableName}" WHERE id = $1`; 
+      const result = await client.query(query, [id]); 
+      return result.rowCount > 0; 
+    } catch (e) { 
+      console.error(e); 
+      return false; 
+    } finally { 
+      client.release(); 
+    } 
+  } 
+  
   async rawQuery(query, params = []) {
     const client = await pool.connect();
     try {

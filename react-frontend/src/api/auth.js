@@ -16,9 +16,8 @@ const loginFromLink = async (email, url) => {
 }
 
 const completeSignup = async (username, firebase_uid) => {
-    await client.post('/users/',
-        { username, firebase_uid },
-    )
+    const res = await client.post('/users/', { username, firebase_uid });
+    return res.data; // the created user object
 }
 
 const handleLogin = async (email) => {

@@ -71,12 +71,27 @@ router.get('/:id', async (req: Request, res: Response) => {
   }
 });
 
+router.get('/firebase/:firebase_uid', async (req: Request, res: Response) => {
+  const { firebase_uid } = req.params;
+  try {
+    const user = await userService.getUserByFirebaseId(firebase_uid); 
+    if (user) {
+      res.status(200).json(user);
+    } else {
+      res.status(404).json({ message: `User with firebase_uid ${firebase_uid} not found` });
+    }
+  } catch (error) {
+    console.error(`Error fetching user with firebase_uid ${firebase_uid}:`, error);
+    res.status(500).json({ message: 'Error fetching user' });
+  }
+});
+
 router.post('/', async (req: Request, res: Response) => {
   const { username, firebase_uid } = req.body;
   try {
     const newUser = await userService.createUser({ username, firebase_uid });
       if (newUser) {
-        res.status(200).json(newUser);
+        res.status(201).json(newUser);
       } else {
         res.status(500).json({ message: `Could not create user with username ${username}. New user not returned.` });
       }

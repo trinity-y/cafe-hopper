@@ -49,6 +49,13 @@ async function seedDatabase() {
                 "openingDays" TEXT,
                 "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5)
             );
+
+            CREATE TABLE IF NOT EXISTS "Bookmark" (
+              id SERIAL PRIMARY KEY,
+              uid INT NOT NULL REFERENCES "User"(id), 
+              cid INT NOT NULL REFERENCES "Cafe"(id), 
+              UNIQUE(uid, cid)
+            );
         `);
 
         await client.query('TRUNCATE "User", "Cafe" RESTART IDENTITY CASCADE');
@@ -77,6 +84,14 @@ async function seedDatabase() {
             await client.query(
                 'INSERT INTO "Cafe" (name, address, latitude, longitude, "openingDays", "googleRating") VALUES ($1, $2, $3, $4, $5, $6)',
                 [cafe.name, cafe.address, cafe.latitude, cafe.longitude, cafe.openingDays, cafe.googleRating]
+            );
+        }
+
+        const bookmarks = require('../mock_data/bookmarks.json');
+        for (const bookmark of bookmarks) {
+            await client.query(
+                'INSERT INTO "Bookmark" (uid, cid) VALUES ($1, $2)',
+                [bookmark.uid, bookmark.cid]
             );
         }
 

@@ -67,7 +67,9 @@ You can view all completed routes in ```typescript-backend/src/routes```
 
 # Fully implemented features
 
-1. 
+1. Users
+2. Cafe
+3. Bookmarks (implemented under bookmarks branch): http://localhost:3000/profile
 
 # How to generate the “production” dataset and load it into our database
 Since our dataset is only ~300 entries, we have saved it in typescript-backend/prod_data/cafes.json

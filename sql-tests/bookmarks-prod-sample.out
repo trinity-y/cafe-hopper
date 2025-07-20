@@ -1,0 +1,30 @@
+-- Selecting bookmarks for a certain user 
+ id  | uid | cid 
+-----+-----+-----
+   1 | 149 | 153
+ 208 | 149 |  29
+(2 rows)
+
+  id  | uid | cid 
+------+-----+-----
+  299 | 394 | 328
+  409 | 394 | 108
+  984 | 394 |  41
+ 1422 | 394 | 150
+ 1447 | 394 | 282
+ 1953 | 394 | 198
+ 2248 | 394 | 279
+ 2264 | 394 |  54
+ 2384 | 394 | 180
+(9 rows)
+
+ id | uid | cid 
+----+-----+-----
+(0 rows)
+
+-- getting bookmarked cafes for a certain user
+ id  | cafe_id |        name        | googleRating 
+-----+---------+--------------------+--------------
+   1 |     153 | Midway Coffee Shop |          4.8
+ 208 |      29 | SWEET LOOP         |          4.8
+(2 rows)
