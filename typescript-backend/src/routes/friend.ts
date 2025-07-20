@@ -3,6 +3,16 @@ import friendService from '../services/friend.service';
 
 const router = Router();
 
+router.get('/mutuals/:user_id', async (req: Request, res: Response) => {
+  const { user_id } = req.params;
+  try {
+    const userMutuals = await friendService.getUserMutualsByUserId(parseInt(user_id, 10));
+    res.status(200).json(userMutuals);
+  } catch (error) {
+    console.error('Error fetching cafes:', error);
+  }
+});
+
 router.get('/:user_id', async (req: Request, res: Response) => {
   const { user_id } = req.params;
   try {

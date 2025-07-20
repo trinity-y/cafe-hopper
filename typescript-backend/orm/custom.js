@@ -116,6 +116,16 @@ class CustomModel {
       client.release();
     }
   }
+
+  async rawQuery(query, params = []) {
+    const client = await pool.connect();
+    try {
+      const result = await client.query(query, params);
+      return result.rows;
+    } finally {
+      client.release();
+    }
+  }
 }
 
 module.exports = { CustomModel, pool };
