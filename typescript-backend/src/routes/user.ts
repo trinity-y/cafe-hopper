@@ -34,6 +34,28 @@ router.get('/usernameExists', async (req: Request, res: Response) => {
   }
 });
 
+router.get('/search', async (req: Request, res: Response) => {
+  const username = typeof req.query.search === 'string' ? req.query.search.trim() : '';
+  const userId = parseInt(req.query.userId as string, 10);
+
+  if (!username) {
+    return res.status(400).json({ message: 'Missing or empty search term.' });
+  }
+
+  if (isNaN(userId)) {
+    return res.status(400).json({ message: 'Invalid or missing userId.' });
+  }
+
+  try {
+    const users = await userService.searchUsers(username, userId);
+    res.status(200).json(users);
+  } catch (error) {
+    console.error(`Error searching users with username "${username}":`, error);
+    res.status(500).json({ message: 'An error occurred while searching for users.' });
+  }
+});
+
+
 router.get('/:id', async (req: Request, res: Response) => {
   const { id } = req.params;
   try {

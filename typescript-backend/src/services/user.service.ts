@@ -35,6 +35,18 @@ const userService: IUserServiceAPI = {
     } else {
       return false;
     }
+  },
+
+  async searchUsers(username: string, current_uid: number): Promise<IUser[]> {
+    const query = `
+      SELECT id, username, firebase_uid
+      FROM "User"
+      WHERE username ILIKE $1
+        AND id != $2
+      LIMIT 10
+    `;
+    const matchedUsers = await userModel.rawQuery(query, [`%${username}%`, current_uid]);
+    return matchedUsers;
   }
 };
 
