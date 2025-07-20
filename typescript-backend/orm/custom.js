@@ -104,6 +104,25 @@ class CustomModel {
     }
   }
 
+  async findByColumn(columnName, value) {
+    const client = await pool.connect();
+
+    try {
+      // validate column name
+      if (!/^[a-zA-Z0-9_]+$/.test(columnName)) {
+        throw new Error('Invalid column name');
+      }
+
+      const query = `SELECT * FROM "${this.tableName}" WHERE "${columnName}" = $1`;
+      const result = await client.query(query, [value]);
+
+      return result.rows.length > 0 ? result.rows[0] : null;
+    } finally {
+      client.release();
+    }
+  }
+
+
   // inserts a single row into the database. returns object created.
   async create(tupleObject) {
     const client = await pool.connect();
@@ -176,21 +195,6 @@ class CustomModel {
       );
       const setClause = setStatements.join(', ');
       const query = `UPDATE "${this.tableName}" SET ${setClause} WHERE id = ${id}`
-      const result = await client.query(query);
-      return result.rows[0];
-    } catch (e) {
-      console.error(e);
-    } finally {
-      client.release();
-    }
-  }
-
-  // ID is unique identifier for each table
-  // Replicating the structure of prisma input: https://www.prisma.io/docs/orm/prisma-client/queries/crud#delete 
-  async delete(id) {
-    const client = await pool.connect();
-    try {
-      const query = `DELETE FROM "${this.tableName}" WHERE id = ${id}`
       const result = await client.query(query);
       return result.rows[0];
     } catch (e) {
