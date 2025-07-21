@@ -28,7 +28,7 @@ function FeedPage() {
     return (
     <>
     <ThemeProvider theme={theme}>
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <Box
             sx={{ display:'flex', flexDirection:'column', alignItems:'center'}}
             width={'100%'}
@@ -43,7 +43,7 @@ function FeedPage() {
                     paddingX='1em'
                     paddingTop='1em'
                 >
-                    <Typography variant="h2" fontWeight='fontWeightMedium' color='whitesmoke' margin={'1rem'}>Your Feed</Typography>
+                    <Typography variant="h2" fontWeight='fontWeightMedium' margin={'1rem'}>Your Feed</Typography>
                 </Box>
                 <Stack
                     justifyContent="center"
@@ -65,7 +65,7 @@ function FeedPage() {
                             sx={{ alignItems:'left'}}
                             width='100%'
                         >
-                            <Typography variant="h5" color='whitesmoke'>You're not following anyone who has written a review yet!</Typography>
+                            <Typography variant="h5">You're not following anyone who has written a review yet!</Typography>
                         </Box>
                         } 
                     </Box>

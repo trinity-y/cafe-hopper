@@ -3,7 +3,7 @@ import StarRating from './StarRating';
 import { Typography } from '@mui/material';
 import Reaction from './Reaction';
 
-function Review({review}) {
+function Review({review, key}) {
     // Expecting review object with the following structure:
     // 1. Username (username)
     // 2. Cafe name (name)
@@ -16,7 +16,18 @@ function Review({review}) {
     // 9. Review timestamp (timestamp)
     return (
         <>
-        <Box component="section" sx={{ px:4, py: 2, border: '1px solid grey', width: '100%', bgcolor:'whitesmoke', padding:'2em' }} display="flex" justifyContent="space-between" >
+        <Box 
+        component="section" 
+        sx={{ 
+            marginTop: key === 0 ? 0 : '0.5em',
+            // borderColor: '#b5b5b5',
+            width: '100%', 
+            bgcolor: 'white', 
+            padding: '2em' 
+        }} 
+        display="flex" 
+        justifyContent="space-between"
+        >
             {/* main review info */}
             <Box display="flex" flexDirection="column" sx={{ height: '100%', marginTop:'1em' }} gap={1}>
                 <Typography variant='h4'>{review.name}</Typography>
