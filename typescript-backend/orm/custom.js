@@ -140,6 +140,52 @@ class CustomModel {
     }
   }
 
+  // Updates the requested id with the requested key value pairs
+  // Replicating the structure of prisma input:
+  // https://www.prisma.io/docs/orm/prisma-client/queries/crud#update
+
+  // does not return anything
+  async updateMany(id, tupleObject) {
+    const client = await pool.connect();
+    try {
+      const keyNames = Object.keys(tupleObject);
+      const quotedProperties = await this.#quoteProperties(tupleObject);
+      const setStatements = Object.keys(quotedProperties).map(key => 
+        `${key} = ${quotedProperties[key]}`
+      );
+      const setClause = setStatements.join(', ');
+      const query = `UPDATE "${this.tableName}" SET ${setClause} WHERE id = ${id}`
+      const result = await client.query(query);
+    } catch (e) {
+      console.error(e);
+      throw e;
+    } finally {
+      client.release();
+    }
+  }
+
+  // Updates the requested id with the requested key value pairs
+  // Replicating the structure of prisma input:
+  // https://www.prisma.io/docs/orm/prisma-client/queries/crud#update
+
+  async updateMany(id, tupleObject) {
+    const client = await pool.connect();
+    try {
+      const keyNames = Object.keys(tupleObject);
+      const quotedProperties = await this.#quoteProperties(tupleObject);
+      const setStatements = Object.keys(quotedProperties).map(key => 
+        `${key} = ${quotedProperties[key]}`
+      );
+      const setClause = setStatements.join(', ');
+      const query = `UPDATE "${this.tableName}" SET ${setClause} WHERE id = ${id}`
+      const result = await client.query(query);
+      return result.rows[0];
+    } catch (e) {
+      console.error(e);
+    } finally {
+      client.release();
+    }
+  }
   async delete(id) { 
     const client = await pool.connect(); 
     try { 

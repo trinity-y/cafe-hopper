@@ -19,6 +19,14 @@ async function seedDatabase() {
               "username" VARCHAR(100) NOT NULL UNIQUE,
               "firebase_uid" VARCHAR(100) NOT NULL UNIQUE
             );
+
+            CREATE TABLE IF NOT EXISTS "Friend" (
+                id SERIAL PRIMARY KEY,
+                user_id INT NOT NULL REFERENCES "User"(id), 
+                friend_id INT NOT NULL REFERENCES "User"(id), 
+                UNIQUE(user_id, friend_id),
+                CHECK (user_id != friend_id)
+            );
             
             CREATE TABLE IF NOT EXISTS "Cafe" (
                 id SERIAL PRIMARY KEY,
@@ -27,7 +35,21 @@ async function seedDatabase() {
                 latitude DOUBLE PRECISION NOT NULL,
                 longitude DOUBLE PRECISION NOT NULL,
                 "openingDays" TEXT,
-                "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5)
+                "googleRating" DECIMAL(2,1) CHECK ("googleRating" >= 0 AND "googleRating" <= 5),
+                startPrice INTEGER,
+                endPrice INTEGER
+            );
+            CREATE TABLE IF NOT EXISTS "Reviews" (
+              id SERIAL PRIMARY KEY,
+              rating DECIMAL(2,1) NOT NULL CHECK (rating >= 0 AND rating <= 5),
+              drinkRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
+              foodRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
+              atmosphereRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
+              notes VARCHAR(200),
+              timestamp TIMESTAMP NOT NULL,
+              cID INT NOT NULL REFERENCES "Cafe"(id),
+              uID INT NOT NULL REFERENCES "User"(id),
+              UNIQUE(cID, uID)
             );
 
             CREATE TABLE IF NOT EXISTS "Bookmark" (
@@ -50,12 +72,28 @@ async function seedDatabase() {
             );
         }
 
+        const friends = require('../mock_data/friends.json');
+        for (const friend of friends) {
+            await client.query(
+                'INSERT INTO "Friend" ("user_id", "friend_id") VALUES ($1, $2)',
+                [friend.user_id, friend.friend_id]
+            );
+        }
+
         const { getCafeData } = require('./getCafeData');
         const cafes = await getCafeData();
         for (const cafe of cafes) {
             await client.query(
-                'INSERT INTO "Cafe" (name, address, latitude, longitude, "openingDays", "googleRating") VALUES ($1, $2, $3, $4, $5, $6)',
-                [cafe.name, cafe.address, cafe.latitude, cafe.longitude, cafe.openingDays, cafe.googleRating]
+                'INSERT INTO "Cafe" (name, address, latitude, longitude, "openingDays", "googleRating", startPrice, endPrice) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
+                [cafe.name, cafe.address, cafe.latitude, cafe.longitude, cafe.openingDays, cafe.googleRating, cafe.startPrice, cafe.endPrice]
+            );
+        }
+        const reviews = require('../mock_data/reviews.json');
+
+        for (const review of reviews) {
+            await client.query(
+                'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, timestamp, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
+                [review.rating, review.drinkRating, review.foodRating, review.atmosphereRating, review.notes, review.timestamp, review.uID, review.cID]
             );
         }
 

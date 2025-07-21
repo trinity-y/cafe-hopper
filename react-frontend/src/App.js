@@ -8,6 +8,7 @@ import SignupPage from './pages/Signup';
 import CompleteSignupPage from './pages/CompleteSignup';
 import Profile from './pages/Profile'
 import CafeSearchPage from './pages/CafeSearch';
+import FeedPage from './pages/Feed';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/signup' element={<SignupPage />} />
           <Route path='/complete-signup' element={<CompleteSignupPage />} />
           <Route path='/cafesearch' element={<CafeSearchPage />} />
+          <Route path='/feed' element={<FeedPage />} />
           <Route path='/profile' element={<Profile />} />
         </Routes>
       </Router>
