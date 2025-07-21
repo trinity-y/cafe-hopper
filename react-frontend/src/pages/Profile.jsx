@@ -6,6 +6,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import theme from '../components/theme';
 import BookmarkTab from '../components/BookmarkTab';
+import FriendTab from '../components/FriendsTab';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -62,7 +63,7 @@ export default function BasicTabs() {
           <BookmarkTab />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          Add friends here
+          <FriendTab />
         </CustomTabPanel>
       </Box>
     </ThemeProvider>
