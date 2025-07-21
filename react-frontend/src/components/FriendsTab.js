@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Box, Typography, List, ListItem, ListItemText, Divider } from '@mui/material';
+import { Grid, Card, CardContent } from '@mui/material';
 import UserSearch from './UserSearch';
 import { useUser } from '../context/userContext';
 
@@ -7,12 +8,12 @@ const FriendTab = () => {
   const { userId } = useUser();
   const [friends, setFriends] = useState([]);
   const [mutuals, setMutuals] = useState([]);
-  const userEmojis = ['🐸', '☕', '🥐', '🥖', '🧋', '🍵', '🍪'];
+  const userEmojis = ['🐸', '☕', '🥐', '🧋', '🍵', '🍪', '🥗', '🥯', '🍰', '🍧'];
 
-  const getRandomEmoji = () => {
-    const index = Math.floor(Math.random() * userEmojis.length);
-    return userEmojis[index];
-  };
+  const getEmojiForUser = (userId) => {
+  	const index = userId % userEmojis.length;
+  	return userEmojis[index];
+	};
 
   const fetchFriends = async () => {
     try {
@@ -53,21 +54,29 @@ const FriendTab = () => {
         Your Friends
       </Typography>
 
-      <Typography variant="p" color='gray' sx={{ mt: 1, mb: 3 }}>
+      <Typography variant="body2" color='gray'>
         ({mutuals.length} mutual friends)
       </Typography>
 
-      <List sx={{ mb: 4 }}>
-        {friends.length === 0 ? (
-          <Typography variant="body2">You haven’t added any friends yet.</Typography>
-        ) : (
-          friends.map((friend) => (
-            <ListItem key={friend.id} divider>
-              <ListItemText primary={`${getRandomEmoji()} ${friend.username}`} />
-            </ListItem>
-          ))
-        )}
-      </List>
+    	{friends.length === 0 ? (
+				<Typography variant="body2">You haven’t added any friends yet.</Typography>
+				) : (
+				<Box sx={{ display: 'flex', justifyContent: 'center', mt:2, mb: 4 }}>
+					<Grid container spacing={2}  justifyContent="center">
+						{friends.map((friend) => (
+							<Grid item xs={12} sm={6} key={friend.id}>
+								<Card variant="outlined" sx={{ borderRadius: 10, height: 55}}>
+										<CardContent>
+											<Typography variant="body1">
+													{`${getEmojiForUser(friend.id)} ${friend.username}`}
+											</Typography>
+										</CardContent>
+								</Card>
+							</Grid>
+						))}
+					</Grid>
+				</Box>
+			)}
 
       <Typography variant="h6" gutterBottom>
         Add New Friends
