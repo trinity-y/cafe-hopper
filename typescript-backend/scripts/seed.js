@@ -51,6 +51,13 @@ async function seedDatabase() {
               uID INT NOT NULL REFERENCES "User"(id),
               UNIQUE(cID, uID)
             );
+
+            CREATE TABLE IF NOT EXISTS "Bookmark" (
+              id SERIAL PRIMARY KEY,
+              uid INT NOT NULL REFERENCES "User"(id), 
+              cid INT NOT NULL REFERENCES "Cafe"(id), 
+              UNIQUE(uid, cid)
+            );
         `);
 
         await client.query('TRUNCATE "User", "Cafe" RESTART IDENTITY CASCADE');
@@ -87,6 +94,14 @@ async function seedDatabase() {
             await client.query(
                 'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, timestamp, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
                 [review.rating, review.drinkRating, review.foodRating, review.atmosphereRating, review.notes, review.timestamp, review.uID, review.cID]
+            );
+        }
+
+        const bookmarks = require('../mock_data/bookmarks.json');
+        for (const bookmark of bookmarks) {
+            await client.query(
+                'INSERT INTO "Bookmark" (uid, cid) VALUES ($1, $2)',
+                [bookmark.uid, bookmark.cid]
             );
         }
 
