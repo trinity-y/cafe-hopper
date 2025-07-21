@@ -53,7 +53,7 @@ export default function BasicTabs() {
           <Tabs value={value} onChange={handleChange} aria-label="profile tabs">
             <Tab label="Reviews" {...a11yProps(0)} />
             <Tab label="Bookmarks" {...a11yProps(1)} />
-            <Tab label="Friends" {...a11yProps(2)} />
+            <Tab label="Following" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>

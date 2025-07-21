@@ -11,7 +11,7 @@ const FriendTab = () => {
   const userEmojis = ['🐸', '☕', '🥐', '🧋', '🍵', '🍪', '🥗', '🥯', '🍰', '🍧'];
 
   const getEmojiForUser = (userId) => {
-  	const index = userId % userEmojis.length;
+  	const index = userId % userEmojis.length; // hashing userId -> emoji
   	return userEmojis[index];
 	};
 
@@ -44,6 +44,7 @@ const FriendTab = () => {
 
   const handleFriendAdded = () => {
     fetchFriends();
+		fetchMutuals();
   };
 
   if (!userId) return null;
@@ -51,20 +52,22 @@ const FriendTab = () => {
   return (
     <Box>
       <Typography variant="h6" gutterBottom>
-        Your Friends
+        Following
       </Typography>
 
-      <Typography variant="body2" color='gray'>
-        ({mutuals.length} mutual friends)
-      </Typography>
+			{friends.length !== 0 && (
+				<Typography variant="body2" color='gray'>
+        	({mutuals.length} user {mutuals.length === 1 ? 'follows' : 'follow'} you back)
+      	</Typography>
+			)}
 
     	{friends.length === 0 ? (
-				<Typography variant="body2">You haven’t added any friends yet.</Typography>
+				<Typography variant="body2" sx={{ mb: 4 }} >You haven’t followed anyone yet.</Typography>
 				) : (
 				<Box sx={{ display: 'flex', justifyContent: 'center', mt:2, mb: 4 }}>
 					<Grid container spacing={2}  justifyContent="center">
 						{friends.map((friend) => (
-							<Grid item xs={12} sm={6} key={friend.id}>
+							<Grid key={friend.id}>
 								<Card variant="outlined" sx={{ borderRadius: 10, height: 55}}>
 										<CardContent>
 											<Typography variant="body1">
@@ -78,8 +81,10 @@ const FriendTab = () => {
 				</Box>
 			)}
 
-      <Typography variant="h6" gutterBottom>
-        Add New Friends
+			<Divider></Divider>
+
+      <Typography variant="h6" sx={{ mt: 2 }} gutterBottom>
+        Discover People
       </Typography>
       <UserSearch userId={userId} onFriendAdded={handleFriendAdded} />
     </Box>
