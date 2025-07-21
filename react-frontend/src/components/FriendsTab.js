@@ -43,7 +43,7 @@ const FriendTab = () => {
 
     try {
       const res = await axios.delete(`http://localhost:3001/friends/${userId}/${friendId}`);
-      if (!res.ok) throw new Error('Failed to unfollow');
+			if (res.status !== 200) throw new Error('Failed to unfollow');
       fetchFriends();
       fetchMutuals();
     } catch (err) {
@@ -85,11 +85,11 @@ const FriendTab = () => {
 						{friends.map((friend) => (
 							<Grid key={friend.id}>
 								<Card variant="outlined" sx={{ borderRadius: 10, height: 55, cursor: 'pointer' }} onClick={() => handleUnfollow(friend.id)}>
-										<CardContent>
-											<Typography variant="body1">
-													{`${getEmojiForUser(friend.id)} ${friend.username}`}
-											</Typography>
-										</CardContent>
+									<CardContent>
+										<Typography variant="body1">
+											{`${getEmojiForUser(friend.id)} ${friend.username}`}
+										</Typography>
+									</CardContent>
 								</Card>
 							</Grid>
 						))}
