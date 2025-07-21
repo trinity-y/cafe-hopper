@@ -38,4 +38,21 @@ router.post('/', async (req: Request, res: Response) => {
   }
 });
 
+router.delete('/:user_id/:following_id', async (req: Request, res: Response) => {
+  const { user_id, following_id } = req.params;
+  
+  try {
+    const deleted = await friendService.deleteFriend(Number(user_id), Number(following_id));
+
+    if (deleted) {
+      res.status(200).json({ message: 'Friendship deleted.' });
+    } else {
+      res.status(404).json({ message: `Friendship not found.` });
+    }
+  } catch (error) {
+    console.error(`Error: user could not unfollow user with uid ${following_id} :`, error)
+    res.status(500).json({ message: `Error: user could not unfollow user with uid ${following_id}.` });
+  }
+});
+
 export default router;

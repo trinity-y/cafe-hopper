@@ -31,6 +31,15 @@ const friendService: IFriendServiceAPI = {
 
     async createFriend(friend: CreateFriendDTO): Promise<IFriend | null> {
         return friendModel.create(friend);
+    },
+
+    async deleteFriend(uid: number, following_id: number): Promise<boolean> {
+        const query = `
+            DELETE FROM "Friend" 
+            WHERE user_id = $1 AND following_id = $2;
+        `;
+
+        return await userModel.rawQuery(query, [uid, following_id]);
     }
 };
 

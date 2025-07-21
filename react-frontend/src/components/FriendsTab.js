@@ -2,12 +2,14 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Box, Typography, List, ListItem, ListItemText, Divider } from '@mui/material';
 import { Grid, Card, CardContent } from '@mui/material';
 import UserSearch from './UserSearch';
+import axios from 'axios';
 import { useUser } from '../context/userContext';
 
 const FriendTab = () => {
   const { userId } = useUser();
   const [friends, setFriends] = useState([]);
   const [mutuals, setMutuals] = useState([]);
+  const [unfollowingId, setUnfollowingId] = useState(null);
   const userEmojis = ['🐸', '☕', '🥐', '🧋', '🍵', '🍪', '🥗', '🥯', '🍰', '🍧'];
 
   const getEmojiForUser = (userId) => {
@@ -32,6 +34,20 @@ const FriendTab = () => {
       setMutuals(data);
     } catch (err) {
       console.error('Error fetching mutuals:', err);
+    }
+  };
+
+  const handleUnfollow = async (friendId) => {
+    setFriends((prev) => prev.filter((f) => f.id !== friendId));
+    setMutuals((prev) => prev.filter((m) => m.id !== friendId)); 
+
+    try {
+      const res = await axios.delete(`http://localhost:3001/friends/${userId}/${friendId}`);
+      if (!res.ok) throw new Error('Failed to unfollow');
+      fetchFriends();
+      fetchMutuals();
+    } catch (err) {
+      console.error('Error unfollowing:', err);
     }
   };
 
@@ -68,7 +84,7 @@ const FriendTab = () => {
 					<Grid container spacing={2}  justifyContent="center">
 						{friends.map((friend) => (
 							<Grid key={friend.id}>
-								<Card variant="outlined" sx={{ borderRadius: 10, height: 55}}>
+								<Card variant="outlined" sx={{ borderRadius: 10, height: 55, cursor: 'pointer' }} onClick={() => handleUnfollow(friend.id)}>
 										<CardContent>
 											<Typography variant="body1">
 													{`${getEmojiForUser(friend.id)} ${friend.username}`}
