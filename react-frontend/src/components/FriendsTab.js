@@ -73,7 +73,7 @@ const FriendTab = () => {
 
 			{friends.length !== 0 && (
 				<Typography variant="body2" color='gray'>
-        	({mutuals.length} user {mutuals.length === 1 ? 'follows' : 'follow'} you back)
+        	({mutuals.length} {mutuals.length === 1 ? 'user follows' : 'users follow'} you back)
       	</Typography>
 			)}
 
