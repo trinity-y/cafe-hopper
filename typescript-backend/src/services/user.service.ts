@@ -44,9 +44,13 @@ const userService: IUserServiceAPI = {
   async searchUsers(username: string, current_uid: number): Promise<IUser[]> {
     const query = `
       SELECT id, username, firebase_uid
-      FROM "User"
-      WHERE username ILIKE $1
-        AND id != $2
+      FROM "User" u
+      WHERE u.username ILIKE $1 
+        AND u.id != $2        
+        AND NOT EXISTS (
+          SELECT 1 FROM "Friend" f
+          WHERE f.user_id = $2 AND f.following_id = u.id
+        )
       LIMIT 10
     `;
     const matchedUsers = await userModel.rawQuery(query, [`%${username}%`, current_uid]);
