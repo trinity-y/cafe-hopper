@@ -5,3 +5,7 @@ export interface ICafe {
   openingDays: string;
   googleRating: number;
 }
+
+export interface ICafeWithDistance extends ICafe {
+  distance: number;
+}

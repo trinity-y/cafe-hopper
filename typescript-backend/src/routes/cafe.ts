@@ -29,6 +29,25 @@ router.get('/:id(\\d+)', async (req: Request, res: Response) => {
   }
 });
 
+router.get('/filter', async (req: Request, res: Response) => {
+  const { rating, date, latitude, longitude, radius } = req.query;
+
+  try {
+    const filters = {
+      rating: rating ? parseFloat(rating as string) : undefined,
+      date: date as string,
+      latitude: latitude ? parseFloat(latitude as string) : undefined,
+      longitude: longitude ? parseFloat(longitude as string) : undefined,
+      radius: radius ? parseFloat(radius as string) : undefined,
+    };
+    
+    const cafes = await cafeService.getFilteredCafes(filters);
+    return cafes;
+  } catch (error) {
+    console.error('Error fetching cafes:', error);
+    return res.status(500).json({ message: 'An error occurred while fetching cafés.' });
+  }
+});
 
 router.get('/search', async (req: Request, res: Response) => {
   const term = (req.query.search as string)?.trim() || '';
