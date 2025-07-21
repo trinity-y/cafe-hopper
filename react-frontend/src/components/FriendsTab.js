@@ -7,6 +7,12 @@ const FriendTab = () => {
   const { userId } = useUser();
   const [friends, setFriends] = useState([]);
   const [mutuals, setMutuals] = useState([]);
+  const userEmojis = ['🐸', '☕', '🥐', '🥖', '🧋', '🍵', '🍪'];
+
+  const getRandomEmoji = () => {
+    const index = Math.floor(Math.random() * userEmojis.length);
+    return userEmojis[index];
+  };
 
   const fetchFriends = async () => {
     try {
@@ -46,7 +52,7 @@ const FriendTab = () => {
       <Typography variant="h6" gutterBottom>
         Your Friends
       </Typography>
-      
+
       <Typography variant="p" color='gray' sx={{ mt: 1, mb: 3 }}>
         ({mutuals.length} mutual friends)
       </Typography>
@@ -57,7 +63,7 @@ const FriendTab = () => {
         ) : (
           friends.map((friend) => (
             <ListItem key={friend.id} divider>
-              <ListItemText primary={`🐸 ${friend.username}`} />
+              <ListItemText primary={`${getRandomEmoji()} ${friend.username}`} />
             </ListItem>
           ))
         )}
