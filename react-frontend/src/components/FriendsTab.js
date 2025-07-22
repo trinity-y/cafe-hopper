@@ -101,7 +101,7 @@ const FriendTab = () => {
       <Typography variant="h6" sx={{ mt: 2 }} gutterBottom>
         Discover People
       </Typography>
-      <UserSearch userId={userId} onFriendAdded={handleFriendAdded} />
+      <UserSearch userId={userId} onFriendAdded={handleFriendAdded} friends={friends} />
     </Box>
   );
 };
