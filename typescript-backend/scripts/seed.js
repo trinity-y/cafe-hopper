@@ -19,6 +19,8 @@ async function seedDatabase() {
             DROP TABLE IF EXISTS "Reviews" CASCADE;
             DROP TABLE IF EXISTS "Reaction" CASCADE;
             DROP TABLE IF EXISTS "Friend" CASCADE;
+            DROP TABLE IF EXISTS "Bookmark" CASCADE;
+
 
             CREATE TABLE "User" (
               id SERIAL PRIMARY KEY,
@@ -45,6 +47,14 @@ async function seedDatabase() {
                 startPrice INTEGER,
                 endPrice INTEGER
             );
+
+            CREATE TABLE IF NOT EXISTS "Bookmark" (
+              id SERIAL PRIMARY KEY,
+              uid INT NOT NULL REFERENCES "User"(id), 
+              cid INT NOT NULL REFERENCES "Cafe"(id), 
+              UNIQUE(uid, cid)
+            );
+
             CREATE TABLE IF NOT EXISTS "Reviews" (
               id SERIAL PRIMARY KEY,
               rating DECIMAL(2,1) NOT NULL CHECK (rating >= 0 AND rating <= 5),
@@ -56,18 +66,6 @@ async function seedDatabase() {
               cID INT NOT NULL REFERENCES "Cafe"(id),
               uID INT NOT NULL REFERENCES "User"(id),
               UNIQUE(cID, uID)
-            );
-
-            CREATE TABLE IF NOT EXISTS "Reviews" (
-                id SERIAL PRIMARY KEY,
-                rating DECIMAL(2,1) NOT NULL CHECK (rating >= 0 AND rating <= 5),
-                drinkRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
-                foodRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
-                atmosphereRating DECIMAL(2,1) CHECK (rating >= 0 AND rating <= 5),
-                notes VARCHAR(200),
-                cID INT NOT NULL REFERENCES "Cafe"(id),
-                uID INT NOT NULL REFERENCES "User"(id),
-                UNIQUE(cID, uID)
             );
 
             CREATE TABLE IF NOT EXISTS "Reaction" (
@@ -122,6 +120,14 @@ async function seedDatabase() {
                 [reaction.uID, reaction.rID, reaction.reaction]
             );
         }
+        const bookmarks = require('../mock_data/bookmarks.json');
+        for (const bookmark of bookmarks) {
+            await client.query(
+                'INSERT INTO "Bookmark" (uid, cid) VALUES ($1, $2)',
+                [bookmark.uid, bookmark.cid]
+            );
+        }
+
 
         console.log('Database seeded successfully with User and Cafe tables!');
     } catch (err) {

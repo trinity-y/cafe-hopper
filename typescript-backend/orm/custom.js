@@ -144,47 +144,6 @@ class CustomModel {
   // Replicating the structure of prisma input:
   // https://www.prisma.io/docs/orm/prisma-client/queries/crud#update
 
-  // does not return anything
-  async updateMany(id, tupleObject) {
-    const client = await pool.connect();
-    try {
-      const keyNames = Object.keys(tupleObject);
-      const quotedProperties = await this.#quoteProperties(tupleObject);
-      const setStatements = Object.keys(quotedProperties).map(key => 
-        `${key} = ${quotedProperties[key]}`
-      );
-      const setClause = setStatements.join(', ');
-      const query = `UPDATE "${this.tableName}" SET ${setClause} WHERE id = ${id}`
-      const result = await client.query(query);
-    } catch (e) {
-      console.error(e);
-      throw e;
-    } finally {
-      client.release();
-    }
-  }
-
-  // ID is unique identifier for each table
-  // Replicating the structure of prisma input: https://www.prisma.io/docs/orm/prisma-client/queries/crud#delete 
-  // Returns a boolean
-  async delete(id) {
-    const client = await pool.connect();
-    try {
-      const query = `DELETE FROM "${this.tableName}" WHERE id = ${id}`
-      const result = await client.query(query);
-      return true;
-    } catch (e) {
-      console.error(e);
-      return false;
-    } finally {
-      client.release();
-    }
-  }
-
-  // Updates the requested id with the requested key value pairs
-  // Replicating the structure of prisma input:
-  // https://www.prisma.io/docs/orm/prisma-client/queries/crud#update
-
   async updateMany(id, tupleObject) {
     const client = await pool.connect();
     try {
@@ -213,6 +172,19 @@ class CustomModel {
       client.release();
     }
   }
+  async delete(id) { 
+    const client = await pool.connect(); 
+    try { 
+      const query = `DELETE FROM "${this.tableName}" WHERE id = $1`; 
+      const result = await client.query(query, [id]); 
+      return result.rowCount > 0; 
+    } catch (e) { 
+      console.error(e); 
+      return false; 
+    } finally { 
+      client.release(); 
+    } 
+  } 
 }
 
 module.exports = { CustomModel, pool };
