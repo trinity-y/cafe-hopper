@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { Box, Typography, List, ListItem, ListItemText, Divider } from '@mui/material';
+import  { useEffect, useState } from 'react';
+import { Box, Typography, Divider } from '@mui/material';
 import { Grid, Card, CardContent } from '@mui/material';
 import UserSearch from './UserSearch';
 import axios from 'axios';

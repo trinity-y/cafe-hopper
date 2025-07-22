@@ -1,0 +1,35 @@
+.reaction-container {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.reaction-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.reaction-button:hover {
+  transform: scale(1.2);
+}
+
+.reaction-button:disabled {
+  cursor: wait;
+}
+
+.thumb-icon {
+  font-size: 24px;
+  color: #777;
+}
+
+.thumb-icon.filled {
+  color: #2196F3;
+}
+
+.reaction-button.active .thumb-icon {
+  color: #2196F3;
+}
