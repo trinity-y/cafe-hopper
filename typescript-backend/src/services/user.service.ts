@@ -25,10 +25,8 @@ const userService: IUserServiceAPI = {
 
   async doesEmailExist(email: string): Promise<boolean> {
     try {
-      if (await admin.auth().getUserByEmail(email)) {
-        return true;
-      }
-      return false;
+      await admin.auth().getUserByEmail(email);
+      return true;
     } catch (e) {
       return false;
     }

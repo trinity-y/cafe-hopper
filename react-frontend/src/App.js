@@ -12,18 +12,18 @@ import FeedPage from './pages/Feed';
 
 function App() {
   return (
-    <UserProvider>
       <Router>
-        <Routes>
-          <Route path='/login' element={<LoginPage />} />
-          <Route path='/signup' element={<SignupPage />} />
-          <Route path='/complete-signup' element={<CompleteSignupPage />} />
-          <Route path='/cafesearch' element={<CafeSearchPage />} />
-          <Route path='/feed' element={<FeedPage />} />
-          <Route path='/profile' element={<Profile />} />
-        </Routes>
+        <UserProvider>
+          <Routes>
+            <Route path='/login' element={<LoginPage />} />
+            <Route path='/signup' element={<SignupPage />} />
+            <Route path='/complete-signup' element={<CompleteSignupPage />} />
+            <Route path='/cafesearch' element={<CafeSearchPage />} />
+            <Route path='/feed' element={<FeedPage />} />
+            <Route path='/profile' element={<Profile />} />
+          </Routes>
+        </UserProvider>
       </Router>
-    </UserProvider>
   );
 }
 
