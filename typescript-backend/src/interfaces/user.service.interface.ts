@@ -7,4 +7,5 @@ export interface IUserServiceAPI {
   createUser(user: CreateUserDTO): Promise<IUser | null>;
   doesEmailExist(email: string): Promise<boolean>;
   doesUsernameExist(username: string): Promise<boolean>;
+  getUserByFirebaseUid(firebaseUid: string): Promise<IUser | null>;
 }

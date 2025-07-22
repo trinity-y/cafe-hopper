@@ -39,7 +39,12 @@ const userService: IUserServiceAPI = {
     } else {
       return false;
     }
-  }
+  },
+
+  async getUserByFirebaseUid(firebaseUid: string): Promise<IUser | null> {
+    const users = await userModel.findMany({ firebase_uid: firebaseUid });
+    return users.length > 0 ? users[0] : null;
+  },
 };
 
 export default userService;

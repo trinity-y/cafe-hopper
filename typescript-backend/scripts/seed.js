@@ -14,7 +14,15 @@ async function seedDatabase() {
 
     try {
         await client.query(`
-            CREATE TABLE IF NOT EXISTS "User" (
+            DROP TABLE IF EXISTS "Cafe" CASCADE;
+            DROP TABLE IF EXISTS "User" CASCADE;
+            DROP TABLE IF EXISTS "Reviews" CASCADE;
+            DROP TABLE IF EXISTS "Reaction" CASCADE;
+            DROP TABLE IF EXISTS "Friend" CASCADE;
+            DROP TABLE IF EXISTS "Bookmark" CASCADE;
+
+
+            CREATE TABLE "User" (
               id SERIAL PRIMARY KEY,
               "username" VARCHAR(100) NOT NULL UNIQUE,
               "firebase_uid" VARCHAR(100) NOT NULL UNIQUE
@@ -23,9 +31,9 @@ async function seedDatabase() {
             CREATE TABLE IF NOT EXISTS "Friend" (
                 id SERIAL PRIMARY KEY,
                 user_id INT NOT NULL REFERENCES "User"(id), 
-                friend_id INT NOT NULL REFERENCES "User"(id), 
-                UNIQUE(user_id, friend_id),
-                CHECK (user_id != friend_id)
+                following_id INT NOT NULL REFERENCES "User"(id), 
+                UNIQUE(user_id, following_id),
+                CHECK (user_id != following_id)
             );
             
             CREATE TABLE IF NOT EXISTS "Cafe" (
@@ -39,6 +47,14 @@ async function seedDatabase() {
                 startPrice INTEGER,
                 endPrice INTEGER
             );
+
+            CREATE TABLE IF NOT EXISTS "Bookmark" (
+              id SERIAL PRIMARY KEY,
+              uid INT NOT NULL REFERENCES "User"(id), 
+              cid INT NOT NULL REFERENCES "Cafe"(id), 
+              UNIQUE(uid, cid)
+            );
+
             CREATE TABLE IF NOT EXISTS "Reviews" (
               id SERIAL PRIMARY KEY,
               rating DECIMAL(2,1) NOT NULL CHECK (rating >= 0 AND rating <= 5),
@@ -52,15 +68,14 @@ async function seedDatabase() {
               UNIQUE(cID, uID)
             );
 
-            CREATE TABLE IF NOT EXISTS "Bookmark" (
-              id SERIAL PRIMARY KEY,
-              uid INT NOT NULL REFERENCES "User"(id), 
-              cid INT NOT NULL REFERENCES "Cafe"(id), 
-              UNIQUE(uid, cid)
+            CREATE TABLE IF NOT EXISTS "Reaction" (
+                id SERIAL PRIMARY KEY,
+                uID INT NOT NULL REFERENCES "User"(id) ON DELETE CASCADE, 
+                rID INT NOT NULL REFERENCES "Reviews"(id) ON DELETE CASCADE,
+                reaction VARCHAR(8) NOT NULL,
+                UNIQUE(uID, rID)
             );
         `);
-
-        await client.query('TRUNCATE "User", "Cafe" RESTART IDENTITY CASCADE');
 
         // warning the firebase uids as part of this data are all FAKE!!
         const { getUserData } = require('./getUserData');
@@ -75,8 +90,8 @@ async function seedDatabase() {
         const friends = require('../mock_data/friends.json');
         for (const friend of friends) {
             await client.query(
-                'INSERT INTO "Friend" ("user_id", "friend_id") VALUES ($1, $2)',
-                [friend.user_id, friend.friend_id]
+                'INSERT INTO "Friend" ("user_id", "following_id") VALUES ($1, $2)',
+                [friend.user_id, friend.following_id]
             );
         }
 
@@ -97,6 +112,14 @@ async function seedDatabase() {
             );
         }
 
+        const reactions = require('../mock_data/reactions.json');
+
+        for (const reaction of reactions) {
+            await client.query(
+                'INSERT INTO "Reaction" (uID, rID, reaction) VALUES ($1, $2, $3)',
+                [reaction.uID, reaction.rID, reaction.reaction]
+            );
+        }
         const bookmarks = require('../mock_data/bookmarks.json');
         for (const bookmark of bookmarks) {
             await client.query(
@@ -104,6 +127,7 @@ async function seedDatabase() {
                 [bookmark.uid, bookmark.cid]
             );
         }
+
 
         console.log('Database seeded successfully with User and Cafe tables!');
     } catch (err) {
