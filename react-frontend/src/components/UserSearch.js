@@ -9,7 +9,7 @@ import {
 import SearchIcon from '@mui/icons-material/Search';
 import UserList from './UserList';
 
-const UserSearch = ({ userId, onFriendAdded }) => {
+const UserSearch = ({ userId, onFriendAdded, friends = []}) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [addingIds, setAddingIds] = useState([]);
@@ -41,6 +41,15 @@ const UserSearch = ({ userId, onFriendAdded }) => {
 
     return () => clearTimeout(delayDebounce);
   }, [searchTerm, userId]);
+
+  useEffect(() => {
+    setSearchResults((prev) =>
+      prev.map((user) => ({
+        ...user,
+        isFriend: friends.some((f) => f.id === user.id),
+      }))
+    );
+  }, [friends]);
 
   const handleAddFriend = async (friendId) => {
     setAddingIds((prev) => [...prev, friendId]);
