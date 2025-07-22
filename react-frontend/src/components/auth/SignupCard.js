@@ -1,6 +1,7 @@
 import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
+import { Link as RouterLink } from 'react-router-dom';
 
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
@@ -10,6 +11,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
+import Link from '@mui/material/Link'
 
 import authAPI from '../../api/auth';
 import theme from '../theme';
@@ -150,7 +152,8 @@ function SignupCard() {
                             Sign Up
                         </Button>
                     </Box>
-                    
+                <Typography sx={{paddingTop:'1em'}} variant="body1">Have an account already? <Link component={RouterLink} to='/login'>Log in here!</Link></Typography>
+
                 </Card>
             </Stack>
             

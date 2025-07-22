@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 
@@ -8,7 +10,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-
+import Link from '@mui/material/Link'
 import authAPI from '../../api/auth';
 import theme from '../theme';
 
@@ -75,6 +77,7 @@ function LoginCard() {
                     >
                         Enter your e-mail and we'll send you a passwordless sign-in link.
                     </Typography>
+
                     <Box
                         component="form"
                         onSubmit={handleSubmit}
@@ -112,8 +115,9 @@ function LoginCard() {
                             >
                             Send me a link!
                         </Button>
+
                     </Box>
-                    
+                    <Typography sx={{paddingTop:'1em'}} variant="body1">Don't have an account? <Link component={RouterLink} to='/signup'>Sign up here!</Link></Typography>
                 </Card>
             </Stack>
             
