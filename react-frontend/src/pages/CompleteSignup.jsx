@@ -36,8 +36,8 @@ function CompleteSignupPage() {
                     console.error(e);
                     setMessage("Something went wrong finishing signup.");
                 }
-            } else { // otherwise we need to log in
-                setMessage("Could not process your sign up. Try again later.");
+            } else {
+                setMessage("Signing you up...");
             }
         });
         return () => cleanupFunc();

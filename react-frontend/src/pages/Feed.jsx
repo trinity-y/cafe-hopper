@@ -23,12 +23,12 @@ function FeedPage() {
         }
         console.log(reviews);
         fetchData();
-    }, [userId]);
+    }, [userId, reviews]);
     
     return (
     <>
     <ThemeProvider theme={theme}>
-        {/* <CssBaseline /> */}
+        <CssBaseline />
         <Box
             sx={{ display:'flex', flexDirection:'column', alignItems:'center'}}
             width={'100%'}

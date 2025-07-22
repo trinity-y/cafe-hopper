@@ -9,7 +9,7 @@ const theme = createTheme({
       main: '#426A5A', // idk darker green
     },
     background: {
-      default: '#3A2618 ', // Default background for the whole app
+      default: '#F4F4F4', // Default background for the whole app
       box: '#CDD9C7', // pale green
     },
   },
