@@ -1,21 +1,17 @@
 import  { useEffect, useState } from 'react';
-import { Box, Typography, Divider } from '@mui/material';
+import { Box, Typography, Divider, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import { Grid, Card, CardContent } from '@mui/material';
 import UserSearch from './UserSearch';
 import axios from 'axios';
 import { useUser } from '../context/userContext';
+import getEmojiForUser from './UserEmoji';
 
 const FriendTab = () => {
   const { userId } = useUser();
   const [friends, setFriends] = useState([]);
   const [mutuals, setMutuals] = useState([]);
   const [unfollowingId, setUnfollowingId] = useState(null);
-  const userEmojis = ['🐸', '☕', '🥐', '🧋', '🍵', '🍪', '🥗', '🥯', '🍰', '🍧'];
-
-  const getEmojiForUser = (userId) => {
-  	const index = userId % userEmojis.length; // hashing userId -> emoji
-  	return userEmojis[index];
-	};
 
   const fetchFriends = async () => {
     try {
@@ -84,12 +80,15 @@ const FriendTab = () => {
 					<Grid container spacing={2}  justifyContent="center">
 						{friends.map((friend) => (
 							<Grid key={friend.id}>
-								<Card variant="outlined" sx={{ borderRadius: 10, height: 55, cursor: 'pointer' }} onClick={() => handleUnfollow(friend.id)}>
-									<CardContent>
-										<Typography variant="body1">
-											{`${getEmojiForUser(friend.id)} ${friend.username}`}
-										</Typography>
-									</CardContent>
+								<Card variant="outlined" sx={{ borderRadius: 10, height: 55 }}>
+                <CardContent sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                  <Typography variant="body1">
+                    {`${getEmojiForUser(friend.id)} ${friend.username}`}
+                  </Typography>
+                  <IconButton disableRipple sx={{p:0}} onClick={() => handleUnfollow(friend.id)}>
+                    <CloseIcon sx={{px:1}} fontSize="small" />
+                  </IconButton>
+                </CardContent>
 								</Card>
 							</Grid>
 						))}
