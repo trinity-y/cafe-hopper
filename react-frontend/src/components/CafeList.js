@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
+const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+
 const CafeList = () => {
   const [cafes, setCafes] = useState([]);
 
   useEffect(() => {
     const fetchCafes = async () => {
       try {
-        const response = await fetch('http://localhost:3001/cafes'); 
+        const response = await fetch(`${baseUrl}/cafes`);
         const data = await response.json();
         setCafes(data);
       } catch (error) {

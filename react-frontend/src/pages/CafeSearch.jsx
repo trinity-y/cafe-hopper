@@ -8,6 +8,8 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import BookmarkButton from '../components/BookmarkButton';
 import { useUser } from '../context/userContext';
 
+const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+
 function CafeSearchPage() {
     const [cafes, setCafes] = useState([]);
     const [inputValue, setInputValue] = useState('');
@@ -22,7 +24,7 @@ function CafeSearchPage() {
             return;
         }
         try {
-            const res = await fetch(`http://localhost:3001/bookmarks/${userId}`);
+            const res = await fetch(`${baseUrl}/bookmarks/${userId}`);
             if (!res.ok) {
                 throw new Error('Failed to fetch bookmarks');
             }
@@ -37,7 +39,7 @@ function CafeSearchPage() {
     // Add bookmark
     const addBookmark = async (cid) => {
         try {
-            const res = await fetch(`http://localhost:3001/bookmarks`, {
+            const res = await fetch(`${baseUrl}/bookmarks`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ uid: userId, cid }),
@@ -60,7 +62,7 @@ function CafeSearchPage() {
             return false;
         }
         try {
-            const res = await fetch(`http://localhost:3001/bookmarks/${bookmark.id}`, {
+            const res = await fetch(`${baseUrl}/bookmarks/${bookmark.id}`, {
                 method: 'DELETE',
             });
             if (!res.ok) {
@@ -99,7 +101,7 @@ function CafeSearchPage() {
 
     const fetchCafes = async (term = '') => {
         try {
-            const url = new URL('http://localhost:3001/cafes/search');
+            const url = new URL(`${baseUrl}/cafes/search`);
             if (term) url.searchParams.set('search', term);
             const res = await fetch(url.toString());
             const data = await res.json();
@@ -115,7 +117,7 @@ function CafeSearchPage() {
     }, []);
 
     useEffect(() => {
-      if (userId !== null) fetchBookmarks();
+        if (userId !== null) fetchBookmarks();
     }, [userId]);
 
     return (
@@ -200,22 +202,22 @@ function CafeSearchPage() {
                                             Rate
                                         </Button>
                                         <BookmarkButton
-                                          isBookmarked={isBookmarked}
-                                          disabled={loading}
-                                          onToggle={async (newState) => {
-                                            if (!userId) {
-                                              return false;
-                                            }
-                                            setLoading(true);
-                                            let success;
-                                            if (newState) {
-                                              success = await addBookmark(cafe.id);
-                                            } else {
-                                              success = await deleteBookmark(cafe.id);
-                                            }
-                                            setLoading(false);
-                                            return success;
-                                          }}
+                                            isBookmarked={isBookmarked}
+                                            disabled={loading}
+                                            onToggle={async (newState) => {
+                                                if (!userId) {
+                                                    return false;
+                                                }
+                                                setLoading(true);
+                                                let success;
+                                                if (newState) {
+                                                    success = await addBookmark(cafe.id);
+                                                } else {
+                                                    success = await deleteBookmark(cafe.id);
+                                                }
+                                                setLoading(false);
+                                                return success;
+                                            }}
                                         />
                                     </Box>
                                 </Box>
