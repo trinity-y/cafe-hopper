@@ -2,12 +2,16 @@ import { useState, useEffect } from 'react';
 import { Box, TextField, Typography, Button } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../components/theme';
-import Navbar from './components/Navbar';
+import Navbar from '../components/Navbar';
 import StarIcon from '@mui/icons-material/Star';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import BookmarkButton from '../components/BookmarkButton';
 import { useUser } from '../context/userContext';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Profile from './Profile';
+import FeedPage from './Feed';
 
 function CafeSearchPage() {
     const [cafes, setCafes] = useState([]);
@@ -121,7 +125,12 @@ function CafeSearchPage() {
 
     return (
         <ThemeProvider theme={theme}>
-
+            <Navbar />
+            <Routes>
+                <Route path='/cafesearch' element={<CafeSearchPage />} />
+                <Route path='/feed' element={<FeedPage />} />
+                <Route path='/profile' element={<Profile />} />
+            </Routes>
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -187,11 +196,11 @@ function CafeSearchPage() {
                                         <Typography variant="h6">
                                             ☕️ {cafe.name}
                                         </Typography>
-                                        <h5></h5>
+                                        <h5> </h5>
                                         <Typography variant="h">
                                             {formatAddress(cafe.address)}
                                         </Typography>
-                                        <h5 ></h5>
+                                        <h5 > </h5>
                                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                                             <Typography variant="body2">
                                                 {Number(cafe.googleRating).toFixed(1)}

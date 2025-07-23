@@ -7,6 +7,8 @@ import Box from '@mui/material/Box';
 import theme from '../components/theme';
 import BookmarkTab from '../components/BookmarkTab';
 
+import Navbar from '../components/Navbar';
+
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -47,6 +49,7 @@ export default function BasicTabs() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Navbar />
       <Box sx={{ width: '100%', maxWidth: '900px', mx: 'auto', mt: 4, px: 2 }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} aria-label="profile tabs">
