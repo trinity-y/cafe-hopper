@@ -4,6 +4,8 @@ export interface ICafe {
   address: string;
   openingDays: string;
   googleRating: number;
+  startPrice: number;
+  endPrice: number;
 }
 
 export interface ICafeWithDistance extends ICafe {

@@ -262,7 +262,7 @@ async function writeCafeData() {
                     headers: {
                         'Content-Type': 'application/json',
                         'X-Goog-Api-Key': process.env.GOOGLE_MAPS_API_KEY,
-                        'X-Goog-FieldMask': 'places.displayName,places.formattedAddress,places.regularOpeningHours,places.rating,places.location',
+                        'X-Goog-FieldMask': 'places.displayName,places.formattedAddress,places.regularOpeningHours,places.rating,places.location,places.priceRange',
                     }
                 }
             );
@@ -284,7 +284,7 @@ async function writeCafeData() {
                 continue;
             }
             for (let j = 0; j < places.length; j++) {
-                const { displayName, formattedAddress, regularOpeningHours, rating, location } = places[j]
+                const { displayName, formattedAddress, regularOpeningHours, rating, location, priceRange } = places[j]
                 if (displayName?.text !== "Tim Hortons" && displayName?.text !== "McDonald's") { // FAKE CAFES!!
                     const place = {
                         name: displayName.text,
@@ -293,6 +293,8 @@ async function writeCafeData() {
                         googleRating: rating,
                         latitude: location.latitude,
                         longitude: location.longitude,
+                        startPrice: priceRange?.startPrice?.units,
+                        endPrice: priceRange?.endPrice?.units,
                     };
                     cafeData.push(place);
                 }

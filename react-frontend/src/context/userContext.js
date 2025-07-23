@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 
+const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+
 const UserContext = createContext();
 export const useUser = () => useContext(UserContext);
 
@@ -26,12 +28,12 @@ export const UserProvider = ({ children }) => {
       }
 
       try {
-        const res = await fetch(`http://localhost:3001/users/firebase/${firebaseUser.uid}`);
+        const res = await fetch(`${baseUrl}/users/firebase/${firebaseUser.uid}`);
         if (!res.ok) throw new Error('Failed to fetch user');
         const matched = await res.json();
         if (matched) {
-           setUser(matched);
-           console.log('user: ', matched);
+          setUser(matched);
+          console.log('user: ', matched);
         }
       } catch (err) {
         console.error('Error fetching backend user:', err);
@@ -46,10 +48,10 @@ export const UserProvider = ({ children }) => {
 
   // added for testing purposes; can use firebaseSignOut() in the console to test with new users
   useEffect(() => {
-      window.firebaseSignOut = () => signOut(getAuth());
-      window.getCurrentUser = () => { // can use getCurrentUser() to see current user.id value
-        console.log('Current user:', user);
-        return user;
+    window.firebaseSignOut = () => signOut(getAuth());
+    window.getCurrentUser = () => { // can use getCurrentUser() to see current user.id value
+      console.log('Current user:', user);
+      return user;
     };
   }, [user]);
 

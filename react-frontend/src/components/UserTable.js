@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
+const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+
 const UserTable = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:3001/users'); 
+        const response = await fetch(`${baseUrl}/users`);
         const data = await response.json();
         setUsers(data);
       } catch (error) {
