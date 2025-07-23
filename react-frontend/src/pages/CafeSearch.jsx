@@ -5,6 +5,7 @@ import theme from '../components/theme';
 import StarIcon from '@mui/icons-material/Star';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
+import { FormControlLabel, Switch, Slider } from '@mui/material';
 import BookmarkButton from '../components/BookmarkButton';
 import { useUser } from '../context/userContext';
 
@@ -147,6 +148,39 @@ function CafeSearchPage() {
                         }
                     }}
                 />
+                <Box sx={{ mt: 2, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+                    {/* Open Now toggle */}
+                    <FormControlLabel
+                        control={
+                            <Switch
+
+                                color="primary"
+                            />
+                        }
+                        label="Open Now"
+                    />
+                    {/* Your Location toggle */}
+                    <FormControlLabel
+                        control={
+                            <Switch
+                                color="primary"
+                            />
+                        }
+                        label="Your Location 📍"
+                    />
+
+                    {/* Minimum Rating */}
+                    <Box sx={{ width: 200 }}>
+                        <Typography gutterBottom>Min. Rating</Typography>
+                        <Slider
+                            step={0.5}
+                            min={0}
+                            max={5}
+                            valueLabelDisplay="auto"
+                        />
+                    </Box>
+
+                </Box>
 
                 {!selectedCafe && inputValue && cafes.length === 0 && (
                     <Box
