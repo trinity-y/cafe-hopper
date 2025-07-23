@@ -2,7 +2,7 @@ import { sendSignInLinkToEmail, signInWithEmailLink } from 'firebase/auth';
 import auth from '../firebase/firebase';
 import { client } from './base';
 
-const frontendUrl = process.env.REACT_APP_ISLOCAL ? process.env.REACT_APP_LOCAL_FRONTEND_URL : process.env.REACT_APP_PROD_FRONTEND_URL;
+const frontendUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_FRONTEND_URL : process.env.REACT_APP_PROD_FRONTEND_URL;
 // const apiUrl = process.env.REACT_APP_ISLOCAL ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
 
 const loginFromLink = async (email, url) => {
