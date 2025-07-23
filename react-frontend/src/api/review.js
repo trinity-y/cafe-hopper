@@ -11,8 +11,20 @@ const getReviewsForFeed = async (uid) => {
         console.error(e);
     }
 }
+const getReviewsForUser = async (uid) => {
+    try {
+        const response = await client.get('/reviews/user', {
+            params: {uid}
+        })
+        console.log(response.data);
+        return response.data;
+    } catch (e) {
+        console.error(e);
+    }
+}
 
 const reviewAPI = {
-    getReviewsForFeed
+    getReviewsForFeed,
+    getReviewsForUser
 }
 export default reviewAPI;
