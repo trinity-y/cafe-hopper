@@ -8,10 +8,11 @@ import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import BookmarkButton from '../components/BookmarkButton';
 import { useUser } from '../context/userContext';
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profile from './Profile';
 import FeedPage from './Feed';
+
+const baseUrl = process.env.REACT_APP_ISLOCAL ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
 
 function CafeSearchPage() {
     const [cafes, setCafes] = useState([]);
@@ -27,7 +28,7 @@ function CafeSearchPage() {
             return;
         }
         try {
-            const res = await fetch(`http://localhost:3001/bookmarks/${userId}`);
+            const res = await fetch(`${baseUrl}/bookmarks/${userId}`);
             if (!res.ok) {
                 throw new Error('Failed to fetch bookmarks');
             }
@@ -42,7 +43,7 @@ function CafeSearchPage() {
     // Add bookmark
     const addBookmark = async (cid) => {
         try {
-            const res = await fetch(`http://localhost:3001/bookmarks`, {
+            const res = await fetch(`${baseUrl}/bookmarks`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ uid: userId, cid }),
@@ -65,7 +66,7 @@ function CafeSearchPage() {
             return false;
         }
         try {
-            const res = await fetch(`http://localhost:3001/bookmarks/${bookmark.id}`, {
+            const res = await fetch(`${baseUrl}/bookmarks/${bookmark.id}`, {
                 method: 'DELETE',
             });
             if (!res.ok) {
@@ -104,7 +105,7 @@ function CafeSearchPage() {
 
     const fetchCafes = async (term = '') => {
         try {
-            const url = new URL('http://localhost:3001/cafes/search');
+            const url = new URL(`${baseUrl}/cafes/search`);
             if (term) url.searchParams.set('search', term);
             const res = await fetch(url.toString());
             const data = await res.json();

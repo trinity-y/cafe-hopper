@@ -1,6 +1,6 @@
 import { sendSignInLinkToEmail, signInWithEmailLink } from 'firebase/auth';
 import auth from '../firebase/firebase';
-import client from './base';
+import { client } from './base';
 
 const frontendUrl = process.env.REACT_APP_ISLOCAL ? process.env.REACT_APP_LOCAL_FRONTEND_URL : process.env.REACT_APP_PROD_FRONTEND_URL;
 // const apiUrl = process.env.REACT_APP_ISLOCAL ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
@@ -21,11 +21,11 @@ const completeSignup = async (username, firebase_uid) => {
 }
 
 const handleLogin = async (email) => {
-    try{
+    try {
         window.localStorage.setItem('emailForSignIn', email);
         await sendSignInLinkToEmail(auth, email, {
-                url: `${frontendUrl}/login`, // fill in later
-                handleCodeInApp: true,
+            url: `${frontendUrl}/login`, // fill in later
+            handleCodeInApp: true,
         });
         return true;
     } catch {
@@ -38,7 +38,7 @@ const handleSignup = async (email, username) => {
         window.localStorage.setItem('emailForSignIn', email);
         await sendSignInLinkToEmail(auth, email, {
             url: `${frontendUrl}/complete-signup?username=${encodeURIComponent(username)}`,
-                handleCodeInApp: true
+            handleCodeInApp: true
         });
         return true;
     } catch (e) {

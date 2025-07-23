@@ -3,13 +3,15 @@ import { Box } from '@mui/material';
 import BookmarkTable from './BookmarkTable';
 import { useUser } from '../context/userContext';
 
+const baseUrl = process.env.REACT_APP_ISLOCAL ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+
 export default function BookmarkTab() {
   const { userId } = useUser();
   const [bookmarkedCafes, setBookmarkedCafes] = useState([]);
 
   const fetchBookmarkedCafes = async () => {
     try {
-      const res = await fetch(`http://localhost:3001/bookmarks/bookmarked-cafes/${userId}`);
+      const res = await fetch(`${baseUrl}/bookmarks/bookmarked-cafes/${userId}`);
       if (!res.ok) throw new Error('Failed to fetch bookmarked cafes');
       const data = await res.json(); // [{ cid, name, rating, bookmarkId }]
       setBookmarkedCafes(data);
