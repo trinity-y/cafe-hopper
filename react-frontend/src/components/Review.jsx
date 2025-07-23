@@ -3,7 +3,7 @@ import StarRating from './StarRating';
 import { Typography } from '@mui/material';
 import Reaction from './Reaction';
 
-function Review({review, key}) {
+function Review({review, key, disableLikes = false}) {
     // Expecting review object with the following structure:
     // 1. Username (username)
     // 2. Cafe name (name)
@@ -32,26 +32,26 @@ function Review({review, key}) {
             <Box display="flex" flexDirection="column" sx={{ height: '100%', marginTop:'1em' }} gap={1}>
                 <Typography variant='h4'>{review.name}</Typography>
                 <StarRating rating={review.overallRating} interactive={false}></StarRating>
-                <Typography variant='p' style={{ fontStyle: 'italic', margin: 0, marginTop: '4px' }}>
+                {review.username && <Typography variant='p' style={{ fontStyle: 'italic', margin: 0, marginTop: '4px' }}>
                     {`written by ${review.username} 🐸 on ${review.timestamp}`}
-                </Typography>
+                </Typography>}
                 <br/>
                 <Typography variant='p' style={{ margin: '0' }}>{review.notes}</Typography>
-                <Reaction reviewId={review.rid} />
+                {!disableLikes && <Reaction reviewId={review.rid}/>}
             </Box>
             {/* detailed ratings */}
             <Box display="flex" flexDirection="column"sx={{textAlign: 'center', justifyContent:'center'}} gap={1}>
                 <Box display="flex" alignItems="center" gap={1.5} >
                     <Typography variant='p'>Food 🥪</Typography>
-                    <StarRating rating={review.foodRating} interactive={false}></StarRating>
+                    <StarRating rating={review.foodRating || review.foodrating} interactive={false}></StarRating>
                 </Box>
                 <Box display="flex" alignItems="center" gap={1.5}>
                     <Typography variant='p'>Drink ☕</Typography>
-                    <StarRating rating={review.drinkRating} interactive={false}></StarRating>
+                    <StarRating rating={review.drinkRating || review.drinkrating} interactive={false}></StarRating>
                 </Box>  
                 <Box display="flex" alignItems="center" gap={1.5}>
                     <Typography variant='p'>Atmosphere 🏠</Typography>
-                    <StarRating rating={review.atmosphereRating} interactive={false}></StarRating>
+                    <StarRating rating={review.atmosphereRating || review.atmosphererating} interactive={false}></StarRating>
                 </Box>              
             </Box>
         </Box>
