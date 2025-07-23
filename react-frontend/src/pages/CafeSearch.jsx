@@ -8,7 +8,7 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import BookmarkButton from '../components/BookmarkButton';
 import { useUser } from '../context/userContext';
 
-const baseUrl = process.env.REACT_APP_ISLOCAL ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
 
 function CafeSearchPage() {
     const [cafes, setCafes] = useState([]);
