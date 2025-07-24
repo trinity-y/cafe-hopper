@@ -192,10 +192,14 @@ function CafeSearchPage() {
                                 onChange={() => setOpenNow(o => !o)}
                             />
                         }
-                        label="Open Now"
+                        label={
+                            <Typography variant="body1">
+                                Open Now
+                            </Typography>
+                        }
                     />
                     <Box sx={{ width: 150 }}>
-                        <Typography variant="body2" textAlign="center">Min. Rating</Typography>
+                        <Typography variant="body1" textAlign="center">Min. Rating</Typography>
                         <Slider
                             value={minRating}
                             onChange={(_, v) => setMinRating(Number(v))}
