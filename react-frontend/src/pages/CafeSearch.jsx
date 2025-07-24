@@ -8,6 +8,10 @@ import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import BookmarkButton from '../components/BookmarkButton';
 import { useUser } from '../context/userContext';
+
+import CloseIcon from '@mui/icons-material/Close';
+import Modal from '@mui/material/Modal';
+import CreateReview from '../components/CreateReview'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profile from './Profile';
 import FeedPage from './Feed';
@@ -22,7 +26,16 @@ function CafeSearchPage() {
     const [bookmarks, setBookmarks] = useState([]); // holds { cid, id } for each bookmarked cafe
     const [loading, setLoading] = useState(false);
     const { userId } = useUser();
-
+    const [openCreateReview, setOpenCreateReview] = useState(false);
+    const [reviewData, setReviewData] = useState([]); // holds {cafeName, cid} when rate button is pressed
+    const handleReviewModalOpen = (cafeName, cid) => {
+        setOpenCreateReview(true);
+        setReviewData([cafeName, cid]);
+    };
+    const handleReviewModalClose = () => {
+        setOpenCreateReview(false);
+        setReviewData([]);
+    }
     // Fetch user bookmarks
     const fetchBookmarks = async () => {
         if (!userId) {
@@ -219,8 +232,12 @@ function CafeSearchPage() {
                                         ))}
                                     </Box>
 
-                                    <Box sx={{ flex: 0, display: 'flex', flexDirection: 'column', gap: 2 }}>
+
+                                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                                         <Button variant="contained" disabled>
+                                            More info
+                                        </Button>
+                                        <Button variant="contained" onClick={() => handleReviewModalOpen(cafe.name, cafe.id)}>
                                             Rate
                                         </Button>
                                         <BookmarkButton
@@ -268,11 +285,36 @@ function CafeSearchPage() {
 
                         </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                            <Button variant="contained" disabled>Rate</Button>
+
+                            <Button variant="contained" disabled>More info</Button>
+                            <Button variant="contained" onClick={() => handleReviewModalOpen(selectedCafe.name, selectedCafe.id)}>Rate</Button>
+
                         </Box>
                     </Box>
                 )}
             </Box>
+            <Modal
+                open={openCreateReview}
+                onClose={handleReviewModalClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        bgcolor: 'background.paper',
+                        border: '2px solid #000',
+                        boxShadow: 24,
+                        p: 4,
+                }}>
+                    <Button onClick={handleReviewModalClose} sx={{ marginLeft: 'auto', display: 'block' }}> 
+                        <CloseIcon/> 
+                    </Button>
+                    <CreateReview cafeName={reviewData[0]} cid={reviewData[1]}/>
+                </Box>
+            </Modal>
         </ThemeProvider>
     );
 }

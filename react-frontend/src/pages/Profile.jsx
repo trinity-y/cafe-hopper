@@ -6,6 +6,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import theme from '../components/theme';
 import BookmarkTab from '../components/BookmarkTab';
+import ReviewTab from '../components/ReviewTab';
 import FriendTab from '../components/FriendsTab';
 import UserOverview from '../components/UserOverview';
 
@@ -63,7 +64,7 @@ export default function BasicTabs() {
             </Tabs>
           </Box>
           <CustomTabPanel value={value} index={0}>
-            Add reviews here
+          <ReviewTab/>
           </CustomTabPanel>
           <CustomTabPanel value={value} index={1}>
             <BookmarkTab />
@@ -73,7 +74,6 @@ export default function BasicTabs() {
           </CustomTabPanel>
         </Box>
       </Box>
-
     </ThemeProvider>
   );
 }
