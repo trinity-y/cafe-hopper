@@ -5,7 +5,6 @@ const getReviewsForFeed = async (uid) => {
         const response = await client.get('/reviews/feed', {
             params: { uid }
         })
-        console.log(response.data);
         return response.data;
     } catch (e) {
         console.error(e);
