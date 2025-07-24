@@ -1,5 +1,13 @@
 import axios from "axios";
-const apiUrl = process.env.REACT_APP_ISLOCAL ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
-const client = axios.create({ baseURL: apiUrl });
 
-export default client;
+const isLocal = process.env.REACT_APP_ISLOCAL === 'true';
+
+const client = axios.create({
+    baseURL: isLocal ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL
+});
+
+const backendClient = axios.create({
+    baseURL: isLocal ? process.env.REACT_APP_LOCAL_BACKEND_URL : process.env.REACT_APP_PROD_BACKEND_URL
+});
+
+export { client, backendClient };

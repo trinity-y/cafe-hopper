@@ -9,6 +9,8 @@ import Paper from '@mui/material/Paper';
 
 import BookmarkButton from './BookmarkButton';
 
+const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+
 export default function BookmarkTable({ bookmarkedCafes, onRemoveBookmark }) {
   const [loadingIds, setLoadingIds] = useState([]);
 
@@ -18,7 +20,7 @@ export default function BookmarkTable({ bookmarkedCafes, onRemoveBookmark }) {
 
     try {
       if (!newState) {
-        const res = await fetch(`http://localhost:3001/bookmarks/${bookmarkId}`, {
+        const res = await fetch(`${baseUrl}/bookmarks/${bookmarkId}`, {
           method: 'DELETE',
         });
         if (!res.ok) throw new Error('Failed to delete bookmark');
