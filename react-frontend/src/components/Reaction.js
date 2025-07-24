@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ThumbUp, ThumbUpOutlined } from '@mui/icons-material';
 import { Box, IconButton, Typography } from '@mui/material';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { backendClient } from '../api/base';
+import { client } from '../api/base';
 import './Reaction.css';
 
 const Reaction = ({ reviewId, onReactionChange }) => {
@@ -29,7 +29,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
 
   const fetchUserIdFromFirebaseUid = async (firebaseUid) => {
     try {
-      const response = await backendClient.get(`users/firebase/${firebaseUid}`);
+      const response = await client.get(`users/firebase/${firebaseUid}`);
       setUserId(response.data.id);
     } catch (error) {
       console.error('Error fetching user ID:', error);
@@ -38,7 +38,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
 
   const fetchLikeCount = async () => {
     try {
-      const response = await backendClient.get(`reactions?reviewId=${reviewId}`);
+      const response = await client.get(`reactions?reviewId=${reviewId}`);
       setLikeCount(response.data.like_count ?? 0);
     } catch (error) {
       setLikeCount(0);
@@ -50,7 +50,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
 
     try {
       setIsLoading(true);
-      const response = await backendClient.get(`reactions?reviewId=${reviewId}&userId=${userId}`);
+      const response = await client.get(`reactions?reviewId=${reviewId}&userId=${userId}`);
       const userReaction = response.data.find(reaction =>
         reaction.uid === userId && reaction.reaction === 'like'
       );
@@ -85,11 +85,11 @@ const Reaction = ({ reviewId, onReactionChange }) => {
     setIsLoading(true);
     try {
       if (hasLiked) {
-        await backendClient.delete(`reactions/${userId}/${reviewId}`);
+        await client.delete(`reactions/${userId}/${reviewId}`);
         setHasLiked(false);
         if (onReactionChange) onReactionChange('remove');
       } else {
-        await backendClient.post('reactions', {
+        await client.post('reactions', {
           uID: userId,
           rID: reviewId,
           reaction: 'like'
