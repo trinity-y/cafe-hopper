@@ -21,8 +21,7 @@ async function seedDatabase() {
             DROP TABLE IF EXISTS "Friend" CASCADE;
             DROP TABLE IF EXISTS "Bookmark" CASCADE;
 
-
-            CREATE TABLE "User" (
+            CREATE TABLE IF NOT EXISTS "User" (
               id SERIAL PRIMARY KEY,
               "username" VARCHAR(100) NOT NULL UNIQUE,
               "firebase_uid" VARCHAR(100) NOT NULL UNIQUE
@@ -138,7 +137,6 @@ async function seedDatabase() {
                 [bookmark.uid, bookmark.cid]
             );
         }
-
 
         console.log('Database seeded successfully with User and Cafe tables!');
     } catch (err) {
