@@ -158,20 +158,22 @@ function CafeSearchPage() {
 
 
     // Helper: given a café’s openingDays JSON string, is it open right now?
-    function isOpenNow(openingDaysRaw) {
+    function isOpenNow(cafe) {
         try {
-            const obj = JSON.parse(openingDaysRaw);
+            // console.log(openingDaysRaw)
+            const obj = JSON.parse(cafe.openingDays);
+
             const now = new Date();
             const day = now.getDay(); // 0=Sunday … 6=Saturday
             const minutesNow = now.getHours() * 60 + now.getMinutes();
-
             const period = obj.periods.find(p => p.open.day === day);
             if (!period) return false;
 
             const openMin = period.open.hour * 60 + period.open.minute;
             const closeMin = period.close.hour * 60 + period.close.minute;
             return minutesNow >= openMin && minutesNow <= closeMin;
-        } catch {
+        } catch (e){
+            console.error(e)
             return false;
         }
     }
@@ -195,7 +197,7 @@ function CafeSearchPage() {
     const visibleCafes = cafes
         .filter(c => c.name.toLowerCase().includes(inputValue.toLowerCase()))
         .filter(c => Number(c.googleRating) >= minRating)
-        .filter(c => (openNow ? JSON.parse(c.openingDays)?.openNow === true : true))
+        .filter(c => openNow ? isOpenNow(c) : true)
         .filter(c => {
             if (!useMyLoc || !myLoc) return true;
             const dist = getDistanceKm(
