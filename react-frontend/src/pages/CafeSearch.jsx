@@ -11,6 +11,7 @@ import { useUser } from '../context/userContext';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profile from './Profile';
 import FeedPage from './Feed';
+import { formatOpeningDays } from '../utils/formatOpeningDays';
 
 const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
 
@@ -181,6 +182,7 @@ function CafeSearchPage() {
 
                         {cafes.map(cafe => {
                             const isBookmarked = bookmarks.some((b) => b.cid === cafe.id);
+                            const hours = formatOpeningDays(cafe.openingDays);
 
                             return (
                                 <Box
@@ -193,13 +195,13 @@ function CafeSearchPage() {
                                         justifyContent: 'space-between',
                                     }}
                                 >
-                                    <Box>
+                                    <Box sx={{ flex: 2 }}>
                                         <Typography variant="h6">
                                             ☕️ {cafe.name}
                                         </Typography>
                                         <h5> </h5>
                                         <Typography variant="h">
-                                            {formatAddress(cafe.address)}
+                                            📍 {formatAddress(cafe.address)}
                                         </Typography>
                                         <h5 > </h5>
                                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
@@ -209,11 +211,16 @@ function CafeSearchPage() {
                                             <StarRating rating={cafe.googleRating} />
                                         </Box>
                                     </Box>
+                                    <Box sx={{ flex: 1 }}>
+                                        <Typography variant="subtitle2">Hours</Typography>
+                                        {formatOpeningDays(cafe.openingDays).map((line, i) => (
+                                            <Typography key={i} variant="body2" noWrap>
+                                                {line}
+                                            </Typography>
+                                        ))}
+                                    </Box>
 
-                                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                                        <Button variant="contained" disabled>
-                                            More info
-                                        </Button>
+                                    <Box sx={{ flex: 0, display: 'flex', flexDirection: 'column', gap: 2 }}>
                                         <Button variant="contained" disabled>
                                             Rate
                                         </Button>
@@ -262,7 +269,6 @@ function CafeSearchPage() {
 
                         </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                            <Button variant="contained" disabled>More info</Button>
                             <Button variant="contained" disabled>Rate</Button>
                         </Box>
                     </Box>

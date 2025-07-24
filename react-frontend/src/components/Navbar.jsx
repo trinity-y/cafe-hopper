@@ -7,6 +7,7 @@ import navLogo from './navLogo.PNG';
 const navItems = [
     { label: 'Search', path: '/cafesearch' },
     { label: 'Feed', path: '/feed' },
+    { label: 'Blend', path: '/blend' },
     { label: 'Profile', path: '/profile' },
 ];
 
