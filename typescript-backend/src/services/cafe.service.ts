@@ -9,6 +9,25 @@ const cafeService: ICafeServiceAPI = {
     return cafeModel.findMany();
   },
 
+  async getTopCafes(): Promise<ICafe[]> {
+    const viewTopCafes = `
+      DROP VIEW IF EXISTS "TopCafes";
+
+      CREATE VIEW "TopCafes" AS
+      SELECT * FROM "Cafe"
+      WHERE "googleRating" IS NOT NULL
+      ORDER BY "googleRating" DESC;
+    `;
+
+    await pool.query(viewTopCafes);
+
+    const q = `
+      SELECT * FROM "TopCafes"
+    `;
+    const { rows } = await pool.query(q);
+    return rows;
+  },
+
   async getCafeById(id: number): Promise<ICafe | null> {
     return cafeModel.findUnique(id);
   },
