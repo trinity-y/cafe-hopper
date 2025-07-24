@@ -17,7 +17,7 @@ export const UserProvider = ({ children }) => {
 
   // dont redirect on login or signup
   const shouldRedirect = () => {
-    const publicRoutes = ['/login', '/signup'];
+    const publicRoutes = ['/login', '/signup', '/complete-signup'];
     return !publicRoutes.includes(location.pathname);
   };
 
