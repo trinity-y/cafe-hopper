@@ -1,4 +1,4 @@
-import client from './base';
+import { client } from './base';
 
 const getCafe = async (id) => {
     try {

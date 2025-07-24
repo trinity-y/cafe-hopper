@@ -56,7 +56,7 @@ export default function ReviewTab() {
                     sx={{ alignItems:'left'}}
                     width='100%'
                 >
-                    <Typography variant="h5">Loading...</Typography>
+                    <Typography variant="h5">You have no reviews yet.</Typography>
                 </Box>
             } 
         </Box>
