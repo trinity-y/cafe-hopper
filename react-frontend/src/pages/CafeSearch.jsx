@@ -279,36 +279,37 @@ function CafeSearchPage() {
                         }
                     }}
                 />
-                <Typography gutterBottom sx={{mt:2}}>Filter by price range</Typography>
-                <Box
-                    sx={{
-                            justifyContent: 'left',
-                            width:'30%',
-                            ml: 2,
-                            display: 'flex', 
-                            flexDirection: 'row', 
-                            gap: 5
-                        }}
-                >
-                    
-                    <Slider
-                        value={sliderPriceFilter}
-                        onChange={handleChange}
-                        min={0}
-                        max={50}
-                        marks = {[
-                                {
-                                    value: 0,
-                                    label: '$0 CAD',
-                                },
-                                {
-                                    value: 50,
-                                    label: '$50+ CAD',
-                                }
-                        ]}
-                         valueLabelDisplay="auto"
-                    />
-                    <Button variant="outlined" onClick={resetPriceFilter} sx={{height:'100%'}}>Reset</Button>
+                <Box sx={{display:'flex', flexDirection:'row', gap: 5}}>
+                <Box>
+                    <Typography gutterBottom sx={{mt:2}}>Filter by price range</Typography>
+                    <Box
+                        sx={{
+                                justifyContent: 'left',
+                                width:'300px',
+                                ml: 2,
+                                gap: 5
+                            }}
+                    >
+                        
+                        <Slider
+                            value={sliderPriceFilter}
+                            onChange={handleChange}
+                            min={0}
+                            max={50}
+                            marks = {[
+                                    {
+                                        value: 0,
+                                        label: '$0 CAD',
+                                    },
+                                    {
+                                        value: 50,
+                                        label: '$50+ CAD',
+                                    }
+                            ]}
+                            valueLabelDisplay="auto"
+                        />
+                        
+                    </Box>
                 </Box>
                 <Box sx={{ mt: 2, mb: 2, display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
                     <FormControlLabel
@@ -339,6 +340,8 @@ function CafeSearchPage() {
                             valueLabelDisplay="auto"
                         />
                     </Box>
+                    <Button variant="outlined" onClick={resetPriceFilter} sx={{height:'50%'}}>Reset Price Filter</Button>
+                </Box>
                 </Box>
 
                 {!selectedCafe && inputValue && visibleCafes.length === 0 && (
