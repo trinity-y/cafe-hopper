@@ -40,14 +40,6 @@ function FeedPage() {
                         sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
                         width={'80%'}
                     >
-                        <Box
-                            sx={{ alignItems: 'left' }}
-                            width='100%'
-                            paddingX='1em'
-                            paddingTop='1em'
-                        >
-                            <Typography variant="h2" fontWeight='fontWeightMedium' margin={'1rem'}>Your Feed</Typography>
-                        </Box>
                         <Stack
                             justifyContent="center"
                             alignItems={"center"}
