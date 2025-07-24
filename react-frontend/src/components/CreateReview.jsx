@@ -6,7 +6,7 @@ import StarRating from './StarRating';
 import CreateReviewRow from '../api/CreateReviewRow';
 import { getAuth } from "firebase/auth";
 
-const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+const baseUrl = process.env.REACT_APP_ISLOCAL ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
 
 function CreateReview({ cafeName, cid }) {
     const [userRating, setUserRating] = useState(0);
