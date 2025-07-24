@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 
 const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
@@ -10,19 +11,28 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [authInitialized, setAuthInitialized] = useState(false);
+  
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // dont redirect on login or signup
+  const shouldRedirect = () => {
+    const publicRoutes = ['/login', '/signup', '/complete-signup'];
+    return !publicRoutes.includes(location.pathname);
+  };
 
   useEffect(() => {
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (!authInitialized) {
-        setAuthInitialized(true);  // firebase has reported auth state at least once
+        setAuthInitialized(true);
       }
 
       if (!firebaseUser) {
-        // if user was set during login/signup don't clear user early
-        if (authInitialized && user !== null) {
-          setUser(null);
-          setLoading(false);
+        setUser(null);
+        setLoading(false);
+        if (shouldRedirect()) {
+          navigate('/login', { replace: true });
         }
         return;
       }
@@ -34,19 +44,33 @@ export const UserProvider = ({ children }) => {
         if (matched) {
           setUser(matched);
           console.log('user: ', matched);
+        } else {
+          setUser(null);
+          if (shouldRedirect()) {
+            navigate('/login', { replace: true });
+          }
         }
       } catch (err) {
         console.error('Error fetching backend user:', err);
         setUser(null);
+        if (shouldRedirect()) {
+          navigate('/login', { replace: true });
+        }
       } finally {
         setLoading(false);
       }
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [navigate, location.pathname, authInitialized]);
 
-  // added for testing purposes; can use firebaseSignOut() in the console to test with new users
+  // Additional effect to handle route changes when user is null
+  useEffect(() => {
+    if (authInitialized && !loading && !user && shouldRedirect()) {
+      navigate('/login', { replace: true });
+    }
+  }, [user, loading, authInitialized, location.pathname, navigate]);
+
   useEffect(() => {
     window.firebaseSignOut = () => signOut(getAuth());
     window.getCurrentUser = () => { // can use getCurrentUser() to see current user.id value

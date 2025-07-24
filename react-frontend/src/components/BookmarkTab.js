@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Box } from '@mui/material';
 import BookmarkTable from './BookmarkTable';
 import { useUser } from '../context/userContext';
+import Typography from '@mui/material/Typography';
 
 const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
 
@@ -33,9 +34,9 @@ export default function BookmarkTab() {
   return (
     <Box sx={{ p: 4 }}>
       {bookmarkedCafes.length === 0 ? (
-        <p>
+        <Typography variant="body1">
           You have no bookmarks yet.
-        </p>
+        </Typography>
       ) : (
         <BookmarkTable
           bookmarkedCafes={bookmarkedCafes}
