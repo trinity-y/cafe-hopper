@@ -26,6 +26,8 @@ function CafeSearchPage() {
     // janky frontend for filter search
     const [minRating, setMinRating] = useState(0);
     const [openNow, setOpenNow] = useState(false);
+    const [useMyLoc, setUseMyLoc] = useState(false);      // ← NEW
+    const [myLoc, setMyLoc] = useState(null);
 
     // Fetch user bookmarks
     const fetchBookmarks = async () => {
@@ -129,27 +131,81 @@ function CafeSearchPage() {
         if (userId !== null) fetchBookmarks();
     }, [userId]);
 
+    // When user toggles "Use My Location"
+    useEffect(() => {
+        if (!useMyLoc) {
+            setMyLoc(null);
+            return;
+        }
+        if (!navigator.geolocation) {
+            alert('Geolocation not supported');
+            setUseMyLoc(false);
+            return;
+        }
+        navigator.geolocation.getCurrentPosition(
+            pos => {
+                setMyLoc({
+                    lat: pos.coords.latitude,
+                    lng: pos.coords.longitude,
+                });
+            },
+            err => {
+                console.error('Geolocation error:', err);
+                setUseMyLoc(false);
+            }
+        );
+    }, [useMyLoc]);
+
+
     // Helper: given a café’s openingDays JSON string, is it open right now?
     function isOpenNow(openingDaysRaw) {
-        // if there’s no data at all, consider it closed
-        if (!openingDaysRaw) return false;
-
         try {
             const obj = JSON.parse(openingDaysRaw);
-            // obj.openNow might be true or false; anything else -> false
-            return obj.openNow === true;
+            const now = new Date();
+            const day = now.getDay(); // 0=Sunday … 6=Saturday
+            const minutesNow = now.getHours() * 60 + now.getMinutes();
+
+            const period = obj.periods.find(p => p.open.day === day);
+            if (!period) return false;
+
+            const openMin = period.open.hour * 60 + period.open.minute;
+            const closeMin = period.close.hour * 60 + period.close.minute;
+            return minutesNow >= openMin && minutesNow <= closeMin;
         } catch {
             return false;
         }
     }
 
-    // Helper: apply filters: name search → minRating → openNow (if toggled)
+    // Helper: Haversine formula!!!! 👀
+    function getDistanceKm(lat1, lon1, lat2, lon2) {
+        const toRad = x => (x * Math.PI) / 180;
+        const R = 6371; // Earth km radius
+        const dLat = toRad(lat2 - lat1);
+        const dLon = toRad(lon2 - lon1);
+        const a =
+            Math.sin(dLat / 2) ** 2 +
+            Math.cos(toRad(lat1)) *
+            Math.cos(toRad(lat2)) *
+            Math.sin(dLon / 2) ** 2;
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c;
+    }
+
+    // Helper: apply name + rating + openNow + location filters
     const visibleCafes = cafes
-        .filter(c =>
-            c.name.toLowerCase().includes(inputValue.toLowerCase())
-        )
+        .filter(c => c.name.toLowerCase().includes(inputValue.toLowerCase()))
         .filter(c => Number(c.googleRating) >= minRating)
-        .filter(c => (openNow ? isOpenNow(c.openingDays) : true));
+        .filter(c => (openNow ? JSON.parse(c.openingDays)?.openNow === true : true))
+        .filter(c => {
+            if (!useMyLoc || !myLoc) return true;
+            const dist = getDistanceKm(
+                myLoc.lat,
+                myLoc.lng,
+                Number(c.latitude),
+                Number(c.longitude)
+            );
+            return dist <= 3; // within 5 km
+        });
 
     return (
         <ThemeProvider theme={theme}>
@@ -197,6 +253,10 @@ function CafeSearchPage() {
                                 Open Now
                             </Typography>
                         }
+                    />
+                    <FormControlLabel
+                        control={<Switch checked={useMyLoc} onChange={() => setUseMyLoc(u => !u)} />}
+                        label={<Typography variant="body1">My Location</Typography>}
                     />
                     <Box sx={{ width: 150 }}>
                         <Typography variant="body1" textAlign="center">Min. Rating</Typography>
