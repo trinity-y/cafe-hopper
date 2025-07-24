@@ -57,7 +57,7 @@ const UserSearch = ({ userId, onFriendAdded, friends = [] }) => {
     setAddingIds((prev) => [...prev, friendId]);
 
     try {
-      const res = await fetch('http://localhost:3001/friends', {
+      const res = await fetch(`${baseUrl}/friends`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user_id: userId, following_id: friendId }),
