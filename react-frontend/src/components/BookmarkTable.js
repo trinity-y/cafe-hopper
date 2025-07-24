@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 
 import BookmarkButton from './BookmarkButton';
 
-const baseUrl = process.env.REACT_APP_ISLOCAL ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
 
 export default function BookmarkTable({ bookmarkedCafes, onRemoveBookmark }) {
   const [loadingIds, setLoadingIds] = useState([]);
