@@ -9,7 +9,9 @@ import {
 import SearchIcon from '@mui/icons-material/Search';
 import UserList from './UserList';
 
-const UserSearch = ({ userId, onFriendAdded, friends = []}) => {
+const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+
+const UserSearch = ({ userId, onFriendAdded, friends = [] }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [addingIds, setAddingIds] = useState([]);
@@ -26,7 +28,7 @@ const UserSearch = ({ userId, onFriendAdded, friends = []}) => {
       const fetchUsers = async () => {
         setLoading(true);
         try {
-          const res = await fetch(`http://localhost:3001/users/search?search=${searchTerm}&userId=${userId}`);
+          const res = await fetch(`${baseUrl}/users/search?search=${searchTerm}&userId=${userId}`);
           const data = await res.json();
           setSearchResults(data);
         } catch (err) {
