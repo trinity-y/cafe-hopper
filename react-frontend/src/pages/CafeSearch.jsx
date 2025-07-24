@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Box, TextField, Typography, Button } from '@mui/material';
+import { Box, TextField, Typography, Button, Slider, Switch, FormControlLabel } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../components/theme';
 import StarIcon from '@mui/icons-material/Star';
@@ -17,6 +17,10 @@ function CafeSearchPage() {
     const [bookmarks, setBookmarks] = useState([]); // holds { cid, id } for each bookmarked cafe
     const [loading, setLoading] = useState(false);
     const { userId } = useUser();
+
+    // janky frontend for filter search
+    const [minRating, setMinRating] = useState(0);
+    const [openNow, setOpenNow] = useState(false);
 
     // Fetch user bookmarks
     const fetchBookmarks = async () => {
@@ -120,6 +124,28 @@ function CafeSearchPage() {
         if (userId !== null) fetchBookmarks();
     }, [userId]);
 
+    // Helper: given a café’s openingDays JSON string, is it open right now?
+    function isOpenNow(openingDaysRaw) {
+        // if there’s no data at all, consider it closed
+        if (!openingDaysRaw) return false;
+
+        try {
+            const obj = JSON.parse(openingDaysRaw);
+            // obj.openNow might be true or false; anything else -> false
+            return obj.openNow === true;
+        } catch {
+            return false;
+        }
+    }
+
+    // Helper: apply filters: name search → minRating → openNow (if toggled)
+    const visibleCafes = cafes
+        .filter(c =>
+            c.name.toLowerCase().includes(inputValue.toLowerCase())
+        )
+        .filter(c => Number(c.googleRating) >= minRating)
+        .filter(c => (openNow ? isOpenNow(c.openingDays) : true));
+
     return (
         <ThemeProvider theme={theme}>
             <Box sx={{
@@ -147,8 +173,30 @@ function CafeSearchPage() {
                         }
                     }}
                 />
+                <Box sx={{ mt: 2, mb: 2, display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
+                    <FormControlLabel
+                        control={
+                            <Switch
+                                checked={openNow}
+                                onChange={() => setOpenNow(o => !o)}
+                            />
+                        }
+                        label="Open Now"
+                    />
+                    <Box sx={{ width: 150 }}>
+                        <Typography variant="body2" textAlign="center">Min. Rating</Typography>
+                        <Slider
+                            value={minRating}
+                            onChange={(_, v) => setMinRating(Number(v))}
+                            step={0.5}
+                            min={0}
+                            max={5}
+                            valueLabelDisplay="auto"
+                        />
+                    </Box>
+                </Box>
 
-                {!selectedCafe && inputValue && cafes.length === 0 && (
+                {!selectedCafe && inputValue && visibleCafes.length === 0 && (
                     <Box
                         sx={{
                             mt: 6,
@@ -161,15 +209,15 @@ function CafeSearchPage() {
                     </Box>
                 )}
 
-                {!selectedCafe && cafes.length > 0 && (
+                {!selectedCafe && visibleCafes.length > 0 && (
                     <>
                         <Typography variant="body1" sx={{ mt: 2 }}>
                             {inputValue
-                                ? `Showing ${cafes.length} result${cafes.length > 1 ? 's' : ''} for "${inputValue}"`
-                                : `Showing all ${cafes.length} cafes`}
+                                ? `Showing ${visibleCafes.length} result${visibleCafes.length > 1 ? 's' : ''} for "${inputValue}"`
+                                : `Showing all ${visibleCafes.length} cafes`}
                         </Typography>
 
-                        {cafes.map(cafe => {
+                        {visibleCafes.map(cafe => {
                             const isBookmarked = bookmarks.some((b) => b.cid === cafe.id);
 
                             return (
