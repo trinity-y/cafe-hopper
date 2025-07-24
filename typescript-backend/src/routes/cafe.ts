@@ -45,5 +45,20 @@ router.get('/search', async (req: Request, res: Response) => {
     return res.status(500).json({ message: 'An error occurred while fetching cafés.' });
   }
 });
+router.get('/pricerange', async (req: Request, res: Response) => {
+  const term = (req.query.search as string)?.trim() || '';
+  const startPrice = parseInt(req.query.startPrice as string, 10);
+  const endPrice = parseInt(req.query.endPrice as string, 10);
+
+  try {
+    // If there's a non-empty search term, do search; otherwise get all
+    const cafes = await cafeService.searchCafesPriceRange(term, startPrice, endPrice);
+
+    return res.status(200).json(cafes);
+  } catch (error) {
+    console.error('Error fetching cafes:', error);
+    return res.status(500).json({ message: 'An error occurred while fetching cafés.' });
+  }
+});
 
 export default router;

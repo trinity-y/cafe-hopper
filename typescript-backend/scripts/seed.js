@@ -86,7 +86,7 @@ async function seedDatabase() {
                 UNIQUE(uID, rID)
             );
         `);
-
+        await client.query('CREATE INDEX PriceRangeFilter ON "Cafe"(startPrice, endPrice)');
         // warning the firebase uids as part of this data are all FAKE!!
         const { getUserData } = require('./getUserData');
         const users = await getUserData();

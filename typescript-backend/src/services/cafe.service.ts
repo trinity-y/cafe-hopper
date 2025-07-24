@@ -40,6 +40,23 @@ const cafeService: ICafeServiceAPI = {
     const { rows } = await pool.query(q, [term]);
     return rows;
   },
+  async searchCafesPriceRange(term: string, startPrice: number, endPrice: number): Promise<ICafe[]> {
+    const hasTermFilter = term && term.trim() !== '';
+    const roundDownStartPrice = Math.floor(startPrice / 10) * 10;
+    const roundUpEndPrice = Math.ceil(endPrice / 10) * 10;
+    const q = `
+    SELECT * FROM "Cafe" 
+    WHERE ${hasTermFilter ? `LOWER(name) LIKE LOWER('%' || $1 || '%') AND` : ''}
+    (startPrice >= $${hasTermFilter ? 2 : 1} 
+    AND endPrice <= $${hasTermFilter ? 3 : 2})
+    ORDER BY name;
+    `;
+    console.log(q);
+    
+    const params = hasTermFilter ? [term.trim(), roundDownStartPrice, roundUpEndPrice] : [roundDownStartPrice, roundUpEndPrice];
+    const { rows } = await pool.query(q, params);
+    return rows;
+  },
 
 };
 

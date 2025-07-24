@@ -16,6 +16,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profile from './Profile';
 import FeedPage from './Feed';
 import { formatOpeningDays } from '../utils/formatOpeningDays';
+import cafeAPI from '../api/cafe';
 
 const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
 
@@ -42,7 +43,27 @@ function CafeSearchPage() {
     const handleReviewModalClose = () => {
         setOpenCreateReview(false);
         setReviewData([]);
-    }
+    }    
+    const [sliderPriceFilter, setSliderPriceFilter] = useState([0,50]);
+    const [userFilterPrice, setUserFilterPrice] = useState(false);
+    const fetchPriceFilteredCafes = async () => {
+        if (sliderPriceFilter) {
+            const getCafesWithinRange = await cafeAPI.searchCafesByPriceRange(inputValue, sliderPriceFilter[0], sliderPriceFilter[1]); 
+            setCafes(getCafesWithinRange);
+        }
+    };
+    const handleChange = (event, newValue) => {
+        setUserFilterPrice(true);
+        setSliderPriceFilter(newValue);
+        fetchPriceFilteredCafes();
+    };
+
+    const resetPriceFilter = () => {
+        setSliderPriceFilter([0,50]);
+        setUserFilterPrice(false);
+        fetchCafes(inputValue);
+    };
+
     // Fetch user bookmarks
     const fetchBookmarks = async () => {
         if (!userId) {
@@ -244,7 +265,11 @@ function CafeSearchPage() {
                         const v = e.target.value;
                         setInputValue(v);
                         setSelectedCafe(null);
-                        fetchCafes(v); // live search
+                        if (userFilterPrice){
+                            fetchPriceFilteredCafes();
+                        } else {
+                            fetchCafes(v); // live search
+                        }
                     }}
                     onKeyDown={e => {
                         if (e.key === 'Enter') {
@@ -254,6 +279,38 @@ function CafeSearchPage() {
                         }
                     }}
                 />
+                <Box sx={{display:'flex', flexDirection:'row', gap: 5}}>
+                <Box>
+                    <Typography gutterBottom sx={{mt:2}}>Filter by price range</Typography>
+                    <Box
+                        sx={{
+                                justifyContent: 'left',
+                                width:'300px',
+                                ml: 2,
+                                gap: 5
+                            }}
+                    >
+                        
+                        <Slider
+                            value={sliderPriceFilter}
+                            onChange={handleChange}
+                            min={0}
+                            max={50}
+                            marks = {[
+                                    {
+                                        value: 0,
+                                        label: '$0 CAD',
+                                    },
+                                    {
+                                        value: 50,
+                                        label: '$50+ CAD',
+                                    }
+                            ]}
+                            valueLabelDisplay="auto"
+                        />
+                        
+                    </Box>
+                </Box>
                 <Box sx={{ mt: 2, mb: 2, display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
                     <FormControlLabel
                         control={
@@ -283,6 +340,8 @@ function CafeSearchPage() {
                             valueLabelDisplay="auto"
                         />
                     </Box>
+                    <Button variant="outlined" onClick={resetPriceFilter} sx={{height:'50%'}}>Reset Price Filter</Button>
+                </Box>
                 </Box>
 
                 {!selectedCafe && inputValue && visibleCafes.length === 0 && (
@@ -335,6 +394,11 @@ function CafeSearchPage() {
                                             </Typography>
                                             <StarRating rating={cafe.googleRating} />
                                         </Box>
+                                        {cafe.startprice && 
+                                            <Typography variant="body2" sx={{mt:2}}>
+                                                Price range: $ {cafe.startprice} CAD - $ {cafe.endprice} CAD
+                                            </Typography>
+                                        }
                                     </Box>
                                     <Box sx={{ flex: 1 }}>
                                         <Typography variant="subtitle2">Hours</Typography>
