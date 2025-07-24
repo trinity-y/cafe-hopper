@@ -5,11 +5,11 @@ import { IBlendServiceAPI } from '../interfaces/blend.service.interface';
 const blendModel = new CustomModel('Blend');
 
 const blendService: IBlendServiceAPI = {
-  async getBlend(userId: number): Promise<ICafeWithRating[]> {
-    const q = `
+    async getBlend(userId: number): Promise<ICafeWithRating[]> {
+        const q = `
         -- Get all my friends
         WITH my_friends AS (
-            SELECT friend_id
+            SELECT following_id
             FROM "Friend" as f
             WHERE f.user_id = $1
         ),
@@ -26,7 +26,7 @@ const blendService: IBlendServiceAPI = {
             SELECT r.cid AS cafe_id, AVG(r.rating) AS avg_rating, COUNT(*) AS friend_count
             FROM "Reviews" AS r
             WHERE r.uid IN (
-                SELECT friend_id FROM my_friends
+                SELECT following_id FROM my_friends
             )
             AND 
             r.cid NOT IN (
@@ -45,7 +45,7 @@ const blendService: IBlendServiceAPI = {
             r.rating
             FROM "Reviews" AS r
             WHERE r.uid IN (
-                SELECT friend_id FROM my_friends
+                SELECT following_id FROM my_friends
             )
             AND r.cid NOT IN (
                 SELECT my_visited.cafe_id 
@@ -93,18 +93,18 @@ const blendService: IBlendServiceAPI = {
             FROM final_recommendations fr
             JOIN "Cafe" c ON fr.cafe_id = c.id
             JOIN "Reviews" r ON r.cid = fr.cafe_id 
-                AND r.uid IN (SELECT friend_id FROM my_friends)
+                AND r.uid IN (SELECT following_id FROM my_friends)
             JOIN "User" u ON r.uid = u.id
             ORDER BY fr.cafe_id, r.rating DESC  
         ) AS final_result
         ORDER BY final_result."finalRating" DESC, final_result.id ASC  
         LIMIT 10;
     `;
-    
-    // NO GO AMIGO!!
-    const { rows } = await pool.query(q, [userId]);
-    return rows;
-  },
+
+        // NO GO AMIGO!!
+        const { rows } = await pool.query(q, [userId]);
+        return rows;
+    },
 
 };
 

@@ -598,5 +598,53 @@
   {
     "user_id": 149,
     "following_id": 46
+  },
+  {
+    "user_id": 95,
+    "following_id": 2
+  },
+  {
+    "user_id": 109,
+    "following_id": 120
+  },
+  {
+    "user_id": 40,
+    "following_id": 130
+  },
+  {
+    "user_id": 149,
+    "following_id": 46
+  },
+  {
+    "user_id": 751,
+    "following_id": 1
+  },
+  {
+    "user_id": 751,
+    "following_id": 2
+  },
+  {
+    "user_id": 751,
+    "following_id": 3
+  },
+  {
+    "user_id": 751,
+    "following_id": 4
+  },
+  {
+    "user_id": 1,
+    "following_id": 751
+  },
+  {
+    "user_id": 2,
+    "following_id": 751
+  },
+  {
+    "user_id": 3,
+    "following_id": 751
+  },
+  {
+    "user_id": 4,
+    "following_id": 751
   }
 ]

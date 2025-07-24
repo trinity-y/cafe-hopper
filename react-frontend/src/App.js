@@ -11,7 +11,6 @@ import CafeSearchPage from './pages/CafeSearch';
 import FeedPage from './pages/Feed';
 import BlendPage from './pages/BlendPage';
 
-
 function App() {
   return (
     <Router>
@@ -23,6 +22,7 @@ function App() {
           <Route path='/cafesearch' element={<CafeSearchPage />} />
           <Route path='/feed' element={<FeedPage />} />
           <Route path='/profile' element={<Profile />} />
+          <Route path='/blend' element={<BlendPage />} />
         </Routes>
       </UserProvider>
     </Router>

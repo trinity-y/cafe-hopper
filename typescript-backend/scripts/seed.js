@@ -138,16 +138,6 @@ async function seedDatabase() {
             );
         }
 
-
-        const reviews = require('../mock_data/reviews.json');
-
-        for (const review of reviews) {
-            await client.query(
-                'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7)',
-                [review.rating, review.drinkRating, review.foodRating, review.atmosphereRating, review.notes, review.uID, review.cID]
-            );
-        }
-
         console.log('Database seeded successfully with User and Cafe tables!');
     } catch (err) {
         console.error('Error seeding database:', err);
