@@ -7,6 +7,7 @@ import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import BookmarkButton from '../components/BookmarkButton';
 import { useUser } from '../context/userContext';
+import CloseIcon from '@mui/icons-material/Close';
 import Modal from '@mui/material/Modal';
 import CreateReview from '../components/CreateReview'
 
@@ -277,6 +278,9 @@ function CafeSearchPage() {
                         boxShadow: 24,
                         p: 4,
                 }}>
+                    <Button onClick={handleReviewModalClose} sx={{ marginLeft: 'auto', display: 'block' }}> 
+                        <CloseIcon/> 
+                    </Button>
                     <CreateReview cafeName={reviewData[0]} cid={reviewData[1]}/>
                 </Box>
             </Modal>
