@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Box, TextField, Typography, Button } from '@mui/material';
+import { Box, TextField, Typography, Button, Slider, Switch, FormControlLabel } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../components/theme';
 import Navbar from '../components/Navbar';
@@ -26,6 +26,13 @@ function CafeSearchPage() {
     const [bookmarks, setBookmarks] = useState([]); // holds { cid, id } for each bookmarked cafe
     const [loading, setLoading] = useState(false);
     const { userId } = useUser();
+
+    // janky frontend for filter search
+    const [minRating, setMinRating] = useState(0);
+    const [openNow, setOpenNow] = useState(false);
+    const [useMyLoc, setUseMyLoc] = useState(false);      // ← NEW
+    const [myLoc, setMyLoc] = useState(null);
+
     const [openCreateReview, setOpenCreateReview] = useState(false);
     const [reviewData, setReviewData] = useState([]); // holds {cafeName, cid} when rate button is pressed
     const handleReviewModalOpen = (cafeName, cid) => {
@@ -138,6 +145,82 @@ function CafeSearchPage() {
         if (userId !== null) fetchBookmarks();
     }, [userId]);
 
+    // When user toggles "Use My Location"
+    useEffect(() => {
+        if (!useMyLoc) {
+            setMyLoc(null);
+            return;
+        }
+        if (!navigator.geolocation) {
+            alert('Geolocation not supported');
+            setUseMyLoc(false);
+            return;
+        }
+        navigator.geolocation.getCurrentPosition(
+            pos => {
+                setMyLoc({
+                    lat: pos.coords.latitude,
+                    lng: pos.coords.longitude,
+                });
+            },
+            err => {
+                console.error('Geolocation error:', err);
+                setUseMyLoc(false);
+            }
+        );
+    }, [useMyLoc]);
+
+
+    // Helper: given a café’s openingDays JSON string, is it open right now?
+    function isOpenNow(cafe) {
+        try {
+            const obj = JSON.parse(cafe.openingDays);
+            const now = new Date();
+            const day = now.getDay(); // 0=Sunday … 6=Saturday
+            const minutesNow = now.getHours() * 60 + now.getMinutes();
+            const period = obj.periods.find(p => p.open.day === day);
+            if (!period) return false;
+
+            const openMin = period.open.hour * 60 + period.open.minute;
+            const closeMin = period.close.hour * 60 + period.close.minute;
+            return minutesNow >= openMin && minutesNow <= closeMin;
+        } catch (e){
+            console.error(e)
+            return false;
+        }
+    }
+
+    // Helper: Haversine formula!!!! 👀
+    function getDistanceKm(lat1, lon1, lat2, lon2) {
+        const toRad = x => (x * Math.PI) / 180;
+        const R = 6371; // Earth km radius
+        const dLat = toRad(lat2 - lat1);
+        const dLon = toRad(lon2 - lon1);
+        const a =
+            Math.sin(dLat / 2) ** 2 +
+            Math.cos(toRad(lat1)) *
+            Math.cos(toRad(lat2)) *
+            Math.sin(dLon / 2) ** 2;
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c;
+    }
+
+    // Helper: apply name + rating + openNow + location filters
+    const visibleCafes = cafes
+        .filter(c => c.name.toLowerCase().includes(inputValue.toLowerCase()))
+        .filter(c => Number(c.googleRating) >= minRating)
+        .filter(c => openNow ? isOpenNow(c) : true)
+        .filter(c => {
+            if (!useMyLoc || !myLoc) return true;
+            const dist = getDistanceKm(
+                myLoc.lat,
+                myLoc.lng,
+                Number(c.latitude),
+                Number(c.longitude)
+            );
+            return dist <= 3; // within 5 km
+        });
+
     return (
         <ThemeProvider theme={theme}>
             <Navbar />
@@ -171,8 +254,38 @@ function CafeSearchPage() {
                         }
                     }}
                 />
+                <Box sx={{ mt: 2, mb: 2, display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
+                    <FormControlLabel
+                        control={
+                            <Switch
+                                checked={openNow}
+                                onChange={() => setOpenNow(o => !o)}
+                            />
+                        }
+                        label={
+                            <Typography variant="body1">
+                                Open Now
+                            </Typography>
+                        }
+                    />
+                    <FormControlLabel
+                        control={<Switch checked={useMyLoc} onChange={() => setUseMyLoc(u => !u)} />}
+                        label={<Typography variant="body1">My Location</Typography>}
+                    />
+                    <Box sx={{ width: 150 }}>
+                        <Typography variant="body1" textAlign="center">Min. Rating</Typography>
+                        <Slider
+                            value={minRating}
+                            onChange={(_, v) => setMinRating(Number(v))}
+                            step={0.5}
+                            min={0}
+                            max={5}
+                            valueLabelDisplay="auto"
+                        />
+                    </Box>
+                </Box>
 
-                {!selectedCafe && inputValue && cafes.length === 0 && (
+                {!selectedCafe && inputValue && visibleCafes.length === 0 && (
                     <Box
                         sx={{
                             mt: 6,
@@ -185,15 +298,15 @@ function CafeSearchPage() {
                     </Box>
                 )}
 
-                {!selectedCafe && cafes.length > 0 && (
+                {!selectedCafe && visibleCafes.length > 0 && (
                     <>
                         <Typography variant="body1" sx={{ mt: 2 }}>
                             {inputValue
-                                ? `Showing ${cafes.length} result${cafes.length > 1 ? 's' : ''} for "${inputValue}"`
-                                : `Showing all ${cafes.length} cafes`}
+                                ? `Showing ${visibleCafes.length} result${visibleCafes.length > 1 ? 's' : ''} for "${inputValue}"`
+                                : `Showing all ${visibleCafes.length} cafes`}
                         </Typography>
 
-                        {cafes.map(cafe => {
+                        {visibleCafes.map(cafe => {
                             const isBookmarked = bookmarks.some((b) => b.cid === cafe.id);
 
                             return (
