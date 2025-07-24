@@ -5,10 +5,12 @@ import theme from '../components/theme';
 import { Box, Stack } from '@mui/material';
 import Review from '../components/Review';
 import CssBaseline from '@mui/material/CssBaseline';
-import {Typography} from '@mui/material';
+import { Typography } from '@mui/material';
 import { useUser } from '../context/userContext';
 
 import reviewAPI from '../api/review';
+
+import Navbar from '../components/Navbar';
 
 function FeedPage() {
     const { userId } = useUser();
@@ -17,68 +19,62 @@ function FeedPage() {
     React.useEffect(() => {
         const fetchData = async () => {
             if (userId) {
-                const getFeedReviewsResult = await reviewAPI.getReviewsForFeed(userId); 
+                const getFeedReviewsResult = await reviewAPI.getReviewsForFeed(userId);
                 setReviews(getFeedReviewsResult);
             }
         }
         console.log(reviews);
         fetchData();
     }, [userId, reviews]);
-    
+
     return (
-    <>
-    <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Box
-            sx={{ display:'flex', flexDirection:'column', alignItems:'center'}}
-            width={'100%'}
-        >
-            <Box
-                sx={{ display:'flex', flexDirection:'column', alignItems:'center'}}
-                width={'80%'}
-            >
+        <>
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <Navbar />
                 <Box
-                    sx={{ alignItems:'left'}}
-                    width='100%'
-                    paddingX='1em'
-                    paddingTop='1em'
-                >
-                    <Typography variant="h2" fontWeight='fontWeightMedium' margin={'1rem'}>Your Feed</Typography>
-                </Box>
-                <Stack
-                    justifyContent="center"
-                    alignItems={"center"}
+                    sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
                     width={'100%'}
                 >
-                    <Box width={'100%'} sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            padding: '30px'}}>
-                        {
-                        reviews?.length > 0 ?
-                        reviews.map((review, index) => {
-                            return <Review key={index} review={review}/>
-                        }) :
-                        <Box
-                            sx={{ alignItems:'left'}}
-                            width='100%'
+                    <Box
+                        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+                        width={'80%'}
+                    >
+                        <Stack
+                            justifyContent="center"
+                            alignItems={"center"}
+                            width={'100%'}
                         >
-                            <Typography variant="h5">You're not following anyone who has written a review yet!</Typography>
-                        </Box>
-                        } 
+                            <Box width={'100%'} sx={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                padding: '30px'
+                            }}>
+                                {
+                                    reviews?.length > 0 ?
+                                        reviews.map((review, index) => {
+                                            return <Review key={index} review={review} />
+                                        }) :
+                                        <Box
+                                            sx={{ alignItems: 'left' }}
+                                            width='100%'
+                                        >
+                                            <Typography variant="h5">You're not following anyone who has written a review yet!</Typography>
+                                        </Box>
+                                }
+                            </Box>
+                        </Stack>
                     </Box>
-                </Stack>
-            </Box>
-            
-        </Box>
+
+                </Box>
 
 
 
-    </ThemeProvider>
+            </ThemeProvider>
 
-    </>
+        </>
     )
 }
 

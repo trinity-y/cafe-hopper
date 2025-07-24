@@ -7,6 +7,7 @@ const theme = createTheme({
     },
     secondary: {
       main: '#426A5A', // idk darker green
+      nav: '#355d37ff', // darker green for nav
     },
     background: {
       default: '#F4F4F4', // Default background for the whole app
