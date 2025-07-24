@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ThumbUp, ThumbUpOutlined } from '@mui/icons-material';
 import { Box, IconButton, Typography } from '@mui/material';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import axios from 'axios';
+import { backendClient } from '../api/base';
 import './Reaction.css';
 
 const Reaction = ({ reviewId, onReactionChange }) => {
@@ -10,7 +10,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentUser, setCurrentUser] = useState(null);
   const [userId, setUserId] = useState(null);
-  const [likeCount, setLikeCount] = useState(0); 
+  const [likeCount, setLikeCount] = useState(0);
 
   useEffect(() => {
     const auth = getAuth();
@@ -29,7 +29,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
 
   const fetchUserIdFromFirebaseUid = async (firebaseUid) => {
     try {
-      const response = await axios.get(`http://localhost:3001/users/firebase/${firebaseUid}`);
+      const response = await backendClient.get(`users/firebase/${firebaseUid}`);
       setUserId(response.data.id);
     } catch (error) {
       console.error('Error fetching user ID:', error);
@@ -38,7 +38,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
 
   const fetchLikeCount = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/reactions?reviewId=${reviewId}`);
+      const response = await backendClient.get(`reactions?reviewId=${reviewId}`);
       setLikeCount(response.data.like_count ?? 0);
     } catch (error) {
       setLikeCount(0);
@@ -50,8 +50,8 @@ const Reaction = ({ reviewId, onReactionChange }) => {
 
     try {
       setIsLoading(true);
-      const response = await axios.get(`http://localhost:3001/reactions?reviewId=${reviewId}&userId=${userId}`);
-      const userReaction = response.data.find(reaction => 
+      const response = await backendClient.get(`reactions?reviewId=${reviewId}&userId=${userId}`);
+      const userReaction = response.data.find(reaction =>
         reaction.uid === userId && reaction.reaction === 'like'
       );
       setHasLiked(!!userReaction);
@@ -71,7 +71,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
     if (isLoading) return;
 
     const auth = getAuth();
-    
+
     if (!auth.currentUser) {
       alert('Please log in to react to reviews');
       return;
@@ -85,11 +85,11 @@ const Reaction = ({ reviewId, onReactionChange }) => {
     setIsLoading(true);
     try {
       if (hasLiked) {
-        await axios.delete(`http://localhost:3001/reactions/${userId}/${reviewId}`);
+        await backendClient.delete(`reactions/${userId}/${reviewId}`);
         setHasLiked(false);
         if (onReactionChange) onReactionChange('remove');
       } else {
-        await axios.post('http://localhost:3001/reactions', {
+        await backendClient.post('reactions', {
           uID: userId,
           rID: reviewId,
           reaction: 'like'
@@ -100,7 +100,7 @@ const Reaction = ({ reviewId, onReactionChange }) => {
       await fetchLikeCount();
     } catch (error) {
       console.error('Error updating reaction:', error);
-      
+
       if (error.response?.status === 409) {
         alert('You have already reacted to this review');
       } else if (error.response?.status === 404) {
@@ -114,11 +114,11 @@ const Reaction = ({ reviewId, onReactionChange }) => {
   };
 
   if (!currentUser) {
-    return null; 
+    return null;
   }
 
   return (
-    <Box display="flex" alignItems="center" gap={0.5} sx={{ margin:0 }}className="reaction-container">
+    <Box display="flex" alignItems="center" gap={0.5} sx={{ margin: 0 }} className="reaction-container">
       <IconButton
         onClick={handleReaction}
         aria-label={hasLiked ? "Unlike" : "Like"}

@@ -1,5 +1,7 @@
+const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+
 const CreateReviewRow = async (rating, foodRating, drinkRating, atmosphereRating, notes, uid, cid) => {
-const now = new Date();
+  const now = new Date();
   const timestamp = now.toISOString();
 
   const newReview = {
@@ -13,7 +15,7 @@ const now = new Date();
     cid: cid,
   };
   try {
-    const response = await fetch('http://localhost:3001/reviews/', {
+    const response = await fetch(`${baseUrl}/reviews/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

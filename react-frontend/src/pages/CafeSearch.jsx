@@ -2,14 +2,22 @@ import { useState, useEffect } from 'react';
 import { Box, TextField, Typography, Button } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../components/theme';
+import Navbar from '../components/Navbar';
 import StarIcon from '@mui/icons-material/Star';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import BookmarkButton from '../components/BookmarkButton';
 import { useUser } from '../context/userContext';
+
 import CloseIcon from '@mui/icons-material/Close';
 import Modal from '@mui/material/Modal';
 import CreateReview from '../components/CreateReview'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Profile from './Profile';
+import FeedPage from './Feed';
+import { formatOpeningDays } from '../utils/formatOpeningDays';
+
+const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
 
 function CafeSearchPage() {
     const [cafes, setCafes] = useState([]);
@@ -34,7 +42,7 @@ function CafeSearchPage() {
             return;
         }
         try {
-            const res = await fetch(`http://localhost:3001/bookmarks/${userId}`);
+            const res = await fetch(`${baseUrl}/bookmarks/${userId}`);
             if (!res.ok) {
                 throw new Error('Failed to fetch bookmarks');
             }
@@ -49,7 +57,7 @@ function CafeSearchPage() {
     // Add bookmark
     const addBookmark = async (cid) => {
         try {
-            const res = await fetch(`http://localhost:3001/bookmarks`, {
+            const res = await fetch(`${baseUrl}/bookmarks`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ uid: userId, cid }),
@@ -72,7 +80,7 @@ function CafeSearchPage() {
             return false;
         }
         try {
-            const res = await fetch(`http://localhost:3001/bookmarks/${bookmark.id}`, {
+            const res = await fetch(`${baseUrl}/bookmarks/${bookmark.id}`, {
                 method: 'DELETE',
             });
             if (!res.ok) {
@@ -98,11 +106,11 @@ function CafeSearchPage() {
 
         for (let i = 1; i <= totalStars; i++) {
             if (i <= Math.floor(value)) {
-                stars.push(<StarIcon key={i} sx={{ color: 'gold' }} />); // full star
+                stars.push(<StarIcon key={i} sx={{ color: 'primary.main' }} />); // full star
             } else if (i === Math.ceil(value) && !Number.isInteger(value)) {
-                stars.push(<StarHalfIcon key={i} sx={{ color: 'gold' }} />); // half star
+                stars.push(<StarHalfIcon key={i} sx={{ color: 'primary.main' }} />); // half star
             } else {
-                stars.push(<StarBorderIcon key={i} sx={{ color: 'gold' }} />); // empty star
+                stars.push(<StarBorderIcon key={i} sx={{ color: 'primary.main' }} />); // empty star
             }
         }
 
@@ -111,7 +119,7 @@ function CafeSearchPage() {
 
     const fetchCafes = async (term = '') => {
         try {
-            const url = new URL('http://localhost:3001/cafes/search');
+            const url = new URL(`${baseUrl}/cafes/search`);
             if (term) url.searchParams.set('search', term);
             const res = await fetch(url.toString());
             const data = await res.json();
@@ -127,11 +135,17 @@ function CafeSearchPage() {
     }, []);
 
     useEffect(() => {
-      if (userId !== null) fetchBookmarks();
+        if (userId !== null) fetchBookmarks();
     }, [userId]);
 
     return (
         <ThemeProvider theme={theme}>
+            <Navbar />
+            <Routes>
+                <Route path='/cafesearch' element={<CafeSearchPage />} />
+                <Route path='/feed' element={<FeedPage />} />
+                <Route path='/profile' element={<Profile />} />
+            </Routes>
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -193,9 +207,15 @@ function CafeSearchPage() {
                                         justifyContent: 'space-between',
                                     }}
                                 >
-                                    <Box>
-                                        <h3 > ☕️ {cafe.name}</h3>
-                                        <h5 >{formatAddress(cafe.address)}</h5>
+                                    <Box sx={{ flex: 2 }}>
+                                        <Typography variant="h6">
+                                            ☕️ {cafe.name}
+                                        </Typography>
+                                        <h5> </h5>
+                                        <Typography variant="h">
+                                            📍 {formatAddress(cafe.address)}
+                                        </Typography>
+                                        <h5 > </h5>
                                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                                             <Typography variant="body2">
                                                 {Number(cafe.googleRating).toFixed(1)}
@@ -203,6 +223,15 @@ function CafeSearchPage() {
                                             <StarRating rating={cafe.googleRating} />
                                         </Box>
                                     </Box>
+                                    <Box sx={{ flex: 1 }}>
+                                        <Typography variant="subtitle2">Hours</Typography>
+                                        {formatOpeningDays(cafe.openingDays).map((line, i) => (
+                                            <Typography key={i} variant="body2" noWrap>
+                                                {line}
+                                            </Typography>
+                                        ))}
+                                    </Box>
+
 
                                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                                         <Button variant="contained" disabled>
@@ -212,22 +241,22 @@ function CafeSearchPage() {
                                             Rate
                                         </Button>
                                         <BookmarkButton
-                                          isBookmarked={isBookmarked}
-                                          disabled={loading}
-                                          onToggle={async (newState) => {
-                                            if (!userId) {
-                                              return false;
-                                            }
-                                            setLoading(true);
-                                            let success;
-                                            if (newState) {
-                                              success = await addBookmark(cafe.id);
-                                            } else {
-                                              success = await deleteBookmark(cafe.id);
-                                            }
-                                            setLoading(false);
-                                            return success;
-                                          }}
+                                            isBookmarked={isBookmarked}
+                                            disabled={loading}
+                                            onToggle={async (newState) => {
+                                                if (!userId) {
+                                                    return false;
+                                                }
+                                                setLoading(true);
+                                                let success;
+                                                if (newState) {
+                                                    success = await addBookmark(cafe.id);
+                                                } else {
+                                                    success = await deleteBookmark(cafe.id);
+                                                }
+                                                setLoading(false);
+                                                return success;
+                                            }}
                                         />
                                     </Box>
                                 </Box>
@@ -256,8 +285,10 @@ function CafeSearchPage() {
 
                         </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+
                             <Button variant="contained" disabled>More info</Button>
                             <Button variant="contained" onClick={() => handleReviewModalOpen(selectedCafe.name, selectedCafe.id)}>Rate</Button>
+
                         </Box>
                     </Box>
                 )}

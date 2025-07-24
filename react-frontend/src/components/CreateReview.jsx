@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import {Box, TextField, Grid, Button, Alert} from '@mui/material';
+import { Box, TextField, Grid, Button, Alert } from '@mui/material';
 import theme from './theme';
 import StarRating from './StarRating';
 import CreateReviewRow from '../api/CreateReviewRow';
 import { getAuth } from "firebase/auth";
 
-function CreateReview({cafeName, cid}) {
+const baseUrl = process.env.REACT_APP_ISLOCAL === "true" ? process.env.REACT_APP_LOCAL_API_URL : process.env.REACT_APP_PROD_API_URL;
+
+function CreateReview({ cafeName, cid }) {
     const [userRating, setUserRating] = useState(0);
     const [drinkRating, setDrinkRating] = useState(0);
     const [foodRating, setFoodRating] = useState(0);
@@ -22,56 +24,56 @@ function CreateReview({cafeName, cid}) {
         setSubmissionMessage(result);
     };
     const FormSubmission = async () => {
-        if (userRating === 0){
+        if (userRating === 0) {
             return <Alert severity="error">Please submit a ranking.</Alert>;
         }
         try {
             const auth = getAuth();
             const user = auth.currentUser; // Get current user synchronously
-            
+
             if (!user) {
                 return <Alert severity="error">You must be signed in to write a review.</Alert>;
             }
-            
+
             // Fetch and find the matching user
             // TODO: Update with new bookmarks endpoint
-            const res = await fetch("http://localhost:3001/users");
+            const res = await fetch(`${baseUrl}/users`);
             if (!res.ok) throw new Error("Failed to fetch users");
-            
+
             const users = await res.json();
             const matchingUser = users.find(u => u.firebase_uid === user.uid);
-            
+
             if (!matchingUser) {
                 console.error("No matching user found for this Firebase UID");
                 return <Alert severity="error">User not found in database.</Alert>;
             }
-            
+
             const currentUid = matchingUser.id; // Use local variable instead of state
             const currentCid = cid || 1; // Handle null cid
-            
-            
+
+
             const result = await CreateReviewRow(userRating, foodRating, drinkRating, atmosphereRating, notes, currentUid, currentCid);
             console.log(result);
             return <Alert severity="success">Your review was successfully created.</Alert>;
-            
-        } catch (error){
+
+        } catch (error) {
             console.log(error);
             return <Alert severity="error">An error has occurred/you have already created a review for this cafe.</Alert>;
         }
     }
     return (
         <ThemeProvider theme={theme}>
-            <Box 
-            display="flex" 
-            alignItems="center"
-            justifyContent="center"
-            flexDirection={"column"}
-            width={"600px"}
-            gap={2}
+            <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexDirection={"column"}
+                width={"600px"}
+                gap={2}
             >
                 <Box
-                display={"flex"} flexDirection={"row"} gap={10}
-                alignItems={"center"}
+                    display={"flex"} flexDirection={"row"} gap={10}
+                    alignItems={"center"}
                 >
                     <h1>Create a Review</h1>
                     <h3>{cafeName ? cafeName : "Unnamed Cafe"}</h3>
@@ -85,10 +87,10 @@ function CreateReview({cafeName, cid}) {
                         setNotes(event.target.value);
                     }}
                     multiline
-                    sx={{width: '80%'}}
+                    sx={{ width: '80%' }}
                 />
-                { userRating !== 0 && 
-                    (<Box width={"80%"} justifyContent={"center"}> 
+                {userRating !== 0 &&
+                    (<Box width={"80%"} justifyContent={"center"}>
                         <Grid container spacing={1}>
                             <Grid size={12}>
                                 <Box display="flex" alignItems="left" justifyContent="left" gap={2}>
