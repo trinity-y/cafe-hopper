@@ -37,7 +37,7 @@ router.get('/search', async (req: Request, res: Response) => {
     // If there's a non-empty search term, do search; otherwise get all
     const cafes = term
       ? await cafeService.searchCafes(term)
-      : await cafeService.getAllCafes();
+      : await cafeService.getTopCafes();
 
     return res.status(200).json(cafes);
   } catch (error) {
