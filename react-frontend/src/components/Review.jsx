@@ -2,7 +2,7 @@ import {Box} from '@mui/material';
 import StarRating from './StarRating';
 import { Typography } from '@mui/material';
 import Reaction from './Reaction';
-
+import getEmojiForUser from './UserEmoji';
 function Review({review, key}) {
     // Expecting review object with the following structure:
     // 1. Username (username)
@@ -33,7 +33,7 @@ function Review({review, key}) {
                 <Typography variant='h4'>{review.name}</Typography>
                 <StarRating rating={review.overallRating} interactive={false}></StarRating>
                 <Typography variant='p' style={{ fontStyle: 'italic', margin: 0, marginTop: '4px' }}>
-                    {`written by ${review.username} 🐸 on ${review.timestamp}`}
+                    {`written by ${review.username} ${getEmojiForUser(review.uid)} on ${review.timestamp}`}
                 </Typography>
                 <br/>
                 <Typography variant='p' style={{ margin: '0' }}>{review.notes}</Typography>
