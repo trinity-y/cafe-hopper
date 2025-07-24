@@ -347,9 +347,6 @@ function CafeSearchPage() {
 
 
                                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                                        <Button variant="contained" disabled>
-                                            More info
-                                        </Button>
                                         <Button variant="contained" onClick={() => handleReviewModalOpen(cafe.name, cafe.id)}>
                                             Rate
                                         </Button>
@@ -399,7 +396,6 @@ function CafeSearchPage() {
                         </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
 
-                            <Button variant="contained" disabled>More info</Button>
                             <Button variant="contained" onClick={() => handleReviewModalOpen(selectedCafe.name, selectedCafe.id)}>Rate</Button>
 
                         </Box>
