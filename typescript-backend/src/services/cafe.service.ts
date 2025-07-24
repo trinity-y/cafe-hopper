@@ -21,6 +21,22 @@ const cafeService: ICafeServiceAPI = {
     const { rows } = await pool.query(q, [term]);
     return rows;
   },
+  async searchCafesPriceRange(term: string, startPrice: number, endPrice: number): Promise<ICafe[]> {
+    const hasTermFilter = term && term.trim() !== '';
+    console.log(term);
+    const q = `
+    SELECT * FROM "Cafe" 
+    WHERE ${hasTermFilter ? `LOWER(name) LIKE LOWER('%' || $1 || '%') AND` : ''}
+    (startPrice >= $${hasTermFilter ? 2 : 1} 
+    AND endPrice <= $${hasTermFilter ? 3 : 2})
+    ORDER BY name;
+    `;
+    console.log(q);
+    
+    const params = hasTermFilter ? [term.trim(), startPrice, endPrice] : [startPrice, endPrice];
+    const { rows } = await pool.query(q, params);
+    return rows;
+  },
 
 };
 
