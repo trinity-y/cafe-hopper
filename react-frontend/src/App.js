@@ -9,11 +9,12 @@ import CompleteSignupPage from './pages/CompleteSignup';
 import Profile from './pages/Profile'
 import CafeSearchPage from './pages/CafeSearch';
 import FeedPage from './pages/Feed';
+import BlendPage from './pages/BlendPage';
 
 function App() {
   return (
-    <UserProvider>
-      <Router>
+    <Router>
+      <UserProvider>
         <Routes>
           <Route path='/login' element={<LoginPage />} />
           <Route path='/signup' element={<SignupPage />} />
@@ -21,9 +22,10 @@ function App() {
           <Route path='/cafesearch' element={<CafeSearchPage />} />
           <Route path='/feed' element={<FeedPage />} />
           <Route path='/profile' element={<Profile />} />
+          <Route path='/blend' element={<BlendPage />} />
         </Routes>
-      </Router>
-    </UserProvider>
+      </UserProvider>
+    </Router>
   );
 }
 

@@ -21,8 +21,7 @@ async function seedDatabase() {
             DROP TABLE IF EXISTS "Friend" CASCADE;
             DROP TABLE IF EXISTS "Bookmark" CASCADE;
 
-
-            CREATE TABLE "User" (
+            CREATE TABLE IF NOT EXISTS "User" (
               id SERIAL PRIMARY KEY,
               "username" VARCHAR(100) NOT NULL UNIQUE,
               "firebase_uid" VARCHAR(100) NOT NULL UNIQUE
@@ -35,6 +34,17 @@ async function seedDatabase() {
                 UNIQUE(user_id, following_id),
                 CHECK (user_id != following_id)
             );
+
+            DROP VIEW IF EXISTS "Mutuals";
+
+            CREATE VIEW "Mutuals" AS
+            SELECT f1.user_id AS user_id,
+                   u1.username AS user_username,
+                   f1.following_id AS friend_id,
+                   u2.username AS friend_username
+            FROM "Friend" f1 JOIN "Friend" f2 ON f1.user_id = f2.following_id AND f1.following_id = f2.user_id
+                             JOIN "User" u1 ON f1.user_id = u1.id
+                             JOIN "User" u2 ON f1.following_id = u2.id;
             
             CREATE TABLE IF NOT EXISTS "Cafe" (
                 id SERIAL PRIMARY KEY,
@@ -87,7 +97,7 @@ async function seedDatabase() {
             );
         }
 
-        const friends = require('../mock_data/friends.json');
+        const friends = require('../prod_data/friends.json');
         for (const friend of friends) {
             await client.query(
                 'INSERT INTO "Friend" ("user_id", "following_id") VALUES ($1, $2)',
@@ -127,7 +137,6 @@ async function seedDatabase() {
                 [bookmark.uid, bookmark.cid]
             );
         }
-
 
         console.log('Database seeded successfully with User and Cafe tables!');
     } catch (err) {

@@ -56,7 +56,7 @@ const reviewService: IReviewServiceAPI = {
         await reviewModel.rawQuery(viewQuery);
         // join w/ relevant tables to get the attributes necessary
         let getReviewDataQuery = `
-        SELECT "User"."username", "Cafe"."name", "rid", "overallRating", "drinkRating", "foodRating", "atmosphereRating", "notes", "timestamp", "likes"
+        SELECT "User"."username", "User"."id" AS uid, "Cafe"."name", "rid", "overallRating", "drinkRating", "foodRating", "atmosphereRating", "notes", "timestamp", "likes"
         FROM "reviewsAndLikesForUser${uid}", "User", "Cafe"
         WHERE "reviewsAndLikesForUser${uid}"."author" = "User"."id" AND
             "reviewsAndLikesForUser${uid}"."cid" = "Cafe"."id"

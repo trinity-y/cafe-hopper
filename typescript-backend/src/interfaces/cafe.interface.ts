@@ -7,3 +7,8 @@ export interface ICafe {
   startPrice: number;
   endPrice: number;
 }
+export interface ICafeWithRating extends ICafe {
+  finalRating: number;
+  friendNotes: string;
+  friendUsername: string;
+}

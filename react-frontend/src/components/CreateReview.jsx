@@ -85,7 +85,6 @@ function CreateReview({ cafeName, cid }) {
                     placeholder="I liked the atmosphere..."
                     onChange={(event) => {
                         setNotes(event.target.value);
-                        console.log(event.target.value);
                     }}
                     multiline
                     sx={{ width: '80%' }}

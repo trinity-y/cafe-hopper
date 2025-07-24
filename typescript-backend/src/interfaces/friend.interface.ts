@@ -5,3 +5,4 @@ export interface IFriend {
 }
 
 export type CreateFriendDTO = Omit<IFriend, 'id'>;
+
