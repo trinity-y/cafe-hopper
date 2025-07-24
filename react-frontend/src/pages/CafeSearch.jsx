@@ -182,7 +182,6 @@ function CafeSearchPage() {
 
                         {cafes.map(cafe => {
                             const isBookmarked = bookmarks.some((b) => b.cid === cafe.id);
-                            const hours = formatOpeningDays(cafe.openingDays);
 
                             return (
                                 <Box
