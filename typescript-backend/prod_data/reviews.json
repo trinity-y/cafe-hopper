@@ -1,1352 +1,3002 @@
 [
   {
-    "rating": 3.5,
-    "drinkRating": 1.8,
-    "foodRating": 2.5,
-    "atmosphereRating": 3.6,
-    "notes": "Great spot!",
-    "uID": 37,
-    "cID": 1
-  },
-  {
-    "rating": 4.0,
-    "drinkRating": 2.2,
-    "foodRating": 3.7,
-    "atmosphereRating": 3.4,
-    "notes": "",
-    "uID": 5,
-    "cID": 8
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 3.6,
-    "foodRating": 4.0,
-    "atmosphereRating": 4.1,
-    "notes": "Nice ambiance",
-    "uID": 41,
-    "cID": 7
-  },
-  {
-    "rating": 2.1,
-    "drinkRating": 4.2,
-    "foodRating": 2.2,
-    "atmosphereRating": 3.9,
-    "notes": "",
-    "uID": 33,
-    "cID": 8
-  },
-  {
-    "rating": 2.8,
-    "drinkRating": 3.7,
-    "foodRating": 1.7,
-    "atmosphereRating": 2.1,
-    "notes": "",
-    "uID": 12,
-    "cID": 4
-  },
-  {
-    "rating": 4.4,
-    "drinkRating": 1.7,
-    "foodRating": 4.9,
-    "atmosphereRating": 3.7,
-    "notes": "Great spot!",
-    "uID": 35,
-    "cID": 1
-  },
-  {
-    "rating": 1.9,
-    "drinkRating": 4.2,
-    "foodRating": 2.2,
-    "atmosphereRating": 2.6,
-    "notes": "",
-    "uID": 43,
-    "cID": 6
-  },
-  {
-    "rating": 2.9,
+    "rating": 1.4,
     "drinkRating": 3.0,
-    "foodRating": 2.8,
-    "atmosphereRating": 1.9,
-    "notes": "Great spot!",
-    "uID": 7,
-    "cID": 7
+    "foodRating": 3.5,
+    "atmosphereRating": 1.6,
+    "notes": "",
+    "timestamp": "2024-07-28T21:44:07",
+    "cID": 65,
+    "uID": 12
   },
   {
-    "rating": 2.9,
-    "drinkRating": 1.6,
-    "foodRating": 1.7,
-    "atmosphereRating": 4.7,
-    "notes": null,
-    "uID": 24,
-    "cID": 4
-  },
-  {
-    "rating": 4.3,
-    "drinkRating": 2.2,
-    "foodRating": 3.3,
-    "atmosphereRating": 4.5,
-    "notes": "Loved the drinks",
-    "uID": 17,
-    "cID": 2
-  },
-  {
-    "rating": 2.8,
-    "drinkRating": 3.5,
-    "foodRating": 1.1,
-    "atmosphereRating": 3.3,
-    "notes": null,
-    "uID": 3,
-    "cID": 7
-  },
-  {
-    "rating": 4.4,
-    "drinkRating": 2.8,
-    "foodRating": 2.1,
-    "atmosphereRating": 4.8,
-    "notes": "Loved the drinks",
-    "uID": 33,
-    "cID": 2
-  },
-  {
-    "rating": 3.2,
-    "drinkRating": 4.1,
-    "foodRating": 3.3,
-    "atmosphereRating": 3.4,
-    "notes": null,
-    "uID": 24,
-    "cID": 9
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 4.0,
-    "foodRating": 1.7,
-    "atmosphereRating": 2.1,
-    "notes": null,
-    "uID": 20,
-    "cID": 4
-  },
-  {
-    "rating": 4.0,
-    "drinkRating": 1.6,
-    "foodRating": 4.4,
-    "atmosphereRating": 2.4,
-    "notes": "Great spot!",
-    "uID": 10,
-    "cID": 10
-  },
-  {
-    "rating": 3.3,
-    "drinkRating": 3.9,
-    "foodRating": 3.6,
-    "atmosphereRating": 4.9,
-    "notes": "Loved the drinks",
-    "uID": 39,
-    "cID": 10
-  },
-  {
-    "rating": 2.8,
-    "drinkRating": 4.5,
-    "foodRating": 2.5,
-    "atmosphereRating": 2.9,
-    "notes": null,
-    "uID": 28,
-    "cID": 9
-  },
-  {
-    "rating": 2.7,
-    "drinkRating": 4.7,
-    "foodRating": 3.7,
-    "atmosphereRating": 4.9,
-    "notes": "Loved the drinks",
-    "uID": 41,
-    "cID": 10
-  },
-  {
-    "rating": 3.4,
-    "drinkRating": 2.0,
-    "foodRating": 3.7,
-    "atmosphereRating": 1.3,
-    "notes": "Great spot!",
-    "uID": 9,
-    "cID": 5
-  },
-  {
-    "rating": 4.5,
-    "drinkRating": 3.3,
-    "foodRating": 1.6,
-    "atmosphereRating": 2.7,
-    "notes": "Loved the drinks",
-    "uID": 47,
-    "cID": 5
-  },
-  {
-    "rating": 3.4,
+    "rating": 1.4,
     "drinkRating": 3.2,
-    "foodRating": 1.6,
-    "atmosphereRating": 4.5,
-    "notes": "Nice ambiance",
-    "uID": 44,
-    "cID": 10
-  },
-  {
-    "rating": 1.9,
-    "drinkRating": 1.9,
-    "foodRating": 2.3,
-    "atmosphereRating": 3.8,
-    "notes": "Loved the drinks",
-    "uID": 49,
-    "cID": 10
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 2.9,
-    "foodRating": 4.6,
-    "atmosphereRating": 2.4,
-    "notes": "Great spot!",
-    "uID": 9,
-    "cID": 9
-  },
-  {
-    "rating": 3.2,
-    "drinkRating": 2.7,
-    "foodRating": 2.6,
-    "atmosphereRating": 4.5,
-    "notes": "Great spot!",
-    "uID": 22,
-    "cID": 3
-  },
-  {
-    "rating": 1.7,
-    "drinkRating": 4.3,
-    "foodRating": 1.7,
-    "atmosphereRating": 1.5,
-    "notes": "Great spot!",
-    "uID": 21,
-    "cID": 5
-  },
-  {
-    "rating": 4.9,
-    "drinkRating": 4.9,
-    "foodRating": 3.1,
-    "atmosphereRating": 2.4,
-    "notes": "Great spot!",
-    "uID": 7,
-    "cID": 6
-  },
-  {
-    "rating": 3.1,
-    "drinkRating": 4.3,
-    "foodRating": 2.6,
-    "atmosphereRating": 3.4,
-    "notes": "Nice ambiance",
-    "uID": 11,
-    "cID": 4
-  },
-  {
-    "rating": 3.1,
-    "drinkRating": 3.8,
-    "foodRating": 4.7,
-    "atmosphereRating": 1.8,
-    "notes": "Loved the drinks",
-    "uID": 50,
-    "cID": 3
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 1.4,
-    "foodRating": 4.0,
-    "atmosphereRating": 1.0,
-    "notes": "",
-    "uID": 47,
-    "cID": 6
-  },
-  {
-    "rating": 2.0,
-    "drinkRating": 4.9,
-    "foodRating": 4.6,
-    "atmosphereRating": 2.7,
-    "notes": null,
-    "uID": 7,
-    "cID": 9
-  },
-  {
-    "rating": 2.3,
-    "drinkRating": 4.3,
-    "foodRating": 1.1,
-    "atmosphereRating": 4.5,
-    "notes": null,
-    "uID": 17,
-    "cID": 1
-  },
-  {
-    "rating": 2.5,
-    "drinkRating": 2.2,
-    "foodRating": 3.8,
-    "atmosphereRating": 3.2,
-    "notes": "",
-    "uID": 3,
-    "cID": 3
-  },
-  {
-    "rating": 1.5,
-    "drinkRating": 1.3,
-    "foodRating": 2.6,
-    "atmosphereRating": 1.1,
-    "notes": null,
-    "uID": 43,
-    "cID": 1
-  },
-  {
-    "rating": 4.2,
-    "drinkRating": 4.6,
-    "foodRating": 2.7,
-    "atmosphereRating": 2.2,
-    "notes": "",
-    "uID": 32,
-    "cID": 5
-  },
-  {
-    "rating": 2.6,
-    "drinkRating": 3.5,
-    "foodRating": 1.5,
-    "atmosphereRating": 1.8,
-    "notes": "Nice ambiance",
-    "uID": 45,
-    "cID": 9
-  },
-  {
-    "rating": 2.0,
-    "drinkRating": 4.5,
-    "foodRating": 3.2,
-    "atmosphereRating": 3.7,
-    "notes": null,
-    "uID": 47,
-    "cID": 8
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 2.7,
-    "foodRating": 4.7,
-    "atmosphereRating": 4.2,
-    "notes": "Great spot!",
-    "uID": 33,
-    "cID": 9
-  },
-  {
-    "rating": 2.1,
-    "drinkRating": 2.2,
-    "foodRating": 2.5,
-    "atmosphereRating": 4.1,
-    "notes": "Loved the drinks",
-    "uID": 9,
-    "cID": 7
-  },
-  {
-    "rating": 4.3,
-    "drinkRating": 3.5,
-    "foodRating": 4.2,
-    "atmosphereRating": 1.4,
-    "notes": "Nice ambiance",
-    "uID": 33,
-    "cID": 5
-  },
-  {
-    "rating": 2.7,
-    "drinkRating": 4.2,
-    "foodRating": 4.2,
-    "atmosphereRating": 4.6,
-    "notes": "Great spot!",
-    "uID": 35,
-    "cID": 4
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 2.4,
-    "foodRating": 2.8,
-    "atmosphereRating": 3.2,
-    "notes": "Nice ambiance",
-    "uID": 19,
-    "cID": 8
-  },
-  {
-    "rating": 3.7,
-    "drinkRating": 3.7,
-    "foodRating": 1.6,
-    "atmosphereRating": 2.2,
-    "notes": "",
-    "uID": 46,
-    "cID": 2
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 4.6,
-    "foodRating": 3.0,
-    "atmosphereRating": 4.7,
-    "notes": "",
-    "uID": 27,
-    "cID": 10
-  },
-  {
-    "rating": 4.6,
-    "drinkRating": 3.5,
-    "foodRating": 4.5,
-    "atmosphereRating": 3.3,
-    "notes": "Loved the drinks",
-    "uID": 41,
-    "cID": 2
-  },
-  {
-    "rating": 4.6,
-    "drinkRating": 1.4,
-    "foodRating": 3.1,
-    "atmosphereRating": 1.6,
-    "notes": "",
-    "uID": 19,
-    "cID": 10
-  },
-  {
-    "rating": 4.0,
-    "drinkRating": 4.7,
-    "foodRating": 3.3,
-    "atmosphereRating": 4.9,
-    "notes": "Great spot!",
-    "uID": 2,
-    "cID": 6
-  },
-  {
-    "rating": 1.5,
-    "drinkRating": 2.2,
-    "foodRating": 2.4,
-    "atmosphereRating": 3.0,
-    "notes": "Nice ambiance",
-    "uID": 29,
-    "cID": 5
-  },
-  {
-    "rating": 4.8,
-    "drinkRating": 4.3,
-    "foodRating": 1.3,
-    "atmosphereRating": 2.3,
-    "notes": null,
-    "uID": 23,
-    "cID": 3
-  },
-  {
-    "rating": 4.4,
-    "drinkRating": 3.7,
-    "foodRating": 3.3,
-    "atmosphereRating": 1.3,
-    "notes": "Great spot!",
-    "uID": 36,
-    "cID": 4
-  },
-  {
-    "rating": 1.2,
-    "drinkRating": 2.1,
-    "foodRating": 1.2,
-    "atmosphereRating": 3.2,
-    "notes": "Great spot!",
-    "uID": 26,
-    "cID": 8
-  },
-  {
-    "rating": 1.9,
-    "drinkRating": 2.2,
-    "foodRating": 3.9,
-    "atmosphereRating": 4.7,
-    "notes": "Great spot!",
-    "uID": 32,
-    "cID": 2
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 2.4,
-    "foodRating": 3.9,
-    "atmosphereRating": 1.8,
-    "notes": "",
-    "uID": 18,
-    "cID": 5
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 1.4,
-    "foodRating": 1.0,
-    "atmosphereRating": 4.0,
-    "notes": "Great spot!",
-    "uID": 22,
-    "cID": 2
-  },
-  {
-    "rating": 2.9,
-    "drinkRating": 3.4,
-    "foodRating": 3.6,
-    "atmosphereRating": 1.7,
-    "notes": "Loved the drinks",
-    "uID": 31,
-    "cID": 8
-  },
-  {
-    "rating": 4.3,
-    "drinkRating": 5.0,
-    "foodRating": 2.6,
-    "atmosphereRating": 2.8,
-    "notes": "",
-    "uID": 34,
-    "cID": 4
-  },
-  {
-    "rating": 1.9,
-    "drinkRating": 1.1,
-    "foodRating": 1.7,
-    "atmosphereRating": 2.9,
-    "notes": "Great spot!",
-    "uID": 1,
-    "cID": 2
-  },
-  {
-    "rating": 1.7,
-    "drinkRating": 2.1,
-    "foodRating": 1.7,
-    "atmosphereRating": 4.2,
-    "notes": "Great spot!",
-    "uID": 22,
-    "cID": 7
-  },
-  {
-    "rating": 3.2,
-    "drinkRating": 1.5,
-    "foodRating": 3.6,
-    "atmosphereRating": 4.0,
-    "notes": "Loved the drinks",
-    "uID": 45,
-    "cID": 8
-  },
-  {
-    "rating": 2.1,
-    "drinkRating": 4.0,
-    "foodRating": 4.2,
-    "atmosphereRating": 3.1,
-    "notes": "Great spot!",
-    "uID": 21,
-    "cID": 4
-  },
-  {
-    "rating": 4.3,
-    "drinkRating": 4.8,
-    "foodRating": 3.6,
-    "atmosphereRating": 1.4,
-    "notes": "Nice ambiance",
-    "uID": 25,
-    "cID": 3
-  },
-  {
-    "rating": 4.8,
-    "drinkRating": 1.3,
-    "foodRating": 4.1,
-    "atmosphereRating": 4.3,
-    "notes": "",
-    "uID": 41,
-    "cID": 1
-  },
-  {
-    "rating": 3.6,
-    "drinkRating": 4.0,
-    "foodRating": 3.2,
-    "atmosphereRating": 3.5,
-    "notes": "Nice ambiance",
-    "uID": 34,
-    "cID": 2
-  },
-  {
-    "rating": 2.9,
-    "drinkRating": 2.3,
-    "foodRating": 3.2,
-    "atmosphereRating": 4.5,
-    "notes": "Nice ambiance",
-    "uID": 12,
-    "cID": 5
-  },
-  {
-    "rating": 4.9,
-    "drinkRating": 4.7,
-    "foodRating": 2.3,
-    "atmosphereRating": 2.9,
-    "notes": "Nice ambiance",
-    "uID": 10,
-    "cID": 4
-  },
-  {
-    "rating": 3.9,
-    "drinkRating": 4.7,
-    "foodRating": 4.6,
-    "atmosphereRating": 4.8,
-    "notes": null,
-    "uID": 10,
-    "cID": 7
-  },
-  {
-    "rating": 1.2,
-    "drinkRating": 3.4,
-    "foodRating": 3.1,
-    "atmosphereRating": 1.3,
-    "notes": "Great spot!",
-    "uID": 49,
-    "cID": 4
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 4.6,
-    "foodRating": 2.7,
-    "atmosphereRating": 4.3,
-    "notes": "Loved the drinks",
-    "uID": 37,
-    "cID": 3
-  },
-  {
-    "rating": 2.0,
-    "drinkRating": 4.2,
-    "foodRating": 2.6,
-    "atmosphereRating": 2.2,
-    "notes": "Loved the drinks",
-    "uID": 8,
-    "cID": 8
-  },
-  {
-    "rating": 2.6,
-    "drinkRating": 2.8,
-    "foodRating": 4.4,
-    "atmosphereRating": 3.2,
-    "notes": "Nice ambiance",
-    "uID": 49,
-    "cID": 2
-  },
-  {
-    "rating": 3.2,
-    "drinkRating": 1.0,
-    "foodRating": 5.0,
-    "atmosphereRating": 2.6,
-    "notes": "Great spot!",
-    "uID": 50,
-    "cID": 10
-  },
-  {
-    "rating": 3.3,
-    "drinkRating": 3.0,
-    "foodRating": 4.0,
-    "atmosphereRating": 2.8,
-    "notes": "Nice ambiance",
-    "uID": 26,
-    "cID": 1
-  },
-  {
-    "rating": 5.0,
-    "drinkRating": 2.1,
-    "foodRating": 1.1,
-    "atmosphereRating": 2.8,
-    "notes": "",
-    "uID": 6,
-    "cID": 9
-  },
-  {
-    "rating": 2.0,
-    "drinkRating": 3.1,
-    "foodRating": 4.0,
-    "atmosphereRating": 2.9,
-    "notes": null,
-    "uID": 44,
-    "cID": 7
-  },
-  {
-    "rating": 1.8,
-    "drinkRating": 2.4,
-    "foodRating": 3.9,
-    "atmosphereRating": 1.7,
-    "notes": "Great spot!",
-    "uID": 41,
-    "cID": 4
-  },
-  {
-    "rating": 1.9,
-    "drinkRating": 2.7,
-    "foodRating": 3.8,
-    "atmosphereRating": 4.1,
-    "notes": "Loved the drinks",
-    "uID": 35,
-    "cID": 9
-  },
-  {
-    "rating": 3.1,
-    "drinkRating": 4.4,
-    "foodRating": 3.8,
-    "atmosphereRating": 3.9,
-    "notes": "",
-    "uID": 6,
-    "cID": 1
-  },
-  {
-    "rating": 3.5,
-    "drinkRating": 2.0,
-    "foodRating": 1.2,
-    "atmosphereRating": 2.1,
-    "notes": "Loved the drinks",
-    "uID": 38,
-    "cID": 10
-  },
-  {
-    "rating": 2.6,
-    "drinkRating": 3.4,
-    "foodRating": 4.0,
-    "atmosphereRating": 4.2,
-    "notes": "",
-    "uID": 14,
-    "cID": 5
-  },
-  {
-    "rating": 4.3,
-    "drinkRating": 3.8,
-    "foodRating": 3.1,
-    "atmosphereRating": 3.9,
-    "notes": "Nice ambiance",
-    "uID": 2,
-    "cID": 10
-  },
-  {
-    "rating": 2.7,
-    "drinkRating": 4.4,
-    "foodRating": 4.9,
-    "atmosphereRating": 1.6,
-    "notes": "",
-    "uID": 21,
-    "cID": 3
-  },
-  {
-    "rating": 3.9,
-    "drinkRating": 4.3,
-    "foodRating": 1.1,
-    "atmosphereRating": 2.8,
-    "notes": "",
-    "uID": 30,
-    "cID": 9
-  },
-  {
-    "rating": 5.0,
-    "drinkRating": 3.6,
-    "foodRating": 2.0,
-    "atmosphereRating": 2.5,
-    "notes": "Loved the drinks",
-    "uID": 10,
-    "cID": 2
-  },
-  {
-    "rating": 3.9,
-    "drinkRating": 3.7,
-    "foodRating": 3.1,
-    "atmosphereRating": 4.8,
-    "notes": "",
-    "uID": 5,
-    "cID": 4
-  },
-  {
-    "rating": 4.1,
-    "drinkRating": 2.9,
-    "foodRating": 1.6,
+    "foodRating": 1.8,
     "atmosphereRating": 2.0,
+    "notes": "Exceptional taste.",
+    "timestamp": "2023-07-09T22:27:08",
+    "cID": 97,
+    "uID": 13
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 3.4,
+    "foodRating": 0.1,
+    "atmosphereRating": 1.8,
+    "notes": "Loved the coffee!",
+    "timestamp": "2022-02-02T11:54:52",
+    "cID": 68,
+    "uID": 36
+  },
+  {
+    "rating": 0.8,
+    "drinkRating": 0.5,
+    "foodRating": 0.7,
+    "atmosphereRating": 1.3,
+    "notes": "Great service!",
+    "timestamp": "2022-01-27T19:36:37",
+    "cID": 155,
+    "uID": 17
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 3.9,
+    "foodRating": 4.1,
+    "atmosphereRating": 0.5,
+    "notes": "Highly recommend!",
+    "timestamp": "2023-10-08T05:02:24",
+    "cID": 187,
+    "uID": 32
+  },
+  {
+    "rating": 0.6,
+    "drinkRating": 1.5,
+    "foodRating": 4.6,
+    "atmosphereRating": 2.2,
+    "notes": "Great service!",
+    "timestamp": "2022-09-12T21:08:41",
+    "cID": 3,
+    "uID": 35
+  },
+  {
+    "rating": 0.4,
+    "drinkRating": 1.7,
+    "foodRating": 1.8,
+    "atmosphereRating": 2.6,
     "notes": "",
-    "uID": 4,
-    "cID": 1
+    "timestamp": "2024-03-21T20:17:52",
+    "cID": 100,
+    "uID": 10
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 1.0,
+    "foodRating": 0.8,
+    "atmosphereRating": 3.5,
+    "notes": "",
+    "timestamp": "2022-03-03T09:55:37",
+    "cID": 121,
+    "uID": 36
+  },
+  {
+    "rating": 3.5,
+    "drinkRating": 4.9,
+    "foodRating": 2.8,
+    "atmosphereRating": 3.9,
+    "notes": "Loved the coffee!",
+    "timestamp": "2022-04-07T11:30:26",
+    "cID": 8,
+    "uID": 42
   },
   {
     "rating": 3.8,
+    "drinkRating": 0.6,
+    "foodRating": 0.6,
+    "atmosphereRating": 2.2,
+    "notes": "Too crowded.",
+    "timestamp": "2024-08-31T18:26:57",
+    "cID": 183,
+    "uID": 12
+  },
+  {
+    "rating": 3.0,
     "drinkRating": 1.9,
-    "foodRating": 4.7,
-    "atmosphereRating": 2.9,
-    "notes": "Nice ambiance",
-    "uID": 25,
-    "cID": 8
+    "foodRating": 3.1,
+    "atmosphereRating": 1.7,
+    "notes": "Overpriced.",
+    "timestamp": "2023-07-23T08:13:41",
+    "cID": 62,
+    "uID": 30
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 1.3,
+    "foodRating": 3.5,
+    "atmosphereRating": 1.5,
+    "notes": "Loved the coffee!",
+    "timestamp": "2025-04-23T11:44:54",
+    "cID": 128,
+    "uID": 39
+  },
+  {
+    "rating": 3.0,
+    "drinkRating": 0.2,
+    "foodRating": 3.3,
+    "atmosphereRating": 0.7,
+    "notes": "Too crowded.",
+    "timestamp": "2024-04-28T15:58:10",
+    "cID": 89,
+    "uID": 41
+  },
+  {
+    "rating": 0.7,
+    "drinkRating": 4.5,
+    "foodRating": 1.3,
+    "atmosphereRating": 2.6,
+    "notes": "Not worth it.",
+    "timestamp": "2023-11-18T14:22:23",
+    "cID": 10,
+    "uID": 7
+  },
+  {
+    "rating": 1.6,
+    "drinkRating": 2.7,
+    "foodRating": 1.9,
+    "atmosphereRating": 5.0,
+    "notes": "Great service!",
+    "timestamp": "2023-08-05T22:29:01",
+    "cID": 77,
+    "uID": 17
   },
   {
     "rating": 2.4,
     "drinkRating": 2.9,
-    "foodRating": 4.4,
-    "atmosphereRating": 1.7,
-    "notes": null,
-    "uID": 32,
-    "cID": 9
+    "foodRating": 5.0,
+    "atmosphereRating": 2.7,
+    "notes": "Food was average.",
+    "timestamp": "2023-11-16T07:51:55",
+    "cID": 181,
+    "uID": 1
   },
   {
-    "rating": 4.4,
+    "rating": 2.7,
+    "drinkRating": 4.6,
+    "foodRating": 0.1,
+    "atmosphereRating": 1.8,
+    "notes": "",
+    "timestamp": "2025-09-25T11:00:17",
+    "cID": 166,
+    "uID": 38
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 1.0,
+    "foodRating": 2.6,
+    "atmosphereRating": 3.6,
+    "notes": "Food was average.",
+    "timestamp": "2023-10-02T18:24:39",
+    "cID": 160,
+    "uID": 16
+  },
+  {
+    "rating": 0.1,
+    "drinkRating": 2.1,
+    "foodRating": 3.1,
+    "atmosphereRating": 1.2,
+    "notes": "Overpriced.",
+    "timestamp": "2023-07-30T11:37:46",
+    "cID": 43,
+    "uID": 25
+  },
+  {
+    "rating": 4.5,
     "drinkRating": 1.3,
-    "foodRating": 4.9,
-    "atmosphereRating": 2.2,
-    "notes": "Loved the drinks",
-    "uID": 32,
-    "cID": 4
+    "foodRating": 2.5,
+    "atmosphereRating": 3.5,
+    "notes": "",
+    "timestamp": "2022-10-17T14:36:11",
+    "cID": 57,
+    "uID": 49
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 0.9,
+    "foodRating": 0.9,
+    "atmosphereRating": 1.0,
+    "notes": "Loved the coffee!",
+    "timestamp": "2023-06-13T20:21:36",
+    "cID": 114,
+    "uID": 22
+  },
+  {
+    "rating": 1.8,
+    "drinkRating": 0.1,
+    "foodRating": 1.3,
+    "atmosphereRating": 3.2,
+    "notes": "Highly recommend!",
+    "timestamp": "2023-06-01T11:19:45",
+    "cID": 141,
+    "uID": 2
+  },
+  {
+    "rating": 1.6,
+    "drinkRating": 1.4,
+    "foodRating": 4.4,
+    "atmosphereRating": 4.6,
+    "notes": "Great service!",
+    "timestamp": "2025-02-09T22:14:09",
+    "cID": 120,
+    "uID": 33
+  },
+  {
+    "rating": 4.1,
+    "drinkRating": 1.3,
+    "foodRating": 3.6,
+    "atmosphereRating": 3.5,
+    "notes": "Will visit again.",
+    "timestamp": "2024-11-30T14:45:49",
+    "cID": 16,
+    "uID": 25
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 1.3,
+    "foodRating": 4.6,
+    "atmosphereRating": 3.3,
+    "notes": "Not worth it.",
+    "timestamp": "2025-09-16T02:39:38",
+    "cID": 6,
+    "uID": 5
+  },
+  {
+    "rating": 1.7,
+    "drinkRating": 2.8,
+    "foodRating": 3.7,
+    "atmosphereRating": 2.1,
+    "notes": "Overpriced.",
+    "timestamp": "2022-01-25T10:32:22",
+    "cID": 50,
+    "uID": 34
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 1.5,
+    "foodRating": 2.2,
+    "atmosphereRating": 1.8,
+    "notes": "",
+    "timestamp": "2023-05-25T07:12:35",
+    "cID": 186,
+    "uID": 1
+  },
+  {
+    "rating": 0.6,
+    "drinkRating": 3.4,
+    "foodRating": 2.2,
+    "atmosphereRating": 4.8,
+    "notes": "Not worth it.",
+    "timestamp": "2024-09-17T01:35:48",
+    "cID": 173,
+    "uID": 30
   },
   {
     "rating": 1.5,
-    "drinkRating": 2.4,
+    "drinkRating": 4.3,
+    "foodRating": 3.0,
+    "atmosphereRating": 0.6,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-01-11T17:49:15",
+    "cID": 15,
+    "uID": 25
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 4.7,
     "foodRating": 2.4,
-    "atmosphereRating": 4.2,
-    "notes": "Great spot!",
-    "uID": 41,
-    "cID": 8
-  },
-  {
-    "rating": 4.6,
-    "drinkRating": 2.1,
-    "foodRating": 3.7,
-    "atmosphereRating": 3.1,
-    "notes": "Nice ambiance",
-    "uID": 29,
-    "cID": 6
-  },
-  {
-    "rating": 4.2,
-    "drinkRating": 4.1,
-    "foodRating": 1.8,
-    "atmosphereRating": 4.3,
-    "notes": "Great spot!",
-    "uID": 2,
-    "cID": 5
-  },
-  {
-    "rating": 4.4,
-    "drinkRating": 1.9,
-    "foodRating": 1.7,
-    "atmosphereRating": 2.9,
-    "notes": "Great spot!",
-    "uID": 13,
-    "cID": 3
-  },
-  {
-    "rating": 3.8,
-    "drinkRating": 1.6,
-    "foodRating": 1.4,
-    "atmosphereRating": 2.3,
-    "notes": null,
-    "uID": 3,
-    "cID": 5
-  },
-  {
-    "rating": 2.9,
-    "drinkRating": 1.6,
-    "foodRating": 3.9,
-    "atmosphereRating": 3.3,
-    "notes": "Great spot!",
-    "uID": 5,
-    "cID": 6
-  },
-  {
-    "rating": 2.3,
-    "drinkRating": 4.5,
-    "foodRating": 1.5,
-    "atmosphereRating": 2.9,
-    "notes": "",
-    "uID": 46,
-    "cID": 10
+    "atmosphereRating": 0.4,
+    "notes": "Will visit again.",
+    "timestamp": "2024-07-27T23:02:41",
+    "cID": 51,
+    "uID": 33
   },
   {
     "rating": 4.3,
-    "drinkRating": 4.4,
-    "foodRating": 2.1,
-    "atmosphereRating": 1.4,
-    "notes": "Great spot!",
-    "uID": 24,
-    "cID": 8
+    "drinkRating": 4.5,
+    "foodRating": 0.2,
+    "atmosphereRating": 4.4,
+    "notes": "Nice ambiance.",
+    "timestamp": "2024-06-08T22:40:20",
+    "cID": 84,
+    "uID": 14
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 2.5,
+    "foodRating": 4.5,
+    "atmosphereRating": 3.8,
+    "notes": "Nice ambiance.",
+    "timestamp": "2024-10-10T01:47:11",
+    "cID": 127,
+    "uID": 1
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 3.5,
+    "foodRating": 0.3,
+    "atmosphereRating": 0.8,
+    "notes": "Overpriced.",
+    "timestamp": "2024-01-30T18:24:29",
+    "cID": 34,
+    "uID": 35
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 4.5,
+    "foodRating": 4.3,
+    "atmosphereRating": 3.5,
+    "notes": "Not worth it.",
+    "timestamp": "2023-08-15T22:50:58",
+    "cID": 176,
+    "uID": 39
+  },
+  {
+    "rating": 0.3,
+    "drinkRating": 2.9,
+    "foodRating": 3.1,
+    "atmosphereRating": 4.3,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-09-10T13:50:56",
+    "cID": 29,
+    "uID": 7
+  },
+  {
+    "rating": 1.8,
+    "drinkRating": 0.7,
+    "foodRating": 3.4,
+    "atmosphereRating": 0.9,
+    "notes": "Not worth it.",
+    "timestamp": "2022-03-07T20:07:15",
+    "cID": 51,
+    "uID": 38
   },
   {
     "rating": 1.2,
+    "drinkRating": 3.1,
+    "foodRating": 4.1,
+    "atmosphereRating": 0.4,
+    "notes": "Highly recommend!",
+    "timestamp": "2024-12-24T03:08:16",
+    "cID": 102,
+    "uID": 29
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 1.9,
+    "foodRating": 0.7,
+    "atmosphereRating": 3.1,
+    "notes": "",
+    "timestamp": "2022-06-18T19:03:16",
+    "cID": 112,
+    "uID": 46
+  },
+  {
+    "rating": 3.1,
+    "drinkRating": 2.1,
+    "foodRating": 1.0,
+    "atmosphereRating": 2.4,
+    "notes": "Will visit again.",
+    "timestamp": "2024-08-16T05:01:42",
+    "cID": 172,
+    "uID": 31
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 3.1,
+    "foodRating": 2.9,
+    "atmosphereRating": 4.4,
+    "notes": "Exceptional taste.",
+    "timestamp": "2025-01-18T11:51:22",
+    "cID": 88,
+    "uID": 42
+  },
+  {
+    "rating": 0.8,
+    "drinkRating": 4.8,
+    "foodRating": 0.5,
+    "atmosphereRating": 1.0,
+    "notes": "",
+    "timestamp": "2025-03-09T15:21:26",
+    "cID": 170,
+    "uID": 40
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 3.7,
+    "foodRating": 4.0,
+    "atmosphereRating": 4.8,
+    "notes": "",
+    "timestamp": "2023-10-23T00:01:50",
+    "cID": 149,
+    "uID": 16
+  },
+  {
+    "rating": 0.2,
+    "drinkRating": 4.4,
+    "foodRating": 4.9,
+    "atmosphereRating": 2.7,
+    "notes": "Will visit again.",
+    "timestamp": "2023-01-19T11:25:47",
+    "cID": 44,
+    "uID": 25
+  },
+  {
+    "rating": 4.5,
+    "drinkRating": 4.1,
+    "foodRating": 2.0,
+    "atmosphereRating": 2.2,
+    "notes": "Great service!",
+    "timestamp": "2022-05-25T19:13:37",
+    "cID": 118,
+    "uID": 44
+  },
+  {
+    "rating": 4.0,
+    "drinkRating": 2.7,
+    "foodRating": 2.0,
+    "atmosphereRating": 4.5,
+    "notes": "",
+    "timestamp": "2024-07-01T23:06:53",
+    "cID": 151,
+    "uID": 36
+  },
+  {
+    "rating": 1.2,
+    "drinkRating": 4.8,
+    "foodRating": 3.0,
+    "atmosphereRating": 4.8,
+    "notes": "Will visit again.",
+    "timestamp": "2023-07-10T15:49:16",
+    "cID": 172,
+    "uID": 24
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 2.8,
+    "foodRating": 4.6,
+    "atmosphereRating": 3.5,
+    "notes": "Not worth it.",
+    "timestamp": "2023-10-15T20:36:25",
+    "cID": 68,
+    "uID": 28
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 3.8,
+    "foodRating": 2.6,
+    "atmosphereRating": 2.2,
+    "notes": "Food was average.",
+    "timestamp": "2025-03-06T07:39:32",
+    "cID": 188,
+    "uID": 31
+  },
+  {
+    "rating": 4.3,
+    "drinkRating": 0.4,
+    "foodRating": 4.5,
+    "atmosphereRating": 0.6,
+    "notes": "Overpriced.",
+    "timestamp": "2025-09-06T06:44:55",
+    "cID": 151,
+    "uID": 6
+  },
+  {
+    "rating": 0.8,
     "drinkRating": 2.5,
-    "foodRating": 2.8,
-    "atmosphereRating": 4.1,
-    "notes": "Great spot!",
-    "uID": 1,
-    "cID": 6
+    "foodRating": 1.7,
+    "atmosphereRating": 4.4,
+    "notes": "",
+    "timestamp": "2023-06-01T18:16:12",
+    "cID": 33,
+    "uID": 15
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 3.3,
+    "foodRating": 3.5,
+    "atmosphereRating": 4.8,
+    "notes": "Will visit again.",
+    "timestamp": "2025-01-23T02:58:50",
+    "cID": 95,
+    "uID": 40
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 2.2,
+    "foodRating": 3.3,
+    "atmosphereRating": 4.2,
+    "notes": "Nice ambiance.",
+    "timestamp": "2023-01-28T16:51:59",
+    "cID": 63,
+    "uID": 50
   },
   {
     "rating": 1.9,
-    "drinkRating": 3.2,
-    "foodRating": 2.4,
-    "atmosphereRating": 4.4,
+    "drinkRating": 2.7,
+    "foodRating": 4.3,
+    "atmosphereRating": 2.8,
+    "notes": "Too crowded.",
+    "timestamp": "2024-05-12T10:08:18",
+    "cID": 171,
+    "uID": 4
+  },
+  {
+    "rating": 3.1,
+    "drinkRating": 2.4,
+    "foodRating": 1.3,
+    "atmosphereRating": 1.8,
     "notes": "",
-    "uID": 22,
-    "cID": 6
+    "timestamp": "2024-01-15T11:14:08",
+    "cID": 20,
+    "uID": 19
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 3.8,
+    "foodRating": 1.7,
+    "atmosphereRating": 2.0,
+    "notes": "Loved the coffee!",
+    "timestamp": "2022-10-28T03:50:06",
+    "cID": 74,
+    "uID": 48
+  },
+  {
+    "rating": 4.0,
+    "drinkRating": 2.3,
+    "foodRating": 0.3,
+    "atmosphereRating": 3.3,
+    "notes": "Exceptional taste.",
+    "timestamp": "2022-12-05T05:26:54",
+    "cID": 183,
+    "uID": 36
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 4.1,
+    "foodRating": 2.8,
+    "atmosphereRating": 4.7,
+    "notes": "Great service!",
+    "timestamp": "2025-04-24T22:48:18",
+    "cID": 181,
+    "uID": 46
+  },
+  {
+    "rating": 4.7,
+    "drinkRating": 4.6,
+    "foodRating": 5.0,
+    "atmosphereRating": 1.6,
+    "notes": "Overpriced.",
+    "timestamp": "2022-02-13T06:12:41",
+    "cID": 158,
+    "uID": 38
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 3.2,
+    "foodRating": 1.6,
+    "atmosphereRating": 3.9,
+    "notes": "",
+    "timestamp": "2022-10-03T09:08:38",
+    "cID": 115,
+    "uID": 1
   },
   {
     "rating": 3.7,
+    "drinkRating": 1.3,
+    "foodRating": 3.4,
+    "atmosphereRating": 0.3,
+    "notes": "Loved the coffee!",
+    "timestamp": "2025-08-09T13:46:47",
+    "cID": 97,
+    "uID": 4
+  },
+  {
+    "rating": 0.3,
+    "drinkRating": 2.3,
+    "foodRating": 2.5,
+    "atmosphereRating": 3.0,
+    "notes": "Food was average.",
+    "timestamp": "2023-03-20T18:51:23",
+    "cID": 103,
+    "uID": 32
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 1.4,
+    "foodRating": 3.8,
+    "atmosphereRating": 2.2,
+    "notes": "Loved the coffee!",
+    "timestamp": "2022-02-22T07:24:07",
+    "cID": 176,
+    "uID": 34
+  },
+  {
+    "rating": 2.5,
+    "drinkRating": 0.2,
+    "foodRating": 0.6,
+    "atmosphereRating": 2.1,
+    "notes": "Too crowded.",
+    "timestamp": "2024-03-24T15:54:30",
+    "cID": 128,
+    "uID": 4
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 0.7,
+    "foodRating": 1.5,
+    "atmosphereRating": 1.4,
+    "notes": "Exceptional taste.",
+    "timestamp": "2025-02-05T03:50:03",
+    "cID": 89,
+    "uID": 18
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 4.0,
+    "foodRating": 1.5,
+    "atmosphereRating": 3.2,
+    "notes": "Highly recommend!",
+    "timestamp": "2024-11-18T23:45:58",
+    "cID": 80,
+    "uID": 48
+  },
+  {
+    "rating": 1.1,
     "drinkRating": 2.4,
-    "foodRating": 4.5,
+    "foodRating": 1.7,
+    "atmosphereRating": 2.4,
+    "notes": "Food was average.",
+    "timestamp": "2023-06-06T07:10:00",
+    "cID": 38,
+    "uID": 47
+  },
+  {
+    "rating": 1.2,
+    "drinkRating": 4.6,
+    "foodRating": 3.4,
+    "atmosphereRating": 0.6,
+    "notes": "Highly recommend!",
+    "timestamp": "2023-11-26T13:06:29",
+    "cID": 96,
+    "uID": 35
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 0.7,
+    "foodRating": 1.5,
+    "atmosphereRating": 3.2,
+    "notes": "",
+    "timestamp": "2024-12-26T12:38:04",
+    "cID": 33,
+    "uID": 10
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 1.8,
+    "foodRating": 2.4,
+    "atmosphereRating": 3.3,
+    "notes": "Not worth it.",
+    "timestamp": "2025-11-02T10:57:42",
+    "cID": 150,
+    "uID": 46
+  },
+  {
+    "rating": 2.1,
+    "drinkRating": 2.2,
+    "foodRating": 4.3,
+    "atmosphereRating": 1.5,
+    "notes": "Too crowded.",
+    "timestamp": "2023-10-13T14:22:25",
+    "cID": 146,
+    "uID": 44
+  },
+  {
+    "rating": 0.4,
+    "drinkRating": 2.3,
+    "foodRating": 4.9,
+    "atmosphereRating": 2.8,
+    "notes": "Not worth it.",
+    "timestamp": "2023-10-30T17:28:28",
+    "cID": 94,
+    "uID": 40
+  },
+  {
+    "rating": 0.9,
+    "drinkRating": 3.7,
+    "foodRating": 3.1,
+    "atmosphereRating": 3.8,
+    "notes": "Nice ambiance.",
+    "timestamp": "2024-05-07T14:04:06",
+    "cID": 90,
+    "uID": 23
+  },
+  {
+    "rating": 4.1,
+    "drinkRating": 3.0,
+    "foodRating": 3.2,
+    "atmosphereRating": 3.2,
+    "notes": "",
+    "timestamp": "2023-06-19T02:47:12",
+    "cID": 122,
+    "uID": 30
+  },
+  {
+    "rating": 0.5,
+    "drinkRating": 2.0,
+    "foodRating": 2.0,
+    "atmosphereRating": 3.3,
+    "notes": "Overpriced.",
+    "timestamp": "2025-10-01T08:55:14",
+    "cID": 4,
+    "uID": 29
+  },
+  {
+    "rating": 0.1,
+    "drinkRating": 4.7,
+    "foodRating": 4.7,
+    "atmosphereRating": 1.6,
+    "notes": "",
+    "timestamp": "2024-03-21T14:25:50",
+    "cID": 84,
+    "uID": 26
+  },
+  {
+    "rating": 4.0,
+    "drinkRating": 4.6,
+    "foodRating": 0.8,
+    "atmosphereRating": 0.6,
+    "notes": "Great service!",
+    "timestamp": "2023-05-27T04:15:33",
+    "cID": 111,
+    "uID": 30
+  },
+  {
+    "rating": 2.5,
+    "drinkRating": 2.3,
+    "foodRating": 2.8,
+    "atmosphereRating": 0.5,
+    "notes": "Overpriced.",
+    "timestamp": "2024-10-23T01:17:17",
+    "cID": 193,
+    "uID": 1
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 4.6,
+    "foodRating": 0.8,
+    "atmosphereRating": 0.1,
+    "notes": "Food was average.",
+    "timestamp": "2025-04-04T16:04:19",
+    "cID": 119,
+    "uID": 37
+  },
+  {
+    "rating": 4.5,
+    "drinkRating": 0.1,
+    "foodRating": 3.2,
+    "atmosphereRating": 1.8,
+    "notes": "",
+    "timestamp": "2024-06-16T16:08:35",
+    "cID": 145,
+    "uID": 12
+  },
+  {
+    "rating": 4.0,
+    "drinkRating": 3.1,
+    "foodRating": 1.7,
+    "atmosphereRating": 2.4,
+    "notes": "Not worth it.",
+    "timestamp": "2024-03-18T07:22:23",
+    "cID": 170,
+    "uID": 8
+  },
+  {
+    "rating": 3.5,
+    "drinkRating": 3.5,
+    "foodRating": 2.9,
+    "atmosphereRating": 0.2,
+    "notes": "Great service!",
+    "timestamp": "2022-11-13T11:31:09",
+    "cID": 100,
+    "uID": 21
+  },
+  {
+    "rating": 1.2,
+    "drinkRating": 2.2,
+    "foodRating": 4.2,
+    "atmosphereRating": 2.6,
+    "notes": "Great service!",
+    "timestamp": "2024-04-04T20:18:59",
+    "cID": 124,
+    "uID": 11
+  },
+  {
+    "rating": 4.7,
+    "drinkRating": 2.3,
+    "foodRating": 1.2,
+    "atmosphereRating": 4.9,
+    "notes": "",
+    "timestamp": "2025-02-12T12:29:47",
+    "cID": 113,
+    "uID": 20
+  },
+  {
+    "rating": 0.2,
+    "drinkRating": 1.6,
+    "foodRating": 0.1,
+    "atmosphereRating": 1.9,
+    "notes": "Too crowded.",
+    "timestamp": "2022-03-07T06:20:08",
+    "cID": 80,
+    "uID": 14
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 1.5,
+    "foodRating": 2.3,
+    "atmosphereRating": 4.1,
+    "notes": "Overpriced.",
+    "timestamp": "2022-11-14T19:03:57",
+    "cID": 96,
+    "uID": 48
+  },
+  {
+    "rating": 0.7,
+    "drinkRating": 2.3,
+    "foodRating": 2.1,
+    "atmosphereRating": 2.0,
+    "notes": "",
+    "timestamp": "2024-08-05T12:48:17",
+    "cID": 180,
+    "uID": 48
+  },
+  {
+    "rating": 4.6,
+    "drinkRating": 0.2,
+    "foodRating": 2.3,
+    "atmosphereRating": 0.6,
+    "notes": "Not worth it.",
+    "timestamp": "2025-06-02T18:50:13",
+    "cID": 35,
+    "uID": 6
+  },
+  {
+    "rating": 4.4,
+    "drinkRating": 3.1,
+    "foodRating": 5.0,
+    "atmosphereRating": 2.7,
+    "notes": "Loved the coffee!",
+    "timestamp": "2023-08-04T03:42:29",
+    "cID": 175,
+    "uID": 18
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 0.3,
+    "foodRating": 0.8,
+    "atmosphereRating": 4.0,
+    "notes": "Not worth it.",
+    "timestamp": "2023-12-16T02:15:55",
+    "cID": 172,
+    "uID": 34
+  },
+  {
+    "rating": 0.2,
+    "drinkRating": 3.0,
+    "foodRating": 2.5,
+    "atmosphereRating": 1.0,
+    "notes": "",
+    "timestamp": "2023-12-10T04:04:57",
+    "cID": 79,
+    "uID": 19
+  },
+  {
+    "rating": 3.9,
+    "drinkRating": 4.3,
+    "foodRating": 1.8,
+    "atmosphereRating": 1.0,
+    "notes": "Food was average.",
+    "timestamp": "2024-07-21T03:40:00",
+    "cID": 74,
+    "uID": 22
+  },
+  {
+    "rating": 1.6,
+    "drinkRating": 0.4,
+    "foodRating": 1.0,
+    "atmosphereRating": 4.0,
+    "notes": "Not worth it.",
+    "timestamp": "2023-09-19T09:38:25",
+    "cID": 156,
+    "uID": 42
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 3.5,
+    "foodRating": 0.4,
+    "atmosphereRating": 2.6,
+    "notes": "Too crowded.",
+    "timestamp": "2024-01-11T10:34:05",
+    "cID": 191,
+    "uID": 45
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 3.1,
+    "foodRating": 2.9,
+    "atmosphereRating": 1.6,
+    "notes": "Food was average.",
+    "timestamp": "2024-06-18T19:17:25",
+    "cID": 101,
+    "uID": 48
+  },
+  {
+    "rating": 4.6,
+    "drinkRating": 1.1,
+    "foodRating": 0.2,
+    "atmosphereRating": 4.7,
+    "notes": "",
+    "timestamp": "2025-07-09T14:13:43",
+    "cID": 17,
+    "uID": 37
+  },
+  {
+    "rating": 1.2,
+    "drinkRating": 1.0,
+    "foodRating": 3.5,
+    "atmosphereRating": 5.0,
+    "notes": "Overpriced.",
+    "timestamp": "2024-08-07T16:20:40",
+    "cID": 37,
+    "uID": 34
+  },
+  {
+    "rating": 3.0,
+    "drinkRating": 3.5,
+    "foodRating": 1.7,
+    "atmosphereRating": 2.3,
+    "notes": "Not worth it.",
+    "timestamp": "2023-05-11T02:22:50",
+    "cID": 20,
+    "uID": 34
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 3.0,
+    "foodRating": 4.3,
     "atmosphereRating": 1.5,
     "notes": "",
-    "uID": 36,
-    "cID": 3
+    "timestamp": "2024-02-25T15:55:51",
+    "cID": 17,
+    "uID": 31
+  },
+  {
+    "rating": 3.7,
+    "drinkRating": 4.8,
+    "foodRating": 0.1,
+    "atmosphereRating": 3.4,
+    "notes": "Food was average.",
+    "timestamp": "2025-06-14T03:27:07",
+    "cID": 117,
+    "uID": 14
+  },
+  {
+    "rating": 3.8,
+    "drinkRating": 3.2,
+    "foodRating": 2.5,
+    "atmosphereRating": 0.1,
+    "notes": "Great service!",
+    "timestamp": "2022-08-11T12:46:37",
+    "cID": 56,
+    "uID": 7
+  },
+  {
+    "rating": 0.2,
+    "drinkRating": 0.3,
+    "foodRating": 3.7,
+    "atmosphereRating": 2.8,
+    "notes": "Loved the coffee!",
+    "timestamp": "2025-03-26T09:42:28",
+    "cID": 26,
+    "uID": 17
+  },
+  {
+    "rating": 3.0,
+    "drinkRating": 0.7,
+    "foodRating": 3.0,
+    "atmosphereRating": 3.0,
+    "notes": "Overpriced.",
+    "timestamp": "2025-07-24T01:11:24",
+    "cID": 167,
+    "uID": 46
+  },
+  {
+    "rating": 4.3,
+    "drinkRating": 2.6,
+    "foodRating": 4.5,
+    "atmosphereRating": 4.4,
+    "notes": "Overpriced.",
+    "timestamp": "2025-11-22T18:24:19",
+    "cID": 101,
+    "uID": 22
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 0.4,
+    "foodRating": 4.3,
+    "atmosphereRating": 4.9,
+    "notes": "",
+    "timestamp": "2025-01-09T16:39:18",
+    "cID": 79,
+    "uID": 4
+  },
+  {
+    "rating": 1.3,
+    "drinkRating": 1.1,
+    "foodRating": 3.7,
+    "atmosphereRating": 3.4,
+    "notes": "Nice ambiance.",
+    "timestamp": "2022-10-06T12:30:27",
+    "cID": 166,
+    "uID": 17
+  },
+  {
+    "rating": 0.6,
+    "drinkRating": 1.6,
+    "foodRating": 0.9,
+    "atmosphereRating": 2.2,
+    "notes": "Great service!",
+    "timestamp": "2022-08-02T23:44:52",
+    "cID": 82,
+    "uID": 28
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 5.0,
+    "foodRating": 4.8,
+    "atmosphereRating": 1.0,
+    "notes": "Nice ambiance.",
+    "timestamp": "2024-04-19T03:57:34",
+    "cID": 145,
+    "uID": 35
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 0.5,
+    "foodRating": 4.7,
+    "atmosphereRating": 3.9,
+    "notes": "Not worth it.",
+    "timestamp": "2024-08-20T10:38:52",
+    "cID": 54,
+    "uID": 21
+  },
+  {
+    "rating": 4.3,
+    "drinkRating": 0.7,
+    "foodRating": 0.9,
+    "atmosphereRating": 3.8,
+    "notes": "Exceptional taste.",
+    "timestamp": "2023-07-18T17:13:06",
+    "cID": 85,
+    "uID": 48
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 0.4,
+    "foodRating": 0.3,
+    "atmosphereRating": 1.6,
+    "notes": "Exceptional taste.",
+    "timestamp": "2025-12-06T17:38:13",
+    "cID": 169,
+    "uID": 45
+  },
+  {
+    "rating": 3.5,
+    "drinkRating": 4.4,
+    "foodRating": 4.2,
+    "atmosphereRating": 0.8,
+    "notes": "Not worth it.",
+    "timestamp": "2023-07-15T20:54:50",
+    "cID": 129,
+    "uID": 29
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 2.5,
+    "foodRating": 1.6,
+    "atmosphereRating": 3.8,
+    "notes": "Will visit again.",
+    "timestamp": "2023-09-08T07:57:22",
+    "cID": 54,
+    "uID": 9
+  },
+  {
+    "rating": 0.3,
+    "drinkRating": 3.1,
+    "foodRating": 0.3,
+    "atmosphereRating": 1.9,
+    "notes": "Will visit again.",
+    "timestamp": "2023-07-30T21:59:54",
+    "cID": 58,
+    "uID": 38
+  },
+  {
+    "rating": 0.2,
+    "drinkRating": 3.3,
+    "foodRating": 2.5,
+    "atmosphereRating": 2.2,
+    "notes": "",
+    "timestamp": "2025-05-30T16:02:00",
+    "cID": 113,
+    "uID": 23
+  },
+  {
+    "rating": 4.5,
+    "drinkRating": 0.5,
+    "foodRating": 0.3,
+    "atmosphereRating": 4.0,
+    "notes": "",
+    "timestamp": "2023-08-18T02:21:41",
+    "cID": 65,
+    "uID": 19
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 2.4,
+    "foodRating": 0.0,
+    "atmosphereRating": 3.2,
+    "notes": "Not worth it.",
+    "timestamp": "2022-07-21T08:00:31",
+    "cID": 169,
+    "uID": 50
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 2.3,
+    "foodRating": 4.1,
+    "atmosphereRating": 4.7,
+    "notes": "Overpriced.",
+    "timestamp": "2023-05-18T22:38:46",
+    "cID": 39,
+    "uID": 37
+  },
+  {
+    "rating": 4.3,
+    "drinkRating": 3.7,
+    "foodRating": 3.5,
+    "atmosphereRating": 2.0,
+    "notes": "Too crowded.",
+    "timestamp": "2025-09-13T04:07:10",
+    "cID": 76,
+    "uID": 48
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 3.5,
+    "foodRating": 4.2,
+    "atmosphereRating": 4.1,
+    "notes": "Food was average.",
+    "timestamp": "2024-11-09T06:21:38",
+    "cID": 144,
+    "uID": 7
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 2.7,
+    "foodRating": 3.8,
+    "atmosphereRating": 2.0,
+    "notes": "",
+    "timestamp": "2022-11-05T10:27:26",
+    "cID": 101,
+    "uID": 42
+  },
+  {
+    "rating": 0.1,
+    "drinkRating": 2.1,
+    "foodRating": 1.4,
+    "atmosphereRating": 4.6,
+    "notes": "Not worth it.",
+    "timestamp": "2022-10-25T21:06:29",
+    "cID": 9,
+    "uID": 36
   },
   {
     "rating": 4.7,
     "drinkRating": 2.5,
-    "foodRating": 2.2,
-    "atmosphereRating": 4.1,
-    "notes": null,
-    "uID": 9,
-    "cID": 10
-  },
-  {
-    "rating": 3.0,
-    "drinkRating": 1.8,
-    "foodRating": 3.6,
-    "atmosphereRating": 4.1,
-    "notes": "Great spot!",
-    "uID": 44,
-    "cID": 1
-  },
-  {
-    "rating": 3.9,
-    "drinkRating": 2.4,
-    "foodRating": 4.6,
-    "atmosphereRating": 1.7,
-    "notes": null,
-    "uID": 47,
-    "cID": 2
-  },
-  {
-    "rating": 1.4,
-    "drinkRating": 3.1,
-    "foodRating": 2.4,
-    "atmosphereRating": 4.0,
-    "notes": "Great spot!",
-    "uID": 15,
-    "cID": 4
-  },
-  {
-    "rating": 4.5,
-    "drinkRating": 4.3,
-    "foodRating": 4.4,
-    "atmosphereRating": 3.1,
-    "notes": "Nice ambiance",
-    "uID": 27,
-    "cID": 4
-  },
-  {
-    "rating": 1.5,
-    "drinkRating": 3.2,
-    "foodRating": 2.8,
-    "atmosphereRating": 3.1,
-    "notes": "Loved the drinks",
-    "uID": 26,
-    "cID": 2
-  },
-  {
-    "rating": 3.2,
-    "drinkRating": 1.3,
     "foodRating": 4.9,
-    "atmosphereRating": 5.0,
-    "notes": "",
-    "uID": 11,
-    "cID": 9
-  },
-  {
-    "rating": 3.8,
-    "drinkRating": 1.3,
-    "foodRating": 4.7,
-    "atmosphereRating": 2.5,
-    "notes": null,
-    "uID": 12,
-    "cID": 1
-  },
-  {
-    "rating": 1.6,
-    "drinkRating": 2.5,
-    "foodRating": 2.8,
-    "atmosphereRating": 3.5,
-    "notes": "Great spot!",
-    "uID": 34,
-    "cID": 5
-  },
-  {
-    "rating": 4.5,
-    "drinkRating": 3.7,
-    "foodRating": 2.1,
-    "atmosphereRating": 4.2,
-    "notes": "Loved the drinks",
-    "uID": 24,
-    "cID": 2
-  },
-  {
-    "rating": 2.0,
-    "drinkRating": 2.2,
-    "foodRating": 3.9,
-    "atmosphereRating": 2.2,
-    "notes": "",
-    "uID": 5,
-    "cID": 9
-  },
-  {
-    "rating": 3.0,
-    "drinkRating": 4.9,
-    "foodRating": 4.7,
-    "atmosphereRating": 1.2,
-    "notes": "Loved the drinks",
-    "uID": 37,
-    "cID": 5
-  },
-  {
-    "rating": 2.4,
-    "drinkRating": 4.9,
-    "foodRating": 4.7,
-    "atmosphereRating": 2.7,
-    "notes": "Nice ambiance",
-    "uID": 16,
-    "cID": 6
-  },
-  {
-    "rating": 4.2,
-    "drinkRating": 1.2,
-    "foodRating": 2.1,
-    "atmosphereRating": 4.5,
-    "notes": "Nice ambiance",
-    "uID": 22,
-    "cID": 9
+    "atmosphereRating": 4.9,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-01-07T20:20:54",
+    "cID": 193,
+    "uID": 48
   },
   {
     "rating": 1.4,
-    "drinkRating": 2.8,
-    "foodRating": 1.4,
-    "atmosphereRating": 3.4,
-    "notes": "Great spot!",
-    "uID": 48,
-    "cID": 3
-  },
-  {
-    "rating": 2.8,
-    "drinkRating": 4.6,
-    "foodRating": 4.2,
-    "atmosphereRating": 2.5,
-    "notes": "Loved the drinks",
-    "uID": 11,
-    "cID": 5
-  },
-  {
-    "rating": 2.9,
-    "drinkRating": 1.9,
-    "foodRating": 4.8,
-    "atmosphereRating": 3.3,
+    "drinkRating": 4.9,
+    "foodRating": 2.7,
+    "atmosphereRating": 2.4,
     "notes": "",
-    "uID": 50,
-    "cID": 8
+    "timestamp": "2022-05-10T23:44:09",
+    "cID": 160,
+    "uID": 33
   },
   {
     "rating": 3.9,
-    "drinkRating": 1.6,
-    "foodRating": 4.7,
-    "atmosphereRating": 3.4,
-    "notes": null,
-    "uID": 2,
-    "cID": 8
-  },
-  {
-    "rating": 3.8,
-    "drinkRating": 3.9,
-    "foodRating": 3.4,
-    "atmosphereRating": 4.3,
-    "notes": "",
-    "uID": 34,
-    "cID": 7
-  },
-  {
-    "rating": 4.1,
-    "drinkRating": 2.6,
-    "foodRating": 3.2,
-    "atmosphereRating": 4.6,
-    "notes": "Great spot!",
-    "uID": 48,
-    "cID": 10
-  },
-  {
-    "rating": 1.4,
-    "drinkRating": 2.4,
-    "foodRating": 1.6,
-    "atmosphereRating": 3.0,
-    "notes": "Nice ambiance",
-    "uID": 3,
-    "cID": 10
-  },
-  {
-    "rating": 4.9,
-    "drinkRating": 1.8,
-    "foodRating": 3.6,
-    "atmosphereRating": 1.6,
-    "notes": "Loved the drinks",
-    "uID": 26,
-    "cID": 7
-  },
-  {
-    "rating": 5.0,
-    "drinkRating": 4.5,
-    "foodRating": 2.8,
-    "atmosphereRating": 2.7,
-    "notes": "",
-    "uID": 10,
-    "cID": 9
-  },
-  {
-    "rating": 1.0,
-    "drinkRating": 4.8,
-    "foodRating": 2.7,
-    "atmosphereRating": 1.9,
-    "notes": null,
-    "uID": 18,
-    "cID": 8
-  },
-  {
-    "rating": 2.7,
-    "drinkRating": 4.2,
-    "foodRating": 3.7,
-    "atmosphereRating": 3.1,
-    "notes": "Nice ambiance",
-    "uID": 50,
-    "cID": 9
-  },
-  {
-    "rating": 1.5,
-    "drinkRating": 1.3,
-    "foodRating": 2.4,
-    "atmosphereRating": 3.0,
-    "notes": "Great spot!",
-    "uID": 20,
-    "cID": 1
-  },
-  {
-    "rating": 3.7,
-    "drinkRating": 3.5,
-    "foodRating": 4.4,
-    "atmosphereRating": 2.0,
-    "notes": "Loved the drinks",
-    "uID": 1,
-    "cID": 1
-  },
-  {
-    "rating": 3.3,
-    "drinkRating": 2.9,
-    "foodRating": 2.2,
-    "atmosphereRating": 4.5,
-    "notes": "Nice ambiance",
-    "uID": 26,
-    "cID": 5
-  },
-  {
-    "rating": 1.0,
-    "drinkRating": 1.1,
-    "foodRating": 2.5,
-    "atmosphereRating": 4.8,
-    "notes": "Nice ambiance",
-    "uID": 19,
-    "cID": 7
-  },
-  {
-    "rating": 2.5,
-    "drinkRating": 2.8,
-    "foodRating": 3.4,
-    "atmosphereRating": 4.3,
-    "notes": "",
-    "uID": 19,
-    "cID": 4
-  },
-  {
-    "rating": 1.6,
-    "drinkRating": 1.6,
-    "foodRating": 4.0,
-    "atmosphereRating": 4.3,
-    "notes": "",
-    "uID": 4,
-    "cID": 10
-  },
-  {
-    "rating": 2.6,
-    "drinkRating": 3.3,
-    "foodRating": 3.0,
-    "atmosphereRating": 1.3,
-    "notes": "",
-    "uID": 44,
-    "cID": 9
-  },
-  {
-    "rating": 4.8,
-    "drinkRating": 3.7,
-    "foodRating": 3.3,
-    "atmosphereRating": 2.2,
-    "notes": "",
-    "uID": 40,
-    "cID": 6
-  },
-  {
-    "rating": 3.6,
-    "drinkRating": 2.2,
-    "foodRating": 2.4,
-    "atmosphereRating": 2.0,
-    "notes": "Great spot!",
-    "uID": 29,
-    "cID": 4
-  },
-  {
-    "rating": 1.7,
-    "drinkRating": 4.5,
-    "foodRating": 3.8,
-    "atmosphereRating": 2.0,
-    "notes": "Nice ambiance",
-    "uID": 35,
-    "cID": 6
-  },
-  {
-    "rating": 1.2,
-    "drinkRating": 2.7,
-    "foodRating": 2.1,
-    "atmosphereRating": 4.9,
-    "notes": "Loved the drinks",
-    "uID": 5,
-    "cID": 1
-  },
-  {
-    "rating": 3.4,
-    "drinkRating": 1.9,
-    "foodRating": 1.2,
-    "atmosphereRating": 3.8,
-    "notes": "Great spot!",
-    "uID": 29,
-    "cID": 9
-  },
-  {
-    "rating": 4.5,
-    "drinkRating": 2.8,
-    "foodRating": 3.1,
-    "atmosphereRating": 4.4,
-    "notes": null,
-    "uID": 36,
-    "cID": 7
-  },
-  {
-    "rating": 4.2,
-    "drinkRating": 4.8,
-    "foodRating": 1.7,
-    "atmosphereRating": 4.6,
-    "notes": "Loved the drinks",
-    "uID": 37,
-    "cID": 6
-  },
-  {
-    "rating": 3.8,
-    "drinkRating": 4.4,
-    "foodRating": 1.3,
+    "drinkRating": 1.5,
+    "foodRating": 4.8,
     "atmosphereRating": 4.1,
-    "notes": "Great spot!",
-    "uID": 48,
-    "cID": 7
+    "notes": "Highly recommend!",
+    "timestamp": "2024-05-11T22:43:40",
+    "cID": 76,
+    "uID": 50
   },
   {
-    "rating": 3.6,
-    "drinkRating": 2.5,
-    "foodRating": 1.6,
-    "atmosphereRating": 2.7,
-    "notes": "Loved the drinks",
-    "uID": 10,
-    "cID": 1
-  },
-  {
-    "rating": 1.4,
-    "drinkRating": 1.7,
-    "foodRating": 2.7,
-    "atmosphereRating": 1.5,
-    "notes": "Loved the drinks",
-    "uID": 4,
-    "cID": 6
-  },
-  {
-    "rating": 2.2,
-    "drinkRating": 2.1,
-    "foodRating": 1.5,
-    "atmosphereRating": 1.2,
-    "notes": "Loved the drinks",
-    "uID": 8,
-    "cID": 7
-  },
-  {
-    "rating": 3.8,
-    "drinkRating": 3.2,
-    "foodRating": 1.2,
-    "atmosphereRating": 1.2,
-    "notes": null,
-    "uID": 41,
-    "cID": 5
-  },
-  {
-    "rating": 2.3,
-    "drinkRating": 3.8,
-    "foodRating": 4.6,
-    "atmosphereRating": 1.0,
-    "notes": null,
-    "uID": 11,
-    "cID": 3
-  },
-  {
-    "rating": 3.4,
-    "drinkRating": 3.1,
-    "foodRating": 4.0,
-    "atmosphereRating": 3.2,
-    "notes": "",
-    "uID": 50,
-    "cID": 7
-  },
-  {
-    "rating": 4.8,
-    "drinkRating": 3.8,
-    "foodRating": 2.5,
-    "atmosphereRating": 3.5,
-    "notes": "Nice ambiance",
-    "uID": 27,
-    "cID": 5
-  },
-  {
-    "rating": 3.1,
-    "drinkRating": 2.5,
-    "foodRating": 1.9,
-    "atmosphereRating": 3.8,
-    "notes": "",
-    "uID": 50,
-    "cID": 4
-  },
-  {
-    "rating": 4.5,
-    "drinkRating": 3.0,
-    "foodRating": 1.8,
-    "atmosphereRating": 4.1,
-    "notes": "Great spot!",
-    "uID": 15,
-    "cID": 3
-  },
-  {
-    "rating": 1.5,
-    "drinkRating": 3.0,
+    "rating": 0.3,
+    "drinkRating": 0.0,
     "foodRating": 3.7,
-    "atmosphereRating": 3.5,
-    "notes": "Nice ambiance",
-    "uID": 31,
-    "cID": 3
-  },
-  {
-    "rating": 4.0,
-    "drinkRating": 4.0,
-    "foodRating": 4.5,
     "atmosphereRating": 4.0,
-    "notes": null,
-    "uID": 39,
-    "cID": 4
+    "notes": "Loved the coffee!",
+    "timestamp": "2025-03-08T18:03:17",
+    "cID": 74,
+    "uID": 21
   },
   {
     "rating": 3.4,
     "drinkRating": 2.3,
+    "foodRating": 3.5,
+    "atmosphereRating": 3.8,
+    "notes": "Overpriced.",
+    "timestamp": "2023-08-27T17:39:46",
+    "cID": 48,
+    "uID": 30
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 4.6,
+    "foodRating": 1.1,
+    "atmosphereRating": 0.4,
+    "notes": "",
+    "timestamp": "2025-05-23T13:14:42",
+    "cID": 104,
+    "uID": 3
+  },
+  {
+    "rating": 0.5,
+    "drinkRating": 2.2,
+    "foodRating": 1.2,
+    "atmosphereRating": 0.6,
+    "notes": "Highly recommend!",
+    "timestamp": "2024-10-20T08:04:01",
+    "cID": 108,
+    "uID": 41
+  },
+  {
+    "rating": 3.1,
+    "drinkRating": 4.1,
+    "foodRating": 4.8,
+    "atmosphereRating": 1.3,
+    "notes": "",
+    "timestamp": "2025-03-26T23:48:53",
+    "cID": 176,
+    "uID": 40
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 4.3,
+    "foodRating": 3.9,
+    "atmosphereRating": 0.9,
+    "notes": "Too crowded.",
+    "timestamp": "2022-08-19T19:31:23",
+    "cID": 57,
+    "uID": 10
+  },
+  {
+    "rating": 0.5,
+    "drinkRating": 2.6,
+    "foodRating": 3.8,
+    "atmosphereRating": 3.8,
+    "notes": "Great service!",
+    "timestamp": "2022-12-07T01:55:29",
+    "cID": 21,
+    "uID": 4
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 1.0,
+    "foodRating": 0.9,
+    "atmosphereRating": 0.1,
+    "notes": "Nice ambiance.",
+    "timestamp": "2023-05-02T18:41:56",
+    "cID": 108,
+    "uID": 1
+  },
+  {
+    "rating": 4.6,
+    "drinkRating": 1.2,
+    "foodRating": 1.0,
+    "atmosphereRating": 0.8,
+    "notes": "",
+    "timestamp": "2024-08-18T16:25:15",
+    "cID": 192,
+    "uID": 35
+  },
+  {
+    "rating": 3.7,
+    "drinkRating": 4.3,
+    "foodRating": 2.8,
+    "atmosphereRating": 4.6,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-01-25T17:12:11",
+    "cID": 161,
+    "uID": 48
+  },
+  {
+    "rating": 3.2,
+    "drinkRating": 2.8,
+    "foodRating": 4.5,
+    "atmosphereRating": 2.4,
+    "notes": "Loved the coffee!",
+    "timestamp": "2022-10-30T21:50:56",
+    "cID": 187,
+    "uID": 29
+  },
+  {
+    "rating": 0.0,
+    "drinkRating": 0.9,
+    "foodRating": 2.7,
+    "atmosphereRating": 4.5,
+    "notes": "Will visit again.",
+    "timestamp": "2023-07-07T04:26:14",
+    "cID": 101,
+    "uID": 6
+  },
+  {
+    "rating": 0.5,
+    "drinkRating": 1.9,
+    "foodRating": 2.1,
+    "atmosphereRating": 4.7,
+    "notes": "Not worth it.",
+    "timestamp": "2024-02-09T18:51:16",
+    "cID": 134,
+    "uID": 39
+  },
+  {
+    "rating": 3.2,
+    "drinkRating": 3.0,
+    "foodRating": 4.8,
+    "atmosphereRating": 4.2,
+    "notes": "",
+    "timestamp": "2025-03-23T21:37:28",
+    "cID": 178,
+    "uID": 37
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 0.1,
+    "foodRating": 4.3,
+    "atmosphereRating": 3.5,
+    "notes": "Food was average.",
+    "timestamp": "2023-10-31T03:38:08",
+    "cID": 156,
+    "uID": 33
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 0.2,
+    "foodRating": 1.9,
+    "atmosphereRating": 4.4,
+    "notes": "Exceptional taste.",
+    "timestamp": "2022-01-30T16:11:31",
+    "cID": 8,
+    "uID": 34
+  },
+  {
+    "rating": 4.4,
+    "drinkRating": 4.5,
+    "foodRating": 0.6,
+    "atmosphereRating": 1.9,
+    "notes": "Food was average.",
+    "timestamp": "2023-02-01T12:48:14",
+    "cID": 158,
+    "uID": 28
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 4.8,
+    "foodRating": 2.2,
+    "atmosphereRating": 4.5,
+    "notes": "Loved the coffee!",
+    "timestamp": "2025-11-15T04:13:32",
+    "cID": 37,
+    "uID": 7
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 4.3,
+    "foodRating": 0.1,
+    "atmosphereRating": 1.9,
+    "notes": "Highly recommend!",
+    "timestamp": "2025-08-17T18:11:10",
+    "cID": 49,
+    "uID": 5
+  },
+  {
+    "rating": 4.6,
+    "drinkRating": 1.3,
+    "foodRating": 0.3,
+    "atmosphereRating": 1.6,
+    "notes": "Will visit again.",
+    "timestamp": "2022-06-09T19:37:17",
+    "cID": 186,
+    "uID": 23
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 3.0,
+    "foodRating": 2.7,
+    "atmosphereRating": 0.8,
+    "notes": "Exceptional taste.",
+    "timestamp": "2022-02-16T19:41:37",
+    "cID": 11,
+    "uID": 40
+  },
+  {
+    "rating": 0.4,
+    "drinkRating": 1.4,
+    "foodRating": 4.9,
+    "atmosphereRating": 0.6,
+    "notes": "Loved the coffee!",
+    "timestamp": "2022-12-24T01:32:49",
+    "cID": 88,
+    "uID": 18
+  },
+  {
+    "rating": 1.6,
+    "drinkRating": 0.9,
+    "foodRating": 1.2,
+    "atmosphereRating": 2.2,
+    "notes": "Overpriced.",
+    "timestamp": "2023-05-27T00:29:17",
+    "cID": 109,
+    "uID": 41
+  },
+  {
+    "rating": 0.1,
+    "drinkRating": 4.5,
+    "foodRating": 3.0,
+    "atmosphereRating": 1.0,
+    "notes": "Nice ambiance.",
+    "timestamp": "2025-12-11T00:05:18",
+    "cID": 177,
+    "uID": 22
+  },
+  {
+    "rating": 0.4,
+    "drinkRating": 0.5,
+    "foodRating": 1.4,
+    "atmosphereRating": 1.6,
+    "notes": "Highly recommend!",
+    "timestamp": "2022-11-20T23:45:19",
+    "cID": 66,
+    "uID": 22
+  },
+  {
+    "rating": 4.2,
+    "drinkRating": 0.2,
+    "foodRating": 4.1,
+    "atmosphereRating": 2.7,
+    "notes": "Not worth it.",
+    "timestamp": "2023-01-09T21:43:12",
+    "cID": 152,
+    "uID": 38
+  },
+  {
+    "rating": 3.4,
+    "drinkRating": 4.5,
+    "foodRating": 0.8,
+    "atmosphereRating": 1.5,
+    "notes": "Will visit again.",
+    "timestamp": "2025-03-11T18:32:59",
+    "cID": 83,
+    "uID": 26
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 0.6,
+    "foodRating": 0.8,
+    "atmosphereRating": 4.4,
+    "notes": "",
+    "timestamp": "2022-06-23T14:21:25",
+    "cID": 2,
+    "uID": 44
+  },
+  {
+    "rating": 0.5,
+    "drinkRating": 1.5,
+    "foodRating": 4.4,
+    "atmosphereRating": 3.3,
+    "notes": "Nice ambiance.",
+    "timestamp": "2023-11-17T13:11:14",
+    "cID": 195,
+    "uID": 20
+  },
+  {
+    "rating": 3.2,
+    "drinkRating": 0.4,
+    "foodRating": 0.4,
+    "atmosphereRating": 2.4,
+    "notes": "Food was average.",
+    "timestamp": "2025-10-07T00:45:19",
+    "cID": 49,
+    "uID": 40
+  },
+  {
+    "rating": 3.1,
+    "drinkRating": 3.9,
+    "foodRating": 3.4,
+    "atmosphereRating": 4.1,
+    "notes": "Highly recommend!",
+    "timestamp": "2023-03-26T05:34:49",
+    "cID": 176,
+    "uID": 26
+  },
+  {
+    "rating": 0.9,
+    "drinkRating": 4.8,
+    "foodRating": 2.4,
+    "atmosphereRating": 4.6,
+    "notes": "Nice ambiance.",
+    "timestamp": "2025-06-04T21:41:48",
+    "cID": 70,
+    "uID": 22
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 4.9,
+    "foodRating": 0.6,
+    "atmosphereRating": 1.4,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-06-26T01:53:47",
+    "cID": 64,
+    "uID": 26
+  },
+  {
+    "rating": 3.4,
+    "drinkRating": 1.0,
+    "foodRating": 3.2,
+    "atmosphereRating": 1.7,
+    "notes": "Loved the coffee!",
+    "timestamp": "2024-12-22T11:23:27",
+    "cID": 135,
+    "uID": 27
+  },
+  {
+    "rating": 0.5,
+    "drinkRating": 0.0,
+    "foodRating": 2.0,
+    "atmosphereRating": 3.9,
+    "notes": "Not worth it.",
+    "timestamp": "2023-02-13T03:10:51",
+    "cID": 141,
+    "uID": 49
+  },
+  {
+    "rating": 4.5,
+    "drinkRating": 4.9,
+    "foodRating": 1.7,
+    "atmosphereRating": 0.8,
+    "notes": "Great service!",
+    "timestamp": "2024-01-26T23:54:24",
+    "cID": 148,
+    "uID": 36
+  },
+  {
+    "rating": 1.9,
+    "drinkRating": 1.3,
+    "foodRating": 2.9,
+    "atmosphereRating": 2.7,
+    "notes": "Nice ambiance.",
+    "timestamp": "2022-01-14T08:37:55",
+    "cID": 111,
+    "uID": 5
+  },
+  {
+    "rating": 1.3,
+    "drinkRating": 4.9,
+    "foodRating": 2.4,
+    "atmosphereRating": 1.9,
+    "notes": "Nice ambiance.",
+    "timestamp": "2023-12-16T23:58:12",
+    "cID": 126,
+    "uID": 8
+  },
+  {
+    "rating": 2.3,
+    "drinkRating": 4.8,
+    "foodRating": 2.2,
+    "atmosphereRating": 3.2,
+    "notes": "Will visit again.",
+    "timestamp": "2022-05-17T08:02:06",
+    "cID": 61,
+    "uID": 6
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 2.5,
+    "foodRating": 1.9,
+    "atmosphereRating": 2.9,
+    "notes": "Nice ambiance.",
+    "timestamp": "2024-11-19T15:16:14",
+    "cID": 132,
+    "uID": 46
+  },
+  {
+    "rating": 3.0,
+    "drinkRating": 0.3,
+    "foodRating": 2.7,
+    "atmosphereRating": 1.9,
+    "notes": "Will visit again.",
+    "timestamp": "2025-02-13T08:20:44",
+    "cID": 62,
+    "uID": 17
+  },
+  {
+    "rating": 1.1,
+    "drinkRating": 2.6,
+    "foodRating": 1.0,
+    "atmosphereRating": 3.2,
+    "notes": "Food was average.",
+    "timestamp": "2024-03-19T13:18:04",
+    "cID": 40,
+    "uID": 22
+  },
+  {
+    "rating": 3.2,
+    "drinkRating": 3.8,
+    "foodRating": 0.9,
+    "atmosphereRating": 2.9,
+    "notes": "Not worth it.",
+    "timestamp": "2023-12-30T21:54:25",
+    "cID": 110,
+    "uID": 40
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 2.0,
+    "foodRating": 1.6,
+    "atmosphereRating": 0.6,
+    "notes": "Will visit again.",
+    "timestamp": "2022-11-27T10:57:47",
+    "cID": 147,
+    "uID": 11
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 3.0,
+    "foodRating": 3.0,
+    "atmosphereRating": 0.1,
+    "notes": "Too crowded.",
+    "timestamp": "2024-04-03T14:46:17",
+    "cID": 24,
+    "uID": 22
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 3.5,
+    "foodRating": 0.2,
+    "atmosphereRating": 0.1,
+    "notes": "",
+    "timestamp": "2023-03-15T23:51:29",
+    "cID": 127,
+    "uID": 40
+  },
+  {
+    "rating": 2.3,
+    "drinkRating": 1.2,
+    "foodRating": 4.8,
+    "atmosphereRating": 4.3,
+    "notes": "Great service!",
+    "timestamp": "2025-07-08T16:10:37",
+    "cID": 105,
+    "uID": 30
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 0.7,
+    "foodRating": 4.7,
+    "atmosphereRating": 0.2,
+    "notes": "Will visit again.",
+    "timestamp": "2025-05-29T02:53:42",
+    "cID": 71,
+    "uID": 43
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 0.3,
+    "foodRating": 4.3,
+    "atmosphereRating": 0.5,
+    "notes": "Nice ambiance.",
+    "timestamp": "2025-06-25T12:10:52",
+    "cID": 60,
+    "uID": 50
+  },
+  {
+    "rating": 3.7,
+    "drinkRating": 1.3,
+    "foodRating": 0.9,
+    "atmosphereRating": 4.6,
+    "notes": "Exceptional taste.",
+    "timestamp": "2022-10-29T09:23:12",
+    "cID": 177,
+    "uID": 39
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 3.8,
+    "foodRating": 1.1,
+    "atmosphereRating": 2.4,
+    "notes": "Overpriced.",
+    "timestamp": "2024-03-28T18:09:00",
+    "cID": 57,
+    "uID": 38
+  },
+  {
+    "rating": 4.6,
+    "drinkRating": 1.0,
+    "foodRating": 2.5,
+    "atmosphereRating": 3.7,
+    "notes": "",
+    "timestamp": "2024-06-30T04:14:14",
+    "cID": 35,
+    "uID": 10
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 1.0,
+    "foodRating": 4.9,
+    "atmosphereRating": 2.5,
+    "notes": "Will visit again.",
+    "timestamp": "2022-08-13T01:47:38",
+    "cID": 117,
+    "uID": 41
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 3.1,
     "foodRating": 2.3,
+    "atmosphereRating": 2.9,
+    "notes": "Loved the coffee!",
+    "timestamp": "2024-05-20T15:48:43",
+    "cID": 32,
+    "uID": 5
+  },
+  {
+    "rating": 4.2,
+    "drinkRating": 0.3,
+    "foodRating": 0.9,
+    "atmosphereRating": 1.3,
+    "notes": "Exceptional taste.",
+    "timestamp": "2023-09-22T00:51:26",
+    "cID": 185,
+    "uID": 45
+  },
+  {
+    "rating": 2.5,
+    "drinkRating": 2.6,
+    "foodRating": 0.3,
+    "atmosphereRating": 2.8,
+    "notes": "",
+    "timestamp": "2023-06-07T22:05:30",
+    "cID": 34,
+    "uID": 27
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 3.7,
+    "foodRating": 0.3,
+    "atmosphereRating": 1.7,
+    "notes": "Nice ambiance.",
+    "timestamp": "2023-07-22T20:17:45",
+    "cID": 116,
+    "uID": 21
+  },
+  {
+    "rating": 1.6,
+    "drinkRating": 4.7,
+    "foodRating": 1.7,
+    "atmosphereRating": 1.5,
+    "notes": "Highly recommend!",
+    "timestamp": "2022-10-06T02:34:00",
+    "cID": 120,
+    "uID": 30
+  },
+  {
+    "rating": 3.2,
+    "drinkRating": 1.0,
+    "foodRating": 1.0,
+    "atmosphereRating": 4.3,
+    "notes": "Will visit again.",
+    "timestamp": "2023-11-10T08:54:25",
+    "cID": 59,
+    "uID": 22
+  },
+  {
+    "rating": 0.2,
+    "drinkRating": 4.2,
+    "foodRating": 1.8,
+    "atmosphereRating": 0.3,
+    "notes": "Loved the coffee!",
+    "timestamp": "2023-06-04T17:56:52",
+    "cID": 195,
+    "uID": 37
+  },
+  {
+    "rating": 1.7,
+    "drinkRating": 1.6,
+    "foodRating": 2.6,
+    "atmosphereRating": 1.4,
+    "notes": "Loved the coffee!",
+    "timestamp": "2023-02-27T21:29:43",
+    "cID": 118,
+    "uID": 3
+  },
+  {
+    "rating": 0.3,
+    "drinkRating": 5.0,
+    "foodRating": 2.2,
+    "atmosphereRating": 1.9,
+    "notes": "Overpriced.",
+    "timestamp": "2023-12-27T04:56:38",
+    "cID": 55,
+    "uID": 29
+  },
+  {
+    "rating": 3.1,
+    "drinkRating": 0.1,
+    "foodRating": 3.6,
+    "atmosphereRating": 1.1,
+    "notes": "Nice ambiance.",
+    "timestamp": "2022-01-23T00:10:58",
+    "cID": 24,
+    "uID": 19
+  },
+  {
+    "rating": 1.2,
+    "drinkRating": 1.1,
+    "foodRating": 4.0,
+    "atmosphereRating": 2.2,
+    "notes": "Overpriced.",
+    "timestamp": "2023-01-22T13:15:40",
+    "cID": 60,
+    "uID": 25
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 3.6,
+    "foodRating": 2.1,
+    "atmosphereRating": 3.6,
+    "notes": "Great service!",
+    "timestamp": "2023-09-15T00:00:03",
+    "cID": 94,
+    "uID": 36
+  },
+  {
+    "rating": 0.8,
+    "drinkRating": 3.0,
+    "foodRating": 3.0,
+    "atmosphereRating": 2.2,
+    "notes": "Will visit again.",
+    "timestamp": "2023-07-19T23:18:24",
+    "cID": 32,
+    "uID": 48
+  },
+  {
+    "rating": 3.5,
+    "drinkRating": 3.2,
+    "foodRating": 1.3,
+    "atmosphereRating": 1.9,
+    "notes": "",
+    "timestamp": "2024-08-01T08:54:29",
+    "cID": 57,
+    "uID": 22
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 2.4,
+    "foodRating": 4.1,
+    "atmosphereRating": 0.7,
+    "notes": "Highly recommend!",
+    "timestamp": "2022-03-10T05:06:16",
+    "cID": 149,
+    "uID": 50
+  },
+  {
+    "rating": 0.9,
+    "drinkRating": 1.7,
+    "foodRating": 0.7,
+    "atmosphereRating": 0.1,
+    "notes": "Great service!",
+    "timestamp": "2023-12-27T16:55:18",
+    "cID": 96,
+    "uID": 41
+  },
+  {
+    "rating": 0.6,
+    "drinkRating": 4.9,
+    "foodRating": 4.0,
+    "atmosphereRating": 2.0,
+    "notes": "",
+    "timestamp": "2025-02-02T23:43:30",
+    "cID": 165,
+    "uID": 9
+  },
+  {
+    "rating": 4.2,
+    "drinkRating": 4.3,
+    "foodRating": 3.7,
+    "atmosphereRating": 2.8,
+    "notes": "Too crowded.",
+    "timestamp": "2023-02-05T20:39:59",
+    "cID": 83,
+    "uID": 47
+  },
+  {
+    "rating": 2.3,
+    "drinkRating": 1.0,
+    "foodRating": 3.7,
+    "atmosphereRating": 3.9,
+    "notes": "Too crowded.",
+    "timestamp": "2022-06-03T10:29:34",
+    "cID": 19,
+    "uID": 36
+  },
+  {
+    "rating": 0.2,
+    "drinkRating": 0.9,
+    "foodRating": 1.3,
+    "atmosphereRating": 3.7,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-11-27T03:54:55",
+    "cID": 83,
+    "uID": 44
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 3.0,
+    "foodRating": 1.7,
+    "atmosphereRating": 0.8,
+    "notes": "Food was average.",
+    "timestamp": "2025-04-19T04:42:06",
+    "cID": 129,
+    "uID": 2
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 2.2,
+    "foodRating": 2.8,
+    "atmosphereRating": 0.0,
+    "notes": "",
+    "timestamp": "2024-10-23T02:42:57",
+    "cID": 153,
+    "uID": 49
+  },
+  {
+    "rating": 0.7,
+    "drinkRating": 0.7,
+    "foodRating": 4.8,
+    "atmosphereRating": 4.5,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-07-31T15:15:54",
+    "cID": 185,
+    "uID": 48
+  },
+  {
+    "rating": 0.1,
+    "drinkRating": 4.8,
+    "foodRating": 1.2,
+    "atmosphereRating": 4.1,
+    "notes": "Exceptional taste.",
+    "timestamp": "2023-09-25T07:34:18",
+    "cID": 5,
+    "uID": 39
+  },
+  {
+    "rating": 1.8,
+    "drinkRating": 3.4,
+    "foodRating": 1.6,
+    "atmosphereRating": 3.7,
+    "notes": "Overpriced.",
+    "timestamp": "2023-11-04T01:01:39",
+    "cID": 43,
+    "uID": 14
+  },
+  {
+    "rating": 0.5,
+    "drinkRating": 3.0,
+    "foodRating": 2.3,
+    "atmosphereRating": 2.5,
+    "notes": "Great service!",
+    "timestamp": "2023-04-08T01:30:23",
+    "cID": 81,
+    "uID": 39
+  },
+  {
+    "rating": 3.0,
+    "drinkRating": 4.7,
+    "foodRating": 3.5,
+    "atmosphereRating": 1.4,
+    "notes": "",
+    "timestamp": "2025-01-11T08:30:17",
+    "cID": 159,
+    "uID": 43
+  },
+  {
+    "rating": 2.1,
+    "drinkRating": 1.6,
+    "foodRating": 2.7,
+    "atmosphereRating": 2.9,
+    "notes": "Highly recommend!",
+    "timestamp": "2023-02-02T21:02:51",
+    "cID": 88,
+    "uID": 31
+  },
+  {
+    "rating": 1.3,
+    "drinkRating": 0.5,
+    "foodRating": 1.0,
+    "atmosphereRating": 1.5,
+    "notes": "Will visit again.",
+    "timestamp": "2024-06-13T08:35:33",
+    "cID": 86,
+    "uID": 42
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 3.2,
+    "foodRating": 1.9,
+    "atmosphereRating": 4.2,
+    "notes": "Too crowded.",
+    "timestamp": "2025-06-17T05:46:49",
+    "cID": 82,
+    "uID": 32
+  },
+  {
+    "rating": 4.2,
+    "drinkRating": 0.8,
+    "foodRating": 4.4,
+    "atmosphereRating": 3.2,
+    "notes": "",
+    "timestamp": "2024-06-21T22:18:33",
+    "cID": 146,
+    "uID": 49
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 4.1,
+    "foodRating": 3.8,
+    "atmosphereRating": 4.8,
+    "notes": "Nice ambiance.",
+    "timestamp": "2023-03-23T05:06:28",
+    "cID": 16,
+    "uID": 18
+  },
+  {
+    "rating": 4.0,
+    "drinkRating": 3.2,
+    "foodRating": 2.1,
+    "atmosphereRating": 4.1,
+    "notes": "Overpriced.",
+    "timestamp": "2025-09-25T12:22:21",
+    "cID": 104,
+    "uID": 18
+  },
+  {
+    "rating": 1.8,
+    "drinkRating": 3.4,
+    "foodRating": 2.4,
+    "atmosphereRating": 0.3,
+    "notes": "Exceptional taste.",
+    "timestamp": "2022-07-26T23:14:32",
+    "cID": 109,
+    "uID": 9
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 4.9,
+    "foodRating": 1.2,
+    "atmosphereRating": 2.8,
+    "notes": "",
+    "timestamp": "2024-10-31T22:22:04",
+    "cID": 22,
+    "uID": 28
+  },
+  {
+    "rating": 0.4,
+    "drinkRating": 0.3,
+    "foodRating": 4.2,
+    "atmosphereRating": 2.4,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-07-27T06:53:46",
+    "cID": 87,
+    "uID": 32
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 1.4,
+    "foodRating": 4.6,
+    "atmosphereRating": 4.7,
+    "notes": "Will visit again.",
+    "timestamp": "2025-01-21T08:55:18",
+    "cID": 72,
+    "uID": 10
+  },
+  {
+    "rating": 0.7,
+    "drinkRating": 2.1,
+    "foodRating": 1.5,
+    "atmosphereRating": 2.1,
+    "notes": "",
+    "timestamp": "2023-12-22T13:53:08",
+    "cID": 67,
+    "uID": 1
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 0.1,
+    "foodRating": 3.9,
+    "atmosphereRating": 1.5,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-05-30T21:28:21",
+    "cID": 70,
+    "uID": 45
+  },
+  {
+    "rating": 0.4,
+    "drinkRating": 4.0,
+    "foodRating": 2.7,
+    "atmosphereRating": 3.7,
+    "notes": "Great service!",
+    "timestamp": "2024-03-27T13:14:25",
+    "cID": 148,
+    "uID": 4
+  },
+  {
+    "rating": 1.1,
+    "drinkRating": 2.3,
+    "foodRating": 3.3,
+    "atmosphereRating": 0.7,
+    "notes": "Overpriced.",
+    "timestamp": "2024-12-09T23:23:15",
+    "cID": 2,
+    "uID": 47
+  },
+  {
+    "rating": 3.2,
+    "drinkRating": 1.6,
+    "foodRating": 4.2,
+    "atmosphereRating": 2.7,
+    "notes": "Overpriced.",
+    "timestamp": "2022-01-06T23:24:26",
+    "cID": 70,
+    "uID": 23
+  },
+  {
+    "rating": 0.8,
+    "drinkRating": 1.4,
+    "foodRating": 1.1,
+    "atmosphereRating": 2.5,
+    "notes": "Not worth it.",
+    "timestamp": "2024-07-03T03:00:28",
+    "cID": 30,
+    "uID": 35
+  },
+  {
+    "rating": 3.9,
+    "drinkRating": 1.8,
+    "foodRating": 4.7,
+    "atmosphereRating": 1.3,
+    "notes": "Exceptional taste.",
+    "timestamp": "2023-03-09T10:36:42",
+    "cID": 193,
+    "uID": 26
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 2.8,
+    "foodRating": 0.9,
+    "atmosphereRating": 0.9,
+    "notes": "Highly recommend!",
+    "timestamp": "2022-05-08T18:37:41",
+    "cID": 90,
+    "uID": 46
+  },
+  {
+    "rating": 1.3,
+    "drinkRating": 3.1,
+    "foodRating": 0.2,
+    "atmosphereRating": 1.1,
+    "notes": "Nice ambiance.",
+    "timestamp": "2023-11-11T03:17:37",
+    "cID": 72,
+    "uID": 14
+  },
+  {
+    "rating": 0.1,
+    "drinkRating": 4.5,
+    "foodRating": 0.2,
+    "atmosphereRating": 0.3,
+    "notes": "Not worth it.",
+    "timestamp": "2025-06-01T07:10:38",
+    "cID": 166,
+    "uID": 29
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 0.2,
+    "foodRating": 3.8,
+    "atmosphereRating": 3.7,
+    "notes": "Overpriced.",
+    "timestamp": "2023-03-14T01:19:06",
+    "cID": 70,
+    "uID": 43
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 0.2,
+    "foodRating": 2.7,
+    "atmosphereRating": 0.6,
+    "notes": "",
+    "timestamp": "2024-10-11T04:38:36",
+    "cID": 57,
+    "uID": 34
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 3.9,
+    "foodRating": 3.5,
+    "atmosphereRating": 3.6,
+    "notes": "",
+    "timestamp": "2022-08-15T19:52:18",
+    "cID": 162,
+    "uID": 46
+  },
+  {
+    "rating": 2.5,
+    "drinkRating": 3.2,
+    "foodRating": 0.9,
+    "atmosphereRating": 2.9,
+    "notes": "Will visit again.",
+    "timestamp": "2023-07-13T19:35:28",
+    "cID": 90,
+    "uID": 32
+  },
+  {
+    "rating": 2.2,
+    "drinkRating": 1.2,
+    "foodRating": 2.4,
+    "atmosphereRating": 0.2,
+    "notes": "Loved the coffee!",
+    "timestamp": "2022-12-19T21:03:40",
+    "cID": 174,
+    "uID": 22
+  },
+  {
+    "rating": 4.0,
+    "drinkRating": 3.8,
+    "foodRating": 3.9,
+    "atmosphereRating": 1.4,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-06-25T08:01:24",
+    "cID": 86,
+    "uID": 14
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 0.4,
+    "foodRating": 4.3,
+    "atmosphereRating": 4.4,
+    "notes": "Overpriced.",
+    "timestamp": "2022-06-27T21:46:54",
+    "cID": 67,
+    "uID": 19
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 0.7,
+    "foodRating": 0.1,
+    "atmosphereRating": 1.2,
+    "notes": "Highly recommend!",
+    "timestamp": "2023-02-19T04:06:10",
+    "cID": 105,
+    "uID": 40
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 3.4,
+    "foodRating": 3.0,
+    "atmosphereRating": 3.3,
+    "notes": "",
+    "timestamp": "2024-05-13T23:37:10",
+    "cID": 2,
+    "uID": 43
+  },
+  {
+    "rating": 0.8,
+    "drinkRating": 4.3,
+    "foodRating": 3.6,
+    "atmosphereRating": 2.7,
+    "notes": "Great service!",
+    "timestamp": "2022-05-02T18:57:08",
+    "cID": 88,
+    "uID": 29
+  },
+  {
+    "rating": 3.7,
+    "drinkRating": 4.0,
+    "foodRating": 4.6,
+    "atmosphereRating": 3.2,
+    "notes": "Loved the coffee!",
+    "timestamp": "2023-06-20T17:23:17",
+    "cID": 165,
+    "uID": 20
+  },
+  {
+    "rating": 4.5,
+    "drinkRating": 2.1,
+    "foodRating": 0.6,
+    "atmosphereRating": 2.7,
+    "notes": "",
+    "timestamp": "2023-03-21T10:03:26",
+    "cID": 61,
+    "uID": 46
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 3.8,
+    "foodRating": 4.1,
+    "atmosphereRating": 0.7,
+    "notes": "Too crowded.",
+    "timestamp": "2024-12-28T01:45:28",
+    "cID": 12,
+    "uID": 6
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 4.0,
+    "foodRating": 0.8,
+    "atmosphereRating": 0.6,
+    "notes": "Loved the coffee!",
+    "timestamp": "2024-04-23T10:19:38",
+    "cID": 146,
+    "uID": 12
+  },
+  {
+    "rating": 1.9,
+    "drinkRating": 2.6,
+    "foodRating": 2.6,
+    "atmosphereRating": 0.1,
+    "notes": "Nice ambiance.",
+    "timestamp": "2022-04-03T08:12:52",
+    "cID": 152,
+    "uID": 12
+  },
+  {
+    "rating": 0.2,
+    "drinkRating": 1.9,
+    "foodRating": 3.3,
+    "atmosphereRating": 3.9,
+    "notes": "Exceptional taste.",
+    "timestamp": "2025-02-13T22:58:01",
+    "cID": 70,
+    "uID": 36
+  },
+  {
+    "rating": 1.2,
+    "drinkRating": 1.2,
+    "foodRating": 1.1,
+    "atmosphereRating": 0.9,
+    "notes": "Not worth it.",
+    "timestamp": "2025-01-05T00:33:38",
+    "cID": 6,
+    "uID": 25
+  },
+  {
+    "rating": 4.9,
+    "drinkRating": 1.8,
+    "foodRating": 4.3,
+    "atmosphereRating": 2.1,
+    "notes": "Too crowded.",
+    "timestamp": "2022-05-02T02:30:33",
+    "cID": 112,
+    "uID": 8
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 1.0,
+    "foodRating": 0.8,
+    "atmosphereRating": 3.4,
+    "notes": "Highly recommend!",
+    "timestamp": "2023-06-19T23:17:49",
+    "cID": 62,
+    "uID": 38
+  },
+  {
+    "rating": 0.7,
+    "drinkRating": 1.8,
+    "foodRating": 1.8,
+    "atmosphereRating": 4.3,
+    "notes": "Highly recommend!",
+    "timestamp": "2024-03-03T06:51:56",
+    "cID": 177,
+    "uID": 3
+  },
+  {
+    "rating": 3.0,
+    "drinkRating": 4.3,
+    "foodRating": 0.1,
+    "atmosphereRating": 1.1,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-08-17T08:37:07",
+    "cID": 139,
+    "uID": 36
+  },
+  {
+    "rating": 1.6,
+    "drinkRating": 0.1,
+    "foodRating": 3.5,
+    "atmosphereRating": 2.5,
+    "notes": "",
+    "timestamp": "2025-03-26T11:52:21",
+    "cID": 114,
+    "uID": 26
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 2.2,
+    "foodRating": 2.8,
+    "atmosphereRating": 1.7,
+    "notes": "Loved the coffee!",
+    "timestamp": "2023-02-01T02:41:43",
+    "cID": 120,
+    "uID": 25
+  },
+  {
+    "rating": 1.4,
+    "drinkRating": 2.5,
+    "foodRating": 4.6,
+    "atmosphereRating": 3.9,
+    "notes": "Too crowded.",
+    "timestamp": "2024-09-11T21:11:56",
+    "cID": 85,
+    "uID": 14
+  },
+  {
+    "rating": 1.0,
+    "drinkRating": 3.8,
+    "foodRating": 1.7,
+    "atmosphereRating": 0.2,
+    "notes": "Great service!",
+    "timestamp": "2024-08-09T08:14:06",
+    "cID": 23,
+    "uID": 21
+  },
+  {
+    "rating": 4.8,
+    "drinkRating": 4.0,
+    "foodRating": 2.4,
+    "atmosphereRating": 3.8,
+    "notes": "Not worth it.",
+    "timestamp": "2024-01-18T23:04:09",
+    "cID": 149,
+    "uID": 30
+  },
+  {
+    "rating": 0.2,
+    "drinkRating": 2.9,
+    "foodRating": 2.8,
+    "atmosphereRating": 2.9,
+    "notes": "Not worth it.",
+    "timestamp": "2024-10-09T01:07:15",
+    "cID": 135,
+    "uID": 4
+  },
+  {
+    "rating": 0.6,
+    "drinkRating": 0.2,
+    "foodRating": 1.3,
+    "atmosphereRating": 0.5,
+    "notes": "",
+    "timestamp": "2024-02-12T12:22:26",
+    "cID": 129,
+    "uID": 44
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 3.1,
+    "foodRating": 2.3,
+    "atmosphereRating": 1.5,
+    "notes": "Overpriced.",
+    "timestamp": "2024-07-08T03:59:57",
+    "cID": 15,
+    "uID": 26
+  },
+  {
+    "rating": 3.5,
+    "drinkRating": 1.5,
+    "foodRating": 0.9,
+    "atmosphereRating": 2.4,
+    "notes": "Will visit again.",
+    "timestamp": "2022-10-01T04:36:03",
+    "cID": 61,
+    "uID": 14
+  },
+  {
+    "rating": 4.0,
+    "drinkRating": 4.0,
+    "foodRating": 2.7,
+    "atmosphereRating": 4.2,
+    "notes": "Loved the coffee!",
+    "timestamp": "2025-01-26T03:50:26",
+    "cID": 23,
+    "uID": 48
+  },
+  {
+    "rating": 2.4,
+    "drinkRating": 0.5,
+    "foodRating": 1.4,
+    "atmosphereRating": 1.8,
+    "notes": "Overpriced.",
+    "timestamp": "2023-03-15T16:13:04",
+    "cID": 35,
+    "uID": 31
+  },
+  {
+    "rating": 4.3,
+    "drinkRating": 0.0,
+    "foodRating": 0.1,
     "atmosphereRating": 4.9,
-    "notes": "Loved the drinks",
-    "uID": 46,
-    "cID": 7
+    "notes": "Nice ambiance.",
+    "timestamp": "2023-06-13T23:48:58",
+    "cID": 50,
+    "uID": 33
+  },
+  {
+    "rating": 0.0,
+    "drinkRating": 4.3,
+    "foodRating": 4.9,
+    "atmosphereRating": 1.0,
+    "notes": "Will visit again.",
+    "timestamp": "2025-11-01T04:23:33",
+    "cID": 102,
+    "uID": 30
+  },
+  {
+    "rating": 0.3,
+    "drinkRating": 0.6,
+    "foodRating": 4.3,
+    "atmosphereRating": 4.1,
+    "notes": "Great service!",
+    "timestamp": "2022-08-04T11:28:35",
+    "cID": 76,
+    "uID": 11
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 1.4,
+    "foodRating": 0.0,
+    "atmosphereRating": 3.9,
+    "notes": "Too crowded.",
+    "timestamp": "2023-01-17T15:04:01",
+    "cID": 37,
+    "uID": 19
+  },
+  {
+    "rating": 1.6,
+    "drinkRating": 2.0,
+    "foodRating": 0.4,
+    "atmosphereRating": 4.3,
+    "notes": "Not worth it.",
+    "timestamp": "2023-06-04T17:06:54",
+    "cID": 37,
+    "uID": 20
+  },
+  {
+    "rating": 2.0,
+    "drinkRating": 3.4,
+    "foodRating": 4.8,
+    "atmosphereRating": 2.6,
+    "notes": "Nice ambiance.",
+    "timestamp": "2023-12-05T04:50:50",
+    "cID": 134,
+    "uID": 43
+  },
+  {
+    "rating": 3.1,
+    "drinkRating": 4.4,
+    "foodRating": 3.5,
+    "atmosphereRating": 2.7,
+    "notes": "",
+    "timestamp": "2025-09-20T05:23:02",
+    "cID": 5,
+    "uID": 14
+  },
+  {
+    "rating": 0.7,
+    "drinkRating": 5.0,
+    "foodRating": 4.3,
+    "atmosphereRating": 2.4,
+    "notes": "Will visit again.",
+    "timestamp": "2023-07-08T11:32:57",
+    "cID": 96,
+    "uID": 25
+  },
+  {
+    "rating": 0.2,
+    "drinkRating": 4.2,
+    "foodRating": 3.0,
+    "atmosphereRating": 4.6,
+    "notes": "Food was average.",
+    "timestamp": "2023-04-14T11:17:04",
+    "cID": 189,
+    "uID": 20
+  },
+  {
+    "rating": 0.5,
+    "drinkRating": 0.9,
+    "foodRating": 1.3,
+    "atmosphereRating": 0.6,
+    "notes": "Too crowded.",
+    "timestamp": "2023-01-04T16:01:38",
+    "cID": 19,
+    "uID": 25
+  },
+  {
+    "rating": 2.5,
+    "drinkRating": 4.7,
+    "foodRating": 2.7,
+    "atmosphereRating": 0.3,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-11-12T11:22:40",
+    "cID": 199,
+    "uID": 14
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 4.7,
+    "foodRating": 2.6,
+    "atmosphereRating": 4.9,
+    "notes": "Nice ambiance.",
+    "timestamp": "2025-03-03T15:34:46",
+    "cID": 139,
+    "uID": 11
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 2.2,
+    "foodRating": 1.7,
+    "atmosphereRating": 2.5,
+    "notes": "Overpriced.",
+    "timestamp": "2024-09-07T01:46:08",
+    "cID": 11,
+    "uID": 42
+  },
+  {
+    "rating": 4.5,
+    "drinkRating": 2.1,
+    "foodRating": 4.2,
+    "atmosphereRating": 1.0,
+    "notes": "",
+    "timestamp": "2025-04-08T07:05:10",
+    "cID": 4,
+    "uID": 39
+  },
+  {
+    "rating": 0.5,
+    "drinkRating": 2.8,
+    "foodRating": 1.0,
+    "atmosphereRating": 2.3,
+    "notes": "",
+    "timestamp": "2024-12-27T03:29:29",
+    "cID": 122,
+    "uID": 4
+  },
+  {
+    "rating": 3.0,
+    "drinkRating": 3.8,
+    "foodRating": 2.1,
+    "atmosphereRating": 0.6,
+    "notes": "Great service!",
+    "timestamp": "2022-09-11T01:55:47",
+    "cID": 166,
+    "uID": 21
+  },
+  {
+    "rating": 3.1,
+    "drinkRating": 2.0,
+    "foodRating": 0.9,
+    "atmosphereRating": 1.5,
+    "notes": "Not worth it.",
+    "timestamp": "2024-03-23T20:26:05",
+    "cID": 18,
+    "uID": 44
+  },
+  {
+    "rating": 1.8,
+    "drinkRating": 4.7,
+    "foodRating": 0.6,
+    "atmosphereRating": 4.5,
+    "notes": "Overpriced.",
+    "timestamp": "2024-11-09T23:23:07",
+    "cID": 140,
+    "uID": 20
+  },
+  {
+    "rating": 2.9,
+    "drinkRating": 4.5,
+    "foodRating": 1.8,
+    "atmosphereRating": 2.1,
+    "notes": "Food was average.",
+    "timestamp": "2024-09-15T11:19:36",
+    "cID": 87,
+    "uID": 2
+  },
+  {
+    "rating": 2.3,
+    "drinkRating": 1.5,
+    "foodRating": 2.7,
+    "atmosphereRating": 3.1,
+    "notes": "Highly recommend!",
+    "timestamp": "2023-10-22T18:28:12",
+    "cID": 78,
+    "uID": 28
+  },
+  {
+    "rating": 3.4,
+    "drinkRating": 3.1,
+    "foodRating": 2.8,
+    "atmosphereRating": 0.5,
+    "notes": "Not worth it.",
+    "timestamp": "2025-08-19T02:43:16",
+    "cID": 141,
+    "uID": 7
+  },
+  {
+    "rating": 3.3,
+    "drinkRating": 4.0,
+    "foodRating": 2.1,
+    "atmosphereRating": 0.6,
+    "notes": "Loved the coffee!",
+    "timestamp": "2025-09-21T01:20:35",
+    "cID": 105,
+    "uID": 50
+  },
+  {
+    "rating": 1.6,
+    "drinkRating": 1.4,
+    "foodRating": 4.5,
+    "atmosphereRating": 0.2,
+    "notes": "Loved the coffee!",
+    "timestamp": "2022-03-10T22:56:33",
+    "cID": 122,
+    "uID": 17
+  },
+  {
+    "rating": 0.8,
+    "drinkRating": 2.0,
+    "foodRating": 3.5,
+    "atmosphereRating": 4.3,
+    "notes": "Food was average.",
+    "timestamp": "2024-02-01T02:44:32",
+    "cID": 120,
+    "uID": 1
+  },
+  {
+    "rating": 4.7,
+    "drinkRating": 0.3,
+    "foodRating": 2.1,
+    "atmosphereRating": 3.0,
+    "notes": "Food was average.",
+    "timestamp": "2025-09-05T01:52:59",
+    "cID": 82,
+    "uID": 4
+  },
+  {
+    "rating": 1.9,
+    "drinkRating": 0.5,
+    "foodRating": 1.4,
+    "atmosphereRating": 1.8,
+    "notes": "Too crowded.",
+    "timestamp": "2025-12-04T12:26:04",
+    "cID": 109,
+    "uID": 23
+  },
+  {
+    "rating": 2.7,
+    "drinkRating": 0.5,
+    "foodRating": 2.8,
+    "atmosphereRating": 0.8,
+    "notes": "Highly recommend!",
+    "timestamp": "2022-08-28T18:40:46",
+    "cID": 23,
+    "uID": 4
+  },
+  {
+    "rating": 4.6,
+    "drinkRating": 3.4,
+    "foodRating": 1.3,
+    "atmosphereRating": 1.9,
+    "notes": "Not worth it.",
+    "timestamp": "2022-12-07T15:49:17",
+    "cID": 68,
+    "uID": 18
+  },
+  {
+    "rating": 0.1,
+    "drinkRating": 2.4,
+    "foodRating": 3.4,
+    "atmosphereRating": 0.6,
+    "notes": "Not worth it.",
+    "timestamp": "2022-06-19T12:44:39",
+    "cID": 197,
+    "uID": 28
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 2.0,
+    "foodRating": 0.7,
+    "atmosphereRating": 4.4,
+    "notes": "Highly recommend!",
+    "timestamp": "2023-12-22T00:36:32",
+    "cID": 12,
+    "uID": 38
+  },
+  {
+    "rating": 0.4,
+    "drinkRating": 2.3,
+    "foodRating": 3.0,
+    "atmosphereRating": 3.9,
+    "notes": "Great service!",
+    "timestamp": "2025-10-11T17:21:43",
+    "cID": 194,
+    "uID": 24
+  },
+  {
+    "rating": 1.5,
+    "drinkRating": 0.1,
+    "foodRating": 2.4,
+    "atmosphereRating": 0.1,
+    "notes": "Food was average.",
+    "timestamp": "2024-11-24T12:52:50",
+    "cID": 126,
+    "uID": 1
+  },
+  {
+    "rating": 4.2,
+    "drinkRating": 1.4,
+    "foodRating": 4.6,
+    "atmosphereRating": 0.4,
+    "notes": "Exceptional taste.",
+    "timestamp": "2025-07-01T06:54:31",
+    "cID": 1,
+    "uID": 50
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 4.1,
+    "foodRating": 2.1,
+    "atmosphereRating": 2.5,
+    "notes": "Will visit again.",
+    "timestamp": "2022-10-19T21:20:25",
+    "cID": 187,
+    "uID": 41
+  },
+  {
+    "rating": 4.2,
+    "drinkRating": 3.5,
+    "foodRating": 1.6,
+    "atmosphereRating": 4.4,
+    "notes": "Exceptional taste.",
+    "timestamp": "2024-03-16T15:21:05",
+    "cID": 195,
+    "uID": 16
+  },
+  {
+    "rating": 0.1,
+    "drinkRating": 4.8,
+    "foodRating": 1.8,
+    "atmosphereRating": 4.2,
+    "notes": "Loved the coffee!",
+    "timestamp": "2024-11-13T12:40:30",
+    "cID": 112,
+    "uID": 4
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 2.8,
+    "foodRating": 0.0,
+    "atmosphereRating": 3.4,
+    "notes": "Great service!",
+    "timestamp": "2022-07-10T09:47:46",
+    "cID": 161,
+    "uID": 31
+  },
+  {
+    "rating": 3.0,
+    "drinkRating": 0.7,
+    "foodRating": 0.2,
+    "atmosphereRating": 2.7,
+    "notes": "Loved the coffee!",
+    "timestamp": "2022-02-13T19:05:55",
+    "cID": 191,
+    "uID": 5
+  },
+  {
+    "rating": 4.7,
+    "drinkRating": 0.8,
+    "foodRating": 4.9,
+    "atmosphereRating": 0.0,
+    "notes": "Loved the coffee!",
+    "timestamp": "2024-04-03T12:01:54",
+    "cID": 84,
+    "uID": 4
+  },
+  {
+    "rating": 0.4,
+    "drinkRating": 3.4,
+    "foodRating": 1.9,
+    "atmosphereRating": 2.1,
+    "notes": "Exceptional taste.",
+    "timestamp": "2022-07-29T13:51:39",
+    "cID": 27,
+    "uID": 2
+  },
+  {
+    "rating": 0.9,
+    "drinkRating": 3.1,
+    "foodRating": 3.5,
+    "atmosphereRating": 3.6,
+    "notes": "Nice ambiance.",
+    "timestamp": "2025-03-29T18:17:15",
+    "cID": 138,
+    "uID": 22
+  },
+  {
+    "rating": 2.8,
+    "drinkRating": 3.5,
+    "foodRating": 3.5,
+    "atmosphereRating": 1.9,
+    "notes": "Loved the coffee!",
+    "timestamp": "2024-06-12T16:10:36",
+    "cID": 185,
+    "uID": 29
+  },
+  {
+    "rating": 3.4,
+    "drinkRating": 0.5,
+    "foodRating": 0.6,
+    "atmosphereRating": 1.4,
+    "notes": "Loved the coffee!",
+    "timestamp": "2023-10-21T23:16:14",
+    "cID": 119,
+    "uID": 46
+  },
+  {
+    "rating": 2.6,
+    "drinkRating": 0.1,
+    "foodRating": 3.0,
+    "atmosphereRating": 3.9,
+    "notes": "Great service!",
+    "timestamp": "2025-03-26T07:48:24",
+    "cID": 76,
+    "uID": 26
   }
 ]
