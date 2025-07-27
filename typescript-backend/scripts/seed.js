@@ -113,8 +113,7 @@ async function seedDatabase() {
                 [cafe.name, cafe.address, cafe.latitude, cafe.longitude, cafe.openingDays, cafe.googleRating, cafe.startPrice, cafe.endPrice]
             );
         }
-        const reviews = require('../mock_data/reviews.json');
-
+        const reviews = require('../prod_data/reviews.json');     
         for (const review of reviews) {
             await client.query(
                 'INSERT INTO "Reviews" (rating, drinkRating, foodRating, atmosphereRating, notes, timestamp, uID, cID) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
