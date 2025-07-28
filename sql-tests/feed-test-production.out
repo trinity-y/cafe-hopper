@@ -1,0 +1,38 @@
+CREATE VIEW
+        username        | uid |              name               | rid | overallRating | drinkRating | foodRating | atmosphereRating |       notes       | 
+     timestamp      | likes
+------------------------+-----+---------------------------------+-----+---------------+-------------+------------+------------------+-------------------+-
+--------------------+-------
+ intercontinentalearner |  24 | Starbucks                       | 217 |           0.0 |         0.8 |        3.3 |              3.6 | Nice ambiance.    | 
+2025-08-19 10:13:13 |     0
+ intercontinentalearner |  24 | Starbucks                       | 526 |           0.2 |         0.4 |        3.7 |              4.4 | Not worth it.     | 
+2025-05-13 10:11:01 |     0
+ intercontinentalearner |  24 | Bloom Cafe                      | 266 |           3.1 |         1.5 |        0.3 |              0.3 |                   | 
+2025-01-02 20:15:11 |     0
+ intercontinentalearner |  24 | The Sobo - Indian Street Food   | 150 |           0.5 |         2.5 |        5.0 |              4.9 | Will visit again. | 
+2024-10-29 10:59:03 |     0
+ intercontinentalearner |  24 | The Bingsu                      | 454 |           2.0 |         1.9 |        4.4 |              1.0 | Food was average. | 
+2024-10-26 01:21:00 |     0
+ intercontinentalearner |  24 | Michel's Bakery CafΘ            |  44 |           2.3 |         1.4 |        3.4 |              4.6 |                   | 
+2024-08-02 14:23:04 |     0
+ intercontinentalearner |  24 | Darlise Cafe                    | 113 |           1.5 |         0.1 |        2.1 |              1.6 | Food was average. | 
+2024-04-05 14:57:13 |     0
+ intercontinentalearner |  24 | Sweet Dreams Teashop            | 447 |           2.9 |         3.9 |        0.1 |              1.0 | Highly recommend! | 
+2023-12-08 20:46:56 |     0
+ intercontinentalearner |  24 | I DEAL COFFEE & WINE            | 243 |           1.2 |         3.4 |        0.8 |              3.7 | Too crowded.      | 
+2023-10-19 14:51:39 |     0
+ intercontinentalearner |  24 | Coffee Brick Canada Inc.        | 406 |           0.9 |         3.7 |        0.9 |              4.0 | Will visit again. | 
+2023-10-06 02:41:28 |     0
+ intercontinentalearner |  24 | Eclipse Cafe (Dessert & Bakery) |  16 |           2.2 |         0.8 |        3.6 |              1.9 | Great service!    | 
+2023-09-22 05:01:15 |     1
+ intercontinentalearner |  24 | Lilmout Lounge                  | 561 |           1.1 |         3.5 |        0.9 |              2.2 | Not worth it.     | 
+2023-03-16 04:13:55 |     0
+ intercontinentalearner |  24 | Starbucks                       | 185 |           1.6 |         4.8 |        1.7 |              0.9 | Overpriced.       | 
+2023-03-09 11:28:53 |     0
+ intercontinentalearner |  24 | Coffee Lunar                    | 494 |           2.0 |         3.8 |        2.1 |              1.2 |                   | 
+2022-05-16 12:37:11 |     0
+ intercontinentalearner |  24 | Cong Caphe (Downtown Toronto)   | 522 |           2.6 |         2.5 |        4.5 |              0.4 | Overpriced.       | 
+2022-05-03 14:14:59 |     0
+ intercontinentalearner |  24 | Castle & Coal                   | 499 |           0.6 |         4.1 |        4.2 |              4.6 | Food was average. | 
+2022-01-26 04:56:49 |     0
+(16 rows)
