@@ -1,0 +1,26 @@
+-- searching for users
+ id | username |         firebase_uid         
+----+----------+------------------------------
+  4 | Nadeen   | mNoPQr5TuVWX6yzA7bCdEfGhIjKl
+
+
+-- select friends for a user
+ id  | username |         firebase_uid         
+-----+----------+------------------------------
+  17 | user012  | WmsrjEF605id9ppvjIXjnLME0Mns
+  97 | user092  | VFtIGoYpO793VnpHOIhY43NXgAqG
+ 114 | user109  | K4XCBX2TWRNyvDLUqJEBOAieUZFm
+ 140 | user135  | zq2YY1wAlPypF2kUUaL3FG4ZrVFS
+(4 rows)
+
+-- select mutuals for a user
+ id | username | firebase_uid 
+----+----------+--------------
+(0 rows)
+
+
+-- select all mutuals
+ user_id | user_username | friend_id | friend_username 
+---------+---------------+-----------+-----------------
+      88 | user083       |        51 | user046
+      51 | user046       |        88 | user083

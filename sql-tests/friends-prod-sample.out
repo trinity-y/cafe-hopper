@@ -1,0 +1,92 @@
+-- searching for users
+ id  |        username        |         firebase_uid         
+-----+------------------------+------------------------------
+   8 | wild-eyedtrack         | aJHqGi6Tn7Fmo7eZwrj71vImGcG0
+  14 | barrenrace             | lXufeH14ENKg8IQ2CQdxht6EXOYy
+  31 | racialpumpkin          | dQZSDUr50tVZ56w0Q8g1USrTRa3v
+  71 | crackedimpairment      | h4YQAe79QfLEnFrNu2zVtfMBkzQD
+  82 | boyishfirecracker      | Pn4XtQlmKwORrdr1HeHpS1WkUz49
+ 150 | crackingwanderer       | K4mPlVrQj5xDdCnH6Tjo3rJI3t7W
+ 161 | practicalmatron        | Bupqhw4PymYcT3Nd8lNyoQdQ0IOj
+ 232 | easterndisgrace        | ndkKp6dLGc1CKUU9486FgltS3Rx5
+ 292 | impracticaldeliverance | 6C3axpRnOMaLDShRXgs9FnPBO1eZ
+ 301 | terracedlanch          | PpDwRtHX9BQLdEFnT2OiFuLs1jiB
+(10 rows)
+
+
+-- select friends for a user
+ id  |       username        |         firebase_uid         
+-----+-----------------------+------------------------------
+  65 | forlornhat            | yxqsjwrK807eNGfsUiCCwvBXGQsM
+  79 | mysteriouscure        | 1YHzqijAyRqvMhuYWKdT2VKiAIzT
+ 164 | hard-presseddiagnosis | OaTWoO7ubj3zy5iEaXkkkzKs2GlM
+ 165 | enticingflashback     | IiXYWaIWw1bxtukDnphoVtCP1F0U
+ 255 | adorablepatch         | BUhT7GDS8mNtRlXrXeSjQKGvMRWp
+ 303 | reprehensibleact      | XImNd3Gra5krcFfrk2Wrkme2sxS8
+ 699 | monogrammedrebel      | lZ9Ssk4Yj4gB8L7pzkQj89ZMdaWJ
+(7 rows)
+
+ id  |      username       |         firebase_uid         
+-----+---------------------+------------------------------
+ 124 | familiardescent     | O20lnZlYl3p4vaPAIdQoAlch64D5
+ 195 | gallopingcausation  | 8vKXg0dZS0SWw51kzmttC3dEiK5F
+ 237 | connectingpayoff    | oTwZPRXcl9VJvCZE7mJgvbCiTj18
+ 271 | backhandvicar       | H9eRDWivtlciFF8WA6vmDLaSAvnY
+ 272 | carelessprizewinner | y122xB7MrHRV4o8KU6t8cYrYadw4
+ 317 | illustratedcrank    | Gn3hi6wuuz532iAiDQFJpmXiOGBd
+ 420 | proposedbirdcage    | oVVCkS7XD9MHuXjWCrSRQbrbllKq
+ 656 | dailyphilistine     | tsJjdcMJw3VpvAG9j33WfktFPYZa
+ 679 | hourlyneighborhood  | llrUPqvSbIyJ0Dwo17BSXNajKjNp
+ 740 | blinkingflutter     | YbTZKiTmdNaR9gXyJ9gpq2rSfUqb
+(10 rows)
+
+-- select mutuals for a user
+ id | username | firebase_uid 
+----+----------+--------------
+(0 rows)
+
+ id |    username     |         firebase_uid         
+----+-----------------+------------------------------
+  1 | abrasiveprophet | lghQHyRvFY9b8vlNE6CW4Xuf2Ldl
+  2 | unionizedping   | kTufTPqLSnnzR22HfGV5b0EarHfE
+  3 | bindingcereal   | 8skFOfJw8bTmQF89kkmhugPz5mIh
+  4 | definitepoppy   | 1HD6vu1gAkKggI7fnopZhpMR2a30
+(4 rows)
+
+
+-- select all mutuals
+ user_id |      user_username      | friend_id |     friend_username     
+---------+-------------------------+-----------+-------------------------
+     372 | foundingsyndicate       |       583 | adaptableflywheel
+     201 | monetaryhoneybee        |       416 | regrettableidolatry
+     583 | adaptableflywheel       |       372 | foundingsyndicate
+     537 | inhumanbuckskin         |       697 | qualitativeplaque
+     697 | qualitativeplaque       |       537 | inhumanbuckskin
+      57 | invalidrector           |       431 | rosyterrier
+     461 | supernaturaltyphoid     |       340 | kineticpurser
+     539 | sheerflutist            |       142 | influentialsweating
+      43 | handicappedintervention |       612 | unrelatedetching
+     275 | ascendingcap            |       161 | practicalmatron
+     584 | earnedcollage           |       492 | reflexexcitement
+     416 | regrettableidolatry     |       201 | monetaryhoneybee
+     340 | kineticpurser           |       461 | supernaturaltyphoid
+     431 | rosyterrier             |        57 | invalidrector
+     102 | respectablefancier      |       464 | uptownimplantation
+     161 | practicalmatron         |       275 | ascendingcap
+     492 | reflexexcitement        |       584 | earnedcollage
+     612 | unrelatedetching        |        43 | handicappedintervention
+     142 | influentialsweating     |       539 | sheerflutist
+     715 | distortedcropping       |       236 | prestigiousgood-bye
+     464 | uptownimplantation      |       102 | respectablefancier
+     236 | prestigiousgood-bye     |       715 | distortedcropping
+     194 | tinklingscimitar        |       531 | validbulldozer
+     531 | validbulldozer          |       194 | tinklingscimitar
+     751 | RohanNankani            |         1 | abrasiveprophet
+     751 | RohanNankani            |         2 | unionizedping
+     751 | RohanNankani            |         3 | bindingcereal
+     751 | RohanNankani            |         4 | definitepoppy
+       1 | abrasiveprophet         |       751 | RohanNankani
+       2 | unionizedping           |       751 | RohanNankani
+       3 | bindingcereal           |       751 | RohanNankani
+       4 | definitepoppy           |       751 | RohanNankani
+(32 rows)
