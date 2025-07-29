@@ -1,6 +1,6 @@
-# Frog Cafe Hopper
+# CaféHopper 🐸☕️
 
-How to run our project
+**How to run our project:**
 
 1. Clone the repo on your local device
 
@@ -49,9 +49,9 @@ You can navigate to both frontend and backend pages using different ports.
 
 You may need to switch between branches in order to access these pages.
 
-Frontend port: http://localhost:3000/
+🥐 Frontend port: http://localhost:3000/
 
-Frontend pages:
+⭐️ Frontend pages:
 
 http://localhost:3000/signup
 
@@ -61,15 +61,26 @@ http://localhost:3000/complete-signup
 
 http://localhost:3000/cafesearch
 
-Backend port: http://localhost:3001/
+http://localhost:3000/profile
+
+http://localhost:3000/feed
+
+http://localhost:3000/blend
+
+🥐 Backend port: http://localhost:3001/
 
 You can view all completed routes in ```typescript-backend/src/routes```
 
 # Fully implemented features
 
 1. Users
-2. Cafe
-3. Bookmarks (implemented under bookmarks branch): http://localhost:3000/profile
+3. Basic cafe search
+4. Filtered cafe search (price & topcafes)
+5. Bookmarks
+6. Reviews
+7. Friend requests
+8. Feed
+9. Blend
 
 # How to generate the “production” dataset and load it into our database
 Since our dataset is only ~300 entries, we have saved it in typescript-backend/prod_data/cafes.json
