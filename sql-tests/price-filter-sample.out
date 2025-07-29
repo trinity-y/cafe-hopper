@@ -1,0 +1,28 @@
+CREATE TABLE
+
+INSERT 0 8
+
+ id |         name          |      address       | latitude | longitude |                      openingDays                       | googleRating | startPrice | endPrice 
+----+-----------------------+--------------------+----------+-----------+--------------------------------------------------------+--------------+------------+----------
+  3 | Ontario Brew House    | 789 University Ave |  43.4735 |  -80.5421 | {"weekdayDescriptions": ["Monday: 6:00 AM – 9:00 PM"]} |          4.8 |         15 |       18
+  6 | The Coffee Connection | 987 Richmond St    |  43.4612 |   -80.514 | {"weekdayDescriptions": ["Monday: 7:30 AM – 6:30 PM"]} |          4.1 |         10 |       20
+(2 rows)
+
+ id |         name          |      address       | latitude | longitude |                      openingDays                       | googleRating | startPrice | endPrice 
+----+-----------------------+--------------------+----------+-----------+--------------------------------------------------------+--------------+------------+----------
+  3 | Ontario Brew House    | 789 University Ave |  43.4735 |  -80.5421 | {"weekdayDescriptions": ["Monday: 6:00 AM – 9:00 PM"]} |          4.8 |         15 |       18
+  6 | The Coffee Connection | 987 Richmond St    |  43.4612 |   -80.514 | {"weekdayDescriptions": ["Monday: 7:30 AM – 6:30 PM"]} |          4.1 |         10 |       20
+(2 rows)
+
+ id |         name         |     address     | latitude | longitude |                       openingDays                       | googleRating | startPrice | endPrice 
+----+----------------------+-----------------+----------+-----------+---------------------------------------------------------+--------------+------------+----------
+  8 | Luxury Coffee Lounge | 258 Princess St |   43.468 |    -80.53 | {"weekdayDescriptions": ["Monday: 9:00 AM – 10:00 PM"]} |          4.7 |         25 |       45
+  5 | Premium Espresso     | 654 Columbia St |  43.4633 |  -80.5237 | {"weekdayDescriptions": ["Monday: 8:30 AM – 7:00 PM"]}  |          4.3 |         20 |       35
+(2 rows)
+
+ id |        name         |    address    | latitude | longitude |                      openingDays                       | googleRating | startPrice | endPrice 
+----+---------------------+---------------+----------+-----------+--------------------------------------------------------+--------------+------------+----------
+  7 | Affordable Roasters | 147 Albert St |   43.459 |    -80.52 | {"weekdayDescriptions": ["Monday: 8:00 AM – 5:00 PM"]} |          3.9 |          6 |       14
+  4 | Budget Beans        | 321 Weber St  |  43.4501 |  -80.4925 | {"weekdayDescriptions": ["Monday: 9:00 AM – 5:00 PM"]} |          4.0 |          5 |       12
+  1 | Onyx Coffee Lab     | 123 Main St   |  43.4643 |  -80.5204 | {"weekdayDescriptions": ["Monday: 8:00 AM – 6:00 PM"]} |          4.5 |          8 |       15
+(3 rows)
