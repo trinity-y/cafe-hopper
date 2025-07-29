@@ -1,0 +1,17 @@
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+
+INSERT 0 5
+INSERT 0 3
+INSERT 0 5
+
+INSERT 0 10
+
+ id |      name      |      address       |                      openingDays                       | googleRating |    finalRating     |     friendNotes      | friendUsername 
+----+----------------+--------------------+--------------------------------------------------------+--------------+--------------------+----------------------+----------------
+  3 | Brew House C   | 789 University Ave | {"weekdayDescriptions": ["Monday: 6:00 AM – 9:00 PM"]} |          4.8 | 4.3500000000000000 | Amazing espresso!    | friend1
+  4 | Tea Place D    | 321 Weber St       | {"weekdayDescriptions": ["Monday: 9:00 AM – 5:00 PM"]} |          4.0 | 4.2666666666666667 | Best coffee in town! | friend2
+  5 | Espresso Bar E | 654 Columbia St    | {"weekdayDescriptions": ["Monday: 8:30 AM – 7:00 PM"]} |          4.3 | 4.0500000000000000 | Great atmosphere     | friend3
+(3 rows)
